@@ -16,7 +16,7 @@ Este repositorio se encuentra bajo [Creative Commons Attribution-ShareAlike 4.0 
 *Empresas o emprendimientos con equipo de desarrollo*
 
 | Empresa   |  Página Web   | Email contacto     | Categoría   |  Lenguajes de programación, tecnologías usadas, palabras clave  | 
-| :-----------: | :-------------:   | :------------------: | :---------------------------------------: | 
+| :-----------: | :-------------:   | :------------------: | :---------------------------------------: | :-----------: |
 | Playvox | **https://www.playvox.com/**  | info@playvox.com | Servicio al cliente | Python, Serverless, VueJS, Git, Scrum, microservicios, MongoDB |
 | Taxia Life |**https://taxialife.com/**| info@mobilitysolutionsas.com | Transporte | Nodejs, PHP, Angular, React, Git, Scrum, microservicios, AWS  |
 | Apolosoft       | **http://apolosoft.com/** | informacion@apolosoft.com   |  Software contable, administrativo y empresarial |  |
@@ -28,7 +28,7 @@ Este repositorio se encuentra bajo [Creative Commons Attribution-ShareAlike 4.0 
 *Instituciones educativas*
 
 | Institución    |  Programa  | Contacto    |         Página Web                   |  Jornada | Modalidad | Tipo |
-| :-----------: | :-------------:   | :------------------: | :---------------------------------------: | 
+| :-----------: | :-------------:   | :------------------: | :---------------------------------------: | :-----------: |  :-----------: |  :-----------: |
 | Universidad de Caldas | Ingeniería en sistemas y computación  | programa.ingenieriadesistemas@ucaldas.edu.co- (6)8781500 ext.13146  | **http://aspirantes.ucaldas.edu.co/ingenieria-de-sistemas-y-computacion/** | Diurna | Presencial | Pregrado |
 | Universidad de Caldas  | Ingeniería en Informática |  ingeniería.informatica@ucaldas.edu.co – (6) 8781500 ext. 13392 | **http://aspirantes.ucaldas.edu.co/ingenieria-en-informatica/** | Nocturna o fines de semana | Presencial | Pregrado |
 | Universidad de Caldas  | Tecnología en Sistemas informáticos |  ingeniería.informatica@ucaldas.edu.co – (6) 8781500 ext. 13392 | **http://aspirantes.ucaldas.edu.co/ingenieria-en-informatica/** | Nocturna o fines de semana |  A Distancia | Pregrado |
