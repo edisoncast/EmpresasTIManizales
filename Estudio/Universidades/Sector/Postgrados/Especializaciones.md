@@ -13,3 +13,6 @@ Programas de especialización tecnológica:
 
 Programas de especialización:
 
+| Institución    |  Programa  | Contacto    |         Página Web                   |  Jornada | Modalidad | Tipo | Créditos | Duración | SNIES (El Sistema Nacional de Información de la Educación Superior) Programa |
+| :-----------: | :-------------:   | :------------------: | :---------------------------------------: | :-----------: |  :-----------: |  :-----------: |
+| Universidad de Manizales | Especialización en Sistemas de Información Geográfica  | ingenieria@umanizales.edu.co - (6) 8879680 ext 1689  | **https://umanizales.edu.co/?u_course=especializacion-en-sistema-de-informacion-geografica** | Viernes: de 8:00 am. a 12:00 m y de 2:00 a 6:00 pm.Sábados: de 8:00 am. a 12:00 m y de 2:00 a 6:00 pm. - Domingos: de 8:00 am. a 12:00 m y de 2:00 a 6:00 pm | Presencial | Postgrado (Especialización) |
