@@ -25,18 +25,3 @@ Este repositorio se encuentra bajo [Creative Commons Attribution-ShareAlike 4.0 
      * [Eventos.md](./Meetups/Eventos.md)
    
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
