@@ -30,16 +30,16 @@ Manizales cuenta con las siguientes cifras, respecto a programas relacionados co
 
 
 
-*Instituciones educativas*
+# Instituciones educativas
 
-*Programas tecnólogicos 4* *2 de caracter oficial* *2 de caracter privado*
+**Programas tecnólogicos _4_,** **_2_ de caracter oficial,** **_2_ de caracter privado**
 
-*Programas especialización tecnológica 4* *3 de caracter oficial* *1 de caracter privado*
+**Programas especialización tecnológica _4_,** **_3_ de caracter oficial,** **_1_ de caracter privado**
 
-*Programas de pregrado 8* *2 de caracter oficial* *6 de caracter privado*
+**Programas de pregrado _8_,** **_2_ de caracter oficial,** **_6_ de caracter privado**
 
-*Programas de especialización*
+**Programas de especialización**
 
-*Programas de maestría*
+**Programas de maestría**
 
-*Programas de Doctorado*
+**Programas de Doctorado**
