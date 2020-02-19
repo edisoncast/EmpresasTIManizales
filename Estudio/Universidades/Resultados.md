@@ -33,8 +33,13 @@ Manizales cuenta con las siguientes cifras, respecto a programas relacionados co
 *Instituciones educativas*
 
 *Programas tecnólogicos 3*
+
 *Programas especialiación tecnológica 4*
-*Programas de pregrado *
-*Programas de especialización *
-*Programas de maestría *
-*Programas de Doctorado *
+
+*Programas de pregrado*
+
+*Programas de especialización*
+
+*Programas de maestría*
+
+*Programas de Doctorado*
