@@ -15,7 +15,7 @@ Manizales cuenta con las siguientes cifras, respecto a programas relacionados co
 | UNIVERSIDAD DE CALDAS  | **www.ucaldas.edu.co** | 118 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=1112&estadoPro=01&numPagina=1| Oficial | 
 | UNIVERSIDAD DE MANIZALES  | **www.umanizales.edu.co** | 60 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=1722&estadoPro=01&numPagina=1| Privada | 
 | 	UNIVERSIDAD NACIONAL DE COLOMBIA - Sede Manizales  | **www.manizales.unal.edu.co** | 58 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=1103&estadoPro=01&numPagina=1| Oficial | 
-| UNIVERSIDAD ANTONIO NARIÑO  | **www.uan.edu.co** | 147 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=1826&estadoPro=01&numPagina=1| Privada | 
+| UNIVERSIDAD ANTONIO NARIÑO  | **http://www.uan.edu.co/manizales** | 147 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=1826&estadoPro=01&numPagina=1| Privada | 
 
 
 
@@ -23,8 +23,8 @@ Manizales cuenta con las siguientes cifras, respecto a programas relacionados co
 
 | Nombre Universidad   |  Página WEB   |  Programas totales (Tomado del SNIES, no necesariamente de Manizales)   | Programas Vigentes Relacionados a las TIC  Manizales  |  Código SNIES     | Sector |
 | :-----------: | :-------------:   | :------------------: | :---------------------------------------: |  :------------------: |  :------------------: |
-| UNIVERSIDAD CATÓLICA LUIS AMIGÓ-FUNLAM | **www.funlam.edu.co** | 78 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=2719&estadoPro=01&numPagina=1 | Privada |
-| CORPORACION UNIVERSITARIA REMINGTON | **www.remington.edu.co** | 86 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=2833&estadoPro=01&numPagina=1 | Privada |
+| UNIVERSIDAD CATÓLICA LUIS AMIGÓ-FUNLAM | **https://www.funlam.edu.co/modules/sedemanizales/** | 78 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=2719&estadoPro=01&numPagina=1 | Privada |
+| CORPORACION UNIVERSITARIA REMINGTON | **https://www.uniremington.edu.co/manizales/** | 86 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=2833&estadoPro=01&numPagina=1 | Privada |
 | SENA CALDAS | **www.sena.edu.co** | 1050 |   | https://snies.mineducacion.gov.co/consultasnies/listaProgramasIns?codigoIns=9110&estadoPro=01&numPagina=1| Oficial | 
 
 
