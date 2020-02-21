@@ -42,7 +42,7 @@ Manizales cuenta con las siguientes cifras, respecto a programas relacionados co
 
 **Programas de maestría _8_,** **_3_ en universidades de caracter oficial,** **_5_ en universidades de caracter privado**
 
-**Programas de Doctorado _8_,** **_3_ de caracter oficial,** **_5_ de caracter privado**
+**Programas de Doctorado _2_,** 
 
 Se puede encontrar una noticia del periodico la patria sobre estos temas, son 2 los doctorados referentes a ingenieria, aunque se podría contar el de la universidad nacional.
 
