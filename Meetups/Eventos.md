@@ -1,6 +1,6 @@
 # Eventos registrados en la plataforma Meetup
 
-Listado de los eventos en la plataforma Meetup https://www.meetup.com/es/ManizalesJS/
+Listado de los eventos en la plataforma Meetup https://www.meetup.com/
 
 
 *Meetups*
