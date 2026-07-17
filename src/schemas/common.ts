@@ -23,7 +23,16 @@ export const urlSchema = z
 // Fecha ISO 8601 (YYYY-MM-DD o con hora). Se valida como cadena parseable.
 export const isoDateSchema = z
   .string()
-  .refine((v) => !Number.isNaN(Date.parse(v)), 'Debe ser una fecha ISO válida (YYYY-MM-DD)');
+  .regex(
+    /^\d{4}-\d{2}-\d{2}(?:T\d{2}:\d{2}:\d{2}(?:\.\d{1,3})?(?:Z|[+-]\d{2}:\d{2}))?$/,
+    'Debe usar formato ISO 8601 (YYYY-MM-DD o fecha y hora con zona)',
+  )
+  .refine((v) => {
+    if (v.length === 10) {
+      return new Date(`${v}T00:00:00Z`).toISOString().startsWith(v);
+    }
+    return !Number.isNaN(Date.parse(v));
+  }, 'Debe ser una fecha ISO válida');
 
 // Estado de verificación explícito (opcional). Si no se define, se deriva de
 // needsVerification y del estado propio de la entidad (ver lib/verification.ts).
@@ -34,6 +43,63 @@ export const verificationStatusSchema = z.enum([
   'inactive_or_unverified',
   'archived',
 ]);
+
+export const sourceSchema = z.object({
+  url: urlSchema,
+  title: z.string().trim().min(1).optional(),
+  reviewedAt: isoDateSchema.optional(),
+});
+
+/** Campos de procedencia compartidos. sourceUrl se conserva por compatibilidad. */
+export const auditableFields = {
+  sourceUrl: urlSchema.optional(),
+  sources: z.array(sourceSchema).min(1).optional(),
+  firstSeenAt: isoDateSchema.optional(),
+  lastVerifiedAt: isoDateSchema.optional(),
+  verificationStatus: verificationStatusSchema.optional(),
+  needsVerification: z.boolean(),
+  notes: z.string().trim().min(1).optional(),
+};
+
+interface AuditableEntity {
+  sourceUrl?: string;
+  sources?: Array<{ url: string }>;
+  verificationStatus?: z.infer<typeof verificationStatusSchema>;
+  needsVerification: boolean;
+}
+
+/** Reglas semánticas que evitan presentar registros sin evidencia como verificados. */
+export function enforceVerificationRules(entity: AuditableEntity, ctx: z.RefinementCtx): void {
+  const hasSource = Boolean(entity.sourceUrl) || Boolean(entity.sources?.length);
+  const state = entity.verificationStatus ?? (entity.needsVerification ? 'unknown' : 'verified');
+
+  if (state === 'verified' && !hasSource) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['sourceUrl'],
+      message: 'Un registro verificado debe incluir al menos una fuente pública.',
+    });
+  }
+
+  if (state === 'verified' && entity.needsVerification) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['needsVerification'],
+      message: 'Un registro verificado no puede quedar marcado como pendiente.',
+    });
+  }
+
+  if (
+    ['partially_verified', 'unknown', 'inactive_or_unverified'].includes(state) &&
+    !entity.needsVerification
+  ) {
+    ctx.addIssue({
+      code: z.ZodIssueCode.custom,
+      path: ['needsVerification'],
+      message: 'Los estados no concluyentes deben conservar needsVerification: true.',
+    });
+  }
+}
 
 export const workModelSchema = z.enum(['remote', 'hybrid', 'onsite', 'unknown']);
 export const companySizeSchema = z.enum(['micro', 'small', 'medium', 'large', 'unknown']);

@@ -1,7 +1,7 @@
-name: "📚 Sugerir programa"
+name: '📚 Sugerir programa'
 description: Sugiere un programa técnico, tecnológico, de pregrado o posgrado en áreas TIC.
-title: "[Programa] "
-labels: ["data", "programa"]
+title: '[Programa] '
+labels: ['data', 'programa']
 body:
   - type: markdown
     attributes:

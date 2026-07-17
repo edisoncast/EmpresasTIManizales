@@ -4,14 +4,11 @@
     "strict": true,
     "verbatimModuleSyntax": true,
     "allowJs": true,
-    "jsx": "react-jsx",
-    "jsxImportSource": "react",
     "baseUrl": ".",
     "paths": {
       "@/*": ["src/*"],
       "@data/*": ["src/data/*"],
       "@schemas/*": ["src/schemas/*"],
-      "@components/*": ["src/components/*"],
       "@lib/*": ["src/lib/*"]
     },
     "resolveJsonModule": true

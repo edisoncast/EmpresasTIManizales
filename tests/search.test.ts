@@ -54,7 +54,10 @@ describe('filterItems', () => {
   const items: FilterableItem[] = [
     {
       searchText: 'Casa de Software Manizales',
-      facets: { city: encodeFacet(['Manizales']), category: encodeFacet(['Desarrollo de software']) },
+      facets: {
+        city: encodeFacet(['Manizales']),
+        category: encodeFacet(['Desarrollo de software']),
+      },
     },
     {
       searchText: 'Estudio de Datos Chinchiná',

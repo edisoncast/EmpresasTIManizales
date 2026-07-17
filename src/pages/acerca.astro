@@ -47,11 +47,21 @@ const faqs = [
       <section>
         <h2 class="text-2xl font-bold text-ink-900">Principios</h2>
         <ul class="mt-3 space-y-2 text-ink-700">
-          <li class="flex gap-2"><span aria-hidden="true">◆</span> Datos abiertos y versionados como fuente de verdad.</li>
-          <li class="flex gap-2"><span aria-hidden="true">◆</span> Transparencia: mostramos cuándo un dato necesita verificación.</li>
-          <li class="flex gap-2"><span aria-hidden="true">◆</span> Reconocimiento, no competencia: sin rankings de personas.</li>
-          <li class="flex gap-2"><span aria-hidden="true">◆</span> Privacidad: solo información pública y aportes al ecosistema.</li>
-          <li class="flex gap-2"><span aria-hidden="true">◆</span> Bajo costo y fácil de mantener por la comunidad.</li>
+          <li class="flex gap-2">
+            <span aria-hidden="true">◆</span> Datos abiertos y versionados como fuente de verdad.
+          </li>
+          <li class="flex gap-2">
+            <span aria-hidden="true">◆</span> Transparencia: mostramos cuándo un dato necesita verificación.
+          </li>
+          <li class="flex gap-2">
+            <span aria-hidden="true">◆</span> Reconocimiento, no competencia: sin rankings de personas.
+          </li>
+          <li class="flex gap-2">
+            <span aria-hidden="true">◆</span> Privacidad: solo información pública y aportes al ecosistema.
+          </li>
+          <li class="flex gap-2">
+            <span aria-hidden="true">◆</span> Bajo costo y fácil de mantener por la comunidad.
+          </li>
         </ul>
       </section>
 
@@ -86,27 +96,24 @@ const faqs = [
         <h2 class="kicker">Fuentes citadas</h2>
         <ul class="mt-3 space-y-2 text-sm">
           <li>
-            <a
-              href={site.sources.ccmpc.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="link">{site.sources.ccmpc.name}</a
+            <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link"
+              >{site.sources.ccmpc.name}</a
             >
-            <span class="block text-xs text-ink-500">Empresas · registro mercantil (CIIU J6201)</span>
+            <span class="block text-xs text-ink-500"
+              >Empresas · registro mercantil (CIIU J6201)</span
+            >
           </li>
           <li>
-            <a
-              href={site.sources.snies.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="link">{site.sources.snies.name}</a
+            <a href={site.sources.snies.url} target="_blank" rel="noopener noreferrer" class="link"
+              >{site.sources.snies.name}</a
             >
             <span class="block text-xs text-ink-500">Universidades y programas</span>
           </li>
         </ul>
         <p class="mt-3 text-xs text-ink-500">
-          La información empresarial se usa con fines no comerciales, citando a la Cámara de Comercio
-          de Manizales por Caldas como fuente, conforme a sus condiciones de uso (Ley 1581 de 2012).
+          La información empresarial se usa con fines no comerciales, citando a la Cámara de
+          Comercio de Manizales por Caldas como fuente, conforme a sus condiciones de uso (Ley 1581
+          de 2012).
         </p>
       </div>
 
@@ -120,7 +127,7 @@ const faqs = [
           href={site.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="mt-3 inline-flex btn-secondary">Repositorio</a
+          class="btn-secondary mt-3 inline-flex">Repositorio</a
         >
       </div>
     </aside>

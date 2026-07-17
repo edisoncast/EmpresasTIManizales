@@ -73,7 +73,7 @@ La paleta clara parte de papel cálido, niebla, vegetación de montaña, concret
 | `--color-partial` | `#8A6418` | Estado parcialmente verificado. | Usar sobre fondo `#F4EBCF` con texto oscuro. |
 | `--color-pending` | `#765B38` | Estado desconocido o pendiente. | Usar sobre fondo `#EFE6D8`; evitar amarillo pálido con texto blanco. |
 | `--color-inactive` | `#8B4A3F` | Posiblemente inactivo o no verificado. | Tono terracota no alarmista; acompañar con explicación. |
-| `--color-archived` | `#66706B` | Registro archivado o histórico. | Fondo gris verdoso claro y label textual obligatorio. |
+| `--color-archived` | `#58615D` | Registro archivado o histórico. | Ajustado para contraste AA sobre el fondo de estado; label textual obligatorio. |
 
 El café puede aparecer como acento auxiliar puntual (`#6D4C3D`) en fechas históricas o referencias al archivo 2020, nunca como segundo color dominante. No usar más de un acento principal por vista.
 
@@ -156,7 +156,7 @@ Reglas comunes:
 | `partially_verified` | **Verificación parcial** | Ocre `#8A6418` sobre `#F4EBCF`; atención moderada. | “Parte de la información está verificada.” | Hay fuentes, pero faltan campos importantes o la vigencia no está completamente confirmada. |
 | `unknown` | **Estado por confirmar** | Café grisáceo `#765B38` sobre `#EFE6D8`; neutral. | “Aún no contamos con evidencia suficiente.” | Información heredada o aportada sin fuente pública concluyente. |
 | `inactive_or_unverified` | **Posiblemente inactivo** | Terracota sobrio `#8B4A3F` sobre `#F3E1DD`; cauteloso, no alarmista. | “No se confirmó actividad reciente.” | Hay indicios de inactividad o no fue posible verificar vigencia; no equivale a cierre definitivo. |
-| `archived` | **Archivo histórico** | Gris verdoso `#66706B` sobre `#E5E9E6`; documental. | “Se conserva como parte del archivo.” | El registro ya no está vigente o pertenece al conjunto histórico de 2020 y se conserva con contexto. |
+| `archived` | **Archivo histórico** | Gris verdoso `#58615D` sobre `#E5E9E6`; documental. | “Se conserva como parte del archivo.” | El registro ya no está vigente o pertenece al conjunto histórico de 2020 y se conserva con contexto. |
 
 Cada representación debe incluir label, símbolo sencillo y, en detalle, fecha de última verificación. El estado global no reemplaza notas por campo. Los mensajes deben invitar a aportar una fuente sin convertir la incertidumbre en error.
 

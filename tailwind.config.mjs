@@ -28,7 +28,7 @@ export default {
         partial: { DEFAULT: '#8A6418', bg: '#F4EBCF' },
         pending: { DEFAULT: '#765B38', bg: '#EFE6D8' },
         inactive: { DEFAULT: '#8B4A3F', bg: '#F3E1DD' },
-        archived: { DEFAULT: '#66706B', bg: '#E5E9E6' },
+        archived: { DEFAULT: '#58615D', bg: '#E5E9E6' },
 
         // --- Escala neutra mineral (alias `ink`) ---
         ink: {
@@ -36,7 +36,7 @@ export default {
           100: '#E8ECE7', // superficie tenue / bandas
           200: '#C8CFC9', // bordes y divisores
           300: '#AAB4AC',
-          400: '#8A968D',
+          400: '#5F6B64', // metadatos pequeños: contraste AA sobre papel/blanco
           500: '#526059', // texto secundario
           600: '#46534B',
           700: '#38423B',

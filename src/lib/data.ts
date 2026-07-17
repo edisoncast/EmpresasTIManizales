@@ -49,11 +49,9 @@ export const universities: University[] = parseOrThrow(
   universitiesRaw,
   'universities.json',
 ).sort(byName);
-export const programs: Program[] = parseOrThrow(
-  programsSchema,
-  programsRaw,
-  'programs.json',
-).sort(byName);
+export const programs: Program[] = parseOrThrow(programsSchema, programsRaw, 'programs.json').sort(
+  byName,
+);
 export const people: Person[] = parseOrThrow(peopleSchema, peopleRaw, 'people.json').sort(byName);
 export const communities: Community[] = parseOrThrow(
   communitiesSchema,
@@ -89,9 +87,7 @@ export const getCommunity = (slug: string) => communities.find((c) => c.slug ===
 /** Programas que pertenecen a una universidad (por institutionSlug o por lista programs). */
 export function programsForUniversity(university: University): Program[] {
   return programs
-    .filter(
-      (p) => p.institutionSlug === university.slug || university.programs.includes(p.slug),
-    )
+    .filter((p) => p.institutionSlug === university.slug || university.programs.includes(p.slug))
     .sort(byName);
 }
 
@@ -111,12 +107,4 @@ export function organizerForCommunity(community: Community): Person | undefined 
   return community.organizerSlug ? getPerson(community.organizerSlug) : undefined;
 }
 
-export type {
-  Company,
-  University,
-  Program,
-  Person,
-  Community,
-  Event,
-  SupportEntity,
-};
+export type { Company, University, Program, Person, Community, Event, SupportEntity };

@@ -1,5 +1,6 @@
 ---
 import { companies, universities, programs, people, communities } from '../lib/data';
+import { serializeJsonForHtml } from '../lib/json';
 
 // Índice mínimo para búsqueda global en cliente (nombre, tipo, url, subtítulo).
 interface IndexItem {
@@ -35,6 +36,7 @@ const index: IndexItem[] = [
     s: c.focus.join(', '),
   })),
 ];
+const serializedIndex = serializeJsonForHtml(index);
 ---
 
 <div class="relative mx-auto max-w-xl" data-global-search>
@@ -50,10 +52,7 @@ const index: IndexItem[] = [
       placeholder="Buscar empresas, universidades, programas, personas…"
       autocomplete="off"
       class="w-full rounded-lg border border-ink-300 bg-surface py-3.5 pl-10 pr-4 text-md shadow-subtle transition-colors duration-fast focus:border-accent"
-      role="combobox"
-      aria-expanded="false"
       aria-controls="global-search-results"
-      aria-autocomplete="list"
       data-gs-input
     />
   </div>
@@ -61,10 +60,11 @@ const index: IndexItem[] = [
     id="global-search-results"
     class="absolute left-0 right-0 top-full z-30 mt-2 max-h-80 overflow-auto rounded-xl border border-ink-200 bg-white p-2 text-left shadow-xl"
     hidden
+    aria-live="polite"
     data-gs-results
   >
   </ul>
-  <script type="application/json" data-gs-data set:html={JSON.stringify(index)}></script>
+  <script type="application/json" data-gs-data set:html={serializedIndex} />
 </div>
 
 <script>
@@ -88,39 +88,46 @@ const index: IndexItem[] = [
       const q = normalizeText(query);
       if (q.length < 2) {
         results!.hidden = true;
-        input!.setAttribute('aria-expanded', 'false');
+        results!.replaceChildren();
         return;
       }
       const matches = items
         .filter((it) => normalizeText(it.n + ' ' + it.t + ' ' + it.s).includes(q))
         .slice(0, 8);
       if (matches.length === 0) {
-        results!.innerHTML =
-          '<li class="px-3 py-2 text-sm text-ink-500">Sin coincidencias. Prueba otra búsqueda.</li>';
+        const empty = document.createElement('li');
+        empty.className = 'px-3 py-2 text-sm text-ink-500';
+        empty.textContent = 'Sin coincidencias. Prueba otra búsqueda.';
+        results!.replaceChildren(empty);
       } else {
-        results!.innerHTML = matches
-          .map(
-            (m) =>
-              `<li><a href="${m.u}" class="flex items-center justify-between gap-3 rounded-lg px-3 py-2 no-underline hover:bg-brand-50"><span class="min-w-0"><span class="block truncate text-sm font-medium text-ink-900">${escapeHtml(
-                m.n,
-              )}</span><span class="block truncate text-xs text-ink-500">${escapeHtml(
-                m.s,
-              )}</span></span><span class="badge bg-ink-100 text-ink-600">${escapeHtml(
-                m.t,
-              )}</span></a></li>`,
-          )
-          .join('');
+        const fragment = document.createDocumentFragment();
+        for (const match of matches) {
+          const item = document.createElement('li');
+          const link = document.createElement('a');
+          const copy = document.createElement('span');
+          const name = document.createElement('span');
+          const subtitle = document.createElement('span');
+          const type = document.createElement('span');
+
+          link.href = match.u;
+          link.className =
+            'flex items-center justify-between gap-3 rounded-lg px-3 py-2 no-underline hover:bg-brand-50';
+          copy.className = 'min-w-0';
+          name.className = 'block truncate text-sm font-medium text-ink-900';
+          subtitle.className = 'block truncate text-xs text-ink-500';
+          type.className = 'badge bg-ink-100 text-ink-600';
+          name.textContent = match.n;
+          subtitle.textContent = match.s;
+          type.textContent = match.t;
+
+          copy.append(name, subtitle);
+          link.append(copy, type);
+          item.append(link);
+          fragment.append(item);
+        }
+        results!.replaceChildren(fragment);
       }
       results!.hidden = false;
-      input!.setAttribute('aria-expanded', 'true');
-    }
-
-    function escapeHtml(str: string): string {
-      return str.replace(
-        /[&<>"']/g,
-        (c) =>
-          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] ?? c,
-      );
     }
 
     input.addEventListener('input', () => render(input.value));
@@ -130,13 +137,11 @@ const index: IndexItem[] = [
     document.addEventListener('click', (e) => {
       if (!root.contains(e.target as Node)) {
         results.hidden = true;
-        input.setAttribute('aria-expanded', 'false');
       }
     });
     input.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
         results.hidden = true;
-        input.setAttribute('aria-expanded', 'false');
       }
     });
   });

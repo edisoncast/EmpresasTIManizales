@@ -11,7 +11,7 @@
  *
  * Requiere navegadores de Playwright instalados (ver README, sección validación).
  */
-import { chromium } from 'playwright';
+import { chromium } from '@playwright/test';
 import { readFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -28,16 +28,7 @@ const filter = filterArg ? filterArg.split('=')[1] : null;
 const CONCURRENCY = 4;
 const TIMEOUT = 20000;
 
-const URL_FIELDS = [
-  'website',
-  'sourceUrl',
-  'linkedin',
-  'github',
-  'x',
-  'meetup',
-  'contact',
-  'url',
-];
+const URL_FIELDS = ['website', 'sourceUrl', 'linkedin', 'github', 'x', 'meetup', 'contact', 'url'];
 
 function load(file) {
   try {
@@ -99,7 +90,13 @@ async function check(url) {
     results.push({ url, status, ok, origins: [...urlMap.get(url)] });
     console.log(`${ok ? '✓' : '✗'} ${status || 'ERR'}  ${url}`);
   } catch (err) {
-    results.push({ url, status: 0, ok: false, error: String(err.message ?? err), origins: [...urlMap.get(url)] });
+    results.push({
+      url,
+      status: 0,
+      ok: false,
+      error: String(err.message ?? err),
+      origins: [...urlMap.get(url)],
+    });
     console.log(`✗ ERR  ${url}  (${String(err.message ?? err).split('\n')[0]})`);
   } finally {
     await page.close();

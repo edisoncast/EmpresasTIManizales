@@ -23,12 +23,13 @@
     "focus": ["Cloud", "AWS", "DevOps"],
     "city": "Manizales",
     "department": "Caldas",
-    "website": "https://www.meetup.com/aws-user-group-manizales/",
+    "website": "https://awsug.cloud-manizales.com",
     "meetup": "https://www.meetup.com/aws-user-group-manizales/",
-    "organizer": "Camilo Zuluaga",
+    "organizer": "Jimmy Loaiza, Santiago Loaiza Giraldo y Jhon Edison Castro Sánchez",
+    "organizerSlug": "jhon-edison-castro-sanchez",
     "status": "active",
-    "sourceUrl": "https://www.meetup.com/aws-user-group-manizales/",
-    "lastVerifiedAt": "2026-07-15",
+    "sourceUrl": "https://awsug.cloud-manizales.com",
+    "lastVerifiedAt": "2026-07-16",
     "needsVerification": false
   },
   {

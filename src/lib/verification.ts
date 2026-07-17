@@ -4,11 +4,7 @@
  * cada uno tiene label, símbolo y mensaje.
  */
 export type VerificationState =
-  | 'verified'
-  | 'partially_verified'
-  | 'unknown'
-  | 'inactive_or_unverified'
-  | 'archived';
+  'verified' | 'partially_verified' | 'unknown' | 'inactive_or_unverified' | 'archived';
 
 export interface VerificationMeta {
   label: string;

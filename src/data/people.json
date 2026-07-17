@@ -14,7 +14,8 @@
     "x": "https://twitter.com/edisoncast",
     "isPublicProfile": true,
     "sourceUrl": "https://www.meetup.com/es/manizalestechtalks/",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Jaime Andrés Restrepo",
@@ -34,7 +35,8 @@
     "x": "https://twitter.com/DragonJAR",
     "isPublicProfile": true,
     "sourceUrl": "https://www.meetup.com/es/Seguridad-Informatica-Hacking-Manizales",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Germán Mauricio Muñoz",
@@ -51,7 +53,8 @@
     "x": "https://twitter.com/mauriciomunoz",
     "isPublicProfile": true,
     "sourceUrl": "https://www.meetup.com/es/ManizalesJS/",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Gustavo Adolfo Isaza",
@@ -124,5 +127,327 @@
     "sourceUrl": "https://scholar.google.com/citations?user=MGM6USoAAAAJ&hl=en",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false
+  },
+  {
+    "name": "Óscar Giraldo",
+    "slug": "oscar-giraldo",
+    "headline": "Fundador y CEO de Playvox",
+    "shortBio": "Fundador y CEO de Playvox, software para la optimización de centros de contacto con clientes globales (Twitter, Dropbox, Nike, Nubank). Referente del emprendimiento de software desde Manizales, con proyección internacional; egresado de la Universidad Autónoma de Manizales.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Software", "SaaS"],
+    "roles": ["Fundador", "CEO"],
+    "organizations": ["Playvox"],
+    "contributions": [
+      "Fundación y liderazgo de Playvox",
+      "Referente del emprendimiento de software de Manizales con alcance global"
+    ],
+    "linkedin": "https://co.linkedin.com/in/ogiraldo",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.semana.com/economia/emprendimiento/articulo/de-manizales-a-silicon-valley-asi-conquisto-este-colombiano-el-epicentro-de-la-innovacion/202120/",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Juan Bello",
+    "slug": "juan-bello",
+    "headline": "Cofundador y CEO de Porter Metrics",
+    "shortBio": "Cofundador y CEO de Porter Metrics, startup de Manizales de automatización de reportes de marketing que pasó por Techstars y opera en más de 60 países.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Producto", "Datos"],
+    "roles": ["Cofundador", "CEO"],
+    "organizations": ["Porter Metrics"],
+    "contributions": [
+      "Cofundación y dirección de Porter Metrics",
+      "Escalamiento de una startup de Manizales a más de 60 países"
+    ],
+    "linkedin": "https://ca.linkedin.com/in/juan-bello",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.elespectador.com/economia/emprendimiento-y-liderazgo/porter-metrics-el-emprendimiento-made-in-colombia-que-ya-tiene-presencia-en-mas-de-60-paises/",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Mateo Gómez Ocampo",
+    "slug": "mateo-gomez-ocampo",
+    "headline": "Cofundador de Porter Metrics",
+    "shortBio": "Cofundador de Porter Metrics, encargado de la dirección comercial y el desarrollo de negocio. Egresado de la Universidad Autónoma de Manizales.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Desarrollo de negocio"],
+    "roles": ["Cofundador"],
+    "organizations": ["Porter Metrics"],
+    "contributions": [
+      "Cofundación de Porter Metrics",
+      "Desarrollo de negocio y crecimiento comercial internacional"
+    ],
+    "linkedin": "https://www.linkedin.com/in/mateo-porter/",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.linkedin.com/in/mateo-porter/",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Carlos Alexis Gómez",
+    "slug": "carlos-alexis-gomez",
+    "headline": "Cofundador y CTO de Porter Metrics",
+    "shortBio": "Cofundador y director de tecnología (CTO) de Porter Metrics, startup de Manizales que automatiza reportes de marketing y opera en más de 60 países tras pasar por Techstars.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Desarrollo de software", "Datos"],
+    "roles": ["Cofundador", "CTO"],
+    "organizations": ["Porter Metrics"],
+    "contributions": [
+      "Cofundación y liderazgo técnico de Porter Metrics",
+      "Construcción del producto SaaS de analítica usado en más de 60 países"
+    ],
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.elespectador.com/economia/emprendimiento-y-liderazgo/porter-metrics-el-emprendimiento-made-in-colombia-que-ya-tiene-presencia-en-mas-de-60-paises/",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Mateo Burgos Castillo",
+    "slug": "mateo-burgos-castillo",
+    "headline": "Fundador y CEO de Meeteam",
+    "shortBio": "Fundador y CEO de Meeteam, empresa de Manizales que conecta talento tecnológico de Latinoamérica con compañías de Estados Unidos y Europa, con una comunidad de más de 50.000 profesionales.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Talento tech", "Comunidad"],
+    "roles": ["Fundador", "CEO"],
+    "organizations": ["Meeteam"],
+    "contributions": [
+      "Fundación y liderazgo de Meeteam",
+      "Conexión del talento tech latinoamericano con el mercado global"
+    ],
+    "linkedin": "https://www.linkedin.com/in/mateoburgos",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.linkedin.com/in/mateoburgos",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Santiago Loaiza Giraldo",
+    "slug": "santiago-loaiza-giraldo",
+    "headline": "Líder del AWS User Group Manizales · Cloud Architect",
+    "shortBio": "Arquitecto de nube (Sr. Cloud Architect) y líder del AWS User Group Manizales. AWS Certified y AWS Academy Educator; impulsa la formación y la comunidad en torno a tecnologías cloud en la región.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Cloud", "AWS", "Comunidad"],
+    "roles": ["Líder de comunidad", "Cloud Architect"],
+    "organizations": ["AWS User Group Manizales"],
+    "contributions": [
+      "Liderazgo y organización del AWS User Group Manizales",
+      "Formación y divulgación en tecnologías cloud/AWS"
+    ],
+    "linkedin": "https://co.linkedin.com/in/santiagoloaiza",
+    "isPublicProfile": true,
+    "sourceUrl": "https://co.linkedin.com/in/santiagoloaiza",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Jimmy Alejandro Loaiza",
+    "slug": "jimmy-alejandro-loaiza",
+    "headline": "Organizador del AWS User Group Manizales",
+    "shortBio": "Impulsa la comunidad AWS User Group Manizales y participa en iniciativas de cloud como el AWS Community Day Colombia.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Cloud", "AWS", "Comunidad"],
+    "roles": ["Organizador de comunidad"],
+    "organizations": ["AWS User Group Manizales"],
+    "contributions": [
+      "Organización del AWS User Group Manizales",
+      "Divulgación de tecnologías cloud/AWS en la región"
+    ],
+    "linkedin": "https://es.linkedin.com/in/jloaiza07",
+    "isPublicProfile": true,
+    "sourceUrl": "https://es.linkedin.com/in/jloaiza07",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Andrés Marino Álvarez-Meza",
+    "slug": "andres-alvarez-meza",
+    "headline": "Profesor e investigador en machine learning — Universidad Nacional (Manizales)",
+    "shortBio": "Profesor del Departamento de Ingeniería Eléctrica, Electrónica y Computación de la Universidad Nacional de Colombia, sede Manizales. Ph.D. en Ingeniería (Automática). Investiga machine learning, procesamiento de señales y métodos kernel en el grupo de Procesamiento y Reconocimiento de Señales.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Machine learning", "Procesamiento de señales", "Investigación", "Docencia"],
+    "roles": ["Profesor", "Investigador"],
+    "organizations": ["Universidad Nacional de Colombia - Sede Manizales"],
+    "contributions": [
+      "Investigación en machine learning y procesamiento de señales",
+      "Docencia y formación de talento en la UNAL sede Manizales",
+      "Producción científica en el grupo de Procesamiento y Reconocimiento de Señales"
+    ],
+    "personalBrandLinks": [
+      "https://scholar.google.com/citations?user=4aUwQtAAAAAJ",
+      "https://sciprofiles.com/profile/1613243"
+    ],
+    "isPublicProfile": true,
+    "sourceUrl": "https://scholar.google.com/citations?user=4aUwQtAAAAAJ",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Xiomara Blanco Valencia",
+    "slug": "xiomara-blanco-valencia",
+    "headline": "Investigadora y docente en inteligencia artificial y datos — Universidad de Caldas",
+    "shortBio": "Docente e investigadora vinculada a la Universidad de Caldas en inteligencia artificial y ciencia de datos, en el marco del impulso de la región como referente en IA y data.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Inteligencia artificial", "Ciencia de datos", "Investigación", "Docencia"],
+    "roles": ["Investigadora", "Docente"],
+    "organizations": ["Universidad de Caldas"],
+    "contributions": [
+      "Investigación y docencia en inteligencia artificial y ciencia de datos",
+      "Aporte al posicionamiento de la Universidad de Caldas en IA y data"
+    ],
+    "personalBrandLinks": ["https://scholar.google.com/citations?user=SSqbwokAAAAJ&hl=es"],
+    "isPublicProfile": true,
+    "sourceUrl": "https://scholar.google.com/citations?user=SSqbwokAAAAJ&hl=es",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Germán Castellanos-Domínguez",
+    "slug": "german-castellanos-dominguez",
+    "headline": "Profesor e investigador en procesamiento de señales y machine learning — Universidad Nacional (Manizales)",
+    "shortBio": "Profesor titular del Departamento de Ingeniería Eléctrica, Electrónica y Computación de la Universidad Nacional de Colombia, sede Manizales, y líder del Signal Processing and Recognition Group. Investiga procesamiento digital de señales, machine learning y bioingeniería, incluida la conectividad cerebral con EEG.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Procesamiento de señales", "Machine learning", "Investigación", "Docencia"],
+    "roles": ["Profesor titular", "Investigador", "Líder de grupo de investigación"],
+    "organizations": ["Universidad Nacional de Colombia - Sede Manizales"],
+    "contributions": [
+      "Liderazgo del Signal Processing and Recognition Group de la UNAL Manizales",
+      "Investigación en procesamiento de señales, machine learning y bioingeniería",
+      "Formación de investigadores y producción científica de alto impacto en la región"
+    ],
+    "personalBrandLinks": [
+      "https://scholar.google.com/citations?user=RbCdiT0AAAAJ",
+      "https://sciprofiles.com/profile/1714062"
+    ],
+    "isPublicProfile": true,
+    "sourceUrl": "https://scholar.google.com/citations?user=RbCdiT0AAAAJ",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Simón Orozco-Arias",
+    "slug": "simon-orozco-arias",
+    "headline": "Investigador en bioinformática y machine learning",
+    "shortBio": "Investigador en ciencias computacionales formado y vinculado a la Universidad Autónoma de Manizales (actualmente en el Barcelona Supercomputing Center). Trabaja en bioinformática, machine learning y análisis de elementos transponibles, y mantiene herramientas de código abierto para el análisis genómico.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Bioinformática", "Machine learning", "Datos", "Open source"],
+    "roles": ["Investigador", "Docente"],
+    "organizations": ["Universidad Autónoma de Manizales"],
+    "contributions": [
+      "Investigación en bioinformática y machine learning aplicados a la genómica",
+      "Desarrollo de herramientas de código abierto para el análisis de genomas",
+      "Formación y divulgación en ciencias computacionales"
+    ],
+    "github": "https://github.com/simonorozcoarias",
+    "personalBrandLinks": [
+      "https://scholar.google.com/citations?user=tgyTm2MAAAAJ",
+      "https://github.com/simonorozcoarias"
+    ],
+    "isPublicProfile": true,
+    "sourceUrl": "https://scholar.google.com/citations?user=tgyTm2MAAAAJ",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Juan David Montes Vasco",
+    "slug": "juan-david-montes-vasco",
+    "headline": "Cocreador de CityTaxi · Desarrollador de software",
+    "shortBio": "Ingeniero de sistemas de la Universidad de Caldas y cocreador de CityTaxi (2012), una de las primeras aplicaciones de solicitud de taxis de Manizales. Continúa en desarrollo de software en Mobility Solutions.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Desarrollo móvil", "Software"],
+    "roles": ["Cofundador", "Desarrollador"],
+    "organizations": ["CityTaxi", "Mobility Solutions"],
+    "contributions": [
+      "Cocreación de CityTaxi, app de taxis de Manizales (2012), desde la academia",
+      "Desarrollo de software móvil en la región"
+    ],
+    "linkedin": "https://www.linkedin.com/in/juan-david-montes-vasco-b2504a92/",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.ucaldas.edu.co/portal/estudiantes-u-de-caldas-crearon-aplicacion-para-movil-que-permite-pedir-taxis-a-domicilio/",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Andrés Silva Gómez",
+    "slug": "andres-silva-gomez",
+    "headline": "Cocreador de CityTaxi",
+    "shortBio": "Ingeniero de sistemas de la Universidad de Caldas y cocreador de CityTaxi (2012), una de las primeras aplicaciones de solicitud de taxis de Manizales, desarrollada con apoyo del Centro de Innovación de la Universidad de Caldas y el SENA.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Desarrollo móvil", "Software"],
+    "roles": ["Cofundador"],
+    "organizations": ["CityTaxi"],
+    "contributions": [
+      "Cocreación de CityTaxi, app de taxis de Manizales (2012)",
+      "Emprendimiento de base tecnológica surgido desde la academia"
+    ],
+    "linkedin": "https://www.linkedin.com/in/andresilvagomez/",
+    "github": "https://github.com/andresilvagomez",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.lapatria.com/manizales/city-taxi-aplicacion-movil-para-un-servicio-52994",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Herman Freddy Hincapié Ochoa",
+    "slug": "herman-hincapie-ochoa",
+    "headline": "Fundador de Apolo Ingeniería (Apolosoft) · creador de Mekano ERP",
+    "shortBio": "Programador manizaleño formado en la Unión Soviética. Fundó Apolo Ingeniería (Apolosoft) en 1989, una de las empresas de software más antiguas de Manizales, y lidera desde entonces su equipo de desarrollo. Es el creador de Mekano ERP, software contable y administrativo con amplia adopción en Colombia. Un referente fundacional del software en la región.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Software", "Desarrollo de software"],
+    "roles": ["Fundador", "Líder de desarrollo"],
+    "organizations": ["Apolo Ingeniería (Apolosoft)"],
+    "contributions": [
+      "Fundación de Apolo Ingeniería (Apolosoft), pionera del software en Manizales desde 1989",
+      "Creación y liderazgo de Mekano ERP, software contable y administrativo de amplia adopción en Colombia",
+      "Más de tres décadas desarrollando software desde la región"
+    ],
+    "website": "https://apolosoft.com",
+    "isPublicProfile": true,
+    "sourceUrl": "https://apolosoft.com/wordp/sobre-nosotros/",
+    "lastVerifiedAt": "2026-07-16",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
   }
 ]

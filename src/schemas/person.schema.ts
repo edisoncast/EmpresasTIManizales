@@ -1,5 +1,5 @@
 import { z } from 'zod';
-import { slugSchema, urlSchema, isoDateSchema, verificationStatusSchema } from './common';
+import { slugSchema, urlSchema, auditableFields, enforceVerificationRules } from './common';
 
 /**
  * Personas relevantes del ecosistema.
@@ -10,7 +10,7 @@ import { slugSchema, urlSchema, isoDateSchema, verificationStatusSchema } from '
  */
 export const personSchema = z
   .object({
-    name: z.string().min(1),
+    name: z.string().trim().min(1),
     slug: slugSchema,
     headline: z.string().optional(),
     shortBio: z.string().optional(),
@@ -27,11 +27,9 @@ export const personSchema = z
     x: urlSchema.optional(),
     personalBrandLinks: z.array(urlSchema).optional(),
     isPublicProfile: z.boolean(),
-    sourceUrl: urlSchema.optional(),
-    lastVerifiedAt: isoDateSchema.optional(),
-    verificationStatus: verificationStatusSchema.optional(),
-    needsVerification: z.boolean(),
+    ...auditableFields,
   })
+  .superRefine(enforceVerificationRules)
   .refine((p) => p.isPublicProfile === true, {
     message: 'Solo se admiten personas con perfil público (isPublicProfile: true).',
     path: ['isPublicProfile'],
