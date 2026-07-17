@@ -6,7 +6,7 @@ Resumen legible por máquina: `src/data/data-audit.json`
 
 ## Resumen ejecutivo
 
-El repositorio contiene **762 registros**. Después de la revisión preproducción, la comprobación de perfiles profesionales públicos, la ampliación de la oferta académica y la consolidación de 15 pares empresa/establecimiento de comercio, **625** se presentan como verificados, **46** como parcialmente verificados y **91** se muestran como posiblemente inactivos. Este último estado incluye 88 empresas cuya razón social contiene “En liquidación” y tres programas académicos inactivos en HECAA. No existen registros en estado desconocido ni registros verificados sin fuente declarada.
+El repositorio contiene **758 registros**. Después de la revisión preproducción, la comprobación de perfiles profesionales públicos, la ampliación de la oferta académica y la consolidación de 19 pares empresa/establecimiento de comercio, **621** se presentan como verificados, **46** como parcialmente verificados y **91** se muestran como posiblemente inactivos. Este último estado incluye 88 empresas cuya razón social contiene “En liquidación” y tres programas académicos inactivos en HECAA. No existen registros en estado desconocido ni registros verificados sin fuente declarada.
 
 La auditoría sintáctica y referencial pasa, pero la cadena de procedencia no es completa: las empresas apuntan a un portal registral general y no a permalinks individuales; universidades y programas heredados no tenían fecha de revisión; el listado empresarial original de 2020 estaba en un Drive externo no preservado. Por estas razones se requiere mantenimiento humano continuo y no se debe interpretar el directorio como certificación de actividad.
 
@@ -27,20 +27,20 @@ Los cinco organizadores del documento de meetups son referencias a personas, per
 
 | Conjunto | Registros |
 |---|---:|
-| Empresas | 660 |
+| Empresas | 656 |
 | Universidades | 9 |
 | Programas | 70 |
 | Personas | 20 |
 | Comunidades | 3 |
 | Eventos | 0 |
 | Entidades de apoyo | 0 |
-| **Total** | **762** |
+| **Total** | **758** |
 
 ## Estado de verificación
 
 | Estado | Registros | Interpretación |
 |---|---:|---|
-| `verified` | 625 | Fuente registrada y sin señal pendiente en el modelo actual. Incluye 18 perfiles de personas con LinkedIn público contrastado, seis instituciones verificadas y programas con evidencia oficial específica. |
+| `verified` | 621 | Fuente registrada y sin señal pendiente en el modelo actual. Incluye 18 perfiles de personas con LinkedIn público contrastado, seis instituciones verificadas y programas con evidencia oficial específica. |
 | `partially_verified` | 46 | 3 universidades, 41 programas y 2 personas con fuente, pero con verificación incompleta o pendiente de una URL pública específica. |
 | `unknown` | 0 | No hay fichas en estado desconocido. |
 | `inactive_or_unverified` | 91 | 88 empresas cuya razón social contiene “En liquidación” y 3 programas inactivos en HECAA; se preservan con trazabilidad y requieren revisión humana. |
@@ -53,11 +53,11 @@ Otros indicadores:
 - **0** registros carecen de fuente declarada.
 - **0** registros `verified` carecen de fuente.
 - **94** registros empresariales corresponden a negocios registrados como persona natural; no exponen NIT, teléfono, correo ni dirección personal.
-- **0** nombres empresariales se repiten. Los 15 pares empresa/establecimiento de comercio se consolidaron con trazabilidad en `docs/company-consolidation-2026.md`.
+- **0** nombres empresariales se repiten. Los 19 pares empresa/establecimiento de comercio se consolidaron con trazabilidad en `docs/company-consolidation-2026.md`.
 
 ## Cambios relevantes frente a 2020
 
-- El alcance empresarial pasó de un archivo externo no reproducible a 660 registros JSON consultables y validados. Se consolidaron 15 pares empresa/establecimiento de comercio para evitar duplicados en el directorio.
+- El alcance empresarial pasó de un archivo externo no reproducible a 656 registros JSON consultables y validados. Se consolidaron 19 pares empresa/establecimiento de comercio para evitar duplicados en el directorio.
 - Las 9 instituciones y los 30 programas del estudio histórico se preservan. En 2026 se incorporaron 16 registros SNIES adicionales de la Universidad de Caldas, 3 fichas por modalidad de la Universidad Autónoma de Manizales, 4 programas de la Universidad Católica de Manizales, 5 programas de la Universidad Nacional de Colombia - Sede Manizales, 7 programas de la Universidad de Manizales y 5 programas del SENA Regional Caldas, para un total actual de 70 programas; las fichas permanecen parciales o pendientes cuando no existe evidencia específica suficiente.
 - De las 5 comunidades históricas, el conjunto actual contiene 3. Manizales Tech Talks continúa; AI Tinkerers Manizales y AWS User Group Manizales son incorporaciones posteriores. Seguridad Informática Hacking Manizales, Kommit, CoffeeDev y ManizalesJS requieren revisión antes de reingresar o archivarse.
 - El conjunto actual contiene 20 personas basadas en contribuciones públicas, sin ranking. Dieciocho perfiles tienen una URL pública de LinkedIn contrastada y se consideran completos según el criterio editorial definido por el mantenedor. Andrés Marino Álvarez Meza y Herman Freddy Hincapié Ochoa conservan estado parcial porque no se encontró una URL personal de LinkedIn atribuible sin ambigüedad.
