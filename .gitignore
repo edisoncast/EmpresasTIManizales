@@ -1,0 +1,55 @@
+# build output
+dist/
+.astro/
+.output/
+
+# playwright
+test-results/
+playwright-report/
+tests/e2e/**/*-snapshots/
+
+# auditoría generada
+src/data/data-audit.json
+
+# dependencies
+node_modules/
+
+# logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# environment
+.env
+.env.production
+.env.*.local
+
+# editor / os
+.DS_Store
+Thumbs.db
+.vscode/*
+!.vscode/extensions.json
+.idea/
+
+# agente / config local
+.claude/settings.local.json
+
+# terraform
+infra/terraform/.terraform/
+infra/terraform/*.tfstate
+infra/terraform/*.tfstate.*
+infra/terraform/*.tfvars
+!infra/terraform/*.tfvars.example
+infra/terraform/.terraform.lock.hcl
+crash.log
+infra/terraform/apply.log
+
+# cloned source (reference only, not part of the app)
+repo-original/
+
+# Exportaciones crudas de la Cámara de Comercio: contienen datos personales
+# (correos, representantes, direcciones, cédulas) que NO deben publicarse.
+# Los datos ya migrados y depurados viven en src/data/*.json.
+*.xlsx
+*.xls
+*.csv

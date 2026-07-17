@@ -1,0 +1,128 @@
+[
+  {
+    "name": "Jhon Edison Castro Sánchez",
+    "slug": "jhon-edison-castro-sanchez",
+    "headline": "Organizador de Manizales Tech Talks",
+    "shortBio": "Impulsa la comunidad Manizales Tech Talks, un espacio de charlas y encuentros técnicos del ecosistema TIC local.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Comunidad", "Divulgación tecnológica"],
+    "roles": ["Organizador de comunidad"],
+    "organizations": ["Manizales Tech Talks"],
+    "contributions": ["Organización y liderazgo de la comunidad Manizales Tech Talks"],
+    "x": "https://twitter.com/edisoncast",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.meetup.com/es/manizalestechtalks/",
+    "needsVerification": false
+  },
+  {
+    "name": "Jaime Andrés Restrepo",
+    "slug": "jaime-andres-restrepo",
+    "headline": "Organizador de la comunidad de Seguridad Informática y Hacking de Manizales",
+    "shortBio": "Referente en seguridad informática, impulsa espacios de divulgación y comunidad en torno a ciberseguridad y hacking ético.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Ciberseguridad", "Comunidad"],
+    "roles": ["Organizador de comunidad", "Divulgador"],
+    "organizations": ["Seguridad Informática Hacking Manizales", "DragonJAR"],
+    "contributions": [
+      "Organización de la comunidad de Seguridad Informática y Hacking de Manizales",
+      "Divulgación en ciberseguridad"
+    ],
+    "x": "https://twitter.com/DragonJAR",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.meetup.com/es/Seguridad-Informatica-Hacking-Manizales",
+    "needsVerification": false
+  },
+  {
+    "name": "Germán Mauricio Muñoz",
+    "slug": "german-mauricio-munoz",
+    "headline": "Organizador de ManizalesJS",
+    "shortBio": "Impulsa la comunidad ManizalesJS, enfocada en JavaScript y desarrollo web en Manizales.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Desarrollo web", "JavaScript", "Comunidad"],
+    "roles": ["Organizador de comunidad"],
+    "organizations": ["ManizalesJS"],
+    "contributions": ["Organización y liderazgo de la comunidad ManizalesJS"],
+    "x": "https://twitter.com/mauriciomunoz",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.meetup.com/es/ManizalesJS/",
+    "needsVerification": false
+  },
+  {
+    "name": "Gustavo Adolfo Isaza",
+    "slug": "gustavo-isaza",
+    "headline": "Profesor e investigador en ciberseguridad e IA — Universidad de Caldas",
+    "shortBio": "Profesor titular y investigador senior de la Universidad de Caldas, Ph.D. en Ingeniería de Software. Su trabajo abarca ciberseguridad, machine learning, computación paralela y distribuida, inteligencia artificial y bioinformática.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Ciberseguridad", "Inteligencia artificial", "Investigación", "Docencia"],
+    "roles": ["Profesor titular", "Investigador"],
+    "organizations": ["Universidad de Caldas"],
+    "contributions": [
+      "Investigación en ciberseguridad, machine learning e inteligencia artificial",
+      "Docencia en ingeniería de sistemas y computación",
+      "Producción científica y formación de talento en la región"
+    ],
+    "personalBrandLinks": [
+      "https://scholar.google.com/citations?user=juxjI40AAAAJ&hl=es",
+      "https://www.researchgate.net/profile/Gustavo-Isaza"
+    ],
+    "isPublicProfile": true,
+    "sourceUrl": "https://scholar.google.com/citations?user=juxjI40AAAAJ&hl=es",
+    "lastVerifiedAt": "2026-07-16",
+    "needsVerification": false
+  },
+  {
+    "name": "Luis Fernando Castillo Ossa",
+    "slug": "luis-fernando-castillo",
+    "headline": "Líder del grupo de investigación en Inteligencia Artificial — Universidad de Caldas",
+    "shortBio": "Ph.D. por la Universidad de Salamanca e ingeniero de sistemas. Lidera el grupo de investigación en Inteligencia Artificial de la Facultad de Ingenierías de la Universidad de Caldas e impulsa la formación en IA y la modalidad virtual de la institución.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Inteligencia artificial", "Sistemas cognitivos", "Investigación", "Docencia"],
+    "roles": ["Investigador", "Docente", "Líder de grupo de investigación"],
+    "organizations": ["Universidad de Caldas"],
+    "contributions": [
+      "Liderazgo del grupo de investigación en Inteligencia Artificial de la Universidad de Caldas",
+      "Investigación en sistemas cognitivos y sistemas multiagente",
+      "Impulso de programas virtuales y formación en IA"
+    ],
+    "personalBrandLinks": ["https://scholar.google.com/citations?user=D0EGxHIAAAAJ&hl=es"],
+    "isPublicProfile": true,
+    "sourceUrl": "https://scholar.google.com/citations?user=D0EGxHIAAAAJ&hl=es",
+    "lastVerifiedAt": "2026-07-16",
+    "needsVerification": false
+  },
+  {
+    "name": "Jeferson Arango López",
+    "slug": "jeferson-arango-lopez",
+    "headline": "Profesor e investigador en juegos pervasivos y web semántica — Universidad de Caldas",
+    "shortBio": "Profesor del Departamento de Sistemas e Informática de la Universidad de Caldas, Ph.D. en Ciencias Electrónicas (U. del Cauca) y en TIC (U. de Granada). Investiga juegos pervasivos, web semántica, arquitectura de software y datos abiertos enlazados.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Juegos pervasivos", "Web semántica", "Arquitectura de software", "Investigación"],
+    "roles": ["Profesor", "Investigador"],
+    "organizations": ["Universidad de Caldas"],
+    "contributions": [
+      "Investigación en juegos pervasivos (pervasive games) y gamificación",
+      "Docencia e investigación en web semántica y arquitectura de software",
+      "Producción científica y formación de talento"
+    ],
+    "personalBrandLinks": [
+      "https://scholar.google.com/citations?user=MGM6USoAAAAJ&hl=en",
+      "https://sciprofiles.com/profile/418124"
+    ],
+    "isPublicProfile": true,
+    "sourceUrl": "https://scholar.google.com/citations?user=MGM6USoAAAAJ&hl=en",
+    "lastVerifiedAt": "2026-07-16",
+    "needsVerification": false
+  }
+]

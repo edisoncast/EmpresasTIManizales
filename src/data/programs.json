@@ -1,0 +1,565 @@
+[
+  {
+    "name": "Ingeniería en Sistemas y Computación",
+    "slug": "ing-sistemas-computacion-ucaldas",
+    "institutionName": "Universidad de Caldas",
+    "institutionSlug": "universidad-de-caldas",
+    "level": "undergraduate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Computación"
+    ],
+    "credits": 175,
+    "durationSemesters": 10,
+    "sniesCode": "11268",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/ingenieria-de-sistemas-y-computacion/"
+  },
+  {
+    "name": "Administración de Sistemas Informáticos",
+    "slug": "admin-sistemas-informaticos-unal",
+    "institutionName": "Universidad Nacional de Colombia - Sede Manizales",
+    "institutionSlug": "universidad-nacional-de-colombia-sede-manizales",
+    "level": "undergraduate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Sistemas de información",
+      "Administración de TI"
+    ],
+    "credits": 167,
+    "durationSemesters": 10,
+    "sniesCode": "16912",
+    "website": "https://manizales.unal.edu.co/index.php/administracion-de-sistemas-informaticos/",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Tecnología en Sistemas Informáticos",
+    "slug": "tecnologia-sistemas-informaticos-ucaldas",
+    "institutionName": "Universidad de Caldas",
+    "institutionSlug": "universidad-de-caldas",
+    "level": "technological",
+    "modality": "remote",
+    "city": "Manizales",
+    "area": [
+      "Sistemas de información",
+      "Desarrollo de software"
+    ],
+    "credits": 92,
+    "durationSemesters": 5,
+    "sniesCode": "20974",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/tecnologia-en-sistemas-informaticos/"
+  },
+  {
+    "name": "Tecnología en Análisis y Desarrollo de Sistemas de Información",
+    "slug": "tecnologia-adsi-sena",
+    "institutionName": "SENA - Regional Caldas",
+    "institutionSlug": "sena-caldas",
+    "level": "technological",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Bases de datos"
+    ],
+    "credits": 86,
+    "sniesCode": "91151",
+    "website": "http://online.fliphtml5.com/xslre/cxrn/#p=12",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Ingeniería en Informática",
+    "slug": "ing-informatica-ucaldas",
+    "institutionName": "Universidad de Caldas",
+    "institutionSlug": "universidad-de-caldas",
+    "level": "undergraduate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Sistemas de información"
+    ],
+    "credits": 149,
+    "durationSemesters": 9,
+    "sniesCode": "105765",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/ingenieria-en-informatica/"
+  },
+  {
+    "name": "Ingeniería de Sistemas y Telecomunicaciones",
+    "slug": "ing-sistemas-telecomunicaciones-umanizales",
+    "institutionName": "Universidad de Manizales",
+    "institutionSlug": "universidad-de-manizales",
+    "level": "undergraduate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Redes y telecomunicaciones"
+    ],
+    "credits": 170,
+    "durationSemesters": 10,
+    "sniesCode": "12967",
+    "website": "https://umanizales.edu.co/?u_course=ingenieria-de-sistemas-y-telecomunicaciones",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Ingeniería en Analítica de Datos",
+    "slug": "ing-analitica-datos-umanizales",
+    "institutionName": "Universidad de Manizales",
+    "institutionSlug": "universidad-de-manizales",
+    "level": "undergraduate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Datos",
+      "Inteligencia artificial"
+    ],
+    "credits": 153,
+    "durationSemesters": 9,
+    "sniesCode": "108430",
+    "website": "https://umanizales.edu.co/Programa/ingenieria_en_analitica_de_datos/",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Ingeniería de Sistemas",
+    "slug": "ing-sistemas-uam",
+    "institutionName": "Universidad Autónoma de Manizales",
+    "institutionSlug": "universidad-autonoma-de-manizales",
+    "level": "undergraduate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Sistemas de información"
+    ],
+    "credits": 175,
+    "durationSemesters": 10,
+    "sniesCode": "1918",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://www.autonoma.edu.co/oferta-academica/pregrado/ingenieria-de-sistemas"
+  },
+  {
+    "name": "Ingeniería de Sistemas",
+    "slug": "ing-sistemas-funlam",
+    "institutionName": "Universidad Católica Luis Amigó",
+    "institutionSlug": "universidad-catolica-luis-amigo",
+    "level": "undergraduate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Sistemas de información"
+    ],
+    "credits": 170,
+    "durationSemesters": 10,
+    "sniesCode": "105226",
+    "website": "https://www.funlam.edu.co/modules/sedemanizales/item.php?itemid=172",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Ingeniería de Sistemas (Virtual)",
+    "slug": "ing-sistemas-virtual-remington",
+    "institutionName": "Corporación Universitaria Remington",
+    "institutionSlug": "corporacion-universitaria-remington",
+    "level": "undergraduate",
+    "modality": "remote",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Sistemas de información"
+    ],
+    "credits": 145,
+    "durationSemesters": 9,
+    "sniesCode": "104431",
+    "website": "https://www.uniremington.edu.co/facultades/facultad-de-ingenierias/ingenieria-de-sistemas-virtual/",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Tecnología en Análisis y Programación de Sistemas de Información",
+    "slug": "tecnologia-analisis-programacion-uam",
+    "institutionName": "Universidad Autónoma de Manizales",
+    "institutionSlug": "universidad-autonoma-de-manizales",
+    "level": "technological",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Programación"
+    ],
+    "credits": 97,
+    "durationSemesters": 7,
+    "sniesCode": "54000",
+    "website": "https://www.autonoma.edu.co/oferta-academica/pregrados/tecnologia-en-analisis-y-programacion-de-sistemas-de-informacion",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Tecnología en Construcción del Software",
+    "slug": "tecnologia-construccion-software-uan",
+    "institutionName": "Universidad Antonio Nariño",
+    "institutionSlug": "universidad-antonio-narino",
+    "level": "technological",
+    "modality": "remote",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software"
+    ],
+    "credits": 104,
+    "durationSemesters": 6,
+    "sniesCode": "107668",
+    "website": "http://www.uan.edu.co/tecnologia-en-construccion-de-software",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Especialización Tecnológica en Gestión y Seguridad de Bases de Datos",
+    "slug": "esp-tec-gestion-seguridad-bd-sena",
+    "institutionName": "SENA - Regional Caldas",
+    "institutionSlug": "sena-caldas",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Bases de datos",
+      "Ciberseguridad"
+    ],
+    "credits": 18,
+    "durationSemesters": 1,
+    "sniesCode": "91151",
+    "website": "http://online.fliphtml5.com/xslre/cxrn/#p=14",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Especialización Tecnológica en Seguridad en Redes de Computadores",
+    "slug": "esp-tec-seguridad-redes-sena",
+    "institutionName": "SENA - Regional Caldas",
+    "institutionSlug": "sena-caldas",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Ciberseguridad",
+      "Redes y telecomunicaciones"
+    ],
+    "credits": 18,
+    "durationSemesters": 1,
+    "sniesCode": "104004",
+    "website": "http://online.fliphtml5.com/xslre/cxrn/#p=14",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Especialización Tecnológica en Desarrollo de Aplicaciones para Dispositivos Móviles",
+    "slug": "esp-tec-desarrollo-moviles-sena",
+    "institutionName": "SENA - Regional Caldas",
+    "institutionSlug": "sena-caldas",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Desarrollo de software",
+      "Desarrollo móvil"
+    ],
+    "credits": 18,
+    "durationSemesters": 1,
+    "sniesCode": "104014",
+    "website": "http://online.fliphtml5.com/xslre/cxrn/#p=14",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Especialización Tecnológica en Redes",
+    "slug": "esp-tec-redes-umanizales",
+    "institutionName": "Universidad de Manizales",
+    "institutionSlug": "universidad-de-manizales",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Redes y telecomunicaciones"
+    ],
+    "credits": 21,
+    "durationSemesters": 2,
+    "sniesCode": "52398",
+    "website": "https://umanizales.edu.co/?u_course=especializacion-tecnologica-en-redes",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Especialización en Sistemas de Información Geográfica",
+    "slug": "esp-sistemas-informacion-geografica-umanizales",
+    "institutionName": "Universidad de Manizales",
+    "institutionSlug": "universidad-de-manizales",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Sistemas de información geográfica",
+      "Datos"
+    ],
+    "credits": 24,
+    "durationSemesters": 2,
+    "sniesCode": "7817",
+    "website": "https://umanizales.edu.co/?u_course=especializacion-en-sistema-de-informacion-geografica",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Especialización en Ingeniería de Software",
+    "slug": "esp-ingenieria-software-uam",
+    "institutionName": "Universidad Autónoma de Manizales",
+    "institutionSlug": "universidad-autonoma-de-manizales",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Ingeniería de software"
+    ],
+    "credits": 25,
+    "durationSemesters": 2,
+    "sniesCode": "717",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://www.autonoma.edu.co/oferta-academica/especializaciones/especializacion-en-ingenieria-de-software-con-enfasis-en-pruebas"
+  },
+  {
+    "name": "Especialización en Gestión de Redes de Datos",
+    "slug": "esp-gestion-redes-datos-unal",
+    "institutionName": "Universidad Nacional de Colombia - Sede Manizales",
+    "institutionSlug": "universidad-nacional-de-colombia-sede-manizales",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Redes y telecomunicaciones"
+    ],
+    "credits": 28,
+    "durationSemesters": 2,
+    "sniesCode": "52755",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://fadmon.unal.edu.co/inicio/formacion/posgrados-en-informatica-y-computacion/especializacion-en-gestion-de-redes-de-datos.html"
+  },
+  {
+    "name": "Especialización en Auditoría de Sistemas",
+    "slug": "esp-auditoria-sistemas-unal",
+    "institutionName": "Universidad Nacional de Colombia - Sede Manizales",
+    "institutionSlug": "universidad-nacional-de-colombia-sede-manizales",
+    "level": "specialization",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Auditoría de TI",
+      "Ciberseguridad"
+    ],
+    "credits": 26,
+    "durationSemesters": 2,
+    "sniesCode": "55025",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://fadmon.unal.edu.co/inicio/formacion/posgrados-en-informatica-y-computacion/especializacion-en-auditoria-de-sistemas.html"
+  },
+  {
+    "name": "Maestría en Ingeniería Computacional",
+    "slug": "maestria-ingenieria-computacional-ucaldas",
+    "institutionName": "Universidad de Caldas",
+    "institutionSlug": "universidad-de-caldas",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Computación",
+      "Investigación"
+    ],
+    "credits": 60,
+    "durationSemesters": 4,
+    "sniesCode": "101812",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/maestria-en-ingenieria-computacional/"
+  },
+  {
+    "name": "Maestría en Bioinformática y Biología Computacional",
+    "slug": "maestria-bioinformatica-biologia-computacional",
+    "institutionName": "Universidad de Caldas (en convenio con U. de Manizales, U. Católica y U. Autónoma)",
+    "institutionSlug": "universidad-de-caldas",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Bioinformática",
+      "Datos",
+      "Investigación"
+    ],
+    "credits": 60,
+    "durationSemesters": 4,
+    "sniesCode": "103917",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/maestria-en-bioinformatica-y-biologia-computacional/"
+  },
+  {
+    "name": "Maestría en Tecnologías de la Información Geográfica",
+    "slug": "maestria-tecnologias-informacion-geografica-umanizales",
+    "institutionName": "Universidad de Manizales",
+    "institutionSlug": "universidad-de-manizales",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Sistemas de información geográfica",
+      "Datos"
+    ],
+    "credits": 52,
+    "durationSemesters": 4,
+    "sniesCode": "102462",
+    "website": "https://umanizales.edu.co/?u_course=maestria-en-tecnologias-de-la-informacion-geografica",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Maestría en Seguridad de la Información",
+    "slug": "maestria-seguridad-informacion-umanizales",
+    "institutionName": "Universidad de Manizales",
+    "institutionSlug": "universidad-de-manizales",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Ciberseguridad",
+      "Seguridad de la información"
+    ],
+    "credits": 50,
+    "durationSemesters": 4,
+    "sniesCode": "107284",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Maestría en Gestión Estratégica de la Información",
+    "slug": "maestria-gestion-estrategica-informacion-umanizales",
+    "institutionName": "Universidad de Manizales",
+    "institutionSlug": "universidad-de-manizales",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Gestión de la información",
+      "Datos"
+    ],
+    "credits": 50,
+    "durationSemesters": 4,
+    "sniesCode": "107283",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Maestría en Gestión y Desarrollo de Proyectos de Software",
+    "slug": "maestria-gestion-desarrollo-proyectos-software-uam",
+    "institutionName": "Universidad Autónoma de Manizales",
+    "institutionSlug": "universidad-autonoma-de-manizales",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Ingeniería de software",
+      "Gestión de proyectos"
+    ],
+    "credits": 52,
+    "durationSemesters": 4,
+    "sniesCode": "53756",
+    "website": "https://www.autonoma.edu.co/oferta-academica/maestrias/maestria-en-gestion-y-desarrollo-de-proyectos-de-software",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Maestría en Ingeniería",
+    "slug": "maestria-ingenieria-uam",
+    "institutionName": "Universidad Autónoma de Manizales",
+    "institutionSlug": "universidad-autonoma-de-manizales",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Ingeniería",
+      "Investigación"
+    ],
+    "credits": 52,
+    "sniesCode": "104770",
+    "website": "https://www.autonoma.edu.co/oferta-academica/maestrias/maestria-en-ingenieria",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Maestría en Administración de Sistemas Informáticos",
+    "slug": "maestria-admin-sistemas-informaticos-unal",
+    "institutionName": "Universidad Nacional de Colombia - Sede Manizales",
+    "institutionSlug": "universidad-nacional-de-colombia-sede-manizales",
+    "level": "masters",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Sistemas de información",
+      "Administración de TI"
+    ],
+    "credits": 52,
+    "durationSemesters": 4,
+    "sniesCode": "104507",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false,
+    "website": "https://fadmon.unal.edu.co/inicio/formacion/posgrados-en-informatica-y-computacion/maestria-en-administracion-de-sistemas-informaticos-profundizacion.html"
+  },
+  {
+    "name": "Doctorado en Ingeniería",
+    "slug": "doctorado-ingenieria-uam",
+    "institutionName": "Universidad Autónoma de Manizales",
+    "institutionSlug": "universidad-autonoma-de-manizales",
+    "level": "doctorate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Ingeniería",
+      "Investigación"
+    ],
+    "credits": 96,
+    "durationSemesters": 8,
+    "sniesCode": "105180",
+    "website": "https://www.autonoma.edu.co/oferta-academica/doctorados/doctorado-en-ingenieria",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  },
+  {
+    "name": "Doctorado en Ingeniería",
+    "slug": "doctorado-ingenieria-ucaldas",
+    "institutionName": "Universidad de Caldas",
+    "institutionSlug": "universidad-de-caldas",
+    "level": "doctorate",
+    "modality": "onsite",
+    "city": "Manizales",
+    "area": [
+      "Ingeniería",
+      "Investigación"
+    ],
+    "credits": 100,
+    "durationSemesters": 8,
+    "sniesCode": "105174",
+    "website": "http://www.ucaldas.edu.co/portal/doctorado-en-ingenieria/",
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "needsVerification": false
+  }
+]

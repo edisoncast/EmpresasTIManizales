@@ -1,0 +1,61 @@
+---
+import Layout from '../../components/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PersonDetail from '../../components/PersonDetail.astro';
+import { people, communitiesForPerson } from '../../lib/data';
+
+export function getStaticPaths() {
+  return people.map((person) => ({ params: { slug: person.slug }, props: { person } }));
+}
+
+const { person } = Astro.props;
+const relatedCommunities = communitiesForPerson(person);
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Person',
+  name: person.name,
+  description: person.shortBio ?? person.headline,
+  jobTitle: person.headline,
+  sameAs: [person.linkedin, person.github, person.x, person.website].filter(Boolean),
+};
+---
+
+<Layout
+  title={person.name}
+  description={person.headline ?? `${person.name}, referente del ecosistema TIC de Manizales.`}
+  jsonLd={jsonLd}
+  ogType="profile"
+>
+  <div class="container-content pt-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Personas', href: '/personas' },
+        { label: person.name },
+      ]}
+    />
+  </div>
+
+  <PersonDetail person={person}>
+    {
+      relatedCommunities.length > 0 && (
+        <section class="mt-8">
+          <h2 class="text-lg font-bold text-ink-900">Comunidades que organiza</h2>
+          <ul class="mt-3 space-y-2">
+            {relatedCommunities.map((c) => (
+              <li>
+                <a
+                  href={`/comunidades/${c.slug}`}
+                  class="flex items-center gap-2 text-sm font-medium text-brand-700 no-underline hover:underline"
+                >
+                  👥 {c.name}
+                </a>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </PersonDetail>
+</Layout>

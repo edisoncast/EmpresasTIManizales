@@ -1,0 +1,119 @@
+---
+import Layout from '../../components/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import EntityCard from '../../components/EntityCard.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { events, communities } from '../../lib/data';
+import { formatDate, label } from '../../lib/format';
+
+const now = new Date();
+const dated = events.filter((e) => e.date);
+const upcoming = dated
+  .filter((e) => new Date(e.date as string) >= now)
+  .sort((a, b) => (a.date! < b.date! ? -1 : 1));
+const past = dated
+  .filter((e) => new Date(e.date as string) < now)
+  .sort((a, b) => (a.date! > b.date! ? -1 : 1));
+const undated = events.filter((e) => !e.date);
+---
+
+<Layout
+  title="Eventos"
+  description="Eventos y encuentros tecnológicos de Manizales y Caldas: charlas, meetups y actividades del ecosistema TIC."
+>
+  <PageHeader
+    eyebrow="Archivo · Eventos"
+    title="Eventos tecnológicos"
+    description="Charlas, meetups y encuentros del ecosistema, separados en próximos, pasados y por verificar. Los eventos pasados se conservan como archivo; no son convocatorias vigentes."
+  />
+
+  <div class="container-content py-8">
+    {
+      events.length === 0 ? (
+        <div class="space-y-8">
+          <EmptyState
+            icon="📅"
+            title="Aún no hay eventos con fecha registrada"
+            message="El repositorio todavía no tiene eventos fechados. Puedes aportar el próximo evento de tu comunidad (con fecha, lugar y fuente) mediante un Pull Request."
+            ctaLabel="Sugerir un evento"
+          />
+          <section>
+            <h2 class="mb-3 text-lg font-bold text-ink-900">
+              Mientras tanto, sigue a estas comunidades
+            </h2>
+            <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+              {communities.slice(0, 6).map((c) => (
+                <EntityCard
+                  title={c.name}
+                  href={`/comunidades/${c.slug}`}
+                  description={c.description}
+                  tags={c.focus}
+                  needsVerification={c.needsVerification}
+                  icon="👥"
+                />
+              ))}
+            </div>
+          </section>
+        </div>
+      ) : (
+        <div class="space-y-10">
+          {upcoming.length > 0 && (
+            <section>
+              <h2 class="mb-3 text-lg font-bold text-ink-900">Próximos eventos</h2>
+              <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {upcoming.map((e) => (
+                  <EntityCard
+                    title={e.name}
+                    href={e.url ?? '#'}
+                    description={e.description}
+                    meta={[formatDate(e.date), e.venue ?? '', label('modality', e.modality)].filter(
+                      Boolean,
+                    )}
+                    tags={e.topics}
+                    needsVerification={e.needsVerification}
+                    icon="📅"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+          {past.length > 0 && (
+            <section>
+              <h2 class="mb-3 text-lg font-bold text-ink-900">Eventos pasados</h2>
+              <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {past.map((e) => (
+                  <EntityCard
+                    title={e.name}
+                    href={e.url ?? '#'}
+                    description={e.description}
+                    meta={[formatDate(e.date), e.venue ?? ''].filter(Boolean)}
+                    tags={e.topics}
+                    needsVerification={e.needsVerification}
+                    icon="📅"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+          {undated.length > 0 && (
+            <section>
+              <h2 class="mb-3 text-lg font-bold text-ink-900">Sin fecha confirmada</h2>
+              <div class="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+                {undated.map((e) => (
+                  <EntityCard
+                    title={e.name}
+                    href={e.url ?? '#'}
+                    description={e.description}
+                    tags={e.topics}
+                    needsVerification={e.needsVerification}
+                    icon="📅"
+                  />
+                ))}
+              </div>
+            </section>
+          )}
+        </div>
+      )
+    }
+  </div>
+</Layout>

@@ -1,0 +1,65 @@
+---
+import Layout from '../../components/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Browser from '../../components/Browser.astro';
+import EntityCard from '../../components/EntityCard.astro';
+import { programs } from '../../lib/data';
+import { label } from '../../lib/format';
+import { encodeFacet, uniqueSorted } from '../../lib/search';
+
+const levels = uniqueSorted(programs.map((p) => label('programLevel', p.level)));
+const modalities = uniqueSorted(programs.map((p) => label('modality', p.modality)));
+const institutions = uniqueSorted(programs.map((p) => p.institutionName));
+const areas = uniqueSorted(programs.flatMap((p) => p.area));
+
+const facets = [
+  { key: 'level', label: 'Nivel', options: levels, allLabel: 'Todos los niveles' },
+  { key: 'modality', label: 'Modalidad', options: modalities, allLabel: 'Todas' },
+  { key: 'area', label: 'Área', options: areas, allLabel: 'Todas las áreas' },
+  { key: 'institution', label: 'Institución', options: institutions, allLabel: 'Todas' },
+];
+---
+
+<Layout
+  title="Programas"
+  description="Programas técnicos, tecnológicos, pregrados y posgrados en software, datos, cloud, IA y ciberseguridad en Manizales y Caldas."
+>
+  <PageHeader
+    eyebrow="Registro · Programas"
+    title="Programas académicos del área TIC"
+    description="Oferta técnica, tecnológica, de pregrado y posgrado en software, datos, redes, ciberseguridad e ingeniería computacional. El estado se refiere a la existencia y vigencia del programa, no a su calidad."
+  />
+
+  <div class="container-content py-8">
+    <Browser
+      facets={facets}
+      total={programs.length}
+      noun="programas"
+      searchPlaceholder="Buscar programa por nombre, área o institución…"
+    >
+      {
+        programs.map((p) => (
+          <EntityCard
+            title={p.name}
+            href={`/programas/${p.slug}`}
+            kicker={label('programLevel', p.level)}
+            subtitle={p.institutionName}
+            tags={p.area}
+            meta={[label('modality', p.modality), p.city].filter(Boolean)}
+            needsVerification={p.needsVerification}
+            verificationStatus={p.verificationStatus}
+            lastVerifiedAt={p.lastVerifiedAt}
+            attrs={{
+              'data-item': '',
+              'data-search': [p.name, p.institutionName, ...p.area, p.city].join(' '),
+              'data-facet-level': encodeFacet([label('programLevel', p.level)]),
+              'data-facet-modality': encodeFacet([label('modality', p.modality)]),
+              'data-facet-area': encodeFacet(p.area),
+              'data-facet-institution': encodeFacet([p.institutionName]),
+            }}
+          />
+        ))
+      }
+    </Browser>
+  </div>
+</Layout>

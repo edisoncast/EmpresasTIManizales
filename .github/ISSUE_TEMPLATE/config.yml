@@ -1,0 +1,5 @@
+blank_issues_enabled: true
+contact_links:
+  - name: Guía para contribuir
+    url: https://github.com/edisoncast/EmpresasTIManizales/blob/master/CONTRIBUTING.md
+    about: Lee cómo agregar o corregir registros mediante un Pull Request.

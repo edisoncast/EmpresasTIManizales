@@ -1,0 +1,158 @@
+---
+import VerificationStatus from './VerificationStatus.astro';
+import SourceBadge from './SourceBadge.astro';
+import ContributionCTA from './ContributionCTA.astro';
+import Tag from './Tag.astro';
+import { displayUrl } from '../lib/format';
+import type { Person } from '../lib/data';
+
+export interface Props {
+  person: Person;
+}
+const { person } = Astro.props;
+const initials = person.name
+  .split(' ')
+  .slice(0, 2)
+  .map((n) => n.charAt(0))
+  .join('')
+  .toUpperCase();
+
+const location = [person.city, person.department, person.country].filter(Boolean).join(', ');
+
+const links: { label: string; href: string }[] = [];
+if (person.website) links.push({ label: 'Sitio web', href: person.website });
+if (person.linkedin) links.push({ label: 'LinkedIn', href: person.linkedin });
+if (person.github) links.push({ label: 'GitHub', href: person.github });
+if (person.x) links.push({ label: 'X', href: person.x });
+for (const l of person.personalBrandLinks ?? []) links.push({ label: displayUrl(l), href: l });
+---
+
+<article class="container-detail py-8">
+  <header class="border-b border-ink-200 pb-6">
+    <p class="kicker">Persona que construye ecosistema</p>
+    <div class="mt-3 flex items-center gap-4">
+      <span
+        class="grid h-14 w-14 shrink-0 place-items-center rounded-full border border-ink-200 bg-accent-soft font-display text-xl font-semibold text-accent-ink"
+        aria-hidden="true">{initials}</span
+      >
+      <div>
+        <h1 class="font-display text-3xl font-semibold leading-tight text-ink-900">{person.name}</h1>
+        {person.headline && <p class="mt-1 text-md text-ink-600">{person.headline}</p>}
+      </div>
+    </div>
+    <div class="mt-4 flex flex-wrap items-center gap-3">
+      <VerificationStatus
+        verificationStatus={person.verificationStatus}
+        needsVerification={person.needsVerification}
+        lastVerifiedAt={person.lastVerifiedAt}
+        variant="inline"
+      />
+    </div>
+  </header>
+
+  <div class="grid gap-10 py-8 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      {person.shortBio && <p class="prose-reading">{person.shortBio}</p>}
+
+      {
+        person.contributions && person.contributions.length > 0 && (
+          <section class="mt-8">
+            <h2 class="font-display text-lg font-semibold text-ink-900">
+              Contribuciones al ecosistema
+            </h2>
+            <ul class="mt-3 space-y-2">
+              {person.contributions.map((c) => (
+                <li class="flex items-start gap-3 text-sm text-ink-700">
+                  <span aria-hidden="true" class="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span>{c}</span>
+                </li>
+              ))}
+            </ul>
+          </section>
+        )
+      }
+
+      {
+        person.areas.length > 0 && (
+          <section class="mt-6">
+            <h2 class="kicker">Áreas de acción</h2>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              {person.areas.map((a) => (
+                <Tag label={a} tone="soft" href={`/personas?area=${encodeURIComponent(a)}`} />
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      <slot />
+
+      <section class="mt-8 border-t border-ink-200 pt-6">
+        <h2 class="font-display text-lg font-semibold text-ink-900">Fuentes y perfiles públicos</h2>
+        <div class="mt-3">
+          <SourceBadge sourceUrl={person.sourceUrl} reviewedAt={person.lastVerifiedAt} />
+        </div>
+        <div class="mt-5">
+          <ContributionCTA variant="correct" entityName={person.name} compact />
+        </div>
+      </section>
+    </div>
+
+    <aside class="space-y-6">
+      <div class="rounded-lg border border-ink-200 bg-mist/50 p-5">
+        <h2 class="kicker">Ficha</h2>
+        <dl class="mt-3 space-y-3">
+          {
+            location && (
+              <div>
+                <dt class="text-xs text-ink-500">Ubicación</dt>
+                <dd class="text-sm text-ink-900">{location}</dd>
+              </div>
+            )
+          }
+          {
+            person.roles && person.roles.length > 0 && (
+              <div>
+                <dt class="text-xs text-ink-500">Roles</dt>
+                <dd class="text-sm text-ink-900">{person.roles.join(', ')}</dd>
+              </div>
+            )
+          }
+          {
+            person.organizations && person.organizations.length > 0 && (
+              <div>
+                <dt class="text-xs text-ink-500">Organizaciones (contexto)</dt>
+                <dd class="text-sm text-ink-900">{person.organizations.join(', ')}</dd>
+              </div>
+            )
+          }
+        </dl>
+      </div>
+
+      {
+        links.length > 0 && (
+          <div class="rounded-lg border border-ink-200 bg-surface p-5">
+            <h2 class="kicker">Perfiles públicos</h2>
+            <ul class="mt-3 space-y-2">
+              {links.map((l) => (
+                <li>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-baseline gap-1.5 text-sm text-accent no-underline hover:underline"
+                  >
+                    {l.label}
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      <slot name="aside" />
+    </aside>
+  </div>
+</article>

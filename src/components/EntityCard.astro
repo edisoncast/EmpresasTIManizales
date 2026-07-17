@@ -1,0 +1,94 @@
+---
+import Tag from './Tag.astro';
+import VerificationStatus from './VerificationStatus.astro';
+import { resolveVerification, type VerificationState } from '../lib/verification';
+
+export interface Props {
+  title: string;
+  href: string;
+  /** Kicker: tipo de entidad (ej. "Empresa", "Universidad"). */
+  kicker?: string;
+  subtitle?: string;
+  description?: string;
+  tags?: string[];
+  /** Línea de metadatos cortos (ciudad, tipo, etc.). */
+  meta?: string[];
+  needsVerification?: boolean;
+  verificationStatus?: VerificationState;
+  status?: 'active' | 'inactive' | 'unknown';
+  lastVerifiedAt?: string;
+  cta?: string;
+  /** Atributos data-* para el filtrado en cliente. */
+  attrs?: Record<string, string>;
+}
+const {
+  title,
+  href,
+  kicker,
+  subtitle,
+  description,
+  tags = [],
+  meta = [],
+  needsVerification = false,
+  verificationStatus,
+  status,
+  lastVerifiedAt,
+  cta = 'Ver ficha',
+  attrs = {},
+} = Astro.props;
+
+const state = resolveVerification({ verificationStatus, needsVerification, status });
+const isArchived = state === 'archived' || state === 'inactive_or_unverified';
+const shownTags = tags.slice(0, 4);
+const restTags = tags.length - shownTags.length;
+---
+
+<article class:list={['card group', isArchived && 'card-archived']} {...attrs}>
+  <div class="flex items-start justify-between gap-3">
+    {kicker && <p class="kicker pt-0.5">{kicker}</p>}
+    <VerificationStatus
+      verificationStatus={verificationStatus}
+      needsVerification={needsVerification}
+      status={status}
+      lastVerifiedAt={lastVerifiedAt}
+    />
+  </div>
+
+  <h3 class="mt-2 text-lg font-semibold leading-tight text-ink-900">
+    <a href={href} class="no-underline transition-colors duration-fast hover:text-accent">
+      {title}
+    </a>
+  </h3>
+  {subtitle && <p class="mt-1 text-sm text-ink-500">{subtitle}</p>}
+
+  {description && <p class="mt-3 line-clamp-3 text-sm leading-relaxed text-ink-600">{description}</p>}
+
+  {
+    meta.length > 0 && (
+      <ul class="mt-3 flex flex-wrap gap-x-3 gap-y-1 text-xs text-ink-500">
+        {meta.map((m) => (
+          <li>{m}</li>
+        ))}
+      </ul>
+    )
+  }
+
+  {
+    shownTags.length > 0 && (
+      <div class="mt-4 flex flex-wrap items-center gap-1.5">
+        {shownTags.map((t) => (
+          <Tag label={t} tone="soft" />
+        ))}
+        {restTags > 0 && <span class="text-xs text-ink-500">+{restTags} más</span>}
+      </div>
+    )
+  }
+
+  <div class="flex-1"></div>
+  <a
+    href={href}
+    class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent no-underline transition-transform duration-fast group-hover:translate-x-0.5"
+  >
+    {cta} <span aria-hidden="true">→</span>
+  </a>
+</article>

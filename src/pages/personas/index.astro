@@ -1,0 +1,81 @@
+---
+import Layout from '../../components/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Browser from '../../components/Browser.astro';
+import PersonCard from '../../components/PersonCard.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { people } from '../../lib/data';
+import { encodeFacet, uniqueSorted } from '../../lib/search';
+
+const areas = uniqueSorted(people.flatMap((p) => p.areas));
+const roles = uniqueSorted(people.flatMap((p) => p.roles ?? []));
+const orgs = uniqueSorted(people.flatMap((p) => p.organizations ?? []));
+const contributions = uniqueSorted(people.flatMap((p) => p.contributions ?? []));
+
+const facets = [
+  { key: 'area', label: 'Área', options: areas, allLabel: 'Todas las áreas' },
+  { key: 'role', label: 'Rol', options: roles, allLabel: 'Todos los roles' },
+  { key: 'org', label: 'Organización', options: orgs, allLabel: 'Todas' },
+  { key: 'contribution', label: 'Contribución', options: contributions, allLabel: 'Todas' },
+];
+---
+
+<Layout
+  title="Personas"
+  description="Personas que construyen el ecosistema TIC de Manizales y Caldas: referentes con trayectoria pública y contribuciones a la comunidad."
+>
+  <PageHeader
+    eyebrow="Reconocimiento · Personas"
+    title="Personas que construyen ecosistema"
+    description="Reconocimiento a trayectorias y contribuciones públicas: organización de comunidades, mentoría, docencia, liderazgo técnico y construcción de capacidades. Orden alfabético. No es un ranking ni un concurso de popularidad."
+  />
+
+  <div class="container-content py-8">
+    <div class="mb-6 rounded-lg border border-brand-100 bg-brand-50 p-4 text-sm text-brand-800">
+      <p>
+        <strong>Sobre esta sección.</strong> Solo incluimos personas con perfil o contribución
+        pública. El enfoque son los aportes al ecosistema (comunidad, docencia, emprendimiento,
+        open source, divulgación, investigación), no la vida privada. ¿Falta alguien?
+        <a href="/contribuir" class="link">Sugiérela con su fuente pública</a>.
+      </p>
+    </div>
+
+    {
+      people.length === 0 ? (
+        <EmptyState
+          icon="⭐"
+          title="Aún no hay personas registradas"
+          message="Sugiere referentes del ecosistema con su perfil público o contribución verificable."
+        />
+      ) : (
+        <Browser
+          facets={facets}
+          total={people.length}
+          noun="personas"
+          searchPlaceholder="Buscar por nombre, área u organización…"
+          gridClass="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+        >
+          {people.map((p) => (
+            <PersonCard
+              person={p}
+              attrs={{
+                'data-item': '',
+                'data-search': [
+                  p.name,
+                  p.headline ?? '',
+                  p.shortBio ?? '',
+                  ...p.areas,
+                  ...(p.organizations ?? []),
+                ].join(' '),
+                'data-facet-area': encodeFacet(p.areas),
+                'data-facet-role': encodeFacet(p.roles ?? []),
+                'data-facet-org': encodeFacet(p.organizations ?? []),
+                'data-facet-contribution': encodeFacet(p.contributions ?? []),
+              }}
+            />
+          ))}
+        </Browser>
+      )
+    }
+  </div>
+</Layout>

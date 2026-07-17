@@ -1,0 +1,175 @@
+[
+  {
+    "name": "Universidad de Caldas",
+    "slug": "universidad-de-caldas",
+    "description": "Universidad pública de Caldas con programas de pregrado y posgrado relacionados con sistemas, informática e ingeniería computacional.",
+    "website": "https://www.ucaldas.edu.co",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "public",
+    "accredited": true,
+    "sniesCode": "1112",
+    "programs": [
+      "ing-sistemas-computacion-ucaldas",
+      "tecnologia-sistemas-informaticos-ucaldas",
+      "ing-informatica-ucaldas",
+      "maestria-ingenieria-computacional-ucaldas",
+      "maestria-bioinformatica-biologia-computacional",
+      "doctorado-ingenieria-ucaldas"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  },
+  {
+    "name": "Universidad Nacional de Colombia - Sede Manizales",
+    "slug": "universidad-nacional-de-colombia-sede-manizales",
+    "description": "Sede Manizales de la Universidad Nacional de Colombia, con programas de administración de sistemas informáticos y posgrados en redes y sistemas.",
+    "website": "https://www.manizales.unal.edu.co",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "public",
+    "accredited": true,
+    "sniesCode": "1103",
+    "programs": [
+      "admin-sistemas-informaticos-unal",
+      "esp-gestion-redes-datos-unal",
+      "esp-auditoria-sistemas-unal",
+      "maestria-admin-sistemas-informaticos-unal"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  },
+  {
+    "name": "Universidad de Manizales",
+    "slug": "universidad-de-manizales",
+    "description": "Universidad privada de Manizales con programas de ingeniería de sistemas, analítica de datos y maestrías en seguridad y gestión de la información.",
+    "website": "https://www.umanizales.edu.co",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "private",
+    "accredited": true,
+    "sniesCode": "1722",
+    "programs": [
+      "ing-sistemas-telecomunicaciones-umanizales",
+      "ing-analitica-datos-umanizales",
+      "esp-tec-redes-umanizales",
+      "esp-sistemas-informacion-geografica-umanizales",
+      "maestria-tecnologias-informacion-geografica-umanizales",
+      "maestria-seguridad-informacion-umanizales",
+      "maestria-gestion-estrategica-informacion-umanizales"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  },
+  {
+    "name": "Universidad Autónoma de Manizales",
+    "slug": "universidad-autonoma-de-manizales",
+    "description": "Universidad privada de Manizales con programas de ingeniería de sistemas, especialización y maestría en ingeniería de software, y doctorado en ingeniería.",
+    "website": "https://www.autonoma.edu.co",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "private",
+    "accredited": true,
+    "sniesCode": "1825",
+    "programs": [
+      "ing-sistemas-uam",
+      "tecnologia-analisis-programacion-uam",
+      "esp-ingenieria-software-uam",
+      "maestria-gestion-desarrollo-proyectos-software-uam",
+      "maestria-ingenieria-uam",
+      "doctorado-ingenieria-uam"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  },
+  {
+    "name": "Universidad Católica de Manizales",
+    "slug": "universidad-catolica-de-manizales",
+    "description": "Universidad privada de Manizales. Según la fuente original no registra programas TIC vigentes propios; participa en convenios de posgrado.",
+    "website": "https://www.ucm.edu.co",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "private",
+    "accredited": true,
+    "sniesCode": "1827",
+    "programs": [],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": true
+  },
+  {
+    "name": "Universidad Antonio Nariño - Sede Manizales",
+    "slug": "universidad-antonio-narino",
+    "description": "Sede Manizales de la Universidad Antonio Nariño, con oferta tecnológica en construcción de software.",
+    "website": "https://www.uan.edu.co/manizales",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "private",
+    "accredited": true,
+    "sniesCode": "1826",
+    "programs": [
+      "tecnologia-construccion-software-uan"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  },
+  {
+    "name": "Universidad Católica Luis Amigó - Sede Manizales (FUNLAM)",
+    "slug": "universidad-catolica-luis-amigo",
+    "description": "Sede Manizales de la Universidad Católica Luis Amigó, con programa de ingeniería de sistemas.",
+    "website": "https://www.funlam.edu.co/modules/sedemanizales/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "private",
+    "accredited": false,
+    "sniesCode": "2719",
+    "programs": [
+      "ing-sistemas-funlam"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  },
+  {
+    "name": "Corporación Universitaria Remington - Sede Manizales",
+    "slug": "corporacion-universitaria-remington",
+    "description": "Sede Manizales de la Corporación Universitaria Remington, con ingeniería de sistemas en modalidad virtual.",
+    "website": "https://www.uniremington.edu.co/manizales/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "private",
+    "accredited": false,
+    "sniesCode": "2833",
+    "programs": [
+      "ing-sistemas-virtual-remington"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  },
+  {
+    "name": "SENA - Regional Caldas",
+    "slug": "sena-caldas",
+    "description": "Servicio Nacional de Aprendizaje (SENA), Regional Caldas. Oferta tecnológica y de especialización tecnológica en desarrollo de software, bases de datos y redes.",
+    "website": "https://www.sena.edu.co",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "institutionType": "public",
+    "accredited": false,
+    "sniesCode": "9110",
+    "programs": [
+      "tecnologia-adsi-sena",
+      "esp-tec-gestion-seguridad-bd-sena",
+      "esp-tec-seguridad-redes-sena",
+      "esp-tec-desarrollo-moviles-sena"
+    ],
+    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+    "needsVerification": false
+  }
+]

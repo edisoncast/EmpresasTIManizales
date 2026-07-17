@@ -1,0 +1,64 @@
+name: "📅 Sugerir evento"
+description: Sugiere un evento o encuentro tecnológico (con fecha, lugar y fuente).
+title: "[Evento] "
+labels: ["data", "evento"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta sugerencia se convertirá en un registro en `src/data/events.json`.
+  - type: input
+    id: name
+    attributes:
+      label: Nombre del evento
+    validations:
+      required: true
+  - type: input
+    id: date
+    attributes:
+      label: Fecha (YYYY-MM-DD)
+      placeholder: 2025-11-20
+  - type: input
+    id: venue
+    attributes:
+      label: Lugar
+      placeholder: Universidad de Caldas / Virtual
+  - type: input
+    id: city
+    attributes:
+      label: Ciudad
+      placeholder: Manizales
+  - type: dropdown
+    id: modality
+    attributes:
+      label: Modalidad
+      options:
+        - Presencial
+        - Virtual / Remoto
+        - Híbrido
+        - No lo sé
+  - type: input
+    id: organizer
+    attributes:
+      label: Comunidad organizadora
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+  - type: input
+    id: url
+    attributes:
+      label: Enlace del evento
+  - type: input
+    id: source
+    attributes:
+      label: Fuente pública
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmación
+      options:
+        - label: La información es pública y verificable.
+          required: true

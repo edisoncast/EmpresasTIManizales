@@ -1,0 +1,71 @@
+name: "📚 Sugerir programa"
+description: Sugiere un programa técnico, tecnológico, de pregrado o posgrado en áreas TIC.
+title: "[Programa] "
+labels: ["data", "programa"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta sugerencia se convertirá en un registro en `src/data/programs.json`.
+  - type: input
+    id: name
+    attributes:
+      label: Nombre del programa
+      placeholder: Ingeniería de Sistemas
+    validations:
+      required: true
+  - type: input
+    id: institution
+    attributes:
+      label: Institución
+      placeholder: Universidad de Caldas
+    validations:
+      required: true
+  - type: dropdown
+    id: level
+    attributes:
+      label: Nivel
+      options:
+        - Técnico
+        - Tecnológico
+        - Pregrado
+        - Especialización
+        - Maestría
+        - Doctorado
+        - Bootcamp
+        - No lo sé
+    validations:
+      required: true
+  - type: dropdown
+    id: modality
+    attributes:
+      label: Modalidad
+      options:
+        - Presencial
+        - Virtual / Remoto
+        - Híbrido
+        - No lo sé
+  - type: input
+    id: area
+    attributes:
+      label: Áreas (separadas por coma)
+      placeholder: Desarrollo de software, Datos
+  - type: input
+    id: website
+    attributes:
+      label: Página del programa
+  - type: input
+    id: snies
+    attributes:
+      label: Código SNIES (si lo conoces)
+  - type: input
+    id: source
+    attributes:
+      label: Fuente pública
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmación
+      options:
+        - label: La información proviene de una fuente pública (ej. SNIES o sitio oficial).
+          required: true

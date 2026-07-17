@@ -1,0 +1,27 @@
+---
+// Patrón topográfico abstracto (curvas de nivel). Decorativo y de baja opacidad;
+// evoca el relieve de Manizales sin literalidad. No compite con el texto.
+export interface Props {
+  class?: string;
+}
+const { class: className = '' } = Astro.props;
+---
+
+<svg
+  class={className}
+  viewBox="0 0 800 400"
+  preserveAspectRatio="xMidYMid slice"
+  fill="none"
+  stroke="currentColor"
+  stroke-width="1"
+  aria-hidden="true"
+  focusable="false"
+>
+  <path d="M-20 320 C 120 260 220 300 360 250 S 620 180 820 210" />
+  <path d="M-20 350 C 120 292 230 330 370 282 S 630 214 820 244" />
+  <path d="M-20 384 C 130 326 240 362 380 314 S 640 250 820 278" opacity="0.85" />
+  <path d="M-20 288 C 110 236 210 270 350 222 S 610 150 820 180" opacity="0.7" />
+  <path d="M-20 256 C 120 214 210 242 340 198 S 600 126 820 150" opacity="0.55" />
+  <path d="M-20 224 C 120 188 210 214 330 176 S 590 104 820 124" opacity="0.4" />
+  <path d="M-20 190 C 120 160 210 184 320 150 S 580 84 820 100" opacity="0.28" />
+</svg>

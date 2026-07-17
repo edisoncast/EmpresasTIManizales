@@ -1,0 +1,141 @@
+---
+import Layout from '../components/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import ContributionCTA from '../components/ContributionCTA.astro';
+import { universities, communities, people } from '../lib/data';
+
+// Conexiones reales presentes en los datos (sin inventar causalidad).
+const uniConnections = universities
+  .filter((u) => u.programs.length > 0)
+  .sort((a, b) => b.programs.length - a.programs.length)
+  .slice(0, 5);
+const activeCommunities = communities.filter((c) => c.status === 'active');
+const peopleWithOrg = people.filter((p) => p.organizations && p.organizations.length > 0).slice(0, 6);
+
+const connections = [
+  'La academia forma el talento que contratan las empresas.',
+  'Las comunidades acercan a estudiantes, profesionales y empresas.',
+  'Las personas referentes conectan universidad, empresa y comunidad.',
+  'Las entidades de apoyo articulan y financian iniciativas del ecosistema.',
+];
+---
+
+<Layout
+  title="El ecosistema"
+  description="Cómo se conectan los actores del ecosistema TIC de Manizales y Caldas: universidades, programas, empresas, personas, comunidades y entidades de apoyo."
+>
+  <PageHeader
+    eyebrow="Relaciones"
+    title="Cómo se conecta el ecosistema"
+    description="El valor de este mapa no está solo en los registros, sino en las relaciones entre actores. Aquí mostramos las conexiones presentes hoy en los datos y cómo se articula el territorio."
+    showCutoff={false}
+  />
+
+  <!-- Conexiones reales -->
+  <section class="container-content py-12">
+    <h2 class="font-display text-2xl font-semibold text-ink-900">Conexiones en los datos</h2>
+    <p class="mt-1 max-w-reading text-ink-600">
+      Relaciones sustentadas por los registros actuales. No inferimos vínculos que los datos no
+      soporten.
+    </p>
+
+    <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h3 class="kicker">Universidad → Programas</h3>
+        <ul class="mt-3 space-y-2">
+          {
+            uniConnections.map((u) => (
+              <li class="flex items-baseline justify-between gap-3 text-sm">
+                <a
+                  href={`/universidades/${u.slug}`}
+                  class="min-w-0 truncate text-ink-800 no-underline hover:text-accent"
+                >
+                  {u.name}
+                </a>
+                <span class="shrink-0 font-mono text-xs text-ink-500">{u.programs.length}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h3 class="kicker">Comunidades activas → Enfoque</h3>
+        <ul class="mt-3 space-y-2">
+          {
+            activeCommunities.map((c) => (
+              <li class="flex items-baseline justify-between gap-3 text-sm">
+                <a
+                  href={`/comunidades/${c.slug}`}
+                  class="min-w-0 truncate text-ink-800 no-underline hover:text-accent"
+                >
+                  {c.name}
+                </a>
+                <span class="shrink-0 font-mono text-xs text-ink-500">{c.focus[0] ?? ''}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h3 class="kicker">Personas → Organizaciones</h3>
+        <ul class="mt-3 space-y-2">
+          {
+            peopleWithOrg.map((p) => (
+              <li class="text-sm">
+                <a
+                  href={`/personas/${p.slug}`}
+                  class="text-ink-800 no-underline hover:text-accent"
+                >
+                  {p.name}
+                </a>
+                <span class="block truncate font-mono text-xs text-ink-500">
+                  {p.organizations?.[0] ?? ''}
+                </span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Cómo se articula -->
+  <section class="container-content border-t border-ink-200 py-12">
+    <h2 class="font-display text-2xl font-semibold text-ink-900">Cómo se articula el territorio</h2>
+    <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
+      {
+        connections.map((c) => (
+          <div class="flex items-start gap-3 rounded-lg border border-ink-200 bg-surface p-4">
+            <span
+              aria-hidden="true"
+              class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+            />
+            <span class="text-sm text-ink-700">{c}</span>
+          </div>
+        ))
+      }
+    </div>
+    <div class="mt-6 rounded-lg border border-dashed border-ink-300 bg-mist/50 p-5 text-sm text-ink-600">
+      <p>
+        <strong class="text-ink-800">Próximamente:</strong> una visualización de red que muestre las
+        relaciones entre empresas, universidades, programas, comunidades y personas. La estructura de
+        datos ya está preparada; se incorporará sin rehacer el modelo y sin simular relaciones que los
+        datos no soporten.
+      </p>
+    </div>
+  </section>
+
+  <!-- Entidades de apoyo -->
+  <section id="entidades" class="container-content border-t border-ink-200 py-12">
+    <h2 class="font-display text-2xl font-semibold text-ink-900">Entidades de apoyo</h2>
+    <p class="mt-3 max-w-reading text-ink-600">
+      Gremios, cámaras de comercio, clústeres, incubadoras y entidades públicas que fomentan el
+      ecosistema. Aún no hay registros documentados con fuente pública.
+    </p>
+    <div class="mt-6">
+      <ContributionCTA variant="add" />
+    </div>
+  </section>
+</Layout>

@@ -1,0 +1,44 @@
+---
+export interface Stat {
+  label: string;
+  value: number;
+  href?: string;
+  note?: string;
+}
+export interface Props {
+  stats: Stat[];
+  /** Nota de corte temporal / aclaración (registros, no indicadores). */
+  caption?: string;
+}
+const { stats, caption } = Astro.props;
+---
+
+<div>
+  <dl class="grid grid-cols-2 gap-px overflow-hidden rounded-lg border border-ink-200 bg-ink-200 sm:grid-cols-3 lg:grid-cols-6">
+    {
+      stats.map((s) => {
+        const inner = (
+          <div class="h-full bg-surface p-4 transition-colors duration-fast group-hover:bg-accent-soft/40">
+            <dd class="font-display text-2xl font-semibold tabular-nums text-ink-900">{s.value}</dd>
+            <dt class="mt-1 text-sm text-ink-600">{s.label}</dt>
+            {s.note && <p class="mt-0.5 font-mono text-[11px] text-ink-400">{s.note}</p>}
+          </div>
+        );
+        return s.href ? (
+          <a href={s.href} class="group block no-underline">
+            {inner}
+          </a>
+        ) : (
+          <div>{inner}</div>
+        );
+      })
+    }
+  </dl>
+  {
+    caption && (
+      <p class="mt-3 text-xs text-ink-500">
+        {caption}
+      </p>
+    )
+  }
+</div>

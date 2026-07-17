@@ -1,0 +1,68 @@
+name: "⭐ Sugerir persona"
+description: Sugiere a una persona referente del ecosistema (solo perfiles públicos).
+title: "[Persona] "
+labels: ["data", "persona"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta sección es de **reconocimiento y descubrimiento**, no un ranking.
+        Solo se admiten personas con perfil o contribución pública. **No incluyas datos sensibles**
+        (teléfonos, correos privados, direcciones). El enfoque son los aportes al ecosistema.
+  - type: input
+    id: name
+    attributes:
+      label: Nombre
+    validations:
+      required: true
+  - type: input
+    id: headline
+    attributes:
+      label: Titular / rol principal
+      placeholder: Organizadora de comunidad, docente, fundadora…
+  - type: textarea
+    id: contributions
+    attributes:
+      label: Contribuciones al ecosistema
+      placeholder: Liderazgo de comunidades, docencia, open source, divulgación, emprendimiento…
+    validations:
+      required: true
+  - type: input
+    id: areas
+    attributes:
+      label: Áreas (separadas por coma)
+      placeholder: Comunidad, Ciberseguridad, Datos
+  - type: input
+    id: organizations
+    attributes:
+      label: Organizaciones (separadas por coma)
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn
+  - type: input
+    id: github
+    attributes:
+      label: GitHub
+  - type: input
+    id: website
+    attributes:
+      label: Sitio web o marca personal
+  - type: input
+    id: source
+    attributes:
+      label: Fuente pública
+      placeholder: Perfil público que respalde la información
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmaciones
+      options:
+        - label: Es un perfil público y la información no es sensible ni privada.
+          required: true
+        - label: La descripción se enfoca en aportes al ecosistema, no en la vida privada.
+          required: true
+        - label: Si sugiero a otra persona, la información es verificable en fuentes públicas.
+          required: true

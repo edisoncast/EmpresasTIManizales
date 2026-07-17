@@ -1,0 +1,134 @@
+---
+import SearchBar from './SearchBar.astro';
+import FilterPanel from './FilterPanel.astro';
+import EmptyState from './EmptyState.astro';
+import type { Facet } from './FilterPanel.astro';
+
+export interface Props {
+  facets?: Facet[];
+  searchPlaceholder?: string;
+  searchLabel?: string;
+  total: number;
+  noun?: string;
+  gridClass?: string;
+}
+const {
+  facets = [],
+  searchPlaceholder = 'Buscar…',
+  searchLabel = 'Buscar',
+  total,
+  noun = 'resultados',
+  gridClass = 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
+} = Astro.props;
+---
+
+<section data-browser data-noun={noun} data-total={total}>
+  <div class="rounded-lg border border-ink-200 bg-mist/50 p-4">
+    <div class="mb-3">
+      <SearchBar placeholder={searchPlaceholder} label={searchLabel} visibleLabel={true} />
+    </div>
+    {facets.length > 0 && <FilterPanel facets={facets} />}
+    <div class="mt-3 flex items-center justify-between gap-3 border-t border-ink-200 pt-3">
+      <p class="text-sm text-ink-600" data-count aria-live="polite">
+        <span class="font-semibold text-ink-900" data-count-value>{total}</span>
+        {' '}de {total} {noun}
+      </p>
+      <button
+        type="button"
+        class="text-sm font-medium text-accent hover:underline"
+        data-clear-filters
+        hidden
+      >
+        Limpiar filtros
+      </button>
+    </div>
+  </div>
+
+  <div class={`mt-6 ${gridClass}`} data-results>
+    <slot />
+  </div>
+
+  <div class="mt-6" data-empty-wrapper hidden>
+    <EmptyState
+      forFilters={true}
+      title="No encontramos resultados"
+      message="Ninguna combinación de búsqueda y filtros coincide. Prueba con menos filtros o sugiere un registro."
+      ctaHref="/contribuir"
+      ctaLabel="Sugerir un registro"
+    />
+  </div>
+</section>
+
+<script>
+  import { normalizeText, matchesSearch, matchesFacet } from '../lib/search';
+
+  function setupBrowser(root: HTMLElement) {
+    const searchInput = root.querySelector<HTMLInputElement>('[data-search-input]');
+    const selects = Array.from(root.querySelectorAll<HTMLSelectElement>('[data-facet-select]'));
+    const cards = Array.from(root.querySelectorAll<HTMLElement>('[data-item]'));
+    const countValue = root.querySelector<HTMLElement>('[data-count-value]');
+    const emptyWrapper = root.querySelector<HTMLElement>('[data-empty-wrapper]');
+    const results = root.querySelector<HTMLElement>('[data-results]');
+    const clearBtns = Array.from(
+      root.querySelectorAll<HTMLButtonElement>('[data-clear-filters], [data-clear-filters-cta]'),
+    );
+
+    function capitalize(key: string): string {
+      return key
+        .split('-')
+        .map((p) => p.charAt(0).toUpperCase() + p.slice(1))
+        .join('');
+    }
+
+    function apply() {
+      const query = searchInput?.value ?? '';
+      const selections = selects.map((s) => ({ key: s.dataset.facetKey ?? '', value: s.value }));
+      let visible = 0;
+      const anyFilter = normalizeText(query).length > 0 || selections.some((s) => s.value !== '');
+
+      for (const card of cards) {
+        let show = matchesSearch(card.dataset.search ?? '', query);
+        if (show) {
+          for (const sel of selections) {
+            const encoded = card.dataset[`facet${capitalize(sel.key)}`] ?? '';
+            if (!matchesFacet(encoded, sel.value)) {
+              show = false;
+              break;
+            }
+          }
+        }
+        card.hidden = !show;
+        if (show) visible++;
+      }
+
+      if (countValue) countValue.textContent = String(visible);
+      if (emptyWrapper) emptyWrapper.hidden = visible !== 0;
+      if (results) results.hidden = visible === 0;
+      const topClear = root.querySelector<HTMLButtonElement>('[data-clear-filters]');
+      if (topClear) topClear.hidden = !anyFilter;
+    }
+
+    function clearAll() {
+      if (searchInput) searchInput.value = '';
+      selects.forEach((s) => (s.value = ''));
+      apply();
+    }
+
+    // Inicializa desde los parámetros de la URL (?q= y ?<facet>=).
+    const params = new URLSearchParams(window.location.search);
+    const q = params.get('q');
+    if (q && searchInput) searchInput.value = q;
+    selects.forEach((s) => {
+      const val = params.get(s.dataset.facetKey ?? '');
+      if (val && Array.from(s.options).some((o) => o.value === val)) s.value = val;
+    });
+
+    searchInput?.addEventListener('input', apply);
+    selects.forEach((s) => s.addEventListener('change', apply));
+    clearBtns.forEach((b) => b.addEventListener('click', clearAll));
+
+    apply();
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-browser]').forEach(setupBrowser);
+</script>

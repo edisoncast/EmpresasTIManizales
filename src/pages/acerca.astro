@@ -1,0 +1,128 @@
+---
+import Layout from '../components/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site } from '../lib/site';
+
+const faqs = [
+  {
+    q: '¿De dónde salen los datos?',
+    a: 'Del repositorio comunitario original y de fuentes públicas: el registro mercantil de la Cámara de Comercio de Manizales por Caldas para las empresas (actividad CIIU J6201) y el SNIES/HECAA del Ministerio de Educación para universidades y programas. Cada registro puede llevar su fuente y su fecha.',
+  },
+  {
+    q: '¿Por qué algunos registros dicen “por verificar”?',
+    a: 'Porque migramos datos que pueden estar desactualizados o que aún no tienen una fuente confirmada. Preferimos ser transparentes antes que mostrar información como definitiva.',
+  },
+  {
+    q: '¿Cómo se financia?',
+    a: 'Es un proyecto comunitario sin fines de lucro. El sitio es estático (Astro) y se despliega en S3 + CloudFront, con un costo operativo muy bajo.',
+  },
+  {
+    q: '¿Puedo pedir que eliminen mi perfil?',
+    a: 'Sí. Solo incluimos personas con perfil público y enfoque en aportes al ecosistema. Si deseas ajustar o retirar tu ficha, abre un Issue o un Pull Request.',
+  },
+];
+---
+
+<Layout
+  title="Acerca del proyecto"
+  description="Qué es el mapa del ecosistema TIC de Manizales y Caldas, cómo funciona y con qué tecnología está construido."
+>
+  <PageHeader
+    eyebrow="Proyecto"
+    title="Acerca del proyecto"
+    description="Un directorio abierto, mantenible y de bajo costo para visibilizar el ecosistema tecnológico de Manizales y Caldas."
+  />
+
+  <div class="container-content grid gap-10 py-10 lg:grid-cols-3">
+    <div class="space-y-8 lg:col-span-2">
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Qué es</h2>
+        <p class="mt-3 text-ink-700">
+          Este sitio evoluciona un repositorio comunitario de empresas, centros de formación y
+          meetups hacia una experiencia navegable, filtrable y confiable. El objetivo es que
+          cualquier persona entienda el ecosistema TIC de la región y descubra a sus actores.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Principios</h2>
+        <ul class="mt-3 space-y-2 text-ink-700">
+          <li class="flex gap-2"><span aria-hidden="true">◆</span> Datos abiertos y versionados como fuente de verdad.</li>
+          <li class="flex gap-2"><span aria-hidden="true">◆</span> Transparencia: mostramos cuándo un dato necesita verificación.</li>
+          <li class="flex gap-2"><span aria-hidden="true">◆</span> Reconocimiento, no competencia: sin rankings de personas.</li>
+          <li class="flex gap-2"><span aria-hidden="true">◆</span> Privacidad: solo información pública y aportes al ecosistema.</li>
+          <li class="flex gap-2"><span aria-hidden="true">◆</span> Bajo costo y fácil de mantener por la comunidad.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Preguntas frecuentes</h2>
+        <div class="mt-4 space-y-3">
+          {
+            faqs.map((f) => (
+              <details class="rounded-xl border border-ink-200 bg-white p-4">
+                <summary class="cursor-pointer font-medium text-ink-900">{f.q}</summary>
+                <p class="mt-2 text-sm text-ink-600">{f.a}</p>
+              </details>
+            ))
+          }
+        </div>
+      </section>
+    </div>
+
+    <aside class="space-y-6">
+      <div class="rounded-xl border border-ink-200 bg-ink-50/60 p-5">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-ink-500">Tecnología</h2>
+        <ul class="mt-3 space-y-1 text-sm text-ink-700">
+          <li>Astro + TypeScript</li>
+          <li>Tailwind CSS</li>
+          <li>Datos en JSON validados con Zod</li>
+          <li>Búsqueda y filtros en el cliente</li>
+          <li>AWS S3 + CloudFront (OAC)</li>
+          <li>IaC con Terraform · CI/CD con GitHub Actions (OIDC)</li>
+        </ul>
+      </div>
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h2 class="kicker">Fuentes citadas</h2>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>
+            <a
+              href={site.sources.ccmpc.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link">{site.sources.ccmpc.name}</a
+            >
+            <span class="block text-xs text-ink-500">Empresas · registro mercantil (CIIU J6201)</span>
+          </li>
+          <li>
+            <a
+              href={site.sources.snies.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link">{site.sources.snies.name}</a
+            >
+            <span class="block text-xs text-ink-500">Universidades y programas</span>
+          </li>
+        </ul>
+        <p class="mt-3 text-xs text-ink-500">
+          La información empresarial se usa con fines no comerciales, citando a la Cámara de Comercio
+          de Manizales por Caldas como fuente, conforme a sus condiciones de uso (Ley 1581 de 2012).
+        </p>
+      </div>
+
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h2 class="kicker">Licencia</h2>
+        <p class="mt-2 text-sm text-ink-600">
+          Contenido bajo Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0), igual que el
+          repositorio original.
+        </p>
+        <a
+          href={site.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-3 inline-flex btn-secondary">Repositorio</a
+        >
+      </div>
+    </aside>
+  </div>
+</Layout>

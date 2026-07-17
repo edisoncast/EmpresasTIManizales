@@ -1,0 +1,121 @@
+---
+import Layout from '../../components/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import Tag from '../../components/Tag.astro';
+import VerificationStatus from '../../components/VerificationStatus.astro';
+import { universities, programsForUniversity } from '../../lib/data';
+import { label } from '../../lib/format';
+
+export function getStaticPaths() {
+  return universities.map((university) => ({
+    params: { slug: university.slug },
+    props: { university },
+  }));
+}
+
+const { university } = Astro.props;
+const relatedPrograms = programsForUniversity(university);
+
+const facts = [
+  { label: 'Sector', value: label('institutionType', university.institutionType) },
+  { label: 'Ciudad', value: university.city },
+  { label: 'Departamento', value: university.department },
+  {
+    label: 'Acreditación alta calidad',
+    value: university.accredited === undefined ? 'Sin definir' : university.accredited ? 'Sí' : 'No',
+  },
+  { label: 'Código SNIES', value: university.sniesCode ?? '' },
+].filter((f) => f.value);
+
+const links = [];
+if (university.website) links.push({ label: 'Sitio web', href: university.website });
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'CollegeOrUniversity',
+  name: university.name,
+  description: university.description,
+  url: university.website,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: university.city,
+    addressRegion: university.department,
+    addressCountry: university.country,
+  },
+};
+---
+
+<Layout title={university.name} description={university.description} jsonLd={jsonLd}>
+  <div class="container-content pt-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Universidades', href: '/universidades' },
+        { label: university.name },
+      ]}
+    />
+  </div>
+
+  <EntityDetail
+    eyebrow={`Universidad · ${university.city}`}
+    title={university.name}
+    subtitle={label('institutionType', university.institutionType)}
+    description={university.description}
+    needsVerification={university.needsVerification}
+    verificationStatus={university.verificationStatus}
+    lastVerifiedAt={university.lastVerifiedAt}
+    sources={
+      university.sourceUrl
+        ? [
+            {
+              href: university.sourceUrl,
+              title: university.sniesCode
+                ? `Consulta oficial SNIES (HECAA) · busca el código ${university.sniesCode}`
+                : 'Consulta oficial SNIES (HECAA)',
+            },
+          ]
+        : undefined
+    }
+    facts={facts}
+    links={links}
+    entityName={university.name}
+  >
+    <section class="mt-8">
+      <h2 class="font-display text-lg font-semibold text-ink-900">
+        Programas TIC ({relatedPrograms.length})
+      </h2>
+      {
+        relatedPrograms.length === 0 ? (
+          <p class="mt-2 text-sm text-ink-600">
+            No hay programas TIC registrados para esta institución. Si conoces alguno, puedes
+            aportarlo con una fuente pública.
+          </p>
+        ) : (
+          <ul class="mt-3 divide-y divide-ink-200 rounded-lg border border-ink-200">
+            {relatedPrograms.map((p) => (
+              <li class="flex items-center justify-between gap-3 p-4">
+                <div class="min-w-0">
+                  <a
+                    href={`/programas/${p.slug}`}
+                    class="font-medium text-ink-900 no-underline hover:text-accent"
+                  >
+                    {p.name}
+                  </a>
+                  <div class="mt-1 flex flex-wrap gap-1.5">
+                    <Tag label={label('programLevel', p.level)} tone="outline" />
+                    {p.modality && <Tag label={label('modality', p.modality)} tone="neutral" />}
+                  </div>
+                </div>
+                <VerificationStatus
+                  needsVerification={p.needsVerification}
+                  lastVerifiedAt={p.lastVerifiedAt}
+                />
+              </li>
+            ))}
+          </ul>
+        )
+      }
+    </section>
+  </EntityDetail>
+</Layout>

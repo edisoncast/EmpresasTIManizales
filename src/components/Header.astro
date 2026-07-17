@@ -1,0 +1,77 @@
+---
+import { nav } from '../lib/site';
+
+const current = Astro.url.pathname;
+const isActive = (href: string) => current === href || current.startsWith(href + '/');
+---
+
+<header class="sticky top-0 z-40 border-b border-ink-200 bg-paper/95 backdrop-blur-sm">
+  <div class="container-content flex h-16 items-center justify-between gap-4">
+    <a href="/" class="group flex items-baseline gap-2 no-underline">
+      <span class="font-display text-lg font-semibold text-ink-900">Observatorio TIC</span>
+      <span class="hidden font-mono text-[11px] uppercase tracking-kicker text-ink-500 sm:inline"
+        >Manizales · Caldas</span
+      >
+    </a>
+
+    <nav aria-label="Navegación principal" class="hidden xl:block">
+      <ul class="flex items-center gap-0.5">
+        {
+          nav.map((item) => (
+            <li>
+              <a
+                href={item.href}
+                aria-current={isActive(item.href) ? 'page' : undefined}
+                class:list={[
+                  'rounded-md px-3 py-2 text-sm no-underline transition-colors duration-fast',
+                  isActive(item.href)
+                    ? 'font-semibold text-accent'
+                    : 'font-medium text-ink-600 hover:text-ink-900',
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>
+          ))
+        }
+      </ul>
+    </nav>
+
+    <div class="flex items-center gap-2">
+      <a href="/contribuir" class="hidden btn-primary sm:inline-flex">Contribuir</a>
+      <details class="relative xl:hidden">
+        <summary
+          class="btn-secondary cursor-pointer list-none"
+          aria-label="Abrir menú de navegación"
+        >
+          Menú
+        </summary>
+        <nav
+          aria-label="Navegación"
+          class="absolute right-0 z-50 mt-2 w-60 rounded-lg border border-ink-200 bg-surface p-2 shadow-overlay"
+        >
+          <ul class="flex flex-col">
+            {
+              [...nav, { href: '/acerca', label: 'Acerca' }].map((item) => (
+                <li>
+                  <a
+                    href={item.href}
+                    aria-current={isActive(item.href) ? 'page' : undefined}
+                    class:list={[
+                      'block rounded-md px-3 py-2 text-sm no-underline',
+                      isActive(item.href)
+                        ? 'bg-accent-soft font-semibold text-accent-ink'
+                        : 'text-ink-700 hover:bg-ink-100',
+                    ]}
+                  >
+                    {item.label}
+                  </a>
+                </li>
+              ))
+            }
+          </ul>
+        </nav>
+      </details>
+    </div>
+  </div>
+</header>

@@ -1,0 +1,225 @@
+---
+import Layout from '../components/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site } from '../lib/site';
+
+const suggestTypes = [
+  { icon: '🏢', label: 'Empresa', file: 'src/data/companies.json', template: 'suggest-company' },
+  {
+    icon: '🎓',
+    label: 'Universidad',
+    file: 'src/data/universities.json',
+    template: 'suggest-university',
+  },
+  { icon: '📚', label: 'Programa', file: 'src/data/programs.json', template: 'suggest-program' },
+  { icon: '⭐', label: 'Persona', file: 'src/data/people.json', template: 'suggest-person' },
+  {
+    icon: '👥',
+    label: 'Comunidad',
+    file: 'src/data/communities.json',
+    template: 'suggest-community',
+  },
+  { icon: '📅', label: 'Evento', file: 'src/data/events.json', template: 'suggest-event' },
+];
+
+const qualityRules = [
+  'Cada dato importante debe tener una fuente pública (sourceUrl) o quedar marcado con needsVerification: true.',
+  'No inventes datos. Si falta información, deja el campo vacío en lugar de suponer.',
+  'Usa slugs en kebab-case, únicos y estables (ej. universidad-de-caldas).',
+  'Para personas: solo perfiles públicos, sin datos sensibles (teléfonos, correos privados, direcciones).',
+  'Describe aportes y hechos, no opiniones ni lenguaje competitivo (“el mejor”, “top”).',
+  'Respeta el schema: la validación con Zod corre en cada Pull Request.',
+];
+
+const companyExample = `{
+  "name": "Nombre de la empresa",
+  "slug": "nombre-de-la-empresa",
+  "description": "Qué hace, en una o dos frases.",
+  "website": "https://ejemplo.com",
+  "city": "Manizales",
+  "department": "Caldas",
+  "country": "Colombia",
+  "categories": ["Desarrollo de software"],
+  "technologies": ["TypeScript", "AWS"],
+  "hasSoftwareDevelopmentHouse": true,
+  "workModel": "hybrid",
+  "size": "small",
+  "sourceUrl": "https://fuente-publica.com",
+  "needsVerification": false
+}`;
+
+const personExample = `{
+  "name": "Nombre Apellido",
+  "slug": "nombre-apellido",
+  "headline": "Rol o aporte principal",
+  "shortBio": "Enfocada en su contribución al ecosistema.",
+  "city": "Manizales",
+  "department": "Caldas",
+  "country": "Colombia",
+  "areas": ["Comunidad", "Desarrollo de software"],
+  "roles": ["Organizador de comunidad"],
+  "organizations": ["Nombre de la comunidad"],
+  "contributions": ["Organización de la comunidad X"],
+  "linkedin": "https://www.linkedin.com/in/usuario",
+  "github": "https://github.com/usuario",
+  "isPublicProfile": true,
+  "sourceUrl": "https://fuente-publica.com",
+  "needsVerification": false
+}`;
+---
+
+<Layout
+  title="Contribuir"
+  description="Cómo contribuir al mapa del ecosistema TIC de Manizales y Caldas: agrega empresas, universidades, programas, personas, comunidades y eventos vía Pull Request."
+>
+  <PageHeader
+    eyebrow="Comunidad"
+    title="Cómo contribuir"
+    description="Este directorio lo construimos entre toda la comunidad. Los datos viven en un repositorio abierto y se actualizan mediante Pull Requests revisables."
+  />
+
+  <div class="container-content grid gap-10 py-10 lg:grid-cols-3">
+    <div class="space-y-10 lg:col-span-2">
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Dos formas de aportar</h2>
+        <div class="mt-4 grid gap-4 sm:grid-cols-2">
+          <div class="card">
+            <div class="text-2xl" aria-hidden="true">🔀</div>
+            <h3 class="mt-2 font-semibold text-ink-900">Pull Request (recomendado)</h3>
+            <p class="mt-1 text-sm text-ink-600">
+              Edita el archivo JSON correspondiente y abre un PR. La validación de datos y el build
+              se ejecutan automáticamente.
+            </p>
+            <a
+              href={site.newPrUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-3 inline-flex btn-primary">Abrir Pull Request</a
+            >
+          </div>
+          <div class="card">
+            <div class="text-2xl" aria-hidden="true">📝</div>
+            <h3 class="mt-2 font-semibold text-ink-900">Issue (sugerencia)</h3>
+            <p class="mt-1 text-sm text-ink-600">
+              ¿No te sientes a gusto con Git? Abre un Issue con la plantilla y alguien de la
+              comunidad lo convertirá en un PR.
+            </p>
+            <a
+              href={site.issuesUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="mt-3 inline-flex btn-secondary">Sugerir con un Issue</a
+            >
+          </div>
+        </div>
+      </section>
+
+      <section class="rounded-lg border border-brand-200 bg-accent-soft/50 p-5">
+        <p class="kicker text-accent-ink/80">2020 → 2026</p>
+        <h2 class="mt-1 font-display text-xl font-semibold text-accent-ink">
+          Ayúdanos a verificar los datos heredados de 2020
+        </h2>
+        <p class="mt-2 text-sm text-ink-700">
+          Buena parte del archivo proviene de un registro comunitario de 2020 y de fuentes públicas
+          que pueden haber cambiado. Los registros marcados como <em>“Estado por confirmar”</em> o
+          <em>“Posiblemente inactivo”</em> son los que más necesitan una mano: basta con aportar una
+          fuente pública reciente (sitio oficial, registro mercantil, LinkedIn de la organización) o
+          confirmar que un dato sigue vigente.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Paso a paso (Pull Request)</h2>
+        <ol class="mt-4 list-decimal space-y-2 pl-5 text-sm text-ink-700">
+          <li>Haz un fork del repositorio y clónalo.</li>
+          <li>
+            Instala dependencias con <code class="rounded bg-ink-100 px-1">npm install</code> y levanta
+            el sitio con <code class="rounded bg-ink-100 px-1">npm run dev</code>.
+          </li>
+          <li>Agrega o edita el registro en el archivo JSON correspondiente en <code class="rounded bg-ink-100 px-1">src/data/</code>.</li>
+          <li>
+            Valida con <code class="rounded bg-ink-100 px-1">npm run validate:data</code> y prueba el
+            build con <code class="rounded bg-ink-100 px-1">npm run build</code>.
+          </li>
+          <li>Abre un Pull Request describiendo el cambio y su fuente.</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Qué puedes sugerir</h2>
+        <div class="mt-4 grid gap-3 sm:grid-cols-2">
+          {
+            suggestTypes.map((t) => (
+              <div class="flex items-start gap-3 rounded-xl border border-ink-200 bg-white p-4">
+                <span class="text-2xl" aria-hidden="true">
+                  {t.icon}
+                </span>
+                <div class="min-w-0">
+                  <p class="font-semibold text-ink-900">{t.label}</p>
+                  <p class="text-xs text-ink-500">
+                    <code>{t.file}</code>
+                  </p>
+                  <a
+                    href={`${site.repoUrl}/issues/new?template=${t.template}.yml`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="mt-1 inline-block text-sm text-brand-700 hover:underline"
+                  >
+                    Sugerir {t.label.toLowerCase()} →
+                  </a>
+                </div>
+              </div>
+            ))
+          }
+        </div>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Ejemplo: empresa</h2>
+        <pre class="mt-3 overflow-x-auto rounded-xl border border-ink-200 bg-ink-950 p-4 text-xs text-ink-50"><code>{companyExample}</code></pre>
+      </section>
+
+      <section>
+        <h2 class="text-2xl font-bold text-ink-900">Ejemplo: persona</h2>
+        <p class="mt-1 text-sm text-ink-600">
+          Recuerda: solo perfiles públicos, enfoque en contribuciones, sin datos sensibles.
+        </p>
+        <pre class="mt-3 overflow-x-auto rounded-xl border border-ink-200 bg-ink-950 p-4 text-xs text-ink-50"><code>{personExample}</code></pre>
+      </section>
+    </div>
+
+    <aside class="space-y-6">
+      <div class="rounded-xl border border-brand-100 bg-brand-50 p-5">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-brand-800">
+          Reglas de calidad
+        </h2>
+        <ul class="mt-3 space-y-2 text-sm text-brand-800">
+          {
+            qualityRules.map((r) => (
+              <li class="flex items-start gap-2">
+                <span aria-hidden="true" class="mt-0.5">
+                  ✓
+                </span>
+                <span>{r}</span>
+              </li>
+            ))
+          }
+        </ul>
+      </div>
+
+      <div class="rounded-xl border border-ink-200 bg-white p-5">
+        <h2 class="text-sm font-semibold uppercase tracking-wide text-ink-500">Fuente de verdad</h2>
+        <p class="mt-2 text-sm text-ink-600">
+          Todo el contenido vive en el repositorio. No usamos base de datos ni CMS: los datos son
+          archivos JSON versionados y revisables.
+        </p>
+        <a
+          href={site.repoUrl}
+          target="_blank"
+          rel="noopener noreferrer"
+          class="mt-3 inline-flex btn-secondary">Ver repositorio</a
+        >
+      </div>
+    </aside>
+  </div>
+</Layout>

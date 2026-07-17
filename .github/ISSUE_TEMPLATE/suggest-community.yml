@@ -1,0 +1,53 @@
+name: "👥 Sugerir comunidad"
+description: Sugiere un meetup o comunidad técnica de Manizales o Caldas.
+title: "[Comunidad] "
+labels: ["data", "comunidad"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta sugerencia se convertirá en un registro en `src/data/communities.json`.
+  - type: input
+    id: name
+    attributes:
+      label: Nombre de la comunidad
+      placeholder: ManizalesJS
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+  - type: input
+    id: focus
+    attributes:
+      label: Enfoque (separado por coma)
+      placeholder: JavaScript, Desarrollo web
+  - type: input
+    id: meetup
+    attributes:
+      label: Meetup / enlace principal
+      placeholder: https://www.meetup.com/es/ManizalesJS/
+  - type: input
+    id: organizer
+    attributes:
+      label: Persona u organización que la lidera
+  - type: dropdown
+    id: status
+    attributes:
+      label: Estado
+      options:
+        - Activa
+        - Inactiva
+        - No lo sé
+  - type: input
+    id: source
+    attributes:
+      label: Fuente pública
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmación
+      options:
+        - label: La información es pública.
+          required: true

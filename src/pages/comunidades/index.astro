@@ -1,0 +1,80 @@
+---
+import Layout from '../../components/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Browser from '../../components/Browser.astro';
+import EntityCard from '../../components/EntityCard.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { communities } from '../../lib/data';
+import { encodeFacet, uniqueSorted } from '../../lib/search';
+
+const statusLabel: Record<string, string> = {
+  active: 'Activa',
+  inactive: 'Inactiva',
+  unknown: 'Sin verificar',
+};
+
+const focus = uniqueSorted(communities.flatMap((c) => c.focus));
+const cities = uniqueSorted(communities.map((c) => c.city ?? '').filter(Boolean));
+const statuses = uniqueSorted(communities.map((c) => statusLabel[c.status] ?? c.status));
+
+const facets = [
+  { key: 'focus', label: 'Enfoque', options: focus, allLabel: 'Todos los enfoques' },
+  { key: 'status', label: 'Estado', options: statuses, allLabel: 'Todos' },
+  { key: 'city', label: 'Ciudad', options: cities, allLabel: 'Todas' },
+];
+---
+
+<Layout
+  title="Comunidades"
+  description="Meetups y comunidades técnicas de Manizales y Caldas: JavaScript, ciberseguridad, desarrollo de software y más."
+>
+  <PageHeader
+    eyebrow="Comunidad"
+    title="Comunidades y meetups"
+    description="Espacios de encuentro técnico de la región: Manizales Tech Talks, ManizalesJS, CoffeeDev, seguridad informática y más."
+  />
+
+  <div class="container-content py-8">
+    <p class="mb-6 rounded-lg border border-ink-200 bg-mist/60 p-3 text-sm text-ink-600">
+      Solo listamos comunidades con actividad verificable. Los meetups que ya no están disponibles se
+      retiraron tras confirmarlo. ¿Conoces una comunidad activa que falte?
+      <a href="/contribuir" class="link">Ayúdanos a agregarla</a>.
+    </p>
+
+    {
+      communities.length === 0 ? (
+        <EmptyState icon="👥" title="Aún no hay comunidades registradas" />
+      ) : (
+        <Browser
+          facets={facets}
+          total={communities.length}
+          noun="comunidades"
+          searchPlaceholder="Buscar comunidad…"
+        >
+          {communities.map((c) => (
+            <EntityCard
+              title={c.name}
+              href={`/comunidades/${c.slug}`}
+              kicker="Comunidad"
+              subtitle={c.organizer ? `Organiza: ${c.organizer}` : undefined}
+              description={c.description}
+              tags={c.focus}
+              meta={[c.city ?? ''].filter(Boolean)}
+              needsVerification={c.needsVerification}
+              verificationStatus={c.verificationStatus}
+              status={c.status}
+              lastVerifiedAt={c.lastVerifiedAt}
+              attrs={{
+                'data-item': '',
+                'data-search': [c.name, c.description ?? '', ...c.focus].join(' '),
+                'data-facet-focus': encodeFacet(c.focus),
+                'data-facet-status': encodeFacet([statusLabel[c.status] ?? c.status]),
+                'data-facet-city': encodeFacet(c.city ? [c.city] : []),
+              }}
+            />
+          ))}
+        </Browser>
+      )
+    }
+  </div>
+</Layout>

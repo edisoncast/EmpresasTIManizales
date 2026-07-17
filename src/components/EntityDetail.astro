@@ -1,0 +1,182 @@
+---
+import VerificationStatus from './VerificationStatus.astro';
+import ContributionCTA from './ContributionCTA.astro';
+import Tag from './Tag.astro';
+import { displayUrl } from '../lib/format';
+import { resolveVerification, verificationMeta, type VerificationState } from '../lib/verification';
+
+export interface Fact {
+  label: string;
+  value: string;
+  mono?: boolean;
+}
+export interface LinkItem {
+  label: string;
+  href: string;
+}
+export interface SourceItem {
+  href: string;
+  title?: string;
+  reviewedAt?: string;
+}
+export interface Props {
+  title: string;
+  eyebrow?: string;
+  subtitle?: string;
+  description?: string;
+  needsVerification: boolean;
+  verificationStatus?: VerificationState;
+  status?: 'active' | 'inactive' | 'unknown';
+  lastVerifiedAt?: string;
+  sourceUrl?: string;
+  sources?: SourceItem[];
+  facts?: Fact[];
+  links?: LinkItem[];
+  tags?: string[];
+  tagsLabel?: string;
+  entityName?: string;
+}
+const {
+  title,
+  eyebrow,
+  subtitle,
+  description,
+  needsVerification,
+  verificationStatus,
+  status,
+  lastVerifiedAt,
+  sourceUrl,
+  sources,
+  facts = [],
+  links = [],
+  tags = [],
+  tagsLabel = 'Etiquetas',
+  entityName,
+} = Astro.props;
+
+const state = resolveVerification({ verificationStatus, needsVerification, status });
+const showCallout = state === 'unknown' || state === 'partially_verified' || state === 'inactive_or_unverified';
+const sourceList: SourceItem[] = sources ?? (sourceUrl ? [{ href: sourceUrl }] : []);
+---
+
+<article class="container-detail py-8">
+  <header class="border-b border-ink-200 pb-6">
+    {eyebrow && <p class="kicker">{eyebrow}</p>}
+    <h1 class="mt-2 font-display text-3xl font-semibold leading-tight text-ink-900">{title}</h1>
+    {subtitle && <p class="mt-2 text-md text-ink-600">{subtitle}</p>}
+
+    <div class="mt-4 flex flex-wrap items-center gap-x-3 gap-y-2">
+      <VerificationStatus
+        verificationStatus={verificationStatus}
+        needsVerification={needsVerification}
+        status={status}
+        lastVerifiedAt={lastVerifiedAt}
+        variant="inline"
+      />
+    </div>
+
+    {
+      showCallout && (
+        <p class="mt-4 rounded-md border border-partial/30 bg-partial-bg/50 p-3 text-sm text-ink-800">
+          <strong>{verificationMeta[state].label}.</strong> {verificationMeta[state].message} Ayúdanos
+          a actualizar esta información con una fuente pública.
+        </p>
+      )
+    }
+  </header>
+
+  <div class="grid gap-10 py-8 lg:grid-cols-3">
+    <div class="lg:col-span-2">
+      {description && <p class="prose-reading">{description}</p>}
+
+      {
+        tags.length > 0 && (
+          <section class="mt-6">
+            <h2 class="kicker">{tagsLabel}</h2>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              {tags.map((t) => (
+                <Tag label={t} tone="soft" />
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      <slot />
+
+      <section class="mt-8 border-t border-ink-200 pt-6">
+        <h2 class="font-display text-lg font-semibold text-ink-900">Fuentes</h2>
+        {
+          sourceList.length > 0 ? (
+            <ol class="mt-3 space-y-2">
+              {sourceList.map((s, i) => (
+                <li class="flex items-baseline gap-2 text-sm">
+                  <span class="font-mono text-xs text-ink-400">Fuente {i + 1}</span>
+                  <a
+                    href={s.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="text-accent no-underline hover:underline"
+                  >
+                    {s.title ?? displayUrl(s.href)}
+                    <span aria-hidden="true"> ↗</span>
+                    <span class="sr-only">(se abre en una pestaña nueva)</span>
+                  </a>
+                </li>
+              ))}
+            </ol>
+          ) : (
+            <p class="mt-2 text-sm text-ink-500">Sin fuente pública registrada.</p>
+          )
+        }
+        <div class="mt-5">
+          <ContributionCTA variant="correct" entityName={entityName ?? title} compact />
+        </div>
+      </section>
+    </div>
+
+    <aside class="space-y-6">
+      {
+        facts.length > 0 && (
+          <div class="rounded-lg border border-ink-200 bg-mist/50 p-5">
+            <h2 class="kicker">Ficha</h2>
+            <dl class="mt-3 space-y-3">
+              {facts.map((f) => (
+                <div>
+                  <dt class="text-xs text-ink-500">{f.label}</dt>
+                  <dd class:list={['text-sm text-ink-900', f.mono && 'font-mono']}>{f.value}</dd>
+                </div>
+              ))}
+            </dl>
+          </div>
+        )
+      }
+
+      {
+        links.length > 0 && (
+          <div class="rounded-lg border border-ink-200 bg-surface p-5">
+            <h2 class="kicker">Enlaces</h2>
+            <ul class="mt-3 space-y-2">
+              {links.map((l) => (
+                <li>
+                  <a
+                    href={l.href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="inline-flex items-baseline gap-1.5 text-sm text-accent no-underline hover:underline"
+                  >
+                    <span>{l.label}</span>
+                    <span class="text-ink-400">{displayUrl(l.href)}</span>
+                    <span aria-hidden="true">↗</span>
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )
+      }
+
+      <slot name="aside" />
+    </aside>
+  </div>
+</article>

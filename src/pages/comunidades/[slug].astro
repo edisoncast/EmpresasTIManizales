@@ -1,0 +1,76 @@
+---
+import Layout from '../../components/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import { communities, organizerForCommunity } from '../../lib/data';
+
+export function getStaticPaths() {
+  return communities.map((community) => ({
+    params: { slug: community.slug },
+    props: { community },
+  }));
+}
+
+const { community } = Astro.props;
+const organizer = organizerForCommunity(community);
+
+const statusLabel: Record<string, string> = {
+  active: 'Activa',
+  inactive: 'Inactiva',
+  unknown: 'Sin verificar',
+};
+
+const facts = [
+  { label: 'Enfoque', value: community.focus.join(', ') },
+  { label: 'Ciudad', value: community.city ?? '' },
+  { label: 'Organiza', value: community.organizer ?? '' },
+  { label: 'Estado', value: statusLabel[community.status] ?? community.status },
+].filter((f) => f.value);
+
+const links = [];
+if (community.meetup) links.push({ label: 'Meetup', href: community.meetup });
+if (community.website) links.push({ label: 'Sitio web', href: community.website });
+if (community.contact) links.push({ label: 'Contacto', href: community.contact });
+---
+
+<Layout title={community.name} description={community.description}>
+  <div class="container-content pt-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Comunidades', href: '/comunidades' },
+        { label: community.name },
+      ]}
+    />
+  </div>
+
+  <EntityDetail
+    eyebrow={community.city ? `Comunidad · ${community.city}` : 'Comunidad'}
+    title={community.name}
+    description={community.description}
+    needsVerification={community.needsVerification}
+    verificationStatus={community.verificationStatus}
+    status={community.status}
+    lastVerifiedAt={community.lastVerifiedAt}
+    sourceUrl={community.sourceUrl}
+    facts={facts}
+    links={links}
+    tags={community.focus}
+    tagsLabel="Enfoque"
+    entityName={community.name}
+  >
+    {
+      organizer && (
+        <div slot="aside" class="rounded-lg border border-ink-200 bg-surface p-5">
+          <h2 class="kicker">Persona organizadora</h2>
+          <a
+            href={`/personas/${organizer.slug}`}
+            class="mt-2 block text-sm font-medium text-accent no-underline hover:underline"
+          >
+            {organizer.name}
+          </a>
+        </div>
+      )
+    }
+  </EntityDetail>
+</Layout>

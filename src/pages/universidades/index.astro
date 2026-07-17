@@ -1,0 +1,69 @@
+---
+import Layout from '../../components/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Browser from '../../components/Browser.astro';
+import EntityCard from '../../components/EntityCard.astro';
+import { universities } from '../../lib/data';
+import { label } from '../../lib/format';
+import { encodeFacet, uniqueSorted } from '../../lib/search';
+
+const cities = uniqueSorted(universities.map((u) => u.city));
+const types = uniqueSorted(universities.map((u) => label('institutionType', u.institutionType)));
+
+const facets = [
+  { key: 'city', label: 'Ciudad', options: cities, allLabel: 'Todas las ciudades' },
+  { key: 'type', label: 'Sector', options: types, allLabel: 'Todos' },
+  {
+    key: 'accredited',
+    label: 'Alta calidad',
+    options: ['Sí', 'No'],
+    allLabel: 'Indiferente',
+  },
+];
+---
+
+<Layout
+  title="Universidades"
+  description="Universidades e instituciones de educación superior de Manizales y Caldas con oferta en áreas TIC."
+>
+  <PageHeader
+    eyebrow="Registro · Universidades"
+    title="Universidades e instituciones"
+    description="Instituciones de educación superior de la región con oferta en software, datos, redes, ciberseguridad y áreas afines. Fuente principal: registro público del SNIES/HECAA. Una institución es más que su logo: aquí importa su oferta y estado."
+  />
+
+  <div class="container-content py-8">
+    <Browser
+      facets={facets}
+      total={universities.length}
+      noun="universidades"
+      searchPlaceholder="Buscar universidad…"
+    >
+      {
+        universities.map((u) => (
+          <EntityCard
+            title={u.name}
+            href={`/universidades/${u.slug}`}
+            kicker={label('institutionType', u.institutionType)}
+            description={u.description}
+            meta={[
+              u.city,
+              `${u.programs.length} programas TIC`,
+              u.accredited ? 'Acreditada alta calidad' : '',
+            ].filter(Boolean)}
+            needsVerification={u.needsVerification}
+            verificationStatus={u.verificationStatus}
+            lastVerifiedAt={u.lastVerifiedAt}
+            attrs={{
+              'data-item': '',
+              'data-search': [u.name, u.description ?? '', u.city].join(' '),
+              'data-facet-city': encodeFacet([u.city]),
+              'data-facet-type': encodeFacet([label('institutionType', u.institutionType)]),
+              'data-facet-accredited': encodeFacet([u.accredited ? 'Sí' : 'No']),
+            }}
+          />
+        ))
+      }
+    </Browser>
+  </div>
+</Layout>

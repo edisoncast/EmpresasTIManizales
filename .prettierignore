@@ -1,0 +1,8 @@
+dist
+node_modules
+.astro
+repo-original
+legacy
+infra/terraform/.terraform
+package-lock.json
+*.md

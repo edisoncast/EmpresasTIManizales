@@ -1,0 +1,35 @@
+---
+import { displayUrl, formatDate } from '../lib/format';
+
+export interface Props {
+  sourceUrl?: string;
+  label?: string;
+  /** Fecha de consulta/revisión, si existe. */
+  reviewedAt?: string;
+}
+const { sourceUrl, label = 'Fuente', reviewedAt } = Astro.props;
+const domain = sourceUrl ? displayUrl(sourceUrl).split('/')[0] : '';
+const reviewed = reviewedAt ? formatDate(reviewedAt) : '';
+---
+
+{
+  sourceUrl ? (
+    <a
+      href={sourceUrl}
+      target="_blank"
+      rel="noopener noreferrer"
+      class="inline-flex items-center gap-1.5 rounded-md border border-ink-200 bg-surface px-2.5 py-1 text-xs text-ink-600 no-underline transition-colors duration-fast hover:border-brand-300 hover:text-accent"
+      title={`${label}: ${sourceUrl}`}
+    >
+      <span class="font-mono text-ink-400">{label}</span>
+      <span class="font-medium">{domain}</span>
+      {reviewed && <span class="text-ink-400">· rev. {reviewed}</span>}
+      <span aria-hidden="true" class="text-ink-400">↗</span>
+      <span class="sr-only">(se abre en una pestaña nueva)</span>
+    </a>
+  ) : (
+    <span class="inline-flex items-center rounded-md border border-dashed border-ink-300 px-2.5 py-1 text-xs text-ink-500">
+      Sin fuente pública registrada
+    </span>
+  )
+}

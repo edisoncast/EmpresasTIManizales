@@ -1,0 +1,62 @@
+---
+import { site } from '../lib/site';
+
+export interface Props {
+  variant?: 'add' | 'correct' | 'source' | 'general';
+  /** Nombre de la entidad, para personalizar el texto en fichas. */
+  entityName?: string;
+  compact?: boolean;
+}
+const { variant = 'general', entityName, compact = false } = Astro.props;
+
+const copy = {
+  add: {
+    title: 'Falta un registro',
+    body: 'Si conoces un actor del ecosistema que no aparece, ayúdanos a documentarlo con una fuente pública.',
+    primary: { label: 'Sugerir un registro', href: site.issuesUrl },
+  },
+  correct: {
+    title: entityName ? `¿Este registro necesita una corrección?` : 'Sugerir una corrección',
+    body: 'Los datos pueden cambiar o quedar incompletos. Propón una corrección con evidencia y la revisamos.',
+    primary: { label: 'Sugerir una corrección', href: site.newPrUrl },
+  },
+  source: {
+    title: 'Aportar una fuente',
+    body: 'Ayúdanos a subir el nivel de verificación de este registro compartiendo una fuente pública.',
+    primary: { label: 'Aportar una fuente', href: site.issuesUrl },
+  },
+  general: {
+    title: 'Este es un archivo vivo',
+    body: 'Los datos son abiertos y se mantienen entre comunidad. Sugiere, corrige o aporta fuentes por Pull Request o Issue.',
+    primary: { label: 'Cómo contribuir', href: '/contribuir' },
+  },
+};
+const c = copy[variant];
+const external = c.primary.href.startsWith('http');
+---
+
+<div
+  class:list={[
+    'rounded-lg border border-brand-200 bg-accent-soft/50',
+    compact ? 'p-4' : 'p-6',
+  ]}
+>
+  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+    <div>
+      <h2 class:list={['font-display font-semibold text-accent-ink', compact ? 'text-base' : 'text-lg']}>
+        {c.title}
+      </h2>
+      <p class:list={['mt-1 text-ink-700', compact ? 'text-sm' : 'text-sm']}>{c.body}</p>
+    </div>
+    <div class="flex shrink-0 flex-wrap gap-2">
+      <a
+        href={c.primary.href}
+        target={external ? '_blank' : undefined}
+        rel={external ? 'noopener noreferrer' : undefined}
+        class="btn-primary whitespace-nowrap"
+      >
+        {c.primary.label}
+      </a>
+    </div>
+  </div>
+</div>

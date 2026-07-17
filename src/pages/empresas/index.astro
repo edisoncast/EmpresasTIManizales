@@ -1,0 +1,102 @@
+---
+import Layout from '../../components/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import Browser from '../../components/Browser.astro';
+import EntityCard from '../../components/EntityCard.astro';
+import EmptyState from '../../components/EmptyState.astro';
+import { companies } from '../../lib/data';
+import { label } from '../../lib/format';
+import { encodeFacet, uniqueSorted } from '../../lib/search';
+import { site } from '../../lib/site';
+
+const regYear = (c: (typeof companies)[number]) => (c.registeredAt ? c.registeredAt.slice(0, 4) : '');
+
+const cities = uniqueSorted(companies.map((c) => c.city));
+const categories = uniqueSorted(companies.flatMap((c) => c.categories));
+const sizes = uniqueSorted(companies.map((c) => label('size', c.size)));
+const forms = uniqueSorted(companies.map((c) => c.legalForm ?? '').filter(Boolean));
+const years = uniqueSorted(companies.map(regYear));
+
+const facets = [
+  { key: 'city', label: 'Ciudad', options: cities, allLabel: 'Todas las ciudades' },
+  { key: 'category', label: 'Categoría', options: categories, allLabel: 'Todas las categorías' },
+  { key: 'size', label: 'Tamaño', options: sizes, allLabel: 'Todos los tamaños' },
+  { key: 'form', label: 'Forma jurídica', options: forms, allLabel: 'Todas' },
+  { key: 'year', label: 'Año de matrícula', options: years, allLabel: 'Cualquier año' },
+];
+---
+
+<Layout
+  title="Empresas"
+  description="Empresas de base tecnológica y casas de desarrollo de software en Manizales y Caldas."
+>
+  <PageHeader
+    eyebrow="Registro · Empresas"
+    title="Empresas de base tecnológica"
+    description="Empresas y casas de desarrollo de software de Manizales y Caldas. Criterio de inclusión: registro mercantil con actividad de desarrollo de software (CIIU J6201). No es una lista de las “mejores” ni un ranking."
+  />
+
+  <div class="container-content py-8">
+    {
+      companies.length === 0 ? (
+        <EmptyState
+          icon="🏢"
+          title="Aún no hay empresas registradas"
+          message="El repositorio original no incluía datos estructurados de empresas. ¡Sé la primera persona en aportar una!"
+        />
+      ) : (
+        <>
+          <p class="mb-6 rounded-lg border border-ink-200 bg-mist/60 p-3 text-sm text-ink-600">
+            <strong>Fuente:</strong>
+            <a
+              href={site.sources.ccmpc.url}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="link">Cámara de Comercio de Manizales por Caldas</a
+            > — registro mercantil con actividad CIIU J6201 (desarrollo de software) en municipios de
+            Caldas. Datos revalidados a 2026 desde su plataforma de consulta pública.
+            Por privacidad no publicamos correos, direcciones ni representantes, y omitimos el número
+            de identificación de personas naturales.
+          </p>
+          <Browser facets={facets} total={companies.length} noun="empresas" searchPlaceholder="Buscar empresa por nombre, tecnología o categoría…">
+            {companies.map((c) => (
+              <EntityCard
+                title={c.name}
+                href={`/empresas/${c.slug}`}
+                kicker={c.legalForm ?? 'Empresa'}
+                subtitle={c.nit ? `NIT ${c.nit}` : undefined}
+                description={c.description}
+                tags={c.categories}
+                meta={[
+                  c.city,
+                  label('size', c.size),
+                  regYear(c) ? `Matrícula ${regYear(c)}` : '',
+                ].filter(Boolean)}
+                needsVerification={c.needsVerification}
+                verificationStatus={c.verificationStatus}
+                lastVerifiedAt={c.lastVerifiedAt}
+                cta="Ver ficha"
+                attrs={{
+                  'data-item': '',
+                  'data-search': [
+                    c.name,
+                    c.description ?? '',
+                    c.city,
+                    c.nit ?? '',
+                    c.legalForm ?? '',
+                    ...c.categories,
+                  ].join(' '),
+                  'data-facet-city': encodeFacet([c.city]),
+                  'data-facet-category': encodeFacet(c.categories),
+                  'data-facet-size': encodeFacet([label('size', c.size)]),
+                  'data-facet-form': encodeFacet(c.legalForm ? [c.legalForm] : []),
+                  'data-facet-year': encodeFacet(regYear(c) ? [regYear(c)] : []),
+                }}
+              />
+            ))}
+          </Browser>
+        </>
+      )
+    }
+  </div>
+</Layout>

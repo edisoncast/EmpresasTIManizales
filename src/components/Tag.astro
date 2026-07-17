@@ -1,0 +1,25 @@
+---
+export interface Props {
+  label: string;
+  href?: string;
+  tone?: 'soft' | 'neutral' | 'outline';
+}
+const { label, href, tone = 'neutral' } = Astro.props;
+
+const tones: Record<string, string> = {
+  soft: 'bg-accent-soft text-accent-ink',
+  neutral: 'bg-ink-100 text-ink-700',
+  outline: 'border border-ink-300 text-ink-600',
+};
+const cls = `badge font-medium ${tones[tone]}`;
+---
+
+{
+  href ? (
+    <a href={href} class={`${cls} no-underline transition-colors duration-fast hover:bg-accent-soft hover:text-accent-ink`}>
+      {label}
+    </a>
+  ) : (
+    <span class={cls}>{label}</span>
+  )
+}

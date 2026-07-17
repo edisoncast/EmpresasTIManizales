@@ -1,0 +1,71 @@
+---
+import Tag from './Tag.astro';
+import VerificationStatus from './VerificationStatus.astro';
+import type { Person } from '../lib/data';
+
+export interface Props {
+  person: Person;
+  attrs?: Record<string, string>;
+}
+const { person, attrs = {} } = Astro.props;
+const initials = person.name
+  .split(' ')
+  .slice(0, 2)
+  .map((n) => n.charAt(0))
+  .join('')
+  .toUpperCase();
+const firstContribution = person.contributions?.[0];
+---
+
+<article class="card group" {...attrs}>
+  <div class="flex items-start justify-between gap-3">
+    <p class="kicker pt-0.5">Persona</p>
+    <VerificationStatus
+      verificationStatus={person.verificationStatus}
+      needsVerification={person.needsVerification}
+      lastVerifiedAt={person.lastVerifiedAt}
+    />
+  </div>
+
+  <div class="mt-2 flex items-start gap-3">
+    <span
+      class="grid h-11 w-11 shrink-0 place-items-center rounded-full border border-ink-200 bg-accent-soft font-display text-base font-semibold text-accent-ink"
+      aria-hidden="true">{initials}</span
+    >
+    <div class="min-w-0">
+      <h3 class="text-lg font-semibold leading-tight text-ink-900">
+        <a
+          href={`/personas/${person.slug}`}
+          class="no-underline transition-colors duration-fast hover:text-accent">{person.name}</a
+        >
+      </h3>
+      {person.headline && <p class="mt-0.5 text-sm text-ink-500">{person.headline}</p>}
+    </div>
+  </div>
+
+  {
+    firstContribution && (
+      <p class="mt-3 line-clamp-2 text-sm leading-relaxed text-ink-600">
+        <span class="text-ink-400">Contribución:</span> {firstContribution}
+      </p>
+    )
+  }
+
+  {
+    person.areas.length > 0 && (
+      <div class="mt-4 flex flex-wrap gap-1.5">
+        {person.areas.slice(0, 4).map((a) => (
+          <Tag label={a} tone="soft" />
+        ))}
+      </div>
+    )
+  }
+
+  <div class="flex-1"></div>
+  <a
+    href={`/personas/${person.slug}`}
+    class="mt-4 inline-flex items-center gap-1 text-sm font-semibold text-accent no-underline transition-transform duration-fast group-hover:translate-x-0.5"
+  >
+    Ver trayectoria <span aria-hidden="true">→</span>
+  </a>
+</article>

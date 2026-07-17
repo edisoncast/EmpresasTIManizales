@@ -1,0 +1,58 @@
+name: "🎓 Sugerir universidad"
+description: Sugiere una universidad o institución de educación superior con oferta TIC.
+title: "[Universidad] "
+labels: ["data", "universidad"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Esta sugerencia se convertirá en un registro en `src/data/universities.json`.
+  - type: input
+    id: name
+    attributes:
+      label: Nombre de la institución
+      placeholder: Universidad de Caldas
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Sitio web
+      placeholder: https://www.ucaldas.edu.co
+  - type: input
+    id: city
+    attributes:
+      label: Ciudad
+      placeholder: Manizales
+    validations:
+      required: true
+  - type: dropdown
+    id: type
+    attributes:
+      label: Sector
+      options:
+        - Oficial / Pública
+        - Privada
+        - No lo sé
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+  - type: input
+    id: snies
+    attributes:
+      label: Código SNIES (si lo conoces)
+  - type: input
+    id: source
+    attributes:
+      label: Fuente pública
+      placeholder: URL del SNIES o del sitio oficial
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmación
+      options:
+        - label: La información proviene de una fuente pública.
+          required: true

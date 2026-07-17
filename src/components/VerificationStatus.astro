@@ -1,0 +1,52 @@
+---
+import { formatDate } from '../lib/format';
+import {
+  resolveVerification,
+  verificationMeta,
+  type VerificationState,
+} from '../lib/verification';
+
+export interface Props {
+  /** Estado explícito; si no se pasa se deriva de needsVerification/status. */
+  verificationStatus?: VerificationState;
+  needsVerification?: boolean;
+  status?: 'active' | 'inactive' | 'unknown';
+  lastVerifiedAt?: string;
+  /** 'badge' compacto (listados) o 'inline' con mensaje y fecha (detalle). */
+  variant?: 'badge' | 'inline';
+}
+const {
+  verificationStatus,
+  needsVerification = false,
+  status,
+  lastVerifiedAt,
+  variant = 'badge',
+} = Astro.props;
+
+const state = resolveVerification({ verificationStatus, needsVerification, status });
+const meta = verificationMeta[state];
+const verifiedDate = lastVerifiedAt ? formatDate(lastVerifiedAt) : '';
+---
+
+{
+  variant === 'inline' ? (
+    <div class="inline-flex flex-col gap-1">
+      <span class={`badge ${meta.badge}`}>
+        <span aria-hidden="true">{meta.symbol}</span>
+        {meta.label}
+      </span>
+      <span class="text-xs text-ink-500">
+        {meta.message}
+        {verifiedDate && <span> · Última verificación: {verifiedDate}</span>}
+      </span>
+    </div>
+  ) : (
+    <span
+      class={`badge ${meta.badge}`}
+      title={verifiedDate ? `${meta.message} Última verificación: ${verifiedDate}` : meta.message}
+    >
+      <span aria-hidden="true">{meta.symbol}</span>
+      <span>{meta.label}</span>
+    </span>
+  )
+}

@@ -1,0 +1,86 @@
+---
+import Layout from '../../components/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import { programs, universityForProgram } from '../../lib/data';
+import { label } from '../../lib/format';
+
+export function getStaticPaths() {
+  return programs.map((program) => ({ params: { slug: program.slug }, props: { program } }));
+}
+
+const { program } = Astro.props;
+const university = universityForProgram(program);
+
+const facts = [
+  { label: 'Institución', value: program.institutionName },
+  { label: 'Nivel', value: label('programLevel', program.level) },
+  { label: 'Modalidad', value: label('modality', program.modality) },
+  { label: 'Ciudad', value: program.city },
+  { label: 'Créditos', value: program.credits ? String(program.credits) : '' },
+  {
+    label: 'Duración',
+    value: program.durationSemesters ? `${program.durationSemesters} semestres` : '',
+  },
+  { label: 'Código SNIES', value: program.sniesCode ?? '' },
+].filter((f) => f.value);
+
+const links = [];
+if (program.website) links.push({ label: 'Página del programa', href: program.website });
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'EducationalOccupationalProgram',
+  name: program.name,
+  provider: {
+    '@type': 'CollegeOrUniversity',
+    name: program.institutionName,
+  },
+  url: program.website,
+};
+---
+
+<Layout
+  title={program.name}
+  description={`${program.name} en ${program.institutionName} (${label('programLevel', program.level)}).`}
+  jsonLd={jsonLd}
+>
+  <div class="container-content pt-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Programas', href: '/programas' },
+        { label: program.name },
+      ]}
+    />
+  </div>
+
+  <EntityDetail
+    eyebrow={`${label('programLevel', program.level)} · ${program.city}`}
+    title={program.name}
+    subtitle={program.institutionName}
+    needsVerification={program.needsVerification}
+    verificationStatus={program.verificationStatus}
+    lastVerifiedAt={program.lastVerifiedAt}
+    sourceUrl={program.sourceUrl}
+    facts={facts}
+    links={links}
+    tags={program.area}
+    tagsLabel="Áreas"
+    entityName={program.name}
+  >
+    {
+      university && (
+        <div slot="aside" class="rounded-lg border border-ink-200 bg-surface p-5">
+          <h2 class="kicker">Institución</h2>
+          <a
+            href={`/universidades/${university.slug}`}
+            class="mt-2 block text-sm font-medium text-accent no-underline hover:underline"
+          >
+            {university.name}
+          </a>
+        </div>
+      )
+    }
+  </EntityDetail>
+</Layout>

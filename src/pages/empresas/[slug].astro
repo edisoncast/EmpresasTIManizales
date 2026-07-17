@@ -1,0 +1,90 @@
+---
+import Layout from '../../components/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import EntityDetail from '../../components/EntityDetail.astro';
+import { companies } from '../../lib/data';
+import { label, formatDate } from '../../lib/format';
+
+export function getStaticPaths() {
+  return companies.map((company) => ({ params: { slug: company.slug }, props: { company } }));
+}
+
+const { company } = Astro.props;
+
+const facts = [
+  { label: 'NIT', value: company.nit ?? '', mono: true },
+  { label: 'Forma jurídica', value: company.legalForm ?? '' },
+  { label: 'Ciudad', value: company.city },
+  { label: 'Departamento', value: company.department },
+  { label: 'Tamaño', value: label('size', company.size) },
+  { label: 'Actividad (CIIU)', value: company.ciiu ?? '', mono: true },
+  {
+    label: 'Matrícula desde',
+    value: company.registeredAt ? formatDate(company.registeredAt) : '',
+  },
+].filter((f) => f.value);
+
+const links = [];
+if (company.website) links.push({ label: 'Sitio web', href: company.website });
+if (company.linkedin) links.push({ label: 'LinkedIn', href: company.linkedin });
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Organization',
+  name: company.name,
+  description: company.description,
+  url: company.website,
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: company.city,
+    addressRegion: company.department,
+    addressCountry: company.country,
+  },
+};
+---
+
+<Layout
+  title={company.name}
+  description={company.description ?? `${company.name}, empresa TIC de ${company.city}.`}
+  jsonLd={jsonLd}
+  ogType="profile"
+>
+  <div class="container-content pt-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Empresas', href: '/empresas' },
+        { label: company.name },
+      ]}
+    />
+  </div>
+
+  <EntityDetail
+    eyebrow={company.city ? `Empresa · ${company.city}` : 'Empresa'}
+    title={company.name}
+    subtitle={company.categories.join(' · ')}
+    description={company.description}
+    needsVerification={company.needsVerification}
+    verificationStatus={company.verificationStatus}
+    lastVerifiedAt={company.lastVerifiedAt}
+    sourceUrl={company.sourceUrl}
+    facts={facts}
+    links={links}
+    tags={company.technologies ?? []}
+    tagsLabel="Tecnologías"
+    entityName={company.name}
+  >
+    {
+      company.hiringSignals && company.hiringSignals.length > 0 && (
+        <section class="mt-6">
+          <h2 class="font-display text-lg font-semibold text-ink-900">Señales de contratación</h2>
+          <ul class="mt-2 list-inside list-disc text-sm text-ink-700">
+            {company.hiringSignals.map((s) => (
+              <li>{s}</li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+  </EntityDetail>
+</Layout>

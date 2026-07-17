@@ -1,0 +1,143 @@
+---
+import { companies, universities, programs, people, communities } from '../lib/data';
+
+// Índice mínimo para búsqueda global en cliente (nombre, tipo, url, subtítulo).
+interface IndexItem {
+  n: string;
+  t: string;
+  u: string;
+  s: string;
+}
+const index: IndexItem[] = [
+  ...companies.map((c) => ({ n: c.name, t: 'Empresa', u: `/empresas/${c.slug}`, s: c.city })),
+  ...universities.map((u) => ({
+    n: u.name,
+    t: 'Universidad',
+    u: `/universidades/${u.slug}`,
+    s: u.city,
+  })),
+  ...programs.map((p) => ({
+    n: p.name,
+    t: 'Programa',
+    u: `/programas/${p.slug}`,
+    s: p.institutionName,
+  })),
+  ...people.map((p) => ({
+    n: p.name,
+    t: 'Persona',
+    u: `/personas/${p.slug}`,
+    s: p.headline ?? '',
+  })),
+  ...communities.map((c) => ({
+    n: c.name,
+    t: 'Comunidad',
+    u: `/comunidades/${c.slug}`,
+    s: c.focus.join(', '),
+  })),
+];
+---
+
+<div class="relative mx-auto max-w-xl" data-global-search>
+  <label for="global-search-input" class="sr-only">Buscar en todo el ecosistema</label>
+  <div class="relative">
+    <span
+      class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-base text-ink-400"
+      aria-hidden="true">/</span
+    >
+    <input
+      type="search"
+      id="global-search-input"
+      placeholder="Buscar empresas, universidades, programas, personas…"
+      autocomplete="off"
+      class="w-full rounded-lg border border-ink-300 bg-surface py-3.5 pl-10 pr-4 text-md shadow-subtle transition-colors duration-fast focus:border-accent"
+      role="combobox"
+      aria-expanded="false"
+      aria-controls="global-search-results"
+      aria-autocomplete="list"
+      data-gs-input
+    />
+  </div>
+  <ul
+    id="global-search-results"
+    class="absolute left-0 right-0 top-full z-30 mt-2 max-h-80 overflow-auto rounded-xl border border-ink-200 bg-white p-2 text-left shadow-xl"
+    hidden
+    data-gs-results
+  >
+  </ul>
+  <script type="application/json" data-gs-data set:html={JSON.stringify(index)}></script>
+</div>
+
+<script>
+  import { normalizeText } from '../lib/search';
+
+  interface IndexItem {
+    n: string;
+    t: string;
+    u: string;
+    s: string;
+  }
+
+  document.querySelectorAll<HTMLElement>('[data-global-search]').forEach((root) => {
+    const input = root.querySelector<HTMLInputElement>('[data-gs-input]');
+    const results = root.querySelector<HTMLUListElement>('[data-gs-results]');
+    const dataEl = root.querySelector<HTMLScriptElement>('[data-gs-data]');
+    if (!input || !results || !dataEl) return;
+    const items: IndexItem[] = JSON.parse(dataEl.textContent ?? '[]');
+
+    function render(query: string) {
+      const q = normalizeText(query);
+      if (q.length < 2) {
+        results!.hidden = true;
+        input!.setAttribute('aria-expanded', 'false');
+        return;
+      }
+      const matches = items
+        .filter((it) => normalizeText(it.n + ' ' + it.t + ' ' + it.s).includes(q))
+        .slice(0, 8);
+      if (matches.length === 0) {
+        results!.innerHTML =
+          '<li class="px-3 py-2 text-sm text-ink-500">Sin coincidencias. Prueba otra búsqueda.</li>';
+      } else {
+        results!.innerHTML = matches
+          .map(
+            (m) =>
+              `<li><a href="${m.u}" class="flex items-center justify-between gap-3 rounded-lg px-3 py-2 no-underline hover:bg-brand-50"><span class="min-w-0"><span class="block truncate text-sm font-medium text-ink-900">${escapeHtml(
+                m.n,
+              )}</span><span class="block truncate text-xs text-ink-500">${escapeHtml(
+                m.s,
+              )}</span></span><span class="badge bg-ink-100 text-ink-600">${escapeHtml(
+                m.t,
+              )}</span></a></li>`,
+          )
+          .join('');
+      }
+      results!.hidden = false;
+      input!.setAttribute('aria-expanded', 'true');
+    }
+
+    function escapeHtml(str: string): string {
+      return str.replace(
+        /[&<>"']/g,
+        (c) =>
+          ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' })[c] ?? c,
+      );
+    }
+
+    input.addEventListener('input', () => render(input.value));
+    input.addEventListener('focus', () => {
+      if (input.value.length >= 2) render(input.value);
+    });
+    document.addEventListener('click', (e) => {
+      if (!root.contains(e.target as Node)) {
+        results.hidden = true;
+        input.setAttribute('aria-expanded', 'false');
+      }
+    });
+    input.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        results.hidden = true;
+        input.setAttribute('aria-expanded', 'false');
+      }
+    });
+  });
+</script>

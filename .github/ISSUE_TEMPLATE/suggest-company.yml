@@ -1,0 +1,78 @@
+name: "🏢 Sugerir empresa"
+description: Sugiere una empresa de base tecnológica o casa de desarrollo de software.
+title: "[Empresa] "
+labels: ["data", "empresa"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por aportar. Esta sugerencia se convertirá en un registro en `src/data/companies.json`.
+        Recuerda: incluye una fuente pública o quedará marcada como pendiente de verificación.
+  - type: input
+    id: name
+    attributes:
+      label: Nombre de la empresa
+      placeholder: Acme Software
+    validations:
+      required: true
+  - type: input
+    id: website
+    attributes:
+      label: Sitio web
+      placeholder: https://ejemplo.com
+  - type: input
+    id: linkedin
+    attributes:
+      label: LinkedIn
+      placeholder: https://www.linkedin.com/company/ejemplo
+  - type: input
+    id: city
+    attributes:
+      label: Ciudad
+      placeholder: Manizales
+    validations:
+      required: true
+  - type: textarea
+    id: description
+    attributes:
+      label: Descripción
+      placeholder: ¿A qué se dedica? (1-2 frases)
+  - type: input
+    id: categories
+    attributes:
+      label: Categorías (separadas por coma)
+      placeholder: Desarrollo de software, Datos e IA
+  - type: input
+    id: technologies
+    attributes:
+      label: Tecnologías (separadas por coma)
+      placeholder: TypeScript, AWS, Python
+  - type: dropdown
+    id: devhouse
+    attributes:
+      label: ¿Tiene casa de desarrollo de software?
+      options:
+        - "Sí"
+        - "No"
+        - "No lo sé"
+  - type: dropdown
+    id: workModel
+    attributes:
+      label: Modelo de trabajo
+      options:
+        - Remoto
+        - Híbrido
+        - Presencial
+        - No lo sé
+  - type: input
+    id: source
+    attributes:
+      label: Fuente pública
+      placeholder: URL que respalde la información
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmación
+      options:
+        - label: La información es pública y no incluye datos sensibles.
+          required: true

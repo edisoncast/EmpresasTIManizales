@@ -1,0 +1,34 @@
+---
+export interface Props {
+  placeholder?: string;
+  id?: string;
+  label?: string;
+  /** Muestra el label sobre el campo (recomendado en listados). */
+  visibleLabel?: boolean;
+}
+const { placeholder = 'Buscar…', id = 'search', label = 'Buscar', visibleLabel = false } =
+  Astro.props;
+---
+
+<div>
+  <label
+    for={id}
+    class:list={[visibleLabel ? 'mb-1 block text-sm font-medium text-ink-700' : 'sr-only']}
+    >{label}</label
+  >
+  <div class="relative">
+    <span
+      class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-ink-400"
+      aria-hidden="true">/</span
+    >
+    <input
+      type="search"
+      id={id}
+      name={id}
+      placeholder={placeholder}
+      autocomplete="off"
+      class="input pl-8"
+      data-search-input
+    />
+  </div>
+</div>

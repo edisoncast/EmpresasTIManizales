@@ -1,0 +1,38 @@
+---
+export interface Facet {
+  key: string;
+  label: string;
+  options: string[];
+  allLabel?: string;
+}
+export interface Props {
+  facets: Facet[];
+}
+const { facets } = Astro.props;
+---
+
+<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+  {
+    facets.map((facet) => (
+      <div>
+        <label
+          for={`facet-${facet.key}`}
+          class="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-500"
+        >
+          {facet.label}
+        </label>
+        <select
+          id={`facet-${facet.key}`}
+          class="input"
+          data-facet-select
+          data-facet-key={facet.key}
+        >
+          <option value="">{facet.allLabel ?? 'Todas'}</option>
+          {facet.options.map((opt) => (
+            <option value={opt}>{opt}</option>
+          ))}
+        </select>
+      </div>
+    ))
+  }
+</div>

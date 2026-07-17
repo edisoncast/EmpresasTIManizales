@@ -1,0 +1,38 @@
+name: Link check
+
+# Verifica con Playwright que las URLs de los datos sigan vivas.
+# Programado (semanal) + manual. No bloquea el deploy; es control de calidad de datos.
+
+on:
+  workflow_dispatch:
+  schedule:
+    - cron: "0 12 * * 1" # lunes 12:00 UTC
+
+permissions:
+  contents: read
+
+jobs:
+  links:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Install Playwright (Chromium)
+        run: npx playwright install --with-deps chromium
+
+      - name: Check links
+        run: npm run validate:urls
+
+      - name: Summary
+        if: always()
+        run: echo "Revisa el log del job para ver los enlaces con problemas." >> "$GITHUB_STEP_SUMMARY"

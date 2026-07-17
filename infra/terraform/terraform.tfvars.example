@@ -1,0 +1,13 @@
+# Copia este archivo a terraform.tfvars y ajusta los valores.
+project_name = "empresas-ti-manizales"
+environment  = "prod"
+aws_region   = "us-east-1"
+owner        = "comunidad-tic-manizales"
+
+# Dominio personalizado (opcional). Requiere una zona hospedada en Route53.
+enable_custom_domain = false
+domain_name          = ""
+hosted_zone_id       = ""
+
+# Logs de CloudFront apagados por defecto para reducir costos.
+enable_access_logs = false
