@@ -917,27 +917,8 @@
     "website": "https://binapps.com"
   },
   {
-    "name": "Apolo Ingenieria S.A.",
-    "slug": "apolo-ingenieria",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo y licenciamientos de software contable y administrativo - mekano erp - soporte técnico a los clientes. Matrícula desde 1996.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "1996-02-08"
-  },
-  {
     "name": "Apolo Ingenieria S.A.S.",
-    "slug": "apolo-ingenieria-2",
+    "slug": "apolo-ingenieria",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1996.",
     "city": "Manizales",
     "department": "Caldas",
@@ -2339,7 +2320,8 @@
     "needsVerification": false,
     "nit": "900308092-6",
     "registeredAt": "2009-08-21",
-    "website": "https://cafexport.com"
+    "website": "https://cafexport.com",
+    "linkedin": "https://www.linkedin.com/company/cafexport/"
   },
   {
     "name": "Calima Technologies Colombia S.A.S.",
@@ -3562,30 +3544,6 @@
     "registeredAt": "2022-09-22"
   },
   {
-    "name": "Data & Service S.A.S.",
-    "slug": "data-service",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: mantenimiento  reparacion  computadores  accesorios informaticos  portatiles  unidad de cd  puerto usb  impresoras  monitores  teclados  mouse  modems  servidores  scaners  lectores  proyectores  cajetos automaticos atm. Matrícula desde 1996.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": [
-      "Reparación de computadores",
-      "Desarrollo de software",
-      "Hosting y datos",
-      "Otras actividades TI"
-    ],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "1996-12-11"
-  },
-  {
     "name": "Data Quantity S.A.S.",
     "slug": "data-quantity",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2019.",
@@ -3632,7 +3590,7 @@
   },
   {
     "name": "Data Y Service S.A.S.",
-    "slug": "data-y-service",
+    "slug": "data-service",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1996.",
     "city": "Manizales",
     "department": "Caldas",
@@ -6268,27 +6226,8 @@
     "registeredAt": "2019-03-30"
   },
   {
-    "name": "Hackers Academy",
-    "slug": "hackers-academy",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de desarrollo de sistemas informáticos (planificación  análisis  diseño  programación). Matrícula desde 2021.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2021-10-12"
-  },
-  {
     "name": "Hackers Academy S.A.S.",
-    "slug": "hackers-academy-2",
+    "slug": "hackers-academy",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2021.",
     "city": "Manizales",
     "department": "Caldas",
@@ -12854,27 +12793,8 @@
     "registeredAt": "2012-02-29"
   },
   {
-    "name": "Tiempos Games",
-    "slug": "tiempos-games",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: oficina de publicidad. Matrícula desde 2025.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Publicidad", "Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2025-05-19"
-  },
-  {
     "name": "Tiempos Games S.A.S.",
-    "slug": "tiempos-games-2",
+    "slug": "tiempos-games",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
     "city": "Manizales",
     "department": "Caldas",

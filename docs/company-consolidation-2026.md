@@ -24,5 +24,9 @@ Se consolidaron 15 pares que repetían la misma razón social: una ficha corresp
 | `software-de-colombia` | `software-de-colombia-2` |
 | `venus-ingenieria-de-software` | ficha de establecimiento previa; se conservó la ficha de sociedad limitada como `venus-ingenieria-de-software` |
 | `video-dog-network` | `video-dog-network-2` |
+| `apolo-ingenieria` | ficha de establecimiento previa; se conservó la ficha S.A.S. como `apolo-ingenieria` |
+| `data-service` | ficha de establecimiento previa; se conservó la ficha S.A.S. como `data-service` |
+| `hackers-academy` | ficha de establecimiento previa; se conservó la ficha S.A.S. como `hackers-academy` |
+| `tiempos-games` | ficha de establecimiento previa; se conservó la ficha S.A.S. como `tiempos-games` |
 
 No se alteraron las fuentes de Cámara ni los estados de verificación de las fichas conservadas. Esta tabla conserva la trazabilidad de los slugs retirados.
