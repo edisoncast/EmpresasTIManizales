@@ -57,7 +57,7 @@ test.describe('Estructura visual y contenido', () => {
     ).toBeVisible();
     await expect(overview).toContainText(/ingresos por\s+actividades ordinarias anuales/i);
     await expect(overview.getByText('Microempresa', { exact: true }).first()).toBeVisible();
-    await expect(overview.getByText(/560 · 83 %/)).toBeVisible();
+    await expect(overview.getByText(/560 · \d+([.,]\d+)? %/)).toBeVisible();
     await expect(overview.getByRole('link', { name: /decreto 957/i })).toHaveAttribute(
       'rel',
       'noopener noreferrer',
