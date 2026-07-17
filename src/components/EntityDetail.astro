@@ -175,11 +175,11 @@ const sourceList: SourceItem[] = sources ?? (sourceUrl ? [{ href: sourceUrl }] :
                     href={l.href}
                     target="_blank"
                     rel="noopener noreferrer"
-                    class="inline-flex items-baseline gap-1.5 text-sm text-accent no-underline hover:underline"
+                    class="text-sm text-accent no-underline hover:underline"
                   >
-                    <span>{l.label}</span>
-                    <span class="text-ink-400">{displayUrl(l.href)}</span>
-                    <span aria-hidden="true">↗</span>
+                    <span class="font-medium">{l.label}</span>{' '}
+                    <span class="break-all text-ink-400">{displayUrl(l.href)}</span>
+                    <span aria-hidden="true"> ↗</span>
                   </a>
                 </li>
               ))}

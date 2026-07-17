@@ -19,6 +19,8 @@
     "test": "vitest run",
     "validate:data": "tsx scripts/validate-data.ts",
     "audit:data": "tsx scripts/audit-data.ts",
+    "validate:snies": "node scripts/validate-hecaa-programs.mjs",
+    "audit:sena-caldas": "node scripts/validate-hecaa-programs.mjs --audit-sena-caldas",
     "validate:urls": "node scripts/validate-urls.mjs",
     "verify:companies": "node scripts/verify-companies.mjs",
     "test:e2e": "playwright test",

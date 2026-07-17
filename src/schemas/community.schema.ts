@@ -11,6 +11,7 @@ export const communitySchema = z
     department: z.string().optional(),
     website: urlSchema.optional(),
     meetup: urlSchema.optional(),
+    youtube: urlSchema.optional(),
     organizer: z.string().optional(),
     // slug de la persona organizadora, si está registrada
     organizerSlug: slugSchema.optional(),

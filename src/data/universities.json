@@ -16,16 +16,46 @@
       "ing-informatica-ucaldas",
       "maestria-ingenieria-computacional-ucaldas",
       "maestria-bioinformatica-biologia-computacional",
-      "doctorado-ingenieria-ucaldas"
+      "doctorado-ingenieria-ucaldas",
+      "tp-depuracion-datos-ia-presencial-ucaldas",
+      "tp-depuracion-datos-ia-distancia-ucaldas",
+      "tp-depuracion-datos-ia-virtual-ucaldas",
+      "tp-programacion-movil-distancia-ucaldas",
+      "tp-analisis-reporte-datos-ucaldas",
+      "profesional-ciencia-datos-ucaldas",
+      "tp-programacion-web-distancia-ucaldas",
+      "tp-programacion-videojuegos-distancia-ucaldas",
+      "especializacion-ia-analitica-datos-ucaldas",
+      "ingenieria-inteligencia-artificial-ucaldas",
+      "tecnologia-analitica-predictiva-datos-ucaldas",
+      "tp-marketing-digital-presencial-ucaldas",
+      "tp-marketing-digital-distancia-ucaldas",
+      "tp-programacion-web-presencial-ucaldas",
+      "tp-programacion-movil-presencial-ucaldas",
+      "tp-programacion-videojuegos-presencial-ucaldas"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "sources": [
+      {
+        "url": "https://www.ucaldas.edu.co",
+        "title": "Universidad de Caldas — sitio institucional",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+        "title": "HECAA — consulta de instituciones",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "notes": "La institución y su presencia en Manizales se verificaron con fuentes institucionales y HECAA. Cada programa conserva su propio estado de verificación."
   },
   {
     "name": "Universidad Nacional de Colombia - Sede Manizales",
     "slug": "universidad-nacional-de-colombia-sede-manizales",
-    "description": "Sede Manizales de la Universidad Nacional de Colombia, con programas de administración de sistemas informáticos y posgrados en redes y sistemas.",
+    "description": "Sede Manizales de la Universidad Nacional de Colombia, con programas de informática y computación, ciencias de la computación, analítica, inteligencia artificial, redes, sistemas y nanotecnología.",
     "website": "https://www.manizales.unal.edu.co",
     "city": "Manizales",
     "department": "Caldas",
@@ -37,16 +67,35 @@
       "admin-sistemas-informaticos-unal",
       "esp-gestion-redes-datos-unal",
       "esp-auditoria-sistemas-unal",
-      "maestria-admin-sistemas-informaticos-unal"
+      "maestria-admin-sistemas-informaticos-unal",
+      "especializacion-aprendizaje-automatico-ia-unal",
+      "especializacion-inteligencia-artificial-unal",
+      "especializacion-analitica-unal",
+      "especializacion-nanotecnologia-unal",
+      "ciencias-computacion-unal"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "sources": [
+      {
+        "url": "https://www.manizales.unal.edu.co",
+        "title": "Universidad Nacional de Colombia — Sede Manizales",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+        "title": "HECAA — consulta de instituciones",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "notes": "La institución y su presencia en Manizales se verificaron con fuentes institucionales y HECAA. Cada programa conserva su propio estado de verificación."
   },
   {
     "name": "Universidad de Manizales",
     "slug": "universidad-de-manizales",
-    "description": "Universidad privada de Manizales con programas de ingeniería de sistemas, analítica de datos y maestrías en seguridad y gestión de la información.",
+    "description": "Universidad privada de Manizales con oferta presencial y virtual en ingeniería de sistemas, analítica de datos, seguridad de la información, desarrollo de software y tecnologías geográficas.",
     "website": "https://www.umanizales.edu.co",
     "city": "Manizales",
     "department": "Caldas",
@@ -61,11 +110,32 @@
       "esp-sistemas-informacion-geografica-umanizales",
       "maestria-tecnologias-informacion-geografica-umanizales",
       "maestria-seguridad-informacion-umanizales",
-      "maestria-gestion-estrategica-informacion-umanizales"
+      "maestria-gestion-estrategica-informacion-umanizales",
+      "ing-sistemas-virtual-umanizales",
+      "esp-sistemas-informacion-geografica-virtual-umanizales",
+      "ing-analitica-datos-virtual-umanizales",
+      "ing-seguridad-informacion-virtual-umanizales",
+      "tecnologia-desarrollo-software-negocios-digitales-umanizales",
+      "ing-seguridad-informacion-umanizales",
+      "maestria-tecnologias-informacion-geografica-118930-umanizales"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "sources": [
+      {
+        "url": "https://www.umanizales.edu.co",
+        "title": "Universidad de Manizales — sitio institucional",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+        "title": "HECAA — consulta de instituciones",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "notes": "La institución y su presencia en Manizales se verificaron con fuentes institucionales y HECAA. Cada programa conserva su propio estado de verificación."
   },
   {
     "name": "Universidad Autónoma de Manizales",
@@ -82,18 +152,35 @@
       "ing-sistemas-uam",
       "tecnologia-analisis-programacion-uam",
       "esp-ingenieria-software-uam",
+      "esp-ingenieria-software-pruebas-virtual-uam",
+      "especializacion-inteligencia-artificial-presencial-uam",
+      "especializacion-inteligencia-artificial-virtual-uam",
       "maestria-gestion-desarrollo-proyectos-software-uam",
       "maestria-ingenieria-uam",
       "doctorado-ingenieria-uam"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "sources": [
+      {
+        "url": "https://www.autonoma.edu.co",
+        "title": "Universidad Autónoma de Manizales — sitio institucional",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+        "title": "HECAA — consulta de instituciones",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "notes": "La institución y su presencia en Manizales se verificaron con fuentes institucionales y HECAA. Cada programa conserva su propio estado de verificación."
   },
   {
     "name": "Universidad Católica de Manizales",
     "slug": "universidad-catolica-de-manizales",
-    "description": "Universidad privada de Manizales. Según la fuente original no registra programas TIC vigentes propios; participa en convenios de posgrado.",
+    "description": "Universidad privada de Manizales con oferta vigente en educación tecnológica, informática, internet de las cosas y ciberseguridad.",
     "website": "https://www.ucm.edu.co",
     "city": "Manizales",
     "department": "Caldas",
@@ -101,9 +188,16 @@
     "institutionType": "private",
     "accredited": true,
     "sniesCode": "1827",
-    "programs": [],
-    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": true
+    "programs": [
+      "licenciatura-tecnologia-informatica-ucm",
+      "especializacion-ciberseguridad-ucm",
+      "tecnico-profesional-iot-ucm",
+      "tecnologia-implementacion-sistemas-iot-ucm"
+    ],
+    "sourceUrl": "https://www.ucm.edu.co/programas/",
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified"
   },
   {
     "name": "Universidad Antonio Nariño - Sede Manizales",
@@ -156,7 +250,7 @@
   {
     "name": "SENA - Regional Caldas",
     "slug": "sena-caldas",
-    "description": "Servicio Nacional de Aprendizaje (SENA), Regional Caldas. Oferta tecnológica y de especialización tecnológica en desarrollo de software, bases de datos y redes.",
+    "description": "Servicio Nacional de Aprendizaje (SENA), Regional Caldas. Oferta técnica, tecnológica y de especialización tecnológica en desarrollo de software, cloud, bases de datos y redes.",
     "website": "https://www.sena.edu.co",
     "city": "Manizales",
     "department": "Caldas",
@@ -166,12 +260,36 @@
     "sniesCode": "9110",
     "programs": [
       "tecnologia-adsi-sena",
+      "tecnico-sistemas-sena",
+      "tecnico-programacion-software-sena",
+      "tecnico-programacion-aplicaciones-nube-sena",
+      "tecnologia-adso-sena",
+      "tecnologia-implementacion-gestion-bases-datos-sena",
       "esp-tec-gestion-seguridad-bd-sena",
       "esp-tec-seguridad-redes-sena",
       "esp-tec-desarrollo-moviles-sena"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "sources": [
+      {
+        "url": "https://www.sena.edu.co",
+        "title": "SENA — sitio institucional",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://automatizacioncaldas.blogspot.com/p/formacion.html",
+        "title": "Centro de Automatización Industrial — SENA Regional Caldas",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
+        "title": "HECAA — consulta de instituciones",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "notes": "La institución y su presencia en Manizales se verificaron con fuentes institucionales, HECAA y la auditoría de oferta SENA Caldas. Cada programa conserva su propio estado de verificación."
   }
 ]

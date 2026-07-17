@@ -11,11 +11,13 @@
     "roles": ["Organizador de comunidad"],
     "organizations": ["Manizales Tech Talks"],
     "contributions": ["Organización y liderazgo de la comunidad Manizales Tech Talks"],
+    "linkedin": "https://co.linkedin.com/in/jhon-edison-castro-s%C3%A1nchez",
     "x": "https://twitter.com/edisoncast",
     "isPublicProfile": true,
     "sourceUrl": "https://www.meetup.com/es/manizalestechtalks/",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified"
   },
   {
     "name": "Jaime Andrés Restrepo",
@@ -32,11 +34,13 @@
       "Organización de la comunidad de Seguridad Informática y Hacking de Manizales",
       "Divulgación en ciberseguridad"
     ],
+    "linkedin": "https://co.linkedin.com/in/dragonjar",
     "x": "https://twitter.com/DragonJAR",
     "isPublicProfile": true,
     "sourceUrl": "https://www.meetup.com/es/Seguridad-Informatica-Hacking-Manizales",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified"
   },
   {
     "name": "Germán Mauricio Muñoz",
@@ -50,11 +54,13 @@
     "roles": ["Organizador de comunidad"],
     "organizations": ["ManizalesJS"],
     "contributions": ["Organización y liderazgo de la comunidad ManizalesJS"],
+    "linkedin": "https://ca.linkedin.com/in/gmauriciomunoz",
     "x": "https://twitter.com/mauriciomunoz",
     "isPublicProfile": true,
     "sourceUrl": "https://www.meetup.com/es/ManizalesJS/",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": false,
+    "verificationStatus": "verified"
   },
   {
     "name": "Gustavo Adolfo Isaza",
@@ -76,9 +82,11 @@
       "https://scholar.google.com/citations?user=juxjI40AAAAJ&hl=es",
       "https://www.researchgate.net/profile/Gustavo-Isaza"
     ],
+    "linkedin": "https://es.linkedin.com/in/gustavo-isaza-echeverri-87423625",
     "isPublicProfile": true,
     "sourceUrl": "https://scholar.google.com/citations?user=juxjI40AAAAJ&hl=es",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
     "needsVerification": false
   },
   {
@@ -98,9 +106,11 @@
       "Impulso de programas virtuales y formación en IA"
     ],
     "personalBrandLinks": ["https://scholar.google.com/citations?user=D0EGxHIAAAAJ&hl=es"],
+    "linkedin": "https://co.linkedin.com/in/luisfer-castillo-ossa",
     "isPublicProfile": true,
     "sourceUrl": "https://scholar.google.com/citations?user=D0EGxHIAAAAJ&hl=es",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
     "needsVerification": false
   },
   {
@@ -123,9 +133,11 @@
       "https://scholar.google.com/citations?user=MGM6USoAAAAJ&hl=en",
       "https://sciprofiles.com/profile/418124"
     ],
+    "linkedin": "https://co.linkedin.com/in/jeferson-arango-lopez",
     "isPublicProfile": true,
     "sourceUrl": "https://scholar.google.com/citations?user=MGM6USoAAAAJ&hl=en",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
     "needsVerification": false
   },
   {
@@ -146,9 +158,9 @@
     "linkedin": "https://co.linkedin.com/in/ogiraldo",
     "isPublicProfile": true,
     "sourceUrl": "https://www.semana.com/economia/emprendimiento/articulo/de-manizales-a-silicon-valley-asi-conquisto-este-colombiano-el-epicentro-de-la-innovacion/202120/",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Juan Bello",
@@ -168,9 +180,9 @@
     "linkedin": "https://ca.linkedin.com/in/juan-bello",
     "isPublicProfile": true,
     "sourceUrl": "https://www.elespectador.com/economia/emprendimiento-y-liderazgo/porter-metrics-el-emprendimiento-made-in-colombia-que-ya-tiene-presencia-en-mas-de-60-paises/",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Mateo Gómez Ocampo",
@@ -190,9 +202,9 @@
     "linkedin": "https://www.linkedin.com/in/mateo-porter/",
     "isPublicProfile": true,
     "sourceUrl": "https://www.linkedin.com/in/mateo-porter/",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Carlos Alexis Gómez",
@@ -209,11 +221,12 @@
       "Cofundación y liderazgo técnico de Porter Metrics",
       "Construcción del producto SaaS de analítica usado en más de 60 países"
     ],
+    "linkedin": "https://co.linkedin.com/in/carlos-alexis-gomez-28b320199",
     "isPublicProfile": true,
     "sourceUrl": "https://www.elespectador.com/economia/emprendimiento-y-liderazgo/porter-metrics-el-emprendimiento-made-in-colombia-que-ya-tiene-presencia-en-mas-de-60-paises/",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Mateo Burgos Castillo",
@@ -233,9 +246,9 @@
     "linkedin": "https://www.linkedin.com/in/mateoburgos",
     "isPublicProfile": true,
     "sourceUrl": "https://www.linkedin.com/in/mateoburgos",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Santiago Loaiza Giraldo",
@@ -255,9 +268,9 @@
     "linkedin": "https://co.linkedin.com/in/santiagoloaiza",
     "isPublicProfile": true,
     "sourceUrl": "https://co.linkedin.com/in/santiagoloaiza",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Jimmy Alejandro Loaiza",
@@ -277,12 +290,12 @@
     "linkedin": "https://es.linkedin.com/in/jloaiza07",
     "isPublicProfile": true,
     "sourceUrl": "https://es.linkedin.com/in/jloaiza07",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
-    "name": "Andrés Marino Álvarez-Meza",
+    "name": "Andrés Marino Álvarez Meza",
     "slug": "andres-alvarez-meza",
     "headline": "Profesor e investigador en machine learning — Universidad Nacional (Manizales)",
     "shortBio": "Profesor del Departamento de Ingeniería Eléctrica, Electrónica y Computación de la Universidad Nacional de Colombia, sede Manizales. Ph.D. en Ingeniería (Automática). Investiga machine learning, procesamiento de señales y métodos kernel en el grupo de Procesamiento y Reconocimiento de Señales.",
@@ -323,14 +336,15 @@
       "Aporte al posicionamiento de la Universidad de Caldas en IA y data"
     ],
     "personalBrandLinks": ["https://scholar.google.com/citations?user=SSqbwokAAAAJ&hl=es"],
+    "linkedin": "https://es.linkedin.com/in/xiomara-patricia-blanco-valencia-a314185",
     "isPublicProfile": true,
     "sourceUrl": "https://scholar.google.com/citations?user=SSqbwokAAAAJ&hl=es",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
-    "name": "Germán Castellanos-Domínguez",
+    "name": "Germán Castellanos Domínguez",
     "slug": "german-castellanos-dominguez",
     "headline": "Profesor e investigador en procesamiento de señales y machine learning — Universidad Nacional (Manizales)",
     "shortBio": "Profesor titular del Departamento de Ingeniería Eléctrica, Electrónica y Computación de la Universidad Nacional de Colombia, sede Manizales, y líder del Signal Processing and Recognition Group. Investiga procesamiento digital de señales, machine learning y bioingeniería, incluida la conectividad cerebral con EEG.",
@@ -349,14 +363,15 @@
       "https://scholar.google.com/citations?user=RbCdiT0AAAAJ",
       "https://sciprofiles.com/profile/1714062"
     ],
+    "linkedin": "https://co.linkedin.com/in/german-castellanos-dominguez-1b539913",
     "isPublicProfile": true,
     "sourceUrl": "https://scholar.google.com/citations?user=RbCdiT0AAAAJ",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
-    "name": "Simón Orozco-Arias",
+    "name": "Simón Orozco Arias",
     "slug": "simon-orozco-arias",
     "headline": "Investigador en bioinformática y machine learning",
     "shortBio": "Investigador en ciencias computacionales formado y vinculado a la Universidad Autónoma de Manizales (actualmente en el Barcelona Supercomputing Center). Trabaja en bioinformática, machine learning y análisis de elementos transponibles, y mantiene herramientas de código abierto para el análisis genómico.",
@@ -376,11 +391,12 @@
       "https://scholar.google.com/citations?user=tgyTm2MAAAAJ",
       "https://github.com/simonorozcoarias"
     ],
+    "linkedin": "https://es.linkedin.com/in/simon-orozco-arias",
     "isPublicProfile": true,
     "sourceUrl": "https://scholar.google.com/citations?user=tgyTm2MAAAAJ",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Juan David Montes Vasco",
@@ -400,9 +416,9 @@
     "linkedin": "https://www.linkedin.com/in/juan-david-montes-vasco-b2504a92/",
     "isPublicProfile": true,
     "sourceUrl": "https://www.ucaldas.edu.co/portal/estudiantes-u-de-caldas-crearon-aplicacion-para-movil-que-permite-pedir-taxis-a-domicilio/",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Andrés Silva Gómez",
@@ -423,9 +439,9 @@
     "github": "https://github.com/andresilvagomez",
     "isPublicProfile": true,
     "sourceUrl": "https://www.lapatria.com/manizales/city-taxi-aplicacion-movil-para-un-servicio-52994",
-    "lastVerifiedAt": "2026-07-16",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Herman Freddy Hincapié Ochoa",

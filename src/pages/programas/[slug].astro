@@ -23,6 +23,7 @@ const facts = [
     value: program.durationSemesters ? `${program.durationSemesters} semestres` : '',
   },
   { label: 'Código SNIES', value: program.sniesCode ?? '' },
+  { label: 'Código SENA', value: program.senaProgramCode ?? '' },
 ].filter((f) => f.value);
 
 const links = [];

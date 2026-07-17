@@ -4,6 +4,7 @@
   "semi": true,
   "trailingComma": "all",
   "tabWidth": 2,
+  "endOfLine": "auto",
   "plugins": ["prettier-plugin-astro", "prettier-plugin-tailwindcss"],
   "overrides": [
     {
