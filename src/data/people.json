@@ -143,21 +143,35 @@
   {
     "name": "Óscar Giraldo",
     "slug": "oscar-giraldo",
-    "headline": "Fundador y CEO de Playvox",
-    "shortBio": "Fundador y CEO de Playvox, software para la optimización de centros de contacto con clientes globales (Twitter, Dropbox, Nike, Nubank). Referente del emprendimiento de software desde Manizales, con proyección internacional; egresado de la Universidad Autónoma de Manizales.",
+    "headline": "Fundador y CEO de Oversai",
+    "shortBio": "Fundador y CEO de Oversai, plataforma de inteligencia artificial para QA y observabilidad de experiencia de cliente. Anteriormente fundó Playvox; su trayectoria contribuyó a visibilizar el emprendimiento de software de Manizales con alcance internacional. Es egresado de la Universidad Autónoma de Manizales.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "areas": ["Emprendimiento", "Software", "SaaS"],
+    "areas": ["Emprendimiento", "Software", "SaaS", "Inteligencia artificial"],
     "roles": ["Fundador", "CEO"],
-    "organizations": ["Playvox"],
+    "organizations": ["Oversai"],
     "contributions": [
-      "Fundación y liderazgo de Playvox",
+      "Fundación de Playvox",
+      "Fundación y liderazgo actual de Oversai",
       "Referente del emprendimiento de software de Manizales con alcance global"
     ],
     "linkedin": "https://co.linkedin.com/in/ogiraldo",
     "isPublicProfile": true,
-    "sourceUrl": "https://www.semana.com/economia/emprendimiento/articulo/de-manizales-a-silicon-valley-asi-conquisto-este-colombiano-el-epicentro-de-la-innovacion/202120/",
+    "website": "https://www.oversai.com/",
+    "sourceUrl": "https://www.oversai.com/",
+    "sources": [
+      {
+        "url": "https://www.oversai.com/",
+        "title": "Oversai — perfil de Óscar Giraldo como fundador y CEO",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.semana.com/economia/emprendimiento/articulo/de-manizales-a-silicon-valley-asi-conquisto-este-colombiano-el-epicentro-de-la-innovacion/202120/",
+        "title": "Semana — trayectoria de Óscar Giraldo y Playvox",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "lastVerifiedAt": "2026-07-17",
     "verificationStatus": "verified",
     "needsVerification": false

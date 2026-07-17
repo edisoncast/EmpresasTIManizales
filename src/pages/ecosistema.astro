@@ -2,17 +2,47 @@
 import Layout from '../components/Layout.astro';
 import PageHeader from '../components/PageHeader.astro';
 import ContributionCTA from '../components/ContributionCTA.astro';
-import { universities, communities, people } from '../lib/data';
+import StatsGrid from '../components/StatsGrid.astro';
+import {
+  companies,
+  universities,
+  communities,
+  people,
+  stats,
+  programsForUniversity,
+  organizerForCommunity,
+} from '../lib/data';
 
 // Conexiones reales presentes en los datos (sin inventar causalidad).
 const uniConnections = universities
-  .filter((u) => u.programs.length > 0)
-  .sort((a, b) => b.programs.length - a.programs.length)
-  .slice(0, 5);
-const activeCommunities = communities.filter((c) => c.status === 'active');
-const peopleWithOrg = people
-  .filter((p) => p.organizations && p.organizations.length > 0)
+  .map((university) => ({
+    university,
+    programCount: programsForUniversity(university).length,
+  }))
+  .filter(({ programCount }) => programCount > 0)
+  .sort((a, b) => b.programCount - a.programCount);
+const activeCommunities = communities.filter((community) => community.status === 'active');
+const communityConnections = activeCommunities.map((community) => ({
+  community,
+  organizer: organizerForCommunity(community),
+}));
+const companyCategories = [...new Set(companies.flatMap((company) => company.categories))]
+  .map((category) => ({
+    category,
+    count: companies.filter((company) => company.categories.includes(category)).length,
+  }))
+  .sort((a, b) => b.count - a.count || a.category.localeCompare(b.category, 'es'))
   .slice(0, 6);
+const peopleWithOrganizations = people.filter(
+  (person) => person.organizations && person.organizations.length > 0,
+).length;
+const ecosystemStats = [
+  { label: 'Empresas', value: stats.companies, href: '/empresas', note: 'fichas consolidadas' },
+  { label: 'Instituciones', value: stats.universities, href: '/universidades' },
+  { label: 'Programas', value: stats.programs, href: '/programas' },
+  { label: 'Personas', value: stats.people, href: '/personas' },
+  { label: 'Comunidades activas', value: activeCommunities.length, href: '/comunidades' },
+];
 
 const connections = [
   'La academia forma el talento que contratan las empresas.',
@@ -33,8 +63,16 @@ const connections = [
     showCutoff={false}
   />
 
+  <section class="container-content py-10">
+    <h2 class="sr-only">Registros actuales del ecosistema</h2>
+    <StatsGrid
+      stats={ecosystemStats}
+      caption={`${peopleWithOrganizations} personas incluyen al menos una organización o comunidad en su ficha pública.`}
+    />
+  </section>
+
   <!-- Conexiones reales -->
-  <section class="container-content py-12">
+  <section class="container-content border-t border-ink-200 py-12">
     <h2 class="font-display text-2xl font-semibold text-ink-900">Conexiones en los datos</h2>
     <p class="mt-1 max-w-reading text-ink-600">
       Relaciones sustentadas por los registros actuales. No inferimos vínculos que los datos no
@@ -43,18 +81,18 @@ const connections = [
 
     <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-3">
       <div class="rounded-lg border border-ink-200 bg-surface p-5">
-        <h3 class="kicker">Universidad → Programas</h3>
+        <h3 class="kicker">Institución → Programas</h3>
         <ul class="mt-3 space-y-2">
           {
-            uniConnections.map((u) => (
+            uniConnections.map(({ university, programCount }) => (
               <li class="flex items-baseline justify-between gap-3 text-sm">
                 <a
-                  href={`/universidades/${u.slug}`}
+                  href={`/universidades/${university.slug}`}
                   class="min-w-0 truncate text-ink-800 no-underline hover:text-accent"
                 >
-                  {u.name}
+                  {university.name}
                 </a>
-                <span class="shrink-0 font-mono text-xs text-ink-500">{u.programs.length}</span>
+                <span class="shrink-0 font-mono text-xs text-ink-500">{programCount}</span>
               </li>
             ))
           }
@@ -62,18 +100,18 @@ const connections = [
       </div>
 
       <div class="rounded-lg border border-ink-200 bg-surface p-5">
-        <h3 class="kicker">Comunidades activas → Enfoque</h3>
+        <h3 class="kicker">Empresas → Categorías</h3>
         <ul class="mt-3 space-y-2">
           {
-            activeCommunities.map((c) => (
+            companyCategories.map(({ category, count }) => (
               <li class="flex items-baseline justify-between gap-3 text-sm">
                 <a
-                  href={`/comunidades/${c.slug}`}
+                  href={`/empresas?category=${encodeURIComponent(category)}`}
                   class="min-w-0 truncate text-ink-800 no-underline hover:text-accent"
                 >
-                  {c.name}
+                  {category}
                 </a>
-                <span class="shrink-0 font-mono text-xs text-ink-500">{c.focus[0] ?? ''}</span>
+                <span class="shrink-0 font-mono text-xs text-ink-500">{count}</span>
               </li>
             ))
           }
@@ -81,16 +119,25 @@ const connections = [
       </div>
 
       <div class="rounded-lg border border-ink-200 bg-surface p-5">
-        <h3 class="kicker">Personas → Organizaciones</h3>
+        <h3 class="kicker">Comunidades → Organización</h3>
         <ul class="mt-3 space-y-2">
           {
-            peopleWithOrg.map((p) => (
+            communityConnections.map(({ community, organizer }) => (
               <li class="text-sm">
-                <a href={`/personas/${p.slug}`} class="text-ink-800 no-underline hover:text-accent">
-                  {p.name}
+                <a
+                  href={`/comunidades/${community.slug}`}
+                  class="text-ink-800 no-underline hover:text-accent"
+                >
+                  {community.name}
                 </a>
                 <span class="block truncate font-mono text-xs text-ink-500">
-                  {p.organizations?.[0] ?? ''}
+                  {organizer ? (
+                    <a href={`/personas/${organizer.slug}`} class="hover:text-accent">
+                      {organizer.name}
+                    </a>
+                  ) : (
+                    'Organización por documentar'
+                  )}
                 </span>
               </li>
             ))
@@ -105,13 +152,13 @@ const connections = [
     <h2 class="font-display text-2xl font-semibold text-ink-900">Cómo se articula el territorio</h2>
     <div class="mt-6 grid grid-cols-1 gap-3 sm:grid-cols-2">
       {
-        connections.map((c) => (
+        connections.map((connection) => (
           <div class="flex items-start gap-3 rounded-lg border border-ink-200 bg-surface p-4">
             <span
               aria-hidden="true"
               class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
             />
-            <span class="text-sm text-ink-700">{c}</span>
+            <span class="text-sm text-ink-700">{connection}</span>
           </div>
         ))
       }
