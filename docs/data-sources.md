@@ -16,6 +16,19 @@ Este proyecto publica datos de procedencia diversa. Una fuente demuestra un dato
 | Eventos | Fuente pública específica del evento cuando exista. | Fecha, modalidad, lugar y organización. | El conjunto está vacío a la fecha de corte; no se conservan convocatorias sin una fecha o fuente verificable. |
 | Entidades de apoyo | Sitio institucional o registro público específico. | Función y relación con el ecosistema. | El conjunto está vacío a la fecha de corte. |
 
+## Licencia y términos de uso por material
+
+El repositorio usa licenciamiento por material (ver [`LICENSE`](../LICENSE) y
+[`LICENSE-DATA`](../LICENSE-DATA)):
+
+- **Datasets propios** (personas, comunidades, programas, universidades) y el contenido editorial: **CC BY-SA 4.0** (atribución + compartir igual; se permite uso comercial).
+- **Empresas** (`companies.json`): derivado de la base de la **Cámara de Comercio de Manizales por Caldas**. Su fuente exige **atribución** y **uso no comercial**; ese dataset se reutiliza bajo esos términos (equivalente a CC BY-NC-SA 4.0), **no** bajo CC BY-SA 4.0. Cita siempre a la Cámara de Comercio de Manizales por Caldas como fuente.
+- **Universidades y programas**: consultas públicas HECAA/SNIES del Ministerio de Educación; datos públicos, se citan con la fecha de revisión.
+- **Código**: **MIT** (ver `LICENSE`).
+- **Legado** (`legacy/`): **CC0 1.0** del repositorio original de 2020.
+
+Nada de esto constituye asesoría legal; ante una reutilización con dudas, verifica los términos vigentes de cada fuente antes de publicar.
+
 ## Evidencia local y legado
 
 - `legacy/` conserva los Markdown del proyecto de 2020 sin reescribirlos. Son referencia histórica, no datos vigentes.

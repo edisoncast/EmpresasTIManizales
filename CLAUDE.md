@@ -8,7 +8,9 @@ Guía para agentes que trabajen en este repositorio. Léela antes de editar.
 ecosistema tecnológico regional: empresas, universidades, programas, personas, comunidades, eventos
 y entidades de apoyo. Evoluciona el repositorio comunitario original de 2020 (preservado en
 `legacy/`) hacia un sitio moderno. **Los datos, su procedencia y las relaciones son la identidad del
-producto.** Licencia CC BY-SA 4.0.
+producto.** Licenciamiento por material: **código MIT**, **datos y contenido CC BY-SA 4.0**,
+**empresas** bajo términos de la Cámara de Comercio (atribución + no comercial) y **`legacy/`** en
+CC0. Ver `LICENSE`, `LICENSE-DATA` y `docs/data-sources.md`.
 
 - **Sitio en vivo:** https://ticmanizales.edisoncastrosanchez.app
 - **Repo:** `edisoncast/EmpresasTIManizales` (rama por defecto `master`, protegida).

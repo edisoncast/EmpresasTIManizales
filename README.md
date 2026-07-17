@@ -485,5 +485,15 @@ Nada de esto es necesario para el MVP y **no se incluye todavía** para mantener
 
 ## Licencia
 
-Contenido bajo **Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0)**, igual que el
-repositorio original. Ver [`LICENSE`](./LICENSE).
+Este proyecto usa **licenciamiento por material**:
+
+- **Código** (componentes Astro, scripts, infraestructura Terraform): **MIT** — ver
+  [`LICENSE`](./LICENSE).
+- **Datos propios y contenido** (personas, comunidades, programas, universidades, textos y
+  documentación): **CC BY-SA 4.0** — ver [`LICENSE-DATA`](./LICENSE-DATA).
+- **Empresas** (`src/data/companies.json`, derivado de la Cámara de Comercio de Manizales por
+  Caldas): **términos de la fuente — atribución + uso no comercial** (equivalente a CC BY-NC-SA
+  4.0). Ver [`docs/data-sources.md`](./docs/data-sources.md).
+- **Legado 2020** (`legacy/`): **CC0 1.0** (dominio público), como en el repositorio original.
+
+Al reutilizar, cita al **Observatorio TIC de Manizales y Caldas** y las fuentes de cada registro.
