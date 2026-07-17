@@ -36,6 +36,17 @@ test('home screenshot móvil', async ({ page }, testInfo) => {
   });
 });
 
+test('clasificación empresarial screenshot desktop', async ({ page }, testInfo) => {
+  test.skip(testInfo.project.name !== 'desktop-chromium');
+  await page.goto('/empresas');
+  const overview = page.locator('[data-company-size-overview]');
+  await expect(overview).toBeVisible();
+  await overview.screenshot({
+    path: 'test-results/screenshots/clasificacion-empresarial-desktop.png',
+    animations: 'disabled',
+  });
+});
+
 test('estado vacío y registro pendiente', async ({ page }, testInfo) => {
   test.skip(testInfo.project.name !== 'desktop-chromium');
   await page.goto('/empresas');
@@ -47,7 +58,7 @@ test('estado vacío y registro pendiente', async ({ page }, testInfo) => {
     animations: 'disabled',
   });
 
-  await page.goto('/universidades/universidad-catolica-de-manizales');
+  await page.goto('/programas/ing-sistemas-computacion-ucaldas');
   await expect(page.getByText(/Estado por confirmar|Verificación parcial/i).first()).toBeVisible();
   await page.screenshot({
     path: 'test-results/screenshots/registro-pendiente-desktop.png',

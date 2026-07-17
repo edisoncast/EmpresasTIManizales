@@ -106,4 +106,7 @@ privados, difamación o lenguaje competitivo hacia personas serán rechazadas.
 
 ## Licencia de las contribuciones
 
-Al contribuir aceptas que tu aporte se publique bajo **CC BY-SA 4.0**.
+Al contribuir aceptas que tu aporte se publique bajo la licencia que corresponda al material:
+**código bajo MIT** y **datos/contenido bajo CC BY-SA 4.0**. Los datos derivados de la Cámara de
+Comercio (empresas) conservan los términos de su fuente: **atribución + uso no comercial**. Ver
+[`LICENSE`](./LICENSE) y [`LICENSE-DATA`](./LICENSE-DATA).

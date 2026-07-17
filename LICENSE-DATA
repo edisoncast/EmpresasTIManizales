@@ -1,0 +1,56 @@
+Datos y contenido — Creative Commons Attribution-ShareAlike 4.0 International
+(CC BY-SA 4.0)
+
+Copyright (c) 2020-2026 Jhon Edison Castro Sánchez y contribuidores del
+Observatorio TIC de Manizales y Caldas.
+
+==============================================================================
+ALCANCE
+==============================================================================
+
+Esta licencia cubre los DATOS y el CONTENIDO EDITORIAL producidos por el
+proyecto:
+
+  - Datasets propios: src/data/people.json, communities.json, programs.json,
+    universities.json, events.json y supportEntities.json.
+  - Textos del sitio, documentación en docs/ y los esquemas de datos.
+
+NO cubre:
+
+  - El CÓDIGO FUENTE, licenciado bajo MIT (ver LICENSE).
+  - El dataset de EMPRESAS (src/data/companies.json), derivado de la base de la
+    Cámara de Comercio de Manizales por Caldas, sujeto a los TÉRMINOS DE LA
+    FUENTE (ver "EXCEPCIÓN" más abajo y docs/data-sources.md).
+  - El material histórico en legacy/, dedicado al dominio público bajo CC0 1.0
+    en el repositorio original de 2020.
+
+==============================================================================
+LICENCIA
+==============================================================================
+
+Este contenido se publica bajo Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0). Eres libre de compartir y adaptar el material,
+incluso con fines comerciales, siempre que:
+
+  - ATRIBUCIÓN: des crédito al Observatorio TIC de Manizales y Caldas y a las
+    fuentes citadas en cada registro, con un enlace a esta licencia.
+  - COMPARTIR IGUAL: distribuyas tus adaptaciones bajo la misma licencia.
+
+Resumen legible:  https://creativecommons.org/licenses/by-sa/4.0/deed.es
+Texto legal:      https://creativecommons.org/licenses/by-sa/4.0/legalcode.es
+
+==============================================================================
+EXCEPCIÓN — DATOS DE LA CÁMARA DE COMERCIO (empresas)
+==============================================================================
+
+El dataset de empresas (src/data/companies.json) proviene de la base de datos
+de la Cámara de Comercio de Manizales por Caldas. Su fuente exige ATRIBUCIÓN y
+USO NO COMERCIAL. Por eso ese dataset NO se ofrece bajo CC BY-SA 4.0: debe
+reutilizarse respetando los términos de la fuente (equivalente a
+CC BY-NC-SA 4.0: atribución + no comercial + compartir igual). Consulta
+docs/data-sources.md antes de reutilizarlo.
+
+Los datos de registro público (razón social, NIT de personas jurídicas, forma
+jurídica, CIIU y fechas registrales) se publican con fines informativos y de
+investigación del ecosistema, minimizando datos personales conforme a la
+Ley 1581 de 2012.

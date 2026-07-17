@@ -55,3 +55,6 @@ repo-original/
 
 # Revisión preproducción (local, no se versiona)
 docs/pre-deployment-review.md
+
+# Notas de revisión humana (local, no se versiona)
+docs/review-notes.md

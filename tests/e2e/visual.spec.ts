@@ -47,6 +47,23 @@ test.describe('Estructura visual y contenido', () => {
     expect(await badges.count()).toBeGreaterThan(0);
   });
 
+  test('empresas explica y visualiza el tamaño reportado por Cámara de Comercio', async ({
+    page,
+  }) => {
+    await page.goto('/empresas');
+    const overview = page.locator('[data-company-size-overview]');
+    await expect(
+      overview.getByRole('heading', { name: /qué significa el tamaño de una empresa/i }),
+    ).toBeVisible();
+    await expect(overview).toContainText(/ingresos por\s+actividades ordinarias anuales/i);
+    await expect(overview.getByText('Microempresa', { exact: true }).first()).toBeVisible();
+    await expect(overview.getByText(/560 · \d+([.,]\d+)? %/)).toBeVisible();
+    await expect(overview.getByRole('link', { name: /decreto 957/i })).toHaveAttribute(
+      'rel',
+      'noopener noreferrer',
+    );
+  });
+
   test('la ficha de Venus aparece como verificada', async ({ page }) => {
     await page.goto('/empresas/venus-ingenieria-de-software');
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/venus/i);

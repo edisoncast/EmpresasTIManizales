@@ -1,6 +1,6 @@
 # Fuentes de datos
 
-Última revisión documental: **2026-07-16**.
+Última revisión documental: **2026-07-17**.
 
 Este proyecto publica datos de procedencia diversa. Una fuente demuestra un dato concreto; no implica que el proyecto avale, recomiende o clasifique a una entidad. La presencia en el observatorio tampoco demuestra actividad operativa actual, calidad, tamaño ni capacidad de contratación.
 
@@ -10,11 +10,24 @@ Este proyecto publica datos de procedencia diversa. Una fuente demuestra un dato
 |---|---|---|---|
 | Empresas | [Base de datos de la Cámara de Comercio de Manizales por Caldas](https://ccmpc.org.co/basededatos/) | Registros con actividad económica relacionada con desarrollo de software (principalmente CIIU J6201), forma jurídica, municipio y fechas registrales disponibles. | La URL es un portal de consulta general, no un permalink por registro. Una matrícula o actividad declarada no prueba operación comercial actual. Los registros “En liquidación” se muestran como posiblemente inactivos. |
 | Universidades | [Consulta pública de instituciones HECAA/SNIES](https://hecaa.mineducacion.gov.co/consultaspublicas/ies) | Existencia y datos institucionales públicos. | La presencia institucional no confirma por sí sola acreditación, oferta local o vigencia de cada programa. Sin fecha de consulta trazable, el estado es parcial o pendiente. |
-| Programas | [Consulta pública de programas HECAA/SNIES](https://hecaa.mineducacion.gov.co/consultaspublicas/programas) | Nombre, institución, nivel y códigos cuando están disponibles. | Una URL general exige buscar nuevamente el código. Modalidad, sede y vigencia deben revisarse por programa. |
+| Programas | [Consulta pública de programas vigentes HECAA/SNIES](https://hecaa.mineducacion.gov.co/consultaspublicas/programasvigentes) | Nombre, institución, nivel, modalidad, sede, vigencia y códigos cuando están disponibles. | La consulta no genera un permalink por resultado; es necesario buscar nuevamente cada código y registrar la fecha de revisión. |
 | Personas | Perfiles profesionales públicos, páginas de comunidades y perfiles académicos enlazados en cada registro. | Trayectoria pública y contribuciones al ecosistema. | No se valida vida privada, reputación ni popularidad. No se publican teléfonos, direcciones, correos privados ni identificadores personales. |
 | Comunidades | Sitios oficiales y páginas públicas de Meetup enlazadas en cada registro. | Existencia, enfoque, organizadores y señales públicas de actividad. | Una página disponible no garantiza actividad reciente; la fecha de última revisión es indispensable. |
 | Eventos | Fuente pública específica del evento cuando exista. | Fecha, modalidad, lugar y organización. | El conjunto está vacío a la fecha de corte; no se conservan convocatorias sin una fecha o fuente verificable. |
 | Entidades de apoyo | Sitio institucional o registro público específico. | Función y relación con el ecosistema. | El conjunto está vacío a la fecha de corte. |
+
+## Licencia y términos de uso por material
+
+El repositorio usa licenciamiento por material (ver [`LICENSE`](../LICENSE) y
+[`LICENSE-DATA`](../LICENSE-DATA)):
+
+- **Datasets propios** (personas, comunidades, programas, universidades) y el contenido editorial: **CC BY-SA 4.0** (atribución + compartir igual; se permite uso comercial).
+- **Empresas** (`companies.json`): derivado de la base de la **Cámara de Comercio de Manizales por Caldas**. Su fuente exige **atribución** y **uso no comercial**; ese dataset se reutiliza bajo esos términos (equivalente a CC BY-NC-SA 4.0), **no** bajo CC BY-SA 4.0. Cita siempre a la Cámara de Comercio de Manizales por Caldas como fuente.
+- **Universidades y programas**: consultas públicas HECAA/SNIES del Ministerio de Educación; datos públicos, se citan con la fecha de revisión.
+- **Código**: **MIT** (ver `LICENSE`).
+- **Legado** (`legacy/`): **CC0 1.0** del repositorio original de 2020.
+
+Nada de esto constituye asesoría legal; ante una reutilización con dudas, verifica los términos vigentes de cada fuente antes de publicar.
 
 ## Evidencia local y legado
 
@@ -46,6 +59,20 @@ Una fuente debe ser pública, accesible y pertinente al campo respaldado. Se pre
 No se aceptan capturas sin procedencia, contenido generado por IA, resultados de buscador sin abrir la fuente, mensajes privados ni datos personales no relacionados con el propósito del observatorio.
 
 Cuando sea posible, usar el arreglo `sources` con `url`, `title` y `reviewedAt`. `sourceUrl` se conserva como campo compatible para registros con una única fuente.
+
+## Tamaño empresarial y presencia web
+
+El tamaño empresarial publicado para las empresas procede del campo correspondiente en la base de la Cámara de Comercio; el proyecto no lo deduce por cantidad de empleados. El [Decreto 957 de 2019](https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=94550) clasifica el tamaño exclusivamente por ingresos ordinarios anuales y establece umbrales distintos por sector. Para los registros de desarrollo de software, la interfaz usa como referencia los rangos del sector servicios y convierte las UVT a pesos con la [UVT 2026](https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0238_2025.htm). La equivalencia en pesos es orientativa: no reemplaza la vigencia ni los ingresos usados por la Cámara en cada renovación.
+
+La presencia web se revisa separadamente del estado registral. Al corte del 17 de julio de 2026:
+
+- 675 empresas componen el conjunto;
+- 560 están clasificadas como microempresa;
+- 32 tienen sitio web o producto oficial identificado;
+- 5 de las microempresas tienen al menos un enlace oficial identificado;
+- 555 microempresas siguen pendientes de búsqueda de sitio web o LinkedIn corporativo.
+
+El primer lote incorporó enlaces públicos para 4Lytics, Advancit, Appis Group, Beenova —mediante su producto DogtorSoftware— y Cinnco. Solo Cinnco obtuvo además un LinkedIn corporativo inequívoco. Un perfil personal que menciona una empresa sirve para investigar, pero no se guarda como LinkedIn corporativo. La búsqueda debe continuar por lotes y exige correspondencia de razón social, ciudad, NIT o una declaración equivalente en el sitio; no se asignan dominios por similitud de nombre.
 
 ## Mantenimiento
 

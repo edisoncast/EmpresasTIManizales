@@ -23,6 +23,7 @@ export const programSchema = z
     credits: z.number().int().positive().optional(),
     durationSemesters: z.number().positive().optional(),
     sniesCode: z.string().optional(),
+    senaProgramCode: z.string().trim().min(1).optional(),
     website: urlSchema.optional(),
     ...auditableFields,
   })

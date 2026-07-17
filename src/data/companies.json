@@ -20,25 +20,6 @@
     "registeredAt": "2000-04-19"
   },
   {
-    "name": "@s S.A.S.",
-    "slug": "s-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo de software y consultorías. Matrícula desde 2000.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Hosting y datos", "Desarrollo de software", "Consultoría informática"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2000-04-19"
-  },
-  {
     "name": "2share Colombia S.A.S.",
     "slug": "2share-colombia",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
@@ -57,25 +38,6 @@
     "needsVerification": false,
     "nit": "901294327-2",
     "registeredAt": "2023-04-18"
-  },
-  {
-    "name": "2share Colombia S.A.S.",
-    "slug": "2share-colombia-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de desarrollo de sistemas informáticos (planificación  análisis  diseño  programación  pruebas). Matrícula desde 2021.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2021-12-16"
   },
   {
     "name": "3i Cloud Computing S.A.S.",
@@ -100,6 +62,7 @@
   {
     "name": "4lytics S.A.S.",
     "slug": "4lytics",
+    "website": "https://www.4lytics.com",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2010.",
     "city": "Manizales",
     "department": "Caldas",
@@ -111,6 +74,13 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.4lytics.com",
+        "title": "Sitio web de 4Lytics",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
@@ -437,6 +407,7 @@
   {
     "name": "Advancit S.A.S.",
     "slug": "advancit",
+    "website": "https://advancit.co",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2021.",
     "city": "Manizales",
     "department": "Caldas",
@@ -448,6 +419,13 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://advancit.co",
+        "title": "Sitio web de Advancit",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
@@ -981,6 +959,7 @@
   {
     "name": "Appis Group S.A.S.",
     "slug": "appis-group",
+    "website": "https://appis.com.co",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
     "city": "Manizales",
     "department": "Caldas",
@@ -997,6 +976,13 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://appis.com.co/nosotros",
+        "title": "Quiénes somos de Appis Group",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
@@ -1187,25 +1173,6 @@
     "size": "micro",
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2026-02-12"
-  },
-  {
-    "name": "Arcaico Research S.A.S.",
-    "slug": "arcaico-research-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo y operación de plataformas digitales de análisis informático y suscripciones en linea  investigación aplicada y análisis de datos  prestación de servicios de consultoría en gestión e inteligencia artificial  desarrollo de software y herramientas tecnológicas basadas en datos. Matrícula desde 2026.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Portales web", "Consultoría de gestión", "Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
@@ -1648,25 +1615,6 @@
     "registeredAt": "2025-11-25"
   },
   {
-    "name": "Automyx Studio S.A.S.",
-    "slug": "automyx-studio-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo de software  aplicaciones móviles  diseño web  consultoría en tecnología de la información y servicios de alojamiento de datos. Matrícula desde 2025.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software", "Consultoría informática", "Hosting y datos"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2025-11-25"
-  },
-  {
     "name": "Aval Trade S.A.S.",
     "slug": "aval-trade",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2015.",
@@ -1908,6 +1856,7 @@
   {
     "name": "Beenova S.A.S.",
     "slug": "beenova",
+    "website": "https://web.dogtorsoftware.com",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2019.",
     "city": "Manizales",
     "department": "Caldas",
@@ -1919,6 +1868,13 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://web.dogtorsoftware.com/terminos-condiciones",
+        "title": "Términos de DogtorSoftware, producto operado por Beenova S.A.S.",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
@@ -2647,25 +2603,6 @@
     "registeredAt": "2021-08-02"
   },
   {
-    "name": "Cerebro Colombia Digital Desk S.A.S.",
-    "slug": "cerebro-colombia-digital-desk-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de sistemas informativos. Matrícula desde 2021.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software", "Otras actividades TI", "Portales web"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2021-08-02"
-  },
-  {
     "name": "Cero Creativo S.A.S.",
     "slug": "cero-creativo",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2018.",
@@ -2757,6 +2694,8 @@
   {
     "name": "Cinnco S.A.S.",
     "slug": "cinnco",
+    "website": "https://cinnco.co",
+    "linkedin": "https://www.linkedin.com/company/cinnco",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2013.",
     "city": "Manizales",
     "department": "Caldas",
@@ -2768,6 +2707,18 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://cinnco.co/terms_and_conditions.pdf",
+        "title": "Política de tratamiento de datos de Cinnco S.A.S.",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.linkedin.com/company/cinnco",
+        "title": "Perfil corporativo de Cinnco en LinkedIn",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
@@ -3565,25 +3516,6 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "800122217-7",
-    "registeredAt": "1991-05-22"
-  },
-  {
-    "name": "D.s.i. S.A.",
-    "slug": "d-s-i-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo de sistemas de informacion. Matrícula desde 1991.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Edición de software", "Desarrollo de software", "Otras actividades TI"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
     "registeredAt": "1991-05-22"
   },
   {
@@ -6819,30 +6751,6 @@
     "registeredAt": "2025-02-07"
   },
   {
-    "name": "Iaconexiones S.A.S.",
-    "slug": "iaconexiones-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: ia conexiones s.a.s. se dedica al desarrollo  implementación y comercialización de soluciones tecnológicas avanzadas  con énfasis en inteligencia artificial y plataformas saas. bajo el código 6201  diseña y programa sistemas informáticos  aplicaciones y bases de datos  complementa estas actividades con consultoría y administración de instalaciones informáticas (6202). el establecimiento de comercio funcionará como oficina administrativa  su actividad se realiza esencialmente de forma inmaterial. Matrícula desde 2025.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": [
-      "Desarrollo de software",
-      "Hosting y datos",
-      "Consultoría informática",
-      "Formación"
-    ],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2025-02-07"
-  },
-  {
     "name": "Ideandola S.A.S.",
     "slug": "ideandola",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2019.",
@@ -7489,25 +7397,6 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "901367375-0",
-    "registeredAt": "2020-02-14"
-  },
-  {
-    "name": "J&h Services S.A.S.",
-    "slug": "j-h-services-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: call center. Matrícula desde 2020.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software", "Consultoría informática"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
     "registeredAt": "2020-02-14"
   },
   {
@@ -8585,25 +8474,6 @@
     "registeredAt": "2020-01-22"
   },
   {
-    "name": "Maju Technology S.A.S.",
-    "slug": "maju-technology-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo y consultorias en tecnologia. Matrícula desde 2020.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Portales web", "Publicidad", "Hosting y datos", "Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2020-01-22"
-  },
-  {
     "name": "Makubex S.A.S. En Liquidacion",
     "slug": "makubex-s-a-s-en-liquidacion",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2020.",
@@ -9228,30 +9098,6 @@
     "registeredAt": "2013-07-25"
   },
   {
-    "name": "Mobility Solutions S.A.S.",
-    "slug": "mobility-solutions-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo de software. Matrícula desde 2015.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": [
-      "Desarrollo de software",
-      "Otras actividades TI",
-      "Edición de software",
-      "Consultoría informática"
-    ],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2015-06-17"
-  },
-  {
     "name": "Molecular Technology - Techmol S.A.S.",
     "slug": "molecular-technology-techmol",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2018.",
@@ -9418,29 +9264,6 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "901330856-1",
-    "registeredAt": "2019-10-10"
-  },
-  {
-    "name": "Movil Go S.A.S.",
-    "slug": "movil-go-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: realizar eventos  programas y actividades destinadas a juegos de azar. desarrollo de sofware y comercializacion de esquipos de computo y tecnologia en general. Matrícula desde 2019.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": [
-      "Desarrollo de software",
-      "Consultoría informática",
-      "Comercio de equipos informáticos"
-    ],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
     "registeredAt": "2019-10-10"
   },
   {
@@ -10667,25 +10490,6 @@
   {
     "name": "Potensoft E.U.",
     "slug": "potensoft",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de consultoria informática y actividades de administracion de instalaciones informáticas. Matrícula desde 2008.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Consultoría informática", "Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2008-05-13"
-  },
-  {
-    "name": "Potensoft E.U.",
-    "slug": "potensoft-2",
     "description": "Empresa unipersonal con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2008.",
     "city": "Manizales",
     "department": "Caldas",
@@ -12238,25 +12042,6 @@
     "website": "https://softwaredecolombia.com"
   },
   {
-    "name": "Software De Colombia S.A.S.",
-    "slug": "software-de-colombia-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de desarrollo de sistemas informaticos (planificacion  analisis  diseño  programacion  pruebas). Matrícula desde 1994.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software", "Otras actividades TI"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "1994-10-03"
-  },
-  {
     "name": "Software Imperial Group S.A.S.",
     "slug": "software-imperial-group",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
@@ -13558,25 +13343,6 @@
   {
     "name": "Venus Ingenieria De Software Limitada",
     "slug": "venus-ingenieria-de-software",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de consultoria informatica y de administracion  de instalaciones informaticas. Matrícula desde 2004.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Consultoría informática", "Desarrollo de software", "Otras actividades TI"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2004-05-21"
-  },
-  {
-    "name": "Venus Ingenieria De Software Limitada",
-    "slug": "venus-ingenieria-de-software-2",
     "description": "Sociedad limitada con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1999.",
     "city": "Manizales",
     "department": "Caldas",
@@ -13614,25 +13380,6 @@
     "nit": "901102183-6",
     "registeredAt": "2017-07-31",
     "website": "https://videodognetwork.com"
-  },
-  {
-    "name": "Video Dog Network S.A.S.",
-    "slug": "video-dog-network-2",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: edicion de videos  marketing digital  posicionamiento web. Matrícula desde 2017.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Hosting y datos", "Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2017-07-31"
   },
   {
     "name": "Viky Andrea Gallego Gutierrez",

@@ -1,0 +1,160 @@
+---
+interface SizeDatum {
+  key: 'micro' | 'small' | 'medium' | 'large' | 'unknown';
+  label: string;
+  count: number;
+}
+
+interface Props {
+  sizes: SizeDatum[];
+  total: number;
+}
+
+const { sizes, total } = Astro.props;
+
+const ranges = [
+  {
+    label: 'Microempresa',
+    uvt: 'Hasta 32.988 UVT',
+    cop: 'Hasta $1.727.713.512',
+  },
+  {
+    label: 'Pequeña empresa',
+    uvt: 'Más de 32.988 y hasta 131.951 UVT',
+    cop: 'Hasta $6.910.801.674',
+  },
+  {
+    label: 'Mediana empresa',
+    uvt: 'Más de 131.951 y hasta 483.034 UVT',
+    cop: 'Hasta $25.298.422.716',
+  },
+  {
+    label: 'Gran empresa',
+    uvt: 'Más de 483.034 UVT',
+    cop: 'Más de $25.298.422.716',
+  },
+];
+
+const percentage = (count: number) => (total > 0 ? (count / total) * 100 : 0);
+const formatPercentage = (count: number) =>
+  percentage(count).toLocaleString('es-CO', {
+    minimumFractionDigits: percentage(count) < 1 && count > 0 ? 1 : 0,
+    maximumFractionDigits: 1,
+  });
+---
+
+<section
+  aria-labelledby="company-size-title"
+  class="my-10 border-y border-ink-200 py-8"
+  data-company-size-overview
+>
+  <div class="grid gap-8 lg:grid-cols-[minmax(0,1fr)_minmax(20rem,0.9fr)]">
+    <div class="min-w-0">
+      <p class="kicker">Lectura del registro</p>
+      <h2 id="company-size-title" class="mt-2 font-display text-2xl font-semibold text-ink-900">
+        ¿Qué significa el tamaño de una empresa?
+      </h2>
+      <p class="mt-3 max-w-reading text-ink-600">
+        El tamaño publicado proviene del registro de la Cámara de Comercio. En Colombia no se
+        determina por el número de empleados ni por los activos: el criterio son los ingresos por
+        actividades ordinarias anuales. Como estos registros tienen actividad de desarrollo de
+        software, mostramos los rangos del sector servicios.
+      </p>
+
+      <div class="mt-6 max-w-full">
+        <table class="w-full table-fixed border-collapse text-left text-xs sm:text-sm">
+          <caption class="sr-only">
+            Rangos de tamaño empresarial del sector servicios y equivalencia aproximada para 2026
+          </caption>
+          <thead>
+            <tr class="border-b border-ink-300 text-ink-600">
+              <th scope="col" class="w-[28%] py-2 pr-2 font-semibold sm:pr-4">Tamaño</th>
+              <th scope="col" class="w-[42%] py-2 pr-2 font-semibold sm:pr-4">
+                Ingresos ordinarios anuales
+              </th>
+              <th scope="col" class="w-[30%] py-2 font-semibold">Referencia en COP 2026</th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-ink-200">
+            {
+              ranges.map((range) => (
+                <tr>
+                  <th scope="row" class="break-words py-2.5 pr-2 font-medium text-ink-800 sm:pr-4">
+                    {range.label}
+                  </th>
+                  <td class="break-words py-2.5 pr-2 text-ink-600 sm:pr-4">{range.uvt}</td>
+                  <td class="break-words py-2.5 font-mono text-xs text-ink-600">{range.cop}</td>
+                </tr>
+              ))
+            }
+          </tbody>
+        </table>
+      </div>
+
+      <p class="mt-4 max-w-reading text-xs leading-relaxed text-ink-500">
+        Equivalencias calculadas con la UVT 2026 de $52.374. Son una referencia de lectura: la
+        clasificación registrada corresponde a los ingresos reportados para la vigencia aplicable a
+        cada renovación.
+        <a
+          class="link"
+          href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=94550"
+          target="_blank"
+          rel="noopener noreferrer">Decreto 957 de 2019</a
+        >
+        y
+        <a
+          class="link"
+          href="https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0238_2025.htm"
+          target="_blank"
+          rel="noopener noreferrer">UVT 2026</a
+        >.
+      </p>
+    </div>
+
+    <figure class="min-w-0 lg:border-l lg:border-ink-200 lg:pl-8">
+      <figcaption class="font-display text-lg font-semibold text-ink-900">
+        Distribución de los registros
+      </figcaption>
+      <p class="mt-1 text-sm text-ink-500">{total.toLocaleString('es-CO')} empresas registradas</p>
+
+      <ul class="mt-6 space-y-4">
+        {
+          sizes.map((item) => {
+            const percent = percentage(item.count);
+            return (
+              <li>
+                <div class="flex items-baseline justify-between gap-4 text-sm">
+                  <span class="font-medium text-ink-800">{item.label}</span>
+                  <span class="font-mono text-xs tabular-nums text-ink-600">
+                    {item.count.toLocaleString('es-CO')} · {formatPercentage(item.count)} %
+                  </span>
+                </div>
+                <svg
+                  aria-hidden="true"
+                  class="mt-1.5 block h-2 w-full"
+                  viewBox="0 0 100 8"
+                  preserveAspectRatio="none"
+                >
+                  <rect width="100" height="8" rx="2" fill="var(--color-surface-muted)" />
+                  <rect
+                    width={Math.max(percent, item.count > 0 ? 0.6 : 0)}
+                    height="8"
+                    rx="2"
+                    fill={
+                      item.key === 'unknown' ? 'var(--color-text-secondary)' : 'var(--color-accent)'
+                    }
+                  />
+                </svg>
+              </li>
+            );
+          })
+        }
+      </ul>
+
+      <p class="mt-5 text-xs leading-relaxed text-ink-500">
+        “Sin dato” significa que el tamaño no quedó disponible en el registro importado; no equivale
+        a microempresa.
+      </p>
+    </figure>
+  </div>
+</section>
