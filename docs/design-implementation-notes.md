@@ -60,13 +60,14 @@ Cinco estados sobrios con **label + símbolo + color + mensaje** (nunca solo col
   estado alineado; sin sombras flotantes ni logos protagonistas.
 - **Sin gradientes AI, sin íconos en cada título, sin ilustraciones genéricas.** Íconos reducidos a
   símbolos tipográficos con significado.
-- **React** permanece instalado pero **ningún componente lo hidrata**; búsqueda y filtros son
-  vanilla JS en islas mínimas.
+- **React no está instalado**: búsqueda y filtros usan JavaScript nativo y el resto permanece
+  estático.
 
 ## Pendientes / recomendaciones
 
 - Variante oscura (post-MVP): redefinir todos los pares de contraste, no invertir.
-- Página de metodología/auditoría que consuma `src/data/data-audit.json` (generado por `audit:data`).
+- La auditoría y metodología están documentadas en `data-audit-2026.md` y `data-sources.md`; una
+  página dedicada que consuma `src/data/data-audit.json` queda para una fase posterior.
 - Visualización de red del ecosistema (los datos ya modelan relaciones).
 - Retratos de personas con procedencia y `alt` (hoy se usa iniciales tipográficas como fallback).
 - Snapshots visuales con baseline revisado por humanos (hoy se prioriza assertions semánticas +
@@ -76,12 +77,16 @@ Cinco estados sobrios con **label + símbolo + color + mensaje** (nunca solo col
 
 Config en [`playwright.config.ts`](../playwright.config.ts): Chromium desktop (1440×900) y móvil
 (375×812), `screenshot: 'only-on-failure'`, `trace: 'on-first-retry'`, `video: 'retain-on-failure'`,
-locale/timezone fijos. Los tests viven en `tests/e2e/`:
+  locale/timezone fijos y viewports 1440×900 / 375×667. Los tests viven en `tests/e2e/`:
 
 - `navigation.spec.ts` — navegación, ruta activa, menú móvil, “saltar al contenido”.
 - `responsive.spec.ts` — sin overflow horizontal en 320/375/768/1024/1440; buscador visible en móvil.
 - `visual.spec.ts` — h1 único, contexto 2020→2026, buscador, listados con conteo y fichas, estados de
   verificación textuales, ficha verificada (Venus), estado vacío, ausencia de lenguaje de ranking/empleo.
+- `search-and-filters.spec.ts`, `entity-detail.spec.ts`, `contribution.spec.ts` y
+  `accessibility.spec.ts` — flujos críticos, seguridad de enlaces y axe WCAG 2.2 AA.
+- `visual-capture.spec.ts` — screenshots explícitos de vistas representativas para revisión humana,
+  sin actualización automática de baselines.
 
 ```bash
 # Local (con navegadores instalados)
@@ -89,16 +94,16 @@ npm run test:e2e
 npm run test:e2e:ui
 
 # Con Docker (imagen oficial, navegadores incluidos)
-docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-jammy \
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
   sh -c "npm ci && npm run build && npm run test:e2e"
 ```
 
 ## Revisar el sitio localmente
 
 ```bash
-npm install
+npm ci
 npm run dev      # http://localhost:4321
 # o con Docker:
 docker run --rm -it -p 4321:4321 -v "$PWD":/app -w /app node:24-alpine \
-  sh -c "npm install && npm run dev -- --host 0.0.0.0"
+  sh -c "npm ci && npm run dev -- --host 0.0.0.0"
 ```

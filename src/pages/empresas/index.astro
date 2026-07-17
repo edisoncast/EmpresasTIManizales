@@ -9,7 +9,8 @@ import { label } from '../../lib/format';
 import { encodeFacet, uniqueSorted } from '../../lib/search';
 import { site } from '../../lib/site';
 
-const regYear = (c: (typeof companies)[number]) => (c.registeredAt ? c.registeredAt.slice(0, 4) : '');
+const regYear = (c: (typeof companies)[number]) =>
+  c.registeredAt ? c.registeredAt.slice(0, 4) : '';
 
 const cities = uniqueSorted(companies.map((c) => c.city));
 const categories = uniqueSorted(companies.flatMap((c) => c.categories));
@@ -46,19 +47,22 @@ const facets = [
         />
       ) : (
         <>
-          <p class="mb-6 rounded-lg border border-ink-200 bg-mist/60 p-3 text-sm text-ink-600">
+          <p class="bg-mist/60 mb-6 rounded-lg border border-ink-200 p-3 text-sm text-ink-600">
             <strong>Fuente:</strong>
-            <a
-              href={site.sources.ccmpc.url}
-              target="_blank"
-              rel="noopener noreferrer"
-              class="link">Cámara de Comercio de Manizales por Caldas</a
-            > — registro mercantil con actividad CIIU J6201 (desarrollo de software) en municipios de
-            Caldas. Datos revalidados a 2026 desde su plataforma de consulta pública.
-            Por privacidad no publicamos correos, direcciones ni representantes, y omitimos el número
-            de identificación de personas naturales.
+            <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link">
+              Cámara de Comercio de Manizales por Caldas
+            </a>{' '}
+            — registro mercantil con actividad CIIU J6201 (desarrollo de software) en municipios de
+            Caldas. Datos revalidados a 2026 desde su plataforma de consulta pública. Por privacidad
+            no publicamos correos, direcciones ni representantes, y omitimos el número de
+            identificación de personas naturales.
           </p>
-          <Browser facets={facets} total={companies.length} noun="empresas" searchPlaceholder="Buscar empresa por nombre, tecnología o categoría…">
+          <Browser
+            facets={facets}
+            total={companies.length}
+            noun="empresas"
+            searchPlaceholder="Buscar empresa por nombre, tecnología o categoría…"
+          >
             {companies.map((c) => (
               <EntityCard
                 title={c.name}

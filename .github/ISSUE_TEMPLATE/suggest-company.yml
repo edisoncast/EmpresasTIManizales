@@ -1,7 +1,7 @@
-name: "🏢 Sugerir empresa"
+name: '🏢 Sugerir empresa'
 description: Sugiere una empresa de base tecnológica o casa de desarrollo de software.
-title: "[Empresa] "
-labels: ["data", "empresa"]
+title: '[Empresa] '
+labels: ['data', 'empresa']
 body:
   - type: markdown
     attributes:
@@ -52,9 +52,9 @@ body:
     attributes:
       label: ¿Tiene casa de desarrollo de software?
       options:
-        - "Sí"
-        - "No"
-        - "No lo sé"
+        - 'Sí'
+        - 'No'
+        - 'No lo sé'
   - type: dropdown
     id: workModel
     attributes:

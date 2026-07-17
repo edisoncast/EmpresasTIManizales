@@ -1,7 +1,7 @@
-name: "⭐ Sugerir persona"
+name: '⭐ Sugerir persona'
 description: Sugiere a una persona referente del ecosistema (solo perfiles públicos).
-title: "[Persona] "
-labels: ["data", "persona"]
+title: '[Persona] '
+labels: ['data', 'persona']
 body:
   - type: markdown
     attributes:

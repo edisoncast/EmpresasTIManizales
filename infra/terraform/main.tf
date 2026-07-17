@@ -113,7 +113,7 @@ resource "aws_cloudfront_response_headers_policy" "security" {
         "frame-ancestors 'none'",
         "img-src 'self' data:",
         "font-src 'self'",
-        "style-src 'self' 'unsafe-inline'",
+        "style-src 'self'",
         "script-src 'self'",
         "connect-src 'self'",
         "form-action 'self'",
@@ -246,10 +246,9 @@ resource "aws_cloudfront_distribution" "site" {
 # Bucket de logs (solo si enable_access_logs = true).
 # ---------------------------------------------------------------------------
 resource "aws_s3_bucket" "logs" {
-  count         = var.enable_access_logs ? 1 : 0
-  bucket        = "${local.bucket_name}-logs"
-  force_destroy = true
-  tags          = local.tags
+  count  = var.enable_access_logs ? 1 : 0
+  bucket = "${local.bucket_name}-logs"
+  tags   = local.tags
 }
 
 resource "aws_s3_bucket_ownership_controls" "logs" {
@@ -257,6 +256,48 @@ resource "aws_s3_bucket_ownership_controls" "logs" {
   bucket = aws_s3_bucket.logs[0].id
   rule {
     object_ownership = "BucketOwnerPreferred"
+  }
+}
+
+resource "aws_s3_bucket_public_access_block" "logs" {
+  count  = var.enable_access_logs ? 1 : 0
+  bucket = aws_s3_bucket.logs[0].id
+
+  block_public_acls       = true
+  block_public_policy     = true
+  ignore_public_acls      = true
+  restrict_public_buckets = true
+}
+
+resource "aws_s3_bucket_versioning" "logs" {
+  count  = var.enable_access_logs ? 1 : 0
+  bucket = aws_s3_bucket.logs[0].id
+  versioning_configuration {
+    status = "Enabled"
+  }
+}
+
+resource "aws_s3_bucket_server_side_encryption_configuration" "logs" {
+  count  = var.enable_access_logs ? 1 : 0
+  bucket = aws_s3_bucket.logs[0].id
+  rule {
+    apply_server_side_encryption_by_default {
+      sse_algorithm = "AES256"
+    }
+  }
+}
+
+resource "aws_s3_bucket_lifecycle_configuration" "logs" {
+  count  = var.enable_access_logs ? 1 : 0
+  bucket = aws_s3_bucket.logs[0].id
+
+  rule {
+    id     = "expire-cloudfront-logs"
+    status = "Enabled"
+    filter {}
+    expiration {
+      days = 90
+    }
   }
 }
 

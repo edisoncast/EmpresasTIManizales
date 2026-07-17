@@ -16,7 +16,10 @@ const cls = `badge font-medium ${tones[tone]}`;
 
 {
   href ? (
-    <a href={href} class={`${cls} no-underline transition-colors duration-fast hover:bg-accent-soft hover:text-accent-ink`}>
+    <a
+      href={href}
+      class={`${cls} no-underline transition-colors duration-fast hover:bg-accent-soft hover:text-accent-ink`}
+    >
       {label}
     </a>
   ) : (

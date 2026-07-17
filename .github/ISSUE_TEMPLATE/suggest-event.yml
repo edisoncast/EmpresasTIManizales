@@ -1,7 +1,7 @@
-name: "📅 Sugerir evento"
+name: '📅 Sugerir evento'
 description: Sugiere un evento o encuentro tecnológico (con fecha, lugar y fuente).
-title: "[Evento] "
-labels: ["data", "evento"]
+title: '[Evento] '
+labels: ['data', 'evento']
 body:
   - type: markdown
     attributes:

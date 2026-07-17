@@ -5,7 +5,7 @@ const current = Astro.url.pathname;
 const isActive = (href: string) => current === href || current.startsWith(href + '/');
 ---
 
-<header class="sticky top-0 z-40 border-b border-ink-200 bg-paper/95 backdrop-blur-sm">
+<header class="bg-paper/95 sticky top-0 z-40 border-b border-ink-200 backdrop-blur-sm">
   <div class="container-content flex h-16 items-center justify-between gap-4">
     <a href="/" class="group flex items-baseline gap-2 no-underline">
       <span class="font-display text-lg font-semibold text-ink-900">Observatorio TIC</span>
@@ -38,7 +38,7 @@ const isActive = (href: string) => current === href || current.startsWith(href +
     </nav>
 
     <div class="flex items-center gap-2">
-      <a href="/contribuir" class="hidden btn-primary sm:inline-flex">Contribuir</a>
+      <a href="/contribuir" class="btn-primary hidden sm:inline-flex">Contribuir</a>
       <details class="relative xl:hidden">
         <summary
           class="btn-secondary cursor-pointer list-none"

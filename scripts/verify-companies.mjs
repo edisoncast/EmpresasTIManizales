@@ -14,7 +14,7 @@
  *
  * Requiere navegadores de Playwright instalados (ver README).
  */
-import { chromium } from 'playwright';
+import { chromium } from '@playwright/test';
 import { readFileSync, writeFileSync } from 'node:fs';
 import { join, dirname } from 'node:path';
 import { fileURLToPath } from 'node:url';
@@ -69,7 +69,12 @@ for (const company of targets) {
       recordUrl = new URL(link, 'https://directorio-empresas.einforma.co').toString();
       await page.goto(recordUrl, { timeout: 30000, waitUntil: 'domcontentloaded' });
       await page.waitForTimeout(1000);
-      const text = (await page.locator('body').innerText().catch(() => '')).toLowerCase();
+      const text = (
+        await page
+          .locator('body')
+          .innerText()
+          .catch(() => '')
+      ).toLowerCase();
       if (/cancelad|liquidad|inactiv/.test(text)) status = 'inactiva';
       else if (/activa|vigente|balance|renovaci/.test(text)) status = 'activa';
       else status = 'ficha-encontrada';

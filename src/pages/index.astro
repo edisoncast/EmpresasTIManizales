@@ -27,12 +27,48 @@ const metrics = [
 ];
 
 const index = [
-  { n: '01', href: '/empresas', title: 'Empresas', count: stats.companies, text: 'Empresas de base tecnológica y casas de desarrollo de software.' },
-  { n: '02', href: '/universidades', title: 'Universidades', count: stats.universities, text: 'Instituciones con formación en software, datos, redes y afines.' },
-  { n: '03', href: '/programas', title: 'Programas', count: stats.programs, text: 'Técnicos, tecnológicos, pregrados y posgrados del área TIC.' },
-  { n: '04', href: '/personas', title: 'Personas', count: stats.people, text: 'Trayectorias públicas que construyen ecosistema.' },
-  { n: '05', href: '/comunidades', title: 'Comunidades', count: stats.communities, text: 'Meetups y comunidades técnicas de la región.' },
-  { n: '06', href: '/eventos', title: 'Eventos', count: stats.events, text: 'Encuentros próximos, pasados y por verificar.' },
+  {
+    n: '01',
+    href: '/empresas',
+    title: 'Empresas',
+    count: stats.companies,
+    text: 'Empresas de base tecnológica y casas de desarrollo de software.',
+  },
+  {
+    n: '02',
+    href: '/universidades',
+    title: 'Universidades',
+    count: stats.universities,
+    text: 'Instituciones con formación en software, datos, redes y afines.',
+  },
+  {
+    n: '03',
+    href: '/programas',
+    title: 'Programas',
+    count: stats.programs,
+    text: 'Técnicos, tecnológicos, pregrados y posgrados del área TIC.',
+  },
+  {
+    n: '04',
+    href: '/personas',
+    title: 'Personas',
+    count: stats.people,
+    text: 'Trayectorias públicas que construyen ecosistema.',
+  },
+  {
+    n: '05',
+    href: '/comunidades',
+    title: 'Comunidades',
+    count: stats.communities,
+    text: 'Meetups y comunidades técnicas de la región.',
+  },
+  {
+    n: '06',
+    href: '/eventos',
+    title: 'Eventos',
+    count: stats.events,
+    text: 'Encuentros próximos, pasados y por verificar.',
+  },
 ];
 
 // Distribución de estados de verificación en todo el archivo.
@@ -54,7 +90,7 @@ const jsonLd = {
   '@type': 'WebSite',
   name: site.name,
   description: site.description,
-  url: site.repoUrl,
+  url: new URL('/', Astro.site ?? Astro.url).toString(),
 };
 ---
 
@@ -91,15 +127,19 @@ const jsonLd = {
   </section>
 
   <!-- Nota histórica 2020 → 2026 -->
-  <section class="border-b border-ink-200 bg-mist/50">
-    <div class="container-content flex flex-col gap-3 py-6 sm:flex-row sm:items-center sm:justify-between">
+  <section class="bg-mist/50 border-b border-ink-200">
+    <div
+      class="container-content flex flex-col gap-3 py-6 sm:flex-row sm:items-center sm:justify-between"
+    >
       <p class="max-w-2xl text-sm text-ink-700">
         <span class="font-mono text-xs text-coffee">{site.startedYear} → {site.currentYear}</span>
-        &nbsp; Proyecto iniciado en {site.startedYear} como repositorio comunitario y revalidado
-        comunitariamente en {site.currentYear}. Reconocemos lo que aún no está confirmado y lo
-        convertimos en una invitación a contribuir.
+        &nbsp; Proyecto iniciado en {site.startedYear} como repositorio comunitario y revalidado comunitariamente
+        en {site.currentYear}. Reconocemos lo que aún no está confirmado y lo convertimos en una
+        invitación a contribuir.
       </p>
-      <a href="/acerca" class="shrink-0 text-sm font-medium text-accent no-underline hover:underline"
+      <a
+        href="/acerca"
+        class="shrink-0 text-sm font-medium text-accent no-underline hover:underline"
         >Ver metodología →</a
       >
     </div>
@@ -124,7 +164,8 @@ const jsonLd = {
       Explora el archivo
     </h2>
     <p class="mt-1 max-w-reading text-ink-600">
-      Siete tipos de registro conforman el mapa. Cada uno se explora, filtra y verifica por separado.
+      Siete tipos de registro conforman el mapa. Cada uno se explora, filtra y verifica por
+      separado.
     </p>
     <ul class="mt-6 divide-y divide-ink-200 border-y border-ink-200">
       {
@@ -132,7 +173,7 @@ const jsonLd = {
           <li>
             <a
               href={it.href}
-              class="group flex items-baseline gap-4 py-4 no-underline transition-colors duration-fast hover:bg-mist/40"
+              class="hover:bg-mist/40 group flex items-baseline gap-4 py-4 no-underline transition-colors duration-fast"
             >
               <span class="font-mono text-xs text-ink-400">{it.n}</span>
               <span class="flex-1">
@@ -142,7 +183,12 @@ const jsonLd = {
                 <span class="ml-2 font-mono text-xs text-ink-400">{it.count}</span>
                 <span class="mt-0.5 block max-w-xl text-sm text-ink-600">{it.text}</span>
               </span>
-              <span aria-hidden="true" class="text-ink-400 transition-transform duration-fast group-hover:translate-x-0.5">→</span>
+              <span
+                aria-hidden="true"
+                class="text-ink-400 transition-transform duration-fast group-hover:translate-x-0.5"
+              >
+                →
+              </span>
             </a>
           </li>
         ))
@@ -151,7 +197,7 @@ const jsonLd = {
   </section>
 
   <!-- Verificación -->
-  <section class="border-y border-ink-200 bg-mist/40">
+  <section class="bg-mist/40 border-y border-ink-200">
     <div class="container-content py-14" aria-labelledby="verificacion">
       <h2 id="verificacion" class="font-display text-2xl font-semibold text-ink-900">
         Cómo leemos la verificación
@@ -172,9 +218,7 @@ const jsonLd = {
               </dt>
               <dd class="mt-2 font-display text-2xl font-semibold tabular-nums text-ink-900">
                 {dist[s]}
-                <span class="ml-1 font-sans text-xs font-normal text-ink-500">
-                  de {distTotal}
-                </span>
+                <span class="ml-1 font-sans text-xs font-normal text-ink-500">de {distTotal}</span>
               </dd>
             </div>
           ))
@@ -189,8 +233,9 @@ const jsonLd = {
       <h2 id="personas" class="font-display text-2xl font-semibold text-ink-900">
         Personas que construyen ecosistema
       </h2>
-      <a href="/personas" class="shrink-0 text-sm font-medium text-accent no-underline hover:underline"
-        >Ver todas →</a
+      <a
+        href="/personas"
+        class="shrink-0 text-sm font-medium text-accent no-underline hover:underline">Ver todas →</a
       >
     </div>
     <p class="mt-1 max-w-reading text-ink-600">

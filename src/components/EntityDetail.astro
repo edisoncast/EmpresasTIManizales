@@ -24,6 +24,7 @@ export interface Props {
   eyebrow?: string;
   subtitle?: string;
   description?: string;
+  notes?: string;
   needsVerification: boolean;
   verificationStatus?: VerificationState;
   status?: 'active' | 'inactive' | 'unknown';
@@ -41,6 +42,7 @@ const {
   eyebrow,
   subtitle,
   description,
+  notes,
   needsVerification,
   verificationStatus,
   status,
@@ -55,7 +57,8 @@ const {
 } = Astro.props;
 
 const state = resolveVerification({ verificationStatus, needsVerification, status });
-const showCallout = state === 'unknown' || state === 'partially_verified' || state === 'inactive_or_unverified';
+const showCallout =
+  state === 'unknown' || state === 'partially_verified' || state === 'inactive_or_unverified';
 const sourceList: SourceItem[] = sources ?? (sourceUrl ? [{ href: sourceUrl }] : []);
 ---
 
@@ -78,8 +81,8 @@ const sourceList: SourceItem[] = sources ?? (sourceUrl ? [{ href: sourceUrl }] :
     {
       showCallout && (
         <p class="mt-4 rounded-md border border-partial/30 bg-partial-bg/50 p-3 text-sm text-ink-800">
-          <strong>{verificationMeta[state].label}.</strong> {verificationMeta[state].message} Ayúdanos
-          a actualizar esta información con una fuente pública.
+          <strong>{verificationMeta[state].label}.</strong> {verificationMeta[state].message}{' '}
+          Ayúdanos a actualizar esta información con una fuente pública.
         </p>
       )
     }
@@ -88,6 +91,15 @@ const sourceList: SourceItem[] = sources ?? (sourceUrl ? [{ href: sourceUrl }] :
   <div class="grid gap-10 py-8 lg:grid-cols-3">
     <div class="lg:col-span-2">
       {description && <p class="prose-reading">{description}</p>}
+
+      {
+        notes && (
+          <aside class="mt-5 rounded-md border border-inactive/30 bg-inactive-bg/50 p-4 text-sm text-ink-800">
+            <p class="kicker text-inactive">Nota de auditoría</p>
+            <p class="mt-1">{notes}</p>
+          </aside>
+        )
+      }
 
       {
         tags.length > 0 && (
@@ -138,7 +150,7 @@ const sourceList: SourceItem[] = sources ?? (sourceUrl ? [{ href: sourceUrl }] :
     <aside class="space-y-6">
       {
         facts.length > 0 && (
-          <div class="rounded-lg border border-ink-200 bg-mist/50 p-5">
+          <div class="bg-mist/50 rounded-lg border border-ink-200 p-5">
             <h2 class="kicker">Ficha</h2>
             <dl class="mt-3 space-y-3">
               {facts.map((f) => (

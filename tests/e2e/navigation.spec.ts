@@ -11,6 +11,34 @@ async function openMobileMenuIfNeeded(page: import('@playwright/test').Page) {
 }
 
 test.describe('Navegación', () => {
+  const publicRoutes = [
+    '/',
+    '/empresas',
+    '/universidades',
+    '/programas',
+    '/personas',
+    '/comunidades',
+    '/eventos',
+    '/ecosistema',
+    '/contribuir',
+    '/acerca',
+  ];
+
+  test('todas las rutas públicas responden y no emiten errores graves', async ({ page }) => {
+    const errors: string[] = [];
+    page.on('pageerror', (error) => errors.push(String(error)));
+    page.on('console', (message) => {
+      if (message.type() === 'error') errors.push(message.text());
+    });
+
+    for (const route of publicRoutes) {
+      const response = await page.goto(route);
+      expect(response?.ok(), route).toBe(true);
+      await expect(page.getByRole('heading', { level: 1 }), route).toHaveCount(1);
+    }
+    expect(errors).toEqual([]);
+  });
+
   test('el header lleva a cada sección principal', async ({ page }) => {
     await page.goto('/');
     await openMobileMenuIfNeeded(page);
@@ -41,6 +69,8 @@ test.describe('Navegación', () => {
     await expect(
       page.locator('header details').getByRole('link', { name: 'Comunidades', exact: true }),
     ).toBeVisible();
+    await page.locator('header details summary').click();
+    await expect(page.locator('header details')).not.toHaveAttribute('open', '');
   });
 
   test('el enlace "Saltar al contenido" existe', async ({ page }) => {

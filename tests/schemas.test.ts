@@ -65,9 +65,7 @@ describe('reglas de privacidad de personas', () => {
   it('exige fuente o needsVerification', () => {
     const { sourceUrl: _sourceUrl, ...noSource } = base;
     expect(personSchema.safeParse(noSource).success).toBe(false);
-    expect(
-      personSchema.safeParse({ ...noSource, needsVerification: true }).success,
-    ).toBe(true);
+    expect(personSchema.safeParse({ ...noSource, needsVerification: true }).success).toBe(true);
   });
 });
 

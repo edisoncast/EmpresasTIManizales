@@ -6,8 +6,12 @@ export interface Props {
   /** Muestra el label sobre el campo (recomendado en listados). */
   visibleLabel?: boolean;
 }
-const { placeholder = 'Buscar…', id = 'search', label = 'Buscar', visibleLabel = false } =
-  Astro.props;
+const {
+  placeholder = 'Buscar…',
+  id = 'search',
+  label = 'Buscar',
+  visibleLabel = false,
+} = Astro.props;
 ---
 
 <div>

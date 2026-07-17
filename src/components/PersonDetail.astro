@@ -36,7 +36,9 @@ for (const l of person.personalBrandLinks ?? []) links.push({ label: displayUrl(
         aria-hidden="true">{initials}</span
       >
       <div>
-        <h1 class="font-display text-3xl font-semibold leading-tight text-ink-900">{person.name}</h1>
+        <h1 class="font-display text-3xl font-semibold leading-tight text-ink-900">
+          {person.name}
+        </h1>
         {person.headline && <p class="mt-1 text-md text-ink-600">{person.headline}</p>}
       </div>
     </div>
@@ -63,7 +65,10 @@ for (const l of person.personalBrandLinks ?? []) links.push({ label: displayUrl(
             <ul class="mt-3 space-y-2">
               {person.contributions.map((c) => (
                 <li class="flex items-start gap-3 text-sm text-ink-700">
-                  <span aria-hidden="true" class="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                  <span
+                    aria-hidden="true"
+                    class="mt-1 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                  />
                   <span>{c}</span>
                 </li>
               ))}
@@ -99,7 +104,7 @@ for (const l of person.personalBrandLinks ?? []) links.push({ label: displayUrl(
     </div>
 
     <aside class="space-y-6">
-      <div class="rounded-lg border border-ink-200 bg-mist/50 p-5">
+      <div class="bg-mist/50 rounded-lg border border-ink-200 p-5">
         <h2 class="kicker">Ficha</h2>
         <dl class="mt-3 space-y-3">
           {

@@ -31,7 +31,7 @@
     --color-pending-bg: #efe6d8;
     --color-inactive: #8b4a3f;
     --color-inactive-bg: #f3e1dd;
-    --color-archived: #66706b;
+    --color-archived: #58615d;
     --color-archived-bg: #e5e9e6;
 
     /* Movimiento. */
@@ -133,7 +133,7 @@
 
   /* Botones. */
   .btn {
-    @apply inline-flex items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition duration-fast ease-standard;
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition duration-fast ease-standard;
   }
   .btn-primary {
     @apply btn bg-accent text-white hover:bg-brand-700;
@@ -144,7 +144,7 @@
 
   /* Campo de formulario. */
   .input {
-    @apply w-full rounded-md border border-ink-300 bg-surface px-3 py-2 text-sm text-ink-900 placeholder:text-ink-400 transition-colors duration-fast focus:border-accent;
+    @apply min-h-11 w-full rounded-md border border-ink-300 bg-surface px-3 py-2 text-sm text-ink-900 transition-colors duration-fast placeholder:text-ink-400 focus:border-accent;
   }
 
   /* Badge base (label siempre visible). */

@@ -1,7 +1,7 @@
-name: "👥 Sugerir comunidad"
+name: '👥 Sugerir comunidad'
 description: Sugiere un meetup o comunidad técnica de Manizales o Caldas.
-title: "[Comunidad] "
-labels: ["data", "comunidad"]
+title: '[Comunidad] '
+labels: ['data', 'comunidad']
 body:
   - type: markdown
     attributes:

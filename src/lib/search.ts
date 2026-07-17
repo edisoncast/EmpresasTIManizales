@@ -5,11 +5,7 @@
 
 /** Normaliza texto: minúsculas y sin acentos, para búsquedas tolerantes. */
 export function normalizeText(value: string): string {
-  return value
-    .toLowerCase()
-    .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
-    .trim();
+  return value.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g, '').trim();
 }
 
 /** Codifica una lista de valores de faceta como cadena delimitada: ['a','b'] -> '|a|b|'. */

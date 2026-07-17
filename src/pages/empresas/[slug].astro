@@ -44,7 +44,7 @@ const jsonLd = {
 ---
 
 <Layout
-  title={company.name}
+  title={`${company.name} · ${company.legalForm ?? company.city}`}
   description={company.description ?? `${company.name}, empresa TIC de ${company.city}.`}
   jsonLd={jsonLd}
   ogType="profile"
@@ -64,6 +64,7 @@ const jsonLd = {
     title={company.name}
     subtitle={company.categories.join(' · ')}
     description={company.description}
+    notes={company.notes}
     needsVerification={company.needsVerification}
     verificationStatus={company.verificationStatus}
     lastVerifiedAt={company.lastVerifiedAt}
@@ -73,18 +74,5 @@ const jsonLd = {
     tags={company.technologies ?? []}
     tagsLabel="Tecnologías"
     entityName={company.name}
-  >
-    {
-      company.hiringSignals && company.hiringSignals.length > 0 && (
-        <section class="mt-6">
-          <h2 class="font-display text-lg font-semibold text-ink-900">Señales de contratación</h2>
-          <ul class="mt-2 list-inside list-disc text-sm text-ink-700">
-            {company.hiringSignals.map((s) => (
-              <li>{s}</li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
-  </EntityDetail>
+  />
 </Layout>

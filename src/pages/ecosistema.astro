@@ -10,7 +10,9 @@ const uniConnections = universities
   .sort((a, b) => b.programs.length - a.programs.length)
   .slice(0, 5);
 const activeCommunities = communities.filter((c) => c.status === 'active');
-const peopleWithOrg = people.filter((p) => p.organizations && p.organizations.length > 0).slice(0, 6);
+const peopleWithOrg = people
+  .filter((p) => p.organizations && p.organizations.length > 0)
+  .slice(0, 6);
 
 const connections = [
   'La academia forma el talento que contratan las empresas.',
@@ -84,10 +86,7 @@ const connections = [
           {
             peopleWithOrg.map((p) => (
               <li class="text-sm">
-                <a
-                  href={`/personas/${p.slug}`}
-                  class="text-ink-800 no-underline hover:text-accent"
-                >
+                <a href={`/personas/${p.slug}`} class="text-ink-800 no-underline hover:text-accent">
                   {p.name}
                 </a>
                 <span class="block truncate font-mono text-xs text-ink-500">
@@ -116,14 +115,6 @@ const connections = [
           </div>
         ))
       }
-    </div>
-    <div class="mt-6 rounded-lg border border-dashed border-ink-300 bg-mist/50 p-5 text-sm text-ink-600">
-      <p>
-        <strong class="text-ink-800">Próximamente:</strong> una visualización de red que muestre las
-        relaciones entre empresas, universidades, programas, comunidades y personas. La estructura de
-        datos ya está preparada; se incorporará sin rehacer el modelo y sin simular relaciones que los
-        datos no soporten.
-      </p>
     </div>
   </section>
 

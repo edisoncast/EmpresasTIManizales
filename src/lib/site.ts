@@ -19,7 +19,7 @@ export const site = {
   startedYear: 2020,
   currentYear: 2026,
   // Fecha de corte de la revalidación comunitaria (auditoría 2026).
-  auditDate: '2026-07-15',
+  auditDate: '2026-07-16',
   coordinates: '5.07° N, 75.52° O',
   // Fuentes institucionales citadas (condición de uso de sus datos).
   sources: {

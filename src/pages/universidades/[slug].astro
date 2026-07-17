@@ -23,7 +23,8 @@ const facts = [
   { label: 'Departamento', value: university.department },
   {
     label: 'Acreditación alta calidad',
-    value: university.accredited === undefined ? 'Sin definir' : university.accredited ? 'Sí' : 'No',
+    value:
+      university.accredited === undefined ? 'Sin definir' : university.accredited ? 'Sí' : 'No',
   },
   { label: 'Código SNIES', value: university.sniesCode ?? '' },
 ].filter((f) => f.value);
@@ -65,18 +66,16 @@ const jsonLd = {
     needsVerification={university.needsVerification}
     verificationStatus={university.verificationStatus}
     lastVerifiedAt={university.lastVerifiedAt}
-    sources={
-      university.sourceUrl
-        ? [
-            {
-              href: university.sourceUrl,
-              title: university.sniesCode
-                ? `Consulta oficial SNIES (HECAA) · busca el código ${university.sniesCode}`
-                : 'Consulta oficial SNIES (HECAA)',
-            },
-          ]
-        : undefined
-    }
+    sources={university.sourceUrl
+      ? [
+          {
+            href: university.sourceUrl,
+            title: university.sniesCode
+              ? `Consulta oficial SNIES (HECAA) · busca el código ${university.sniesCode}`
+              : 'Consulta oficial SNIES (HECAA)',
+          },
+        ]
+      : undefined}
     facts={facts}
     links={links}
     entityName={university.name}
@@ -108,6 +107,7 @@ const jsonLd = {
                   </div>
                 </div>
                 <VerificationStatus
+                  verificationStatus={p.verificationStatus}
                   needsVerification={p.needsVerification}
                   lastVerifiedAt={p.lastVerifiedAt}
                 />

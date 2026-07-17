@@ -19,7 +19,8 @@
       "doctorado-ingenieria-ucaldas"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Universidad Nacional de Colombia - Sede Manizales",
@@ -39,7 +40,8 @@
       "maestria-admin-sistemas-informaticos-unal"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Universidad de Manizales",
@@ -62,7 +64,8 @@
       "maestria-gestion-estrategica-informacion-umanizales"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Universidad Autónoma de Manizales",
@@ -84,7 +87,8 @@
       "doctorado-ingenieria-uam"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Universidad Católica de Manizales",
@@ -112,11 +116,10 @@
     "institutionType": "private",
     "accredited": true,
     "sniesCode": "1826",
-    "programs": [
-      "tecnologia-construccion-software-uan"
-    ],
+    "programs": ["tecnologia-construccion-software-uan"],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Universidad Católica Luis Amigó - Sede Manizales (FUNLAM)",
@@ -129,11 +132,10 @@
     "institutionType": "private",
     "accredited": false,
     "sniesCode": "2719",
-    "programs": [
-      "ing-sistemas-funlam"
-    ],
+    "programs": ["ing-sistemas-funlam"],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "Corporación Universitaria Remington - Sede Manizales",
@@ -146,11 +148,10 @@
     "institutionType": "private",
     "accredited": false,
     "sniesCode": "2833",
-    "programs": [
-      "ing-sistemas-virtual-remington"
-    ],
+    "programs": ["ing-sistemas-virtual-remington"],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   },
   {
     "name": "SENA - Regional Caldas",
@@ -170,6 +171,7 @@
       "esp-tec-desarrollo-moviles-sena"
     ],
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": false
+    "needsVerification": true,
+    "verificationStatus": "partially_verified"
   }
 ]

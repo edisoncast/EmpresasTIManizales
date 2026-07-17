@@ -1,7 +1,7 @@
-name: "🎓 Sugerir universidad"
+name: '🎓 Sugerir universidad'
 description: Sugiere una universidad o institución de educación superior con oferta TIC.
-title: "[Universidad] "
-labels: ["data", "universidad"]
+title: '[Universidad] '
+labels: ['data', 'universidad']
 body:
   - type: markdown
     attributes:

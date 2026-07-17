@@ -35,15 +35,15 @@ const c = copy[variant];
 const external = c.primary.href.startsWith('http');
 ---
 
-<div
-  class:list={[
-    'rounded-lg border border-brand-200 bg-accent-soft/50',
-    compact ? 'p-4' : 'p-6',
-  ]}
->
+<div class:list={['bg-accent-soft/50 rounded-lg border border-brand-200', compact ? 'p-4' : 'p-6']}>
   <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
     <div>
-      <h2 class:list={['font-display font-semibold text-accent-ink', compact ? 'text-base' : 'text-lg']}>
+      <h2
+        class:list={[
+          'font-display font-semibold text-accent-ink',
+          compact ? 'text-base' : 'text-lg',
+        ]}
+      >
         {c.title}
       </h2>
       <p class:list={['mt-1 text-ink-700', compact ? 'text-sm' : 'text-sm']}>{c.body}</p>

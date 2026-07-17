@@ -42,9 +42,10 @@ Los datos viven versionados en el repositorio (JSON validado con **Zod**) y se a
 
 - **Astro 5** + **TypeScript** (strict) — generación estática.
 - **Tailwind CSS** — estilos utilitarios, diseño responsive.
-- **React** — disponible para islas interactivas (se usa mínimamente; los filtros son vanilla JS).
+- **JavaScript nativo** — búsqueda, filtros y menú sin React ni islas hidratadas innecesarias.
 - **Zod** — validación de datos en build time.
 - **Vitest** — tests de schemas y de la lógica de filtros.
+- **Playwright + axe-core** — pruebas end-to-end, responsive, visuales y de accesibilidad.
 - **ESLint + Prettier** — calidad y formato.
 - **Terraform** — infraestructura AWS (S3 privado + CloudFront + OAC).
 - **GitHub Actions** — CI (validación, lint, test, build) y Deploy (OIDC → AWS).
@@ -53,7 +54,7 @@ Los datos viven versionados en el repositorio (JSON validado con **Zod**) y se a
 
 ## Requisitos
 
-- **Node.js 22+ (recomendado 24)** y npm. (Usa la versión de `.nvmrc`.)
+- **Node.js 24** y npm. Usa la versión fijada en `.nvmrc`.
 - Alternativamente, **Docker** (ver más abajo) si no quieres instalar Node localmente.
 
 ---
@@ -61,7 +62,7 @@ Los datos viven versionados en el repositorio (JSON validado con **Zod**) y se a
 ## 1. Correr el proyecto localmente
 
 ```bash
-npm install
+npm ci
 npm run dev
 ```
 
@@ -72,7 +73,7 @@ Abre <http://localhost:4321>.
 ```bash
 # Desarrollo
 docker run --rm -it -p 4321:4321 -v "$PWD":/app -w /app node:24-alpine \
-  sh -c "npm install && npm run dev -- --host"
+  sh -c "npm ci && npm run dev -- --host"
 
 # Build de producción
 docker run --rm -it -v "$PWD":/app -w /app node:24-alpine \
@@ -94,6 +95,9 @@ El sitio compilado queda en `dist/`.
 | `npm run format`        | Formatea con Prettier.                                  |
 | `npm run test`          | Ejecuta los tests con Vitest.                           |
 | `npm run validate:data` | Valida los JSON contra los schemas Zod + integridad.    |
+| `npm run audit:data`    | Genera el resumen 2026 y reporta brechas de calidad.   |
+| `npm run test:e2e`      | Ejecuta navegación, responsive, axe y revisión visual. |
+| `npm run test:e2e:ui`   | Abre la interfaz de Playwright para revisión local.    |
 | `npm run validate:urls` | Verifica con Playwright que las URLs de los datos vivan. |
 | `npm run verify:companies` | Verifica en einforma si las empresas siguen vigentes.|
 
@@ -111,7 +115,9 @@ src/
   styles/           # CSS global (Tailwind)
 scripts/
   validate-data.ts  # Validación de datos + integridad referencial
-tests/              # Tests de schemas y de filtros (Vitest)
+  audit-data.ts     # Auditoría reproducible y resumen legible por máquina
+tests/              # Tests Vitest y tests/e2e con Playwright + axe
+docs/               # Dirección visual, fuentes, auditoría y revisiones operativas
 infra/terraform/    # IaC de AWS (S3 privado + CloudFront + OAC)
 .github/            # Workflows CI/CD, plantilla de PR y de Issues
 legacy/             # Markdown original preservado como referencia histórica
@@ -125,7 +131,11 @@ Cada dataset en `src/data/*.json` es un arreglo validado por su schema en `src/s
 Campos transversales importantes:
 
 - `slug`: identificador en **kebab-case**, único y estable (define la URL de detalle).
-- `sourceUrl`: fuente pública que respalda el registro.
+- `sourceUrl`: fuente pública primaria; `sources` permite varias fuentes estructuradas.
+- `firstSeenAt` / `lastVerifiedAt`: trazabilidad temporal cuando está disponible.
+- `verificationStatus`: `verified`, `partially_verified`, `unknown`,
+  `inactive_or_unverified` o `archived`.
+- `notes`: contexto de auditoría, cambios de nombre o señales de inactividad.
 - `needsVerification`: `true` cuando el dato no está confirmado. **Cada registro debe tener una
   fuente o quedar marcado como pendiente de verificación.**
 
@@ -284,15 +294,29 @@ una comunidad.
 
 ---
 
-## 8. Validar datos
+## 8. Validar datos, auditoría y pruebas
 
 ```bash
 npm run validate:data
+npm run audit:data
+npm run lint
+npm run test
+npm run build
+npm run test:e2e
 ```
 
-Valida cada JSON contra su schema **y** la integridad referencial (slugs únicos, relaciones
-existentes). El comando `npm run build` lo ejecuta automáticamente, y **CI falla** si los datos no
-cumplen el schema.
+La validación comprueba schemas, estados, fuentes e integridad referencial. La auditoría genera
+`src/data/data-audit.json`; revisa también su salida, porque un comando exitoso no sustituye la
+decisión curatorial. Consulta [`docs/data-audit-2026.md`](./docs/data-audit-2026.md) y
+[`docs/data-sources.md`](./docs/data-sources.md).
+
+Playwright levanta `npm run preview` automáticamente y cubre Chromium desktop/móvil. Para ejecutar
+en Docker con navegadores preinstalados:
+
+```bash
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
+  sh -c "npm ci && npm run build && npm run test:e2e"
+```
 
 ### Validación de enlaces y empresas con Playwright
 
@@ -313,11 +337,11 @@ Con Docker (imagen oficial con navegadores preinstalados; usa la versión de Pla
 
 ```bash
 # Verificar enlaces (muestra de 20)
-docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-jammy \
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
   sh -c "npm ci && node scripts/validate-urls.mjs --limit=20"
 
 # Verificar empresas en einforma y actualizar datos
-docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-jammy \
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
   sh -c "npm ci && node scripts/verify-companies.mjs --only=nit --write"
 ```
 
@@ -427,6 +451,21 @@ En **Settings → Secrets and variables → Actions** (o en el _environment_ `pr
 - **Logs de CloudFront apagados** por defecto (`enable_access_logs = false`) para reducir costos.
 - `PriceClass_100` (regiones más económicas) por defecto.
 - Costo operativo cercano a cero para tráfico bajo; escala con el uso.
+
+No existe un monto garantizado: transferencia de CloudFront, almacenamiento, invalidaciones,
+Route53 y ACM dependen de cuenta, región y tráfico. Revisa AWS Pricing Calculator antes de habilitar
+logs o ampliar `price_class`.
+
+## Solución de problemas
+
+- **`@rollup/rollup-linux-*` no encontrado:** no reutilices `node_modules` instalado en Alpine dentro
+  de Ubuntu; ejecuta `npm ci` en la misma imagen que correrá build/tests.
+- **Playwright no encuentra Chromium:** ejecuta `npx playwright install --with-deps chromium` o usa
+  la imagen oficial con la misma versión del `package-lock.json`.
+- **Terraform intenta usar backend remoto durante validación:** usa
+  `terraform init -backend=false` para revisión local.
+- **El build falla por datos:** ejecuta primero `npm run validate:data`; no desactives el schema ni
+  cambies un estado sin fuente.
 
 ---
 

@@ -26,5 +26,8 @@ export function formatDate(iso: string | undefined | null): string {
 /** Quita el esquema y el www de una URL para mostrarla más corta. */
 export function displayUrl(url: string | undefined | null): string {
   if (!url) return '';
-  return url.replace(/^https?:\/\//, '').replace(/^www\./, '').replace(/\/$/, '');
+  return url
+    .replace(/^https?:\/\//, '')
+    .replace(/^www\./, '')
+    .replace(/\/$/, '');
 }

@@ -40,7 +40,6 @@ infra/terraform/*.tfstate
 infra/terraform/*.tfstate.*
 infra/terraform/*.tfvars
 !infra/terraform/*.tfvars.example
-infra/terraform/.terraform.lock.hcl
 crash.log
 infra/terraform/apply.log
 
@@ -53,3 +52,6 @@ repo-original/
 *.xlsx
 *.xls
 *.csv
+
+# Revisión preproducción (local, no se versiona)
+docs/pre-deployment-review.md
