@@ -246,20 +246,38 @@
     "name": "Mateo Burgos Castillo",
     "slug": "mateo-burgos-castillo",
     "headline": "Fundador y CEO de Meeteam",
-    "shortBio": "Fundador y CEO de Meeteam, empresa de Manizales que conecta talento tecnológico de Latinoamérica con compañías de Estados Unidos y Europa, con una comunidad de más de 50.000 profesionales.",
+    "shortBio": "Fundador y CEO de Meeteam, empresa de Manizales que conecta talento tecnológico de Latinoamérica con compañías internacionales mediante servicios de software, automatización e inteligencia artificial.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "areas": ["Emprendimiento", "Talento tech", "Comunidad"],
+    "areas": ["Emprendimiento", "Talento tech", "Automatización", "Inteligencia artificial"],
     "roles": ["Fundador", "CEO"],
     "organizations": ["Meeteam"],
     "contributions": [
       "Fundación y liderazgo de Meeteam",
-      "Conexión del talento tech latinoamericano con el mercado global"
+      "Conexión del talento tech latinoamericano con el mercado global",
+      "Reconocimiento Cóndor 2025 para Meeteam en la categoría Startup Tecnológica con Impacto Global"
     ],
     "linkedin": "https://www.linkedin.com/in/mateoburgos",
     "isPublicProfile": true,
-    "sourceUrl": "https://www.linkedin.com/in/mateoburgos",
+    "sourceUrl": "https://ccmpc.org.co/reconocimientos-condor-2025-un-homenaje-a-quienes-vuelan-alto-por-el-desarrollo-de-caldas/",
+    "sources": [
+      {
+        "url": "https://ccmpc.org.co/reconocimientos-condor-2025-un-homenaje-a-quienes-vuelan-alto-por-el-desarrollo-de-caldas/",
+        "title": "Cámara de Comercio de Manizales por Caldas: Reconocimientos Cóndor 2025",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://meeteam.co/about-us",
+        "title": "Meeteam: equipo fundador",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://co.linkedin.com/in/mateoburgos/es",
+        "title": "Perfil público de Mateo Burgos Castillo",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "lastVerifiedAt": "2026-07-17",
     "verificationStatus": "verified",
     "needsVerification": false
@@ -335,24 +353,116 @@
     "needsVerification": true
   },
   {
-    "name": "Xiomara Blanco Valencia",
-    "slug": "xiomara-blanco-valencia",
-    "headline": "Investigadora y docente en inteligencia artificial y datos — Universidad de Caldas",
-    "shortBio": "Docente e investigadora vinculada a la Universidad de Caldas en inteligencia artificial y ciencia de datos, en el marco del impulso de la región como referente en IA y data.",
+    "name": "Gaby Carolina Muñoz Chará",
+    "slug": "gaby-carolina-munoz-chara",
+    "headline": "CEO y cofundadora de Taxia Life",
+    "shortBio": "Emprendedora manizaleña y cofundadora de Taxia Life. Lidera la transformación tecnológica de servicios de movilidad y participa en espacios públicos de conversación y mentoría del ecosistema local.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "areas": ["Inteligencia artificial", "Ciencia de datos", "Investigación", "Docencia"],
-    "roles": ["Investigadora", "Docente"],
-    "organizations": ["Universidad de Caldas"],
+    "areas": ["Movilidad y tecnología", "Transformación digital", "Emprendimiento", "Mentoría"],
+    "roles": ["CEO", "Cofundadora", "Mentora"],
+    "organizations": ["Taxia Life"],
     "contributions": [
-      "Investigación y docencia en inteligencia artificial y ciencia de datos",
-      "Aporte al posicionamiento de la Universidad de Caldas en IA y data"
+      "Cofundación y liderazgo de Taxia Life desde Manizales",
+      "Transformación tecnológica de servicios de movilidad",
+      "Mentoría y participación en espacios públicos del ecosistema emprendedor local"
     ],
-    "personalBrandLinks": ["https://scholar.google.com/citations?user=SSqbwokAAAAJ&hl=es"],
-    "linkedin": "https://es.linkedin.com/in/xiomara-patricia-blanco-valencia-a314185",
+    "website": "https://taxialife.com",
+    "linkedin": "https://co.linkedin.com/in/gabycmunoz",
     "isPublicProfile": true,
-    "sourceUrl": "https://scholar.google.com/citations?user=SSqbwokAAAAJ&hl=es",
+    "sourceUrl": "https://umanizales.edu.co/umedia/tecnologia-y-transformacion-de-las-ciudades-tema-de-la-tercera-catedra-conversaciones-0",
+    "sources": [
+      {
+        "url": "https://umanizales.edu.co/umedia/tecnologia-y-transformacion-de-las-ciudades-tema-de-la-tercera-catedra-conversaciones-0",
+        "title": "Universidad de Manizales: Gaby Muñoz, CEO y cofundadora de Taxia Life",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://co.linkedin.com/in/gabycmunoz",
+        "title": "Perfil público de Gaby Muñoz",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://ccmpc.org.co/dos-dias-intensos-de-formacion-y-fortalecimiento-se-vivieron-en-la-maraton-emprendelo/",
+        "title": "Cámara de Comercio de Manizales por Caldas: mentoría de Gaby Carolina Muñoz",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
+    "name": "Kenny Mauricio Gómez",
+    "slug": "kenny-mauricio-gomez",
+    "headline": "Coordinador de la Unidad de Emprendimiento — Universidad Autónoma de Manizales",
+    "shortBio": "Coordinador de la Unidad de Emprendimiento de la Universidad Autónoma de Manizales. Acompaña procesos de innovación, estrategia y formación emprendedora en la ciudad y las universidades de la región.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Innovación", "Estrategia", "Formación"],
+    "roles": ["Coordinador de emprendimiento", "Docente", "Consultor"],
+    "organizations": ["Universidad Autónoma de Manizales"],
+    "contributions": [
+      "Coordinación de la Unidad de Emprendimiento de la Universidad Autónoma de Manizales",
+      "Acompañamiento a emprendedores y empresas de la región",
+      "Reconocimiento Cóndor 2021 como Líder Regional de Apoyo al Emprendimiento"
+    ],
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.autonoma.edu.co/directorio/kenny-mauricio-gomez",
+    "sources": [
+      {
+        "url": "https://www.autonoma.edu.co/directorio/kenny-mauricio-gomez",
+        "title": "Directorio de la Universidad Autónoma de Manizales: Kenny Mauricio Gómez",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.autonoma.edu.co/blog/noticias/coordinador-de-la-unidad-de-emprendimiento-uam-gano-el-los-premios-condor-2021",
+        "title": "Universidad Autónoma de Manizales: ganador del Premio Cóndor 2021",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
+    "name": "Marcela Escobar Arango",
+    "slug": "marcela-escobar-arango",
+    "headline": "Directora de Manizales Más",
+    "shortBio": "Directora de Manizales Más. Trabaja en la articulación entre empresas, universidades, instituciones y mentores para fortalecer el emprendimiento y la innovación en Manizales y Caldas.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Ecosistema emprendedor", "Innovación", "Articulación", "Desarrollo empresarial"],
+    "roles": ["Directora", "Articuladora de ecosistema"],
+    "organizations": ["Manizales Más"],
+    "contributions": [
+      "Dirección de Manizales Más y articulación del ecosistema de emprendimiento regional",
+      "Acompañamiento a empresas, mentores y aliados de la ciudad",
+      "Reconocimiento Cóndor 2018 como Líder Regional de Apoyo al Emprendimiento"
+    ],
+    "linkedin": "https://co.linkedin.com/in/marcelaescobara",
+    "isPublicProfile": true,
+    "sourceUrl": "https://manizalesmas.com.co/manizales-mas-lanza-mas-ecosistema-podcast-un-espacio-para-visibilizar-historias-empresariales/",
+    "sources": [
+      {
+        "url": "https://manizalesmas.com.co/manizales-mas-lanza-mas-ecosistema-podcast-un-espacio-para-visibilizar-historias-empresariales/",
+        "title": "Manizales Más: Marcela Escobar, directora de Manizales Más",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://ccmpc.org.co/premios-condor/",
+        "title": "Cámara de Comercio de Manizales por Caldas: Premios Cóndor 2018",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://co.linkedin.com/in/marcelaescobara",
+        "title": "Perfil público de Marcela Escobar",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "lastVerifiedAt": "2026-07-17",
     "verificationStatus": "verified",
     "needsVerification": false

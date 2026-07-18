@@ -738,11 +738,24 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://ccmpc.org.co/basededatos/",
+        "title": "Cámara de Comercio de Manizales por Caldas: base de datos empresarial",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.amsoftsas.com/terminos-y-condiciones/",
+        "title": "AMSOFT S.A.S.: términos y contacto oficial",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "901372068-4",
-    "registeredAt": "2020-02-27"
+    "registeredAt": "2020-02-27",
+    "website": "https://www.amsoftsas.com"
   },
   {
     "name": "Am Tecnologic S.A.S.",
