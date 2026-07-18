@@ -1,25 +1,5 @@
 [
   {
-    "name": "@s S.A.S.",
-    "slug": "s",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2000.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Hosting y datos", "Desarrollo de software", "Consultoría informática"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "micro",
-    "ciiu": "J6201",
-    "legalForm": "S.A.S.",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "nit": "810003390-1",
-    "registeredAt": "2000-04-19"
-  },
-  {
     "name": "2share Colombia S.A.S.",
     "slug": "2share-colombia",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
@@ -42,7 +22,7 @@
   {
     "name": "3i Cloud Computing S.A.S.",
     "slug": "3i-cloud-computing",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2010.",
+    "description": "Empresa de Manizales registrada para actividades de desarrollo de sistemas informáticos: planificación, análisis, diseño, programación y pruebas. Matrícula mercantil desde 2010.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -53,21 +33,34 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://empresite.eleconomistaamerica.co/3I-CLOUD-COMPUTING-SAS.html",
+        "title": "Ficha pública de 3i Cloud Computing S.A.S.",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.registronit.com/empresas/manizales?ciiu=0161%2C0210%2C9499%2C6201&estado=activa",
+        "title": "Listado de matrícula activa de Cámara de Comercio de Manizales",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "900364853-2",
-    "registeredAt": "2010-06-21"
+    "registeredAt": "2010-06-21",
+    "notes": "No se identificó un sitio web, perfil de LinkedIn ni otra presencia pública que pueda asociarse con seguridad a esta razón social durante la revisión de 2026."
   },
   {
     "name": "4lytics S.A.S.",
     "slug": "4lytics",
     "website": "https://www.4lytics.com",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2010.",
+    "description": "Empresa de Manizales enfocada en consultoría de gestión, desarrollo de software, experiencia de cliente y marketing digital. Su sitio publica recursos sobre CRM y automatización conversacional. Matrícula mercantil desde 2010.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Consultoría de gestión", "Desarrollo de software"],
+    "categories": ["Consultoría de gestión", "Desarrollo de software", "Marketing digital", "Experiencia de cliente"],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
     "size": "micro",
@@ -127,25 +120,6 @@
     "nit": "901942660-1",
     "registeredAt": "2025-05-02",
     "notes": "La razón social consultada incluye “En liquidación”; la actividad operativa requiere revisión humana."
-  },
-  {
-    "name": "A Y V Ingenieria S.A.S.",
-    "slug": "a-y-v-ingenieria",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de desarrollo de sistemas informáticos. Matrícula desde 1998.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "1998-07-24"
   },
   {
     "name": "A&b Digital Solutions S.A.S.",
@@ -342,6 +316,14 @@
   {
     "name": "Admiarchi Soluciones De Archivo Y Gestion Documental",
     "slug": "admiarchi-soluciones-de-archivo-y-gestion-documental",
+    "website": "https://www.admiarchi.com/servicios.html",
+    "sources": [
+      {
+        "url": "https://www.admiarchi.com/servicios.html",
+        "title": "Página de servicios de Admiarchi",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: suministro e  implementación  de  software  de archivo y gestión  documental  elaboración  de instrumentos archivísticos  organización  de archivos  y digitalización de documentos. Matrícula desde 2009.",
     "city": "Manizales",
     "department": "Caldas",
@@ -648,7 +630,14 @@
   {
     "name": "Almera Information Management S.A.S.",
     "slug": "almera-information-management",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2007.",
+    "sources": [
+      {
+        "url": "https://almeraim.com/",
+        "title": "Sitio web de Almera Information Management",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla un sistema de gestión integral para apoyar sostenibilidad y gestión organizacional. Su portafolio incluye gestión de calidad, riesgos, planeación estratégica, gestión humana y PQR, para sectores como banca, educación, gobierno, industria, salud y servicios.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -932,7 +921,14 @@
   {
     "name": "Apolo Ingenieria S.A.S.",
     "slug": "apolo-ingenieria",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1996.",
+    "sources": [
+      {
+        "url": "https://apolosoft.com",
+        "title": "Sitio web de Apolosoft",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla software contable y de gestión empresarial para pymes. Su portafolio incluye Mekano ERP, facturación electrónica, nómina, herramientas con inteligencia artificial y desarrollo web, tiendas en línea y aplicaciones a la medida.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -944,7 +940,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "810000494-3",
     "registeredAt": "1996-02-08",
@@ -1353,26 +1349,6 @@
     "registeredAt": "2019-09-12"
   },
   {
-    "name": "Asociacion Para La Participacion Ciudadana En El Desarrollo Social De Las Comunidades",
-    "slug": "asociacion-para-la-participacion-ciudadana-en-el-desarrollo-social-de-las-comunidades",
-    "description": "Entidad sin ánimo de lucro con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2000.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "medium",
-    "ciiu": "J6201",
-    "legalForm": "Entidad sin ánimo de lucro",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "nit": "810003264-1",
-    "registeredAt": "2000-02-16"
-  },
-  {
     "name": "Asr Tech S.A.S. En Liquidacion",
     "slug": "asr-tech-s-a-s-en-liquidacion",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
@@ -1571,7 +1547,7 @@
   {
     "name": "Automatizacion Y Virtualizacion Ingenieria S.A.S.",
     "slug": "automatizacion-y-virtualizacion-ingenieria",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1998.",
+    "description": "Desarrolla soluciones para monitoreo ambiental e industrial y redes de apoyo a sistemas de alerta temprana. Su plataforma Albatros Suite integra aplicaciones de escritorio, web y APIs para gestionar, almacenar, procesar y visualizar datos de redes de monitoreo.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1582,11 +1558,20 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "website": "https://ayving.com/home/",
+    "sources": [
+      {
+        "url": "https://ayving.com/home/",
+        "title": "Sitio web de AYV Ingeniería",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "810002209-1",
-    "registeredAt": "1998-07-24"
+    "registeredAt": "1998-07-24",
+    "notes": "Registro consolidado: el establecimiento de comercio “A Y V Ingenieria S.A.S.” con la misma fecha de matrícula corresponde a esta razón social."
   },
   {
     "name": "Automyx Studio S.A.S.",
@@ -1603,7 +1588,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "902011857-4",
     "registeredAt": "2025-11-25"
@@ -1623,7 +1608,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900808501-2",
     "registeredAt": "2015-01-09"
@@ -1689,7 +1674,15 @@
   {
     "name": "Azen Consultoria En Sistemas S.A.S.",
     "slug": "azen-consultoria-en-sistemas",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1992.",
+    "website": "https://azen.com.co/",
+    "sources": [
+      {
+        "url": "https://azen.com.co/",
+        "title": "Sitio web de Azen",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla soluciones empresariales en la nube: ERP, aplicaciones móviles, automatización de procesos, capacitación y consultoría TI. Su sitio también presenta proyectos de logística, georreferenciación y arquitectura en AWS.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1701,7 +1694,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "800154051-9",
     "registeredAt": "1992-02-25"
@@ -2317,6 +2310,18 @@
   {
     "name": "Cafexport S.A.r.l. Sucursal Colombia",
     "slug": "cafexport-s-a-r-l-sucursal-colombia",
+    "sources": [
+      {
+        "url": "https://cafexport.com",
+        "title": "Sitio web de Cafexport",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.linkedin.com/company/cafexport/",
+        "title": "Perfil de LinkedIn de Cafexport",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "Sociedad extranjera con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: comercio al por mayor de materias primas  agropecuarias. Matrícula desde 2009.",
     "city": "Manizales",
     "department": "Caldas",
@@ -2329,12 +2334,13 @@
     "legalForm": "Sociedad extranjera",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900308092-6",
     "registeredAt": "2009-08-21",
     "website": "https://cafexport.com",
-    "linkedin": "https://www.linkedin.com/company/cafexport/"
+    "linkedin": "https://www.linkedin.com/company/cafexport/",
+    "notes": "El sitio web de Cafexport se encontraba en mantenimiento durante la revisión de 2026."
   },
   {
     "name": "Calima Technologies Colombia S.A.S.",
@@ -2495,7 +2501,20 @@
   {
     "name": "Celbit Ltda.",
     "slug": "celbit",
-    "description": "Sociedad limitada con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2007.",
+    "website": "https://www.celbit.net/",
+    "sources": [
+      {
+        "url": "https://www.celbit.net/",
+        "title": "Sitio web de Celbit",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.electrodoctor.co/",
+        "title": "Sitio web de ElectroDoctor",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Empresa de Internet de las Cosas que desarrolla prendas y sistemas inteligentes. Su sitio vincula a ElectroDoctor como producto de Celbit y documenta soluciones y actividades relacionadas con monitoreo cardíaco y dispositivos biomédicos.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -2507,7 +2526,7 @@
     "legalForm": "Sociedad limitada",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900132512-0",
     "registeredAt": "2007-02-07"
@@ -2515,14 +2534,17 @@
   {
     "name": "Centro De Bioinformatica Y Biologia Computacional De Colombia O Bios O Cbbc",
     "slug": "centro-de-bioinformatica-y-biologia-computacional-de-colombia-o-bios-o-cbbc",
-    "description": "Entidad sin ánimo de lucro con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2010.",
+    "description": "Centro de Bioinformática y Biología Computacional de Colombia (BIOS), entidad sin ánimo de lucro de Manizales que articula academia, industria y gobierno. Ofrece capacidades en bioinformática, ciencia de datos e IA, nube, ciberseguridad, biotecnología y formación especializada. Matrícula mercantil desde 2010.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
     "categories": [
-      "Consultoría informática",
-      "Hosting y datos",
-      "Servicios de apoyo",
+      "Bioinformática",
+      "Ciencia de datos e IA",
+      "Cloud",
+      "Ciberseguridad",
+      "Biotecnología",
+      "Formación",
       "Desarrollo de software"
     ],
     "hasSoftwareDevelopmentHouse": true,
@@ -2536,7 +2558,14 @@
     "needsVerification": false,
     "nit": "900404482-6",
     "registeredAt": "2010-12-28",
-    "website": "https://bios.co"
+    "website": "https://bios.co",
+    "sources": [
+      {
+        "url": "https://bios.co/inicio",
+        "title": "Sitio web de BIOS",
+        "reviewedAt": "2026-07-17"
+      }
+    ]
   },
   {
     "name": "Centro De Reconocimiento De Conductores Inteligente Del Norte De Caldas",
@@ -3070,7 +3099,8 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "900070075-6",
-    "registeredAt": "2006-02-13"
+    "registeredAt": "2006-02-13",
+    "notes": "No se identificó un sitio web, perfil de LinkedIn ni otra presencia pública que pueda asociarse con seguridad a esta razón social durante la revisión de 2026. Se conserva como fuente la Cámara de Comercio."
   },
   {
     "name": "Comunidad Elite S.A.S.",
@@ -3090,7 +3120,15 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "900199965-1",
-    "registeredAt": "2008-02-12"
+    "registeredAt": "2008-02-12",
+    "sources": [
+      {
+        "url": "https://www.lasempresas.com.co/manizales/comunidad-elite-sas/",
+        "title": "Ficha pública por NIT de Comunidad Elite S.A.S.",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "notes": "La ficha pública consultada por NIT coincide con la matrícula y registra actividades de consultoría informática, desarrollo de software y consultoría de gestión. No se identificó un sitio web o perfil oficial de la organización."
   },
   {
     "name": "Conectamos Eje S.A.S.",
@@ -3225,7 +3263,15 @@
   {
     "name": "Controlsoft S.A.S.",
     "slug": "controlsoft",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1998.",
+    "website": "https://controlsoft.com.co/",
+    "sources": [
+      {
+        "url": "https://controlsoft.com.co/",
+        "title": "Sitio web de Controlsoft",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla software para control de pesaje en básculas camioneras. Sus soluciones incluyen control de entradas y salidas, análisis de calidad, cálculo de faltantes e integración con sistemas ERP.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -3237,7 +3283,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "810001800-9",
     "registeredAt": "1998-02-03"
@@ -3266,46 +3312,6 @@
     "needsVerification": false,
     "nit": "902071041-8",
     "registeredAt": "2026-05-29"
-  },
-  {
-    "name": "Corporacion Para La Tecnologia La Ciencia La Innovacion El Desarrollo Sostenible Y Social Ong",
-    "slug": "corporacion-para-la-tecnologia-la-ciencia-la-innovacion-el-desarrollo-sostenible-y-social-ong",
-    "description": "Entidad sin ánimo de lucro con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2002.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software", "Ingeniería"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "micro",
-    "ciiu": "J6201",
-    "legalForm": "Entidad sin ánimo de lucro",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "nit": "810005285-3",
-    "registeredAt": "2002-09-03"
-  },
-  {
-    "name": "Corporacion Tecnologica Y Cientifica Para El Desarrollo Sostenible",
-    "slug": "corporacion-tecnologica-y-cientifica-para-el-desarrollo-sostenible",
-    "description": "Entidad sin ánimo de lucro con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2000.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "micro",
-    "ciiu": "J6201",
-    "legalForm": "Entidad sin ánimo de lucro",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "nit": "810003244-2",
-    "registeredAt": "2000-02-07"
   },
   {
     "name": "Corporation Dg S.A.S. En Liquidacion",
@@ -3496,7 +3502,15 @@
   {
     "name": "D.s.i. S.A.",
     "slug": "d-s-i",
-    "description": "Sociedad anónima con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1991.",
+    "website": "https://dsi.com.co/dsi/index.html",
+    "sources": [
+      {
+        "url": "https://dsi.com.co/dsi/index.html",
+        "title": "Sitio web de D.S.I.",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla software empresarial para gestión administrativa y financiera. Su sitio presenta las soluciones Vision y Fortuner, con módulos como contabilidad, inventarios, facturación, nómina y punto de venta, además de desarrollos móviles.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -3508,7 +3522,7 @@
     "legalForm": "Sociedad anónima",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "800122217-7",
     "registeredAt": "1991-05-22"
@@ -3604,7 +3618,14 @@
   {
     "name": "Data Y Service S.A.S.",
     "slug": "data-service",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1996.",
+    "sources": [
+      {
+        "url": "https://datayservice.com",
+        "title": "Sitio web de Data y Service",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Integra infraestructura TI, ciberseguridad y datos para organizaciones. Su portafolio incluye continuidad de negocio, consultoría, gobierno y analítica de datos, tableros asistidos por inteligencia artificial y servicios de seguridad administrada.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -3621,7 +3642,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "810001025-7",
     "registeredAt": "1996-12-11",
@@ -3883,7 +3904,15 @@
   {
     "name": "Delta Sistemas Sii",
     "slug": "delta-sistemas-sii",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo y comercialización de software  venta de equipo de computo y hardware. Matrícula desde 2006.",
+    "website": "https://deltasistemas.com/web/",
+    "sources": [
+      {
+        "url": "https://deltasistemas.com/web/",
+        "title": "Sitio web de Delta Sistemas SII",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Empresa de Pácora que desarrolla software a medida, aplicaciones web e integraciones mediante API. Ofrece análisis, consultoría, implementación, mantenimiento y soporte; su portafolio incluye soluciones para ISP, hotelería, agroexportación y pequeños negocios.",
     "city": "Pacora",
     "department": "Caldas",
     "country": "Colombia",
@@ -5092,6 +5121,14 @@
   {
     "name": "Finnova Fintech S.A.S.",
     "slug": "finnova-fintech",
+    "website": "https://www.facebook.com/finnovafintechsas",
+    "sources": [
+      {
+        "url": "https://www.facebook.com/finnovafintechsas",
+        "title": "Página de Facebook de Finnova Fintech",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2008.",
     "city": "Manizales",
     "department": "Caldas",
@@ -5104,7 +5141,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900221228-5",
     "registeredAt": "2008-05-29"
@@ -6008,11 +6045,12 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
+    "verificationStatus": "inactive_or_unverified",
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": true,
     "nit": "900074495-4",
-    "registeredAt": "2006-03-08"
+    "registeredAt": "2006-03-08",
+    "notes": "Reportada como empresa en liquidación por personas que trabajaron allí. Pendiente aportar una fuente pública que confirme su estado societario."
   },
   {
     "name": "Grupo Empresarial Digital International S.A.S.",
@@ -6330,7 +6368,15 @@
   {
     "name": "Heinsohn Business Technology S.A. - Agencia Manizales",
     "slug": "heinsohn-business-technology-s-a-agencia-manizales",
-    "description": "Sociedad anónima con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: consultoras informáticas. Matrícula desde 2009.",
+    "website": "https://www.heinsohn.co/co/",
+    "sources": [
+      {
+        "url": "https://www.heinsohn.co/co/",
+        "title": "Sitio web de Heinsohn",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Agencia de Manizales de una empresa de tecnología que ofrece desarrollo de software a medida, cloud, analítica de datos, inteligencia artificial y staff augmentation. Su portafolio también cubre gestión humana y nómina, soluciones financieras, pensionales, SAP y plataformas empresariales.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -6347,7 +6393,7 @@
     "legalForm": "Sociedad anónima",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "800046226-8",
     "registeredAt": "2009-01-15"
@@ -7301,10 +7347,11 @@
     "ciiu": "J6201",
     "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "2004-11-08"
+    "verificationStatus": "inactive_or_unverified",
+    "lastVerifiedAt": "2026-07-17",
+    "needsVerification": true,
+    "registeredAt": "2004-11-08",
+    "notes": "Marcada como empresa en liquidación durante la limpieza de datos de 2026; pendiente aportar una fuente pública que confirme el estado societario."
   },
   {
     "name": "Iworkbit S.A.S. En Liquidacion",
@@ -7576,6 +7623,14 @@
   {
     "name": "Julibe Computadores",
     "slug": "julibe-computadores",
+    "website": "https://julibecomputadores.com/",
+    "sources": [
+      {
+        "url": "https://julibecomputadores.com/",
+        "title": "Sitio web de Julibe Computadores",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: venta y soporte tecnológico de computadores  partes y accesorios. Matrícula desde 2009.",
     "city": "Riosucio",
     "department": "Caldas",
@@ -7592,7 +7647,7 @@
     "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "registeredAt": "2009-03-30"
   },
@@ -8171,11 +8226,12 @@
   {
     "name": "Logopolis S.A.S.",
     "slug": "logopolis",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2010.",
+    "website": "https://logopoliskpo.com/",
+    "description": "Consultora de Manizales enfocada en transformación digital y gestión de TI. Su trabajo combina análisis, diagnóstico, arquitectura empresarial, innovación y un grupo de I+D+i con líneas en gestión del conocimiento, gestión de TI y transformación digital. Matrícula mercantil desde 2010.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Hosting y datos", "Consultoría de gestión", "Desarrollo de software"],
+    "categories": ["Transformación digital", "Gestión TI", "Consultoría de gestión", "Investigación e innovación", "Desarrollo de software"],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
     "size": "micro",
@@ -8186,7 +8242,14 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "900360447-7",
-    "registeredAt": "2010-05-28"
+    "registeredAt": "2010-05-28",
+    "sources": [
+      {
+        "url": "https://logopoliskpo.com/",
+        "title": "Sitio web de Logopolis",
+        "reviewedAt": "2026-07-17"
+      }
+    ]
   },
   {
     "name": "Lopez Calvo Andres Felipe",
@@ -8648,25 +8711,6 @@
     "registeredAt": "2022-02-07"
   },
   {
-    "name": "Mauricio Toro Franco",
-    "slug": "mauricio-toro-franco",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: eventos actividades inmobiliarias publicidad y mercadeo. Matrícula desde 1972.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Publicidad", "Desarrollo de software"],
-    "hasSoftwareDevelopmentHouse": true,
-    "workModel": "unknown",
-    "size": "unknown",
-    "ciiu": "J6201",
-    "legalForm": "Establecimiento de comercio",
-    "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
-    "registeredAt": "1972-02-14"
-  },
-  {
     "name": "Mdos4 Portal De La Vida S.A.S.",
     "slug": "mdos4-portal-de-la-vida",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2016.",
@@ -8681,7 +8725,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "901015083-5",
     "registeredAt": "2016-10-04"
@@ -9635,7 +9679,15 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "nit": "900031763-9",
-    "registeredAt": "2005-07-05"
+    "registeredAt": "2005-07-05",
+    "sources": [
+      {
+        "url": "https://www.lasempresas.com.co/manizales/obikua-sas/",
+        "title": "Ficha pública por NIT de Obikua S.A.S.",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "notes": "La ficha pública consultada por NIT coincide con la matrícula y registra desarrollo de sistemas, consultoría informática y mantenimiento de equipos. No se identificó sitio web oficial. No asociar con obikua.com: ese dominio pertenece a una inmobiliaria española ajena a esta empresa de Manizales."
   },
   {
     "name": "Ocampo Zapata Wilson Andres",
@@ -10226,7 +10278,15 @@
   {
     "name": "Pgc Planeacion Gestion Y Control S.A.S.",
     "slug": "pgc-planeacion-gestion-y-control",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2006.",
+    "website": "https://pgcsas.com/",
+    "sources": [
+      {
+        "url": "https://pgcsas.com/",
+        "title": "Sitio web de Planeación, Gestión y Control (PGC)",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla software SIICO para gestión y control organizacional, además de soluciones a la medida para entidades y organizaciones. Su portafolio incluye PQR, ventanilla única, MIPG, planeación estratégica, hosting, IoT, seguridad informática, asesorías, auditorías y formación.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10238,7 +10298,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900112125-8",
     "registeredAt": "2006-10-11"
@@ -10442,6 +10502,14 @@
   {
     "name": "Potensoft E.U.",
     "slug": "potensoft",
+    "website": "https://potensoft.com/",
+    "sources": [
+      {
+        "url": "https://potensoft.com/",
+        "title": "Sitio web de Potensoft",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "Empresa unipersonal con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2008.",
     "city": "Manizales",
     "department": "Caldas",
@@ -10454,7 +10522,7 @@
     "legalForm": "Empresa unipersonal",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900217639-3",
     "registeredAt": "2008-05-13"
@@ -10502,7 +10570,15 @@
   {
     "name": "Proasistec Limitada",
     "slug": "proasistec",
-    "description": "Sociedad limitada con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2005.",
+    "website": "https://proasistec.com/",
+    "sources": [
+      {
+        "url": "https://proasistec.com/",
+        "title": "Sitio web de Proasistec",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Empresa de servicios TI en Manizales que ofrece outsourcing de ingeniería, soporte técnico 24/7, mantenimiento y reparación de equipos. Su portafolio incluye infraestructura, servidores, seguridad, respaldo, hosting, dominios y desarrollo de sitios web en WordPress.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10519,7 +10595,7 @@
     "legalForm": "Sociedad limitada",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "830512763-1",
     "registeredAt": "2005-01-12"
@@ -10594,7 +10670,15 @@
   {
     "name": "Proyectiza S.A.S.",
     "slug": "proyectiza",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2009.",
+    "website": "https://www.proyectiza.com/",
+    "sources": [
+      {
+        "url": "https://www.proyectiza.com/",
+        "title": "Sitio web de Proyectiza",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Acompaña a organizaciones en dirección estratégica de proyectos mediante consultoría, formación y tecnología. Su herramienta miPMO apoya la gestión y toma de decisiones en oficinas de proyectos y organizaciones con retos complejos de ejecución estratégica.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10606,7 +10690,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900305335-7",
     "registeredAt": "2009-08-11"
@@ -10704,6 +10788,14 @@
   {
     "name": "Qpula.com Soluciones Informaticas S.A.S.",
     "slug": "qpula-com-soluciones-informaticas",
+    "website": "https://qpula.com/growing/index.html",
+    "sources": [
+      {
+        "url": "https://qpula.com/growing/index.html",
+        "title": "Página de inicio de Qpula.com Soluciones Informáticas",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2001.",
     "city": "Manizales",
     "department": "Caldas",
@@ -10716,7 +10808,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "810004508-6",
     "registeredAt": "2001-09-04"
@@ -10743,7 +10835,15 @@
   {
     "name": "Quantica",
     "slug": "quantica",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: desarrollo de marketing digital. Matrícula desde 2004.",
+    "website": "https://quantica.com.co/",
+    "sources": [
+      {
+        "url": "https://quantica.com.co/",
+        "title": "Sitio web de Quantica Marketing Digital",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Agencia de marketing digital con sede en Manizales que desarrolla e implementa soluciones CRM, sitios web, tiendas virtuales, intranets y plataformas de email y SMS marketing. También ofrece gestión y mantenimiento web, SEO y SEM.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10755,7 +10855,7 @@
     "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "registeredAt": "2004-08-10"
   },
@@ -11719,6 +11819,14 @@
   {
     "name": "Sistemas Municipales S.A.S.",
     "slug": "sistemas-municipales",
+    "website": "https://sites.google.com/view/sistemasmunicipales/inicio",
+    "sources": [
+      {
+        "url": "https://sites.google.com/view/sistemasmunicipales/inicio",
+        "title": "Sitio web de Sistemas Municipales",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1993.",
     "city": "Manizales",
     "department": "Caldas",
@@ -11731,10 +11839,11 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "800182377-3",
-    "registeredAt": "1993-01-12"
+    "registeredAt": "1993-01-12",
+    "notes": "El sitio web asociado no expone una descripción comercial verificable en la revisión de 2026; se conserva la caracterización sustentada en el registro mercantil."
   },
   {
     "name": "Sisteq S.A.S.",
@@ -11975,7 +12084,7 @@
   {
     "name": "Software De Colombia S.A.S.",
     "slug": "software-de-colombia",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1994.",
+    "description": "Empresa de Manizales que desarrolla aplicaciones en la nube para gestión empresarial. Su plataforma ClausERP reúne funciones de contabilidad, inventarios, ventas, compras, impuestos, nómina y fuerza de ventas; el sitio señala un origen del producto en 1993 y la formalización de la empresa en 1994.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -11987,11 +12096,18 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "800241389-5",
     "registeredAt": "1994-10-03",
-    "website": "https://softwaredecolombia.com"
+    "website": "https://www.softwaredecolombia.com/",
+    "sources": [
+      {
+        "url": "https://www.softwaredecolombia.com/",
+        "title": "Sitio web de Software de Colombia",
+        "reviewedAt": "2026-07-17"
+      }
+    ]
   },
   {
     "name": "Software Imperial Group S.A.S.",
@@ -12097,6 +12213,14 @@
   {
     "name": "Soluciones Moviles S.A.S.",
     "slug": "soluciones-moviles",
+    "website": "https://www.facebook.com/p/Soluciones-m%C3%B3viles-S-A-S-61558159216373/",
+    "sources": [
+      {
+        "url": "https://www.facebook.com/p/Soluciones-m%C3%B3viles-S-A-S-61558159216373/",
+        "title": "Página de Facebook de Soluciones Móviles S.A.S.",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2008.",
     "city": "Aguadas",
     "department": "Caldas",
@@ -12109,7 +12233,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900048678-5",
     "registeredAt": "2008-11-04"
@@ -12177,7 +12301,15 @@
   {
     "name": "Solutions Systems S.A.S.",
     "slug": "solutions-systems",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2008.",
+    "website": "https://solutions-systems.com/",
+    "sources": [
+      {
+        "url": "https://solutions-systems.com/",
+        "title": "Sitio web de Solutions Systems",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla sistemas de información a la medida, integraciones entre plataformas y automatización robótica de procesos (RPA). Su portafolio incluye desarrollo web, tiendas en línea, marketplaces y el asistente virtual PEDRO para automatizar tareas repetitivas.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -12193,7 +12325,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "900213801-2",
     "registeredAt": "2008-04-23"
@@ -13276,7 +13408,15 @@
   {
     "name": "Venus Ingenieria De Software Limitada",
     "slug": "venus-ingenieria-de-software",
-    "description": "Sociedad limitada con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1999.",
+    "website": "https://venusingenieria.com/",
+    "sources": [
+      {
+        "url": "https://venusingenieria.com/",
+        "title": "Sitio web de Venus Ingeniería",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "description": "Desarrolla aplicaciones de software para el manejo de información y la productividad de sus clientes. También ofrece soporte y asesoría tecnológica de hardware; su sitio menciona cobertura en alcaldías, hospitales e IPS.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -13288,7 +13428,7 @@
     "legalForm": "Sociedad limitada",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "nit": "810003157-1",
     "registeredAt": "1999-12-21"

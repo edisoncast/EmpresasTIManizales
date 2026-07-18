@@ -29,9 +29,14 @@
     "country": "Colombia",
     "areas": ["Ciberseguridad", "Comunidad"],
     "roles": ["Organizador de comunidad", "Divulgador"],
-    "organizations": ["Seguridad Informática Hacking Manizales", "DragonJAR"],
+    "organizations": [
+      "Seguridad Informática Hacking Manizales",
+      "AI Tinkerers Manizales",
+      "DragonJAR"
+    ],
     "contributions": [
       "Organización de la comunidad de Seguridad Informática y Hacking de Manizales",
+      "Organización de AI Tinkerers Manizales",
       "Divulgación en ciberseguridad"
     ],
     "linkedin": "https://co.linkedin.com/in/dragonjar",
