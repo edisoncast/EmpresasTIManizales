@@ -2,7 +2,7 @@
 import { site } from '../lib/site';
 
 export interface Props {
-  variant?: 'add' | 'correct' | 'source' | 'general';
+  variant?: 'add' | 'correct' | 'source' | 'person' | 'general';
   /** Nombre de la entidad, para personalizar el texto en fichas. */
   entityName?: string;
   compact?: boolean;
@@ -17,17 +17,22 @@ const copy = {
   },
   correct: {
     title: entityName ? `¿Este registro necesita una corrección?` : 'Sugerir una corrección',
-    body: 'Los datos pueden cambiar o quedar incompletos. Propón una corrección con evidencia y la revisamos.',
-    primary: { label: 'Sugerir una corrección', href: site.newPrUrl },
+    body: 'Los datos pueden cambiar o quedar incompletos. Propón una corrección con una fuente pública; no necesitas saber Git.',
+    primary: { label: 'Sugerir una corrección', href: site.correctionUrl },
   },
   source: {
     title: 'Aportar una fuente',
     body: 'Ayúdanos a subir el nivel de verificación de este registro compartiendo una fuente pública.',
-    primary: { label: 'Aportar una fuente', href: site.issuesUrl },
+    primary: { label: 'Aportar una fuente', href: site.correctionUrl },
+  },
+  person: {
+    title: '¿Es tu perfil o quieres corregirlo?',
+    body: 'Puedes solicitar un ajuste o el retiro de tu información, o corregir un dato con una fuente pública. No publicamos datos sensibles.',
+    primary: { label: 'Solicitar ajuste o retiro de información', href: site.removalUrl },
   },
   general: {
     title: 'Este es un archivo vivo',
-    body: 'Los datos son abiertos y se mantienen entre comunidad. Sugiere, corrige o aporta fuentes por Pull Request o Issue.',
+    body: 'Los datos son abiertos y se mantienen entre comunidad. Sugiere, corrige o reporta con una fuente pública; no necesitas saber Git.',
     primary: { label: 'Cómo contribuir', href: '/contribuir' },
   },
 };
