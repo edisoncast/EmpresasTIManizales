@@ -29,9 +29,14 @@
     "country": "Colombia",
     "areas": ["Ciberseguridad", "Comunidad"],
     "roles": ["Organizador de comunidad", "Divulgador"],
-    "organizations": ["Seguridad Informática Hacking Manizales", "DragonJAR"],
+    "organizations": [
+      "Seguridad Informática Hacking Manizales",
+      "AI Tinkerers Manizales",
+      "DragonJAR"
+    ],
     "contributions": [
       "Organización de la comunidad de Seguridad Informática y Hacking de Manizales",
+      "Organización de AI Tinkerers Manizales",
       "Divulgación en ciberseguridad"
     ],
     "linkedin": "https://co.linkedin.com/in/dragonjar",
@@ -589,5 +594,40 @@
     "lastVerifiedAt": "2026-07-16",
     "verificationStatus": "partially_verified",
     "needsVerification": true
+  },
+  {
+    "name": "Hernando Acosta Clavijo",
+    "slug": "hernando-acosta-clavijo",
+    "headline": "Creador de D.S.I. · liderazgo empresarial en software",
+    "shortBio": "Creador de D.S.I., empresa de software de Manizales fundada en 1991. Una publicación regional de 2018 lo identifica como Gerente General de DSI S.A. en una alianza para facturación electrónica.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Software empresarial", "Tecnología"],
+    "roles": ["Creador de empresa", "Liderazgo empresarial"],
+    "organizations": ["D.S.I."],
+    "contributions": [
+      "Creación de D.S.I., empresa de software fundada en Manizales en 1991",
+      "Aporte al desarrollo de software empresarial en la región"
+    ],
+    "linkedin": "https://www.linkedin.com/in/hernando-acosta-34674a297/",
+    "isPublicProfile": true,
+    "sourceUrl": "https://www.eje21.com.co/2018/05/las-empresas-del-eje-cafetero-ahora-cuentan-con-dos-aliados-para-cumplir-con-la-facturacion-electronica/",
+    "sources": [
+      {
+        "url": "https://www.linkedin.com/in/hernando-acosta-34674a297/",
+        "title": "Perfil público de LinkedIn de Hernando Acosta",
+        "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.eje21.com.co/2018/05/las-empresas-del-eje-cafetero-ahora-cuentan-con-dos-aliados-para-cumplir-con-la-facturacion-electronica/",
+        "title": "Noticia sobre la alianza de DSI para facturación electrónica",
+        "reviewedAt": "2026-07-17"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-17",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true,
+    "notes": "La noticia de 2018 confirma su rol público como Gerente General de DSI S.A. La relación como creador de D.S.I. proviene de una contribución de la comunidad y requiere una fuente institucional o histórica adicional."
   }
 ]

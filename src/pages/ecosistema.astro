@@ -10,7 +10,6 @@ import {
   people,
   stats,
   programsForUniversity,
-  organizerForCommunity,
 } from '../lib/data';
 
 // Conexiones reales presentes en los datos (sin inventar causalidad).
@@ -22,10 +21,6 @@ const uniConnections = universities
   .filter(({ programCount }) => programCount > 0)
   .sort((a, b) => b.programCount - a.programCount);
 const activeCommunities = communities.filter((community) => community.status === 'active');
-const communityConnections = activeCommunities.map((community) => ({
-  community,
-  organizer: organizerForCommunity(community),
-}));
 const companyCategories = [...new Set(companies.flatMap((company) => company.categories))]
   .map((category) => ({
     category,
@@ -122,7 +117,7 @@ const connections = [
         <h3 class="kicker">Comunidades → Organización</h3>
         <ul class="mt-3 space-y-2">
           {
-            communityConnections.map(({ community, organizer }) => (
+            activeCommunities.map((community) => (
               <li class="text-sm">
                 <a
                   href={`/comunidades/${community.slug}`}
@@ -130,14 +125,8 @@ const connections = [
                 >
                   {community.name}
                 </a>
-                <span class="block truncate font-mono text-xs text-ink-500">
-                  {organizer ? (
-                    <a href={`/personas/${organizer.slug}`} class="hover:text-accent">
-                      {organizer.name}
-                    </a>
-                  ) : (
-                    'Organización por documentar'
-                  )}
+                <span class="block font-mono text-xs text-ink-500">
+                  {community.organizer ?? 'Organización por documentar'}
                 </span>
               </li>
             ))

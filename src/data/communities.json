@@ -41,9 +41,11 @@
     "city": "Manizales",
     "department": "Caldas",
     "website": "https://manizales.aitinkerers.org/",
+    "organizer": "Jaime Andrés Restrepo",
+    "organizerSlug": "jaime-andres-restrepo",
     "status": "active",
     "sourceUrl": "https://manizales.aitinkerers.org/",
-    "lastVerifiedAt": "2026-07-15",
+    "lastVerifiedAt": "2026-07-18",
     "needsVerification": false
   }
 ]

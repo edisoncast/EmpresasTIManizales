@@ -22,6 +22,7 @@ test.describe('Navegación', () => {
     '/eventos',
     '/ecosistema',
     '/contribuir',
+    '/metodologia',
     '/acerca',
   ];
 

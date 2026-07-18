@@ -26,6 +26,34 @@ const metrics = [
   { label: 'Agenda', value: stats.events, href: '/eventos' },
 ];
 
+// Orientación por necesidad para quien llega por primera vez.
+const starts = [
+  {
+    title: 'Quiero estudiar',
+    text: 'Universidades y programas TIC de la región: técnico, tecnológico, pregrado y posgrado.',
+    href: '/formacion',
+    cta: 'Ver formación',
+  },
+  {
+    title: 'Quiero conocer empresas',
+    text: 'Empresas de base tecnológica y casas de desarrollo de software registradas en Caldas.',
+    href: '/empresas',
+    cta: 'Ver empresas',
+  },
+  {
+    title: 'Quiero participar en comunidad',
+    text: 'Comunidades, meetups y la agenda de encuentros técnicos de la región.',
+    href: '/comunidades',
+    cta: 'Ver comunidad',
+  },
+  {
+    title: 'Quiero entender el territorio',
+    text: 'Cómo se conectan universidades, empresas, personas y comunidades en el mapa.',
+    href: '/ecosistema',
+    cta: 'Ver el mapa',
+  },
+];
+
 const index = [
   {
     n: '01',
@@ -126,6 +154,32 @@ const jsonLd = {
     </div>
   </section>
 
+  <!-- Empieza por aquí: orientación por necesidad -->
+  <section class="container-content py-14" aria-labelledby="empieza">
+    <h2 id="empieza" class="font-display text-2xl font-semibold text-ink-900">Empieza por aquí</h2>
+    <p class="mt-1 max-w-reading text-ink-600">
+      ¿Qué te trae al mapa? Elige un punto de partida según lo que necesitas.
+    </p>
+    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {
+        starts.map((s) => (
+          <a
+            href={s.href}
+            class="group rounded-lg border border-ink-200 bg-surface p-6 no-underline transition-colors duration-fast hover:border-accent"
+          >
+            <h3 class="font-display text-lg font-semibold text-ink-900 group-hover:text-accent">
+              {s.title}
+            </h3>
+            <p class="mt-1 text-sm text-ink-600">{s.text}</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              {s.cta} <span aria-hidden="true">→</span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+  </section>
+
   <!-- Nota histórica 2020 → 2026 -->
   <section class="bg-mist/50 border-b border-ink-200">
     <div
@@ -138,7 +192,7 @@ const jsonLd = {
         invitación a contribuir.
       </p>
       <a
-        href="/acerca"
+        href="/metodologia"
         class="shrink-0 text-sm font-medium text-accent no-underline hover:underline"
         >Ver metodología →</a
       >
