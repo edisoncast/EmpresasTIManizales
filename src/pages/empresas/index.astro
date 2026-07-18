@@ -29,6 +29,9 @@ const sizeDistribution = sizeOrder.map((item) => ({
   ...item,
   count: companies.filter((company) => company.size === item.key).length,
 }));
+const cityDistribution = uniqueSorted(companies.map((c) => c.city ?? '').filter(Boolean))
+  .map((city) => ({ city, count: companies.filter((company) => company.city === city).length }))
+  .sort((a, b) => b.count - a.count);
 
 const facets = [
   { key: 'city', label: 'Ciudad', options: cities, allLabel: 'Todas las ciudades' },
@@ -69,7 +72,11 @@ const facets = [
             no publicamos correos, direcciones ni representantes, y omitimos el número de
             identificación de personas naturales.
           </p>
-          <CompanySizeOverview sizes={sizeDistribution} total={companies.length} />
+          <CompanySizeOverview
+            sizes={sizeDistribution}
+            cities={cityDistribution}
+            total={companies.length}
+          />
           <Browser
             facets={facets}
             total={companies.length}
