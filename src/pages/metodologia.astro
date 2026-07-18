@@ -1,0 +1,192 @@
+---
+import Layout from '../components/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { site } from '../lib/site';
+import { verificationOrder, verificationMeta } from '../lib/verification';
+import { formatDate } from '../lib/format';
+
+const cutoff = formatDate(site.auditDate);
+
+const inclusion = [
+  {
+    t: 'Empresas',
+    d: 'Registros con actividad económica de desarrollo de software (principalmente CIIU J6201) en el registro mercantil de la Cámara de Comercio de Manizales por Caldas. No se publican correos, direcciones, teléfonos ni el número de identificación de personas naturales.',
+  },
+  {
+    t: 'Universidades y programas',
+    d: 'Instituciones con oferta TIC y programas registrados en las consultas públicas HECAA/SNIES del Ministerio de Educación. La vigencia de un programa no equivale a calidad.',
+  },
+  {
+    t: 'Personas',
+    d: 'Solo perfiles públicos con contribución pública al ecosistema (comunidad, docencia, emprendimiento, open source, investigación). Sin lenguaje de ranking y en orden alfabético. No se publica vida privada.',
+  },
+  {
+    t: 'Comunidades y agenda',
+    d: 'Espacios de encuentro técnico con actividad verificable y su fuente pública. Un evento solo aparece como próximo cuando tiene fecha, organizador o fuente comprobable.',
+  },
+];
+
+const sourceHierarchy = [
+  'Registros y sistemas oficiales.',
+  'Sitio institucional o página oficial de la entidad.',
+  'Perfil profesional público controlado por la persona.',
+  'Publicación periodística o académica identificable.',
+  'Directorios secundarios, solo como apoyo y nunca como única evidencia de una afirmación sensible.',
+];
+---
+
+<Layout
+  title="Metodología y transparencia"
+  description="Cómo se incluye, verifica, actualiza y corrige la información del Observatorio TIC de Manizales y Caldas: criterios, estados de verificación, fuentes, corte de datos y proceso de corrección o retiro."
+>
+  <PageHeader
+    eyebrow="Transparencia"
+    title="Metodología y transparencia"
+    description="Cómo decidimos qué se incluye, cómo interpretamos la confianza de cada dato y cómo puedes corregir o retirar información. Esta página explica el criterio; la auditoría completa vive en el repositorio."
+    showCutoff={false}
+  />
+
+  <div class="container-content grid gap-10 py-10 lg:grid-cols-3">
+    <div class="space-y-10 lg:col-span-2">
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-ink-900">Propósito y alcance</h2>
+        <p class="mt-3 text-ink-700">
+          Es un mapa abierto y verificable del ecosistema tecnológico de <strong
+            >Manizales y Caldas</strong
+          >. Documenta actores y relaciones con fuentes públicas; no certifica actividad, calidad ni
+          capacidad de contratación. La ausencia de una entidad no significa que no exista: puede no
+          haber sido sugerida o verificada aún.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-ink-900">Criterios de inclusión</h2>
+        <dl class="mt-4 space-y-4">
+          {
+            inclusion.map((i) => (
+              <div class="rounded-lg border border-ink-200 bg-surface p-4">
+                <dt class="font-semibold text-ink-900">{i.t}</dt>
+                <dd class="mt-1 text-sm text-ink-600">{i.d}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </section>
+
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-ink-900">Estados de verificación</h2>
+        <p class="mt-3 text-ink-700">
+          Cada registro lleva un estado, comunicado con texto además de color. No ocultamos la
+          incertidumbre: la mostramos y la convertimos en una invitación a aportar fuentes.
+        </p>
+        <dl class="mt-4 space-y-3">
+          {
+            verificationOrder.map((s) => (
+              <div class="flex flex-col gap-1 rounded-lg border border-ink-200 bg-surface p-4 sm:flex-row sm:items-baseline sm:gap-4">
+                <dt class="shrink-0">
+                  <span class={`badge ${verificationMeta[s].badge}`}>
+                    <span aria-hidden="true">{verificationMeta[s].symbol}</span>
+                    {verificationMeta[s].label}
+                  </span>
+                </dt>
+                <dd class="text-sm text-ink-600">{verificationMeta[s].message}</dd>
+              </div>
+            ))
+          }
+        </dl>
+      </section>
+
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-ink-900">Fuentes aceptables</h2>
+        <p class="mt-3 text-ink-700">
+          Una fuente debe ser pública, accesible y pertinente al dato que respalda. Se prefieren, en
+          este orden:
+        </p>
+        <ol class="mt-3 list-decimal space-y-1 pl-5 text-sm text-ink-700">
+          {sourceHierarchy.map((s) => <li>{s}</li>)}
+        </ol>
+        <p class="mt-3 text-sm text-ink-500">
+          No se aceptan capturas sin procedencia, contenido generado por IA, resultados de buscador
+          sin abrir la fuente, mensajes privados ni datos personales ajenos al propósito del
+          observatorio.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-ink-900">
+          Datos históricos, inactivos y legado 2020
+        </h2>
+        <p class="mt-3 text-ink-700">
+          El material de 2020 se conserva como archivo histórico y no se elimina por falta de
+          certeza; se contextualiza. Un registro <em>Posiblemente inactivo</em> mantiene una señal
+          explícita (por ejemplo, “En liquidación”) y requiere revisión humana antes de archivarse.
+          Distinguimos un dato heredado de 2020, una actualización de 2026 y un registro archivado.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-ink-900">Personas y datos sensibles</h2>
+        <p class="mt-3 text-ink-700">
+          Solo incluimos personas con perfil o contribución pública, con enfoque en sus aportes al
+          ecosistema. No publicamos teléfonos, direcciones, correos privados ni identificadores
+          personales, conforme a la <strong>Ley 1581 de 2012</strong>. Cualquier persona puede
+          solicitar corrección o retiro de su ficha.
+        </p>
+      </section>
+
+      <section>
+        <h2 class="font-display text-2xl font-semibold text-ink-900">
+          Corrección, actualización y retiro
+        </h2>
+        <p class="mt-3 text-ink-700">
+          Una sugerencia no equivale a publicación automática: se revisa por evidencia y una ficha
+          puede quedar “por confirmar”. Para aportar, corregir o pedir retiro basta indicar el
+          registro, el cambio y una fuente pública; no necesitas conocimientos técnicos.
+        </p>
+        <a href="/contribuir" class="btn-secondary mt-4 inline-flex">Cómo contribuir o corregir</a>
+      </section>
+    </div>
+
+    <aside class="space-y-6">
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h2 class="kicker">Corte de datos</h2>
+        <p class="mt-2 text-sm text-ink-600">
+          Última revisión documental: <strong>{cutoff}</strong>. Las cifras son registros del
+          archivo a esa fecha, no indicadores de desempeño.
+        </p>
+      </div>
+
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h2 class="kicker">Política editorial</h2>
+        <ul class="mt-3 space-y-2 text-sm text-ink-600">
+          <li>Sin pagos por visibilidad ni contenido patrocinado.</li>
+          <li>Sin rankings de empresas, programas o personas.</li>
+          <li>Sin bolsa de empleo ni intermediación comercial.</li>
+          <li>Aparecer aquí no implica recomendación ni aval.</li>
+        </ul>
+      </div>
+
+      <div class="rounded-lg border border-ink-200 bg-surface p-5">
+        <h2 class="kicker">Fuentes citadas</h2>
+        <ul class="mt-3 space-y-2 text-sm">
+          <li>
+            <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link"
+              >{site.sources.ccmpc.name}</a
+            >
+            <span class="block text-xs text-ink-500">Empresas · registro mercantil (CIIU J6201)</span>
+          </li>
+          <li>
+            <a href={site.sources.snies.url} target="_blank" rel="noopener noreferrer" class="link"
+              >{site.sources.snies.name}</a
+            >
+            <span class="block text-xs text-ink-500">Universidades y programas</span>
+          </li>
+        </ul>
+        <p class="mt-3 text-xs text-ink-500">
+          La información empresarial se usa con fines no comerciales, citando a la Cámara de Comercio
+          de Manizales por Caldas como fuente, conforme a sus condiciones de uso.
+        </p>
+      </div>
+    </aside>
+  </div>
+</Layout>
