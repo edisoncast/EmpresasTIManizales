@@ -14,6 +14,7 @@ test.describe('Navegación', () => {
   const publicRoutes = [
     '/',
     '/empresas',
+    '/formacion',
     '/universidades',
     '/programas',
     '/personas',
@@ -48,18 +49,18 @@ test.describe('Navegación', () => {
   });
 
   test('la ruta activa se marca con aria-current', async ({ page }) => {
-    await page.goto('/programas');
+    await page.goto('/empresas');
     const width = page.viewportSize()?.width ?? 1440;
     if (width >= DESKTOP_NAV) {
       const active = page.locator(
         'header nav[aria-label="Navegación principal"] a[aria-current="page"]',
       );
-      await expect(active).toHaveText(/programas/i);
+      await expect(active).toHaveText(/empresas/i);
     } else {
       await page.locator('header details summary').click();
       await expect(
         page.locator('header nav[aria-label="Navegación"] a[aria-current="page"]'),
-      ).toContainText(/programas/i);
+      ).toContainText(/empresas/i);
     }
   });
 
@@ -67,7 +68,7 @@ test.describe('Navegación', () => {
     await page.goto('/');
     await page.locator('header details summary').click();
     await expect(
-      page.locator('header details').getByRole('link', { name: 'Comunidades', exact: true }),
+      page.locator('header details').getByRole('link', { name: 'Comunidad', exact: true }),
     ).toBeVisible();
     await page.locator('header details summary').click();
     await expect(page.locator('header details')).not.toHaveAttribute('open', '');

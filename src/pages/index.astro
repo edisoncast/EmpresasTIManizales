@@ -23,7 +23,7 @@ const metrics = [
   { label: 'Programas', value: stats.programs, href: '/programas' },
   { label: 'Comunidades', value: stats.communities, href: '/comunidades' },
   { label: 'Personas', value: stats.people, href: '/personas' },
-  { label: 'Eventos', value: stats.events, href: '/eventos' },
+  { label: 'Agenda', value: stats.events, href: '/eventos' },
 ];
 
 const index = [
@@ -65,9 +65,9 @@ const index = [
   {
     n: '06',
     href: '/eventos',
-    title: 'Eventos',
+    title: 'Agenda',
     count: stats.events,
-    text: 'Encuentros próximos, pasados y por verificar.',
+    text: 'Encuentros próximos, pasados y por verificar, dentro de Comunidad.',
   },
 ];
 
@@ -120,7 +120,7 @@ const jsonLd = {
       </div>
 
       <div class="mt-6 flex flex-wrap items-center gap-3">
-        <a href="/ecosistema" class="btn-primary">Explorar el ecosistema</a>
+        <a href="/ecosistema" class="btn-primary">Explorar el mapa del ecosistema</a>
         <a href="/contribuir" class="btn-secondary">Contribuir con datos</a>
       </div>
     </div>

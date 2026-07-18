@@ -18,16 +18,22 @@ const undated = events.filter((e) => !e.date);
 ---
 
 <Layout
-  title="Eventos"
-  description="Eventos y encuentros tecnológicos de Manizales y Caldas: charlas, meetups y actividades del ecosistema TIC."
+  title="Agenda de comunidad"
+  description="Agenda de encuentros tecnológicos de Manizales y Caldas: charlas, meetups y actividades de las comunidades, separadas en próximos, pasados y por verificar."
 >
   <PageHeader
-    eyebrow="Archivo · Eventos"
-    title="Eventos tecnológicos"
-    description="Charlas, meetups y encuentros del ecosistema, separados en próximos, pasados y por verificar. Los eventos pasados se conservan como archivo; no son convocatorias vigentes."
+    eyebrow="Comunidad · Agenda"
+    title="Agenda de comunidad"
+    description="Charlas, meetups y encuentros de las comunidades, separados en próximos, pasados y por verificar. Los eventos pasados se conservan como archivo; no son convocatorias vigentes."
   />
 
   <div class="container-content py-8">
+    <a
+      href="/comunidades"
+      class="mb-6 inline-flex items-center gap-1 text-sm font-medium text-accent no-underline hover:underline"
+      ><span aria-hidden="true">←</span> Volver a Comunidad</a
+    >
+
     {
       events.length === 0 ? (
         <div class="space-y-8">
