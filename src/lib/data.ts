@@ -97,14 +97,22 @@ export function universityForProgram(program: Program): University | undefined {
   return universities.find((u) => u.programs.includes(program.slug));
 }
 
-/** Comunidades organizadas por una persona. */
+/** Comunidades organizadas por una persona (principal o co-organizadora). */
 export function communitiesForPerson(person: Person): Community[] {
-  return communities.filter((c) => c.organizerSlug === person.slug);
+  return communities.filter(
+    (c) => c.organizerSlug === person.slug || c.organizerSlugs?.includes(person.slug),
+  );
 }
 
-/** Persona organizadora de una comunidad, si está registrada. */
+/** Persona organizadora principal de una comunidad, si está registrada. */
 export function organizerForCommunity(community: Community): Person | undefined {
   return community.organizerSlug ? getPerson(community.organizerSlug) : undefined;
+}
+
+/** Todas las personas organizadoras registradas de una comunidad. */
+export function organizersForCommunity(community: Community): Person[] {
+  const slugs = community.organizerSlugs ?? (community.organizerSlug ? [community.organizerSlug] : []);
+  return slugs.map((slug) => getPerson(slug)).filter((p): p is Person => Boolean(p));
 }
 
 export type { Company, University, Program, Person, Community, Event, SupportEntity };

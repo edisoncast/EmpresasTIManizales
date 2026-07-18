@@ -28,6 +28,11 @@
     "meetup": "https://www.meetup.com/aws-user-group-manizales/",
     "organizer": "Jimmy Loaiza, Santiago Loaiza Giraldo y Jhon Edison Castro Sánchez",
     "organizerSlug": "jhon-edison-castro-sanchez",
+    "organizerSlugs": [
+      "jimmy-alejandro-loaiza",
+      "santiago-loaiza-giraldo",
+      "jhon-edison-castro-sanchez"
+    ],
     "status": "active",
     "sourceUrl": "https://awsug.cloud-manizales.com",
     "lastVerifiedAt": "2026-07-16",
