@@ -5,12 +5,18 @@ interface SizeDatum {
   count: number;
 }
 
+interface CityDatum {
+  city: string;
+  count: number;
+}
+
 interface Props {
   sizes: SizeDatum[];
+  cities: CityDatum[];
   total: number;
 }
 
-const { sizes, total } = Astro.props;
+const { sizes, cities, total } = Astro.props;
 
 const ranges = [
   {
@@ -155,6 +161,41 @@ const formatPercentage = (count: number) =>
         “Sin dato” significa que el tamaño no quedó disponible en el registro importado; no equivale
         a microempresa.
       </p>
+
+      <div class="mt-6 border-t border-ink-200 pt-5">
+        <h3 class="font-display text-base font-semibold text-ink-900">Por ciudad</h3>
+        <ul class="mt-4 space-y-3">
+          {
+            cities.map((item) => {
+              const percent = percentage(item.count);
+              return (
+                <li>
+                  <div class="flex items-baseline justify-between gap-4 text-sm">
+                    <span class="font-medium text-ink-800">{item.city}</span>
+                    <span class="font-mono text-xs tabular-nums text-ink-600">
+                      {item.count.toLocaleString('es-CO')} · {formatPercentage(item.count)} %
+                    </span>
+                  </div>
+                  <svg
+                    aria-hidden="true"
+                    class="mt-1.5 block h-2 w-full"
+                    viewBox="0 0 100 8"
+                    preserveAspectRatio="none"
+                  >
+                    <rect width="100" height="8" rx="2" fill="var(--color-surface-muted)" />
+                    <rect
+                      width={Math.max(percent, item.count > 0 ? 0.6 : 0)}
+                      height="8"
+                      rx="2"
+                      fill="var(--color-accent)"
+                    />
+                  </svg>
+                </li>
+              );
+            })
+          }
+        </ul>
+      </div>
     </figure>
   </div>
 </section>
