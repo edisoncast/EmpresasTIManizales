@@ -34,13 +34,18 @@ export const site = {
   },
 } as const;
 
-export const nav = [
+export type NavItem = {
+  href: string;
+  label: string;
+  /** Rutas que también marcan este ítem como activo (agrupaciones). */
+  match?: readonly string[];
+};
+
+export const nav: readonly NavItem[] = [
   { href: '/empresas', label: 'Empresas' },
-  { href: '/universidades', label: 'Universidades' },
-  { href: '/programas', label: 'Programas' },
+  { href: '/formacion', label: 'Formación', match: ['/formacion', '/universidades', '/programas'] },
+  { href: '/comunidades', label: 'Comunidad', match: ['/comunidades', '/eventos'] },
   { href: '/personas', label: 'Personas' },
-  { href: '/comunidades', label: 'Comunidades' },
-  { href: '/eventos', label: 'Eventos' },
-  { href: '/ecosistema', label: 'Ecosistema' },
+  { href: '/ecosistema', label: 'Mapa del ecosistema' },
   { href: '/contribuir', label: 'Contribuir' },
-] as const;
+];

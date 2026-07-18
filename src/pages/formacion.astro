@@ -1,0 +1,62 @@
+---
+import Layout from '../components/Layout.astro';
+import PageHeader from '../components/PageHeader.astro';
+import { stats } from '../lib/data';
+
+const areas = [
+  {
+    href: '/universidades',
+    title: 'Universidades',
+    count: stats.universities,
+    text: 'Instituciones de Manizales y Caldas con formación en software, datos, redes y áreas afines.',
+  },
+  {
+    href: '/programas',
+    title: 'Programas',
+    count: stats.programs,
+    text: 'Técnicos, tecnológicos, pregrados y posgrados del área TIC, con nivel, modalidad y área.',
+  },
+];
+---
+
+<Layout
+  title="Formación"
+  description="Dónde estudiar tecnología en Manizales y Caldas: universidades e instituciones con oferta TIC y sus programas técnicos, tecnológicos, de pregrado y posgrado."
+>
+  <PageHeader
+    eyebrow="Formación"
+    title="Dónde estudiar tecnología en la región"
+    description="Reúne las instituciones con oferta TIC y sus programas. Explora por institución o directamente por programa; cada ficha indica nivel, modalidad, área y fuente oficial."
+    showCutoff={false}
+  />
+
+  <div class="container-content py-10">
+    <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {
+        areas.map((a) => (
+          <a
+            href={a.href}
+            class="group rounded-lg border border-ink-200 bg-surface p-6 no-underline transition-colors duration-fast hover:border-accent"
+          >
+            <div class="flex items-baseline justify-between gap-3">
+              <h2 class="font-display text-xl font-semibold text-ink-900 group-hover:text-accent">
+                {a.title}
+              </h2>
+              <span class="font-mono text-xs text-ink-400">{a.count}</span>
+            </div>
+            <p class="mt-2 text-sm text-ink-600">{a.text}</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              Explorar <span aria-hidden="true">→</span>
+            </span>
+          </a>
+        ))
+      }
+    </div>
+
+    <p class="mt-8 max-w-reading text-sm text-ink-500">
+      La vigencia de un programa no equivale a calidad: verifícala siempre con la institución y el
+      registro oficial HECAA/SNIES. ¿Falta una institución o programa?
+      <a href="/contribuir" class="link">Sugiérelo con su fuente pública</a>.
+    </p>
+  </div>
+</Layout>

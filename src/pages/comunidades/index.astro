@@ -41,6 +41,15 @@ const facets = [
       <a href="/contribuir" class="link">Ayúdanos a agregarla</a>.
     </p>
 
+    <div
+      class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-ink-200 bg-surface p-4"
+    >
+      <p class="text-sm text-ink-700">
+        <strong>Agenda.</strong> Encuentros y meetups con fecha: próximos, pasados y por verificar.
+      </p>
+      <a href="/eventos" class="btn-secondary shrink-0">Ver la agenda →</a>
+    </div>
+
     {
       communities.length === 0 ? (
         <EmptyState icon="👥" title="Aún no hay comunidades registradas" />
