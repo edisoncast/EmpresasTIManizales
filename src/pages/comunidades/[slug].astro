@@ -2,7 +2,7 @@
 import Layout from '../../components/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import EntityDetail from '../../components/EntityDetail.astro';
-import { communities, organizerForCommunity } from '../../lib/data';
+import { communities, organizersForCommunity } from '../../lib/data';
 
 export function getStaticPaths() {
   return communities.map((community) => ({
@@ -12,7 +12,7 @@ export function getStaticPaths() {
 }
 
 const { community } = Astro.props;
-const organizer = organizerForCommunity(community);
+const organizers = organizersForCommunity(community);
 
 const statusLabel: Record<string, string> = {
   active: 'Activa',
@@ -61,15 +61,23 @@ if (community.contact) links.push({ label: 'Contacto', href: community.contact }
     entityName={community.name}
   >
     {
-      organizer && (
+      organizers.length > 0 && (
         <div slot="aside" class="rounded-lg border border-ink-200 bg-surface p-5">
-          <h2 class="kicker">Persona organizadora</h2>
-          <a
-            href={`/personas/${organizer.slug}`}
-            class="mt-2 block text-sm font-medium text-accent no-underline hover:underline"
-          >
-            {organizer.name}
-          </a>
+          <h2 class="kicker">
+            {organizers.length > 1 ? 'Personas organizadoras' : 'Persona organizadora'}
+          </h2>
+          <ul class="mt-2 space-y-1">
+            {organizers.map((organizer) => (
+              <li>
+                <a
+                  href={`/personas/${organizer.slug}`}
+                  class="block text-sm font-medium text-accent no-underline hover:underline"
+                >
+                  {organizer.name}
+                </a>
+              </li>
+            ))}
+          </ul>
         </div>
       )
     }

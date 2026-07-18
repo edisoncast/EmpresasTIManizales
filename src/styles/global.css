@@ -69,6 +69,16 @@
     font-weight: 600;
     letter-spacing: -0.005em;
     color: var(--color-text-primary);
+    /* Equilibra líneas en títulos: evita el "escalón" de una línea larga
+       seguida de una corta, look habitual de sitios generados con IA. */
+    text-wrap: balance;
+  }
+
+  /* Párrafos: evita huérfanos (última línea de una sola palabra), que hacen
+     que el texto se vea "cortado". Progressive enhancement (se ignora donde
+     no haya soporte). */
+  p {
+    text-wrap: pretty;
   }
 
   /* Foco visible y accesible (>= 2px, offset), nunca eliminado sin reemplazo. */

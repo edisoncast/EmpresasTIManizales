@@ -13,8 +13,10 @@ export const communitySchema = z
     meetup: urlSchema.optional(),
     youtube: urlSchema.optional(),
     organizer: z.string().optional(),
-    // slug de la persona organizadora, si está registrada
+    // slug de la persona organizadora principal, si está registrada
     organizerSlug: slugSchema.optional(),
+    // slugs de todas las personas organizadoras registradas (comunidades con varios)
+    organizerSlugs: z.array(slugSchema).optional(),
     contact: urlSchema.optional(),
     status: z.enum(['active', 'inactive', 'unknown']).default('unknown'),
     ...auditableFields,
