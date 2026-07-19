@@ -1,0 +1,41 @@
+name: '✏️ Corregir o actualizar un registro'
+description: Propón una corrección o actualización de un registro existente, con una fuente pública.
+title: '[Corrección] '
+labels: ['data', 'correction']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por ayudar a mantener el archivo al día. **No necesitas saber Git**: completa este formulario y lo revisamos.
+        Una sugerencia no se publica automáticamente; se revisa por evidencia y el registro puede quedar “por confirmar”.
+  - type: input
+    id: record
+    attributes:
+      label: Registro a corregir
+      description: Pega la URL de la ficha en el sitio, o el nombre y slug del registro.
+      placeholder: https://ticmanizales.edisoncastrosanchez.app/empresas/...
+    validations:
+      required: true
+  - type: textarea
+    id: change
+    attributes:
+      label: ¿Qué debe corregirse o actualizarse?
+      description: Indica el dato actual y el valor correcto.
+      placeholder: 'Ej.: la ciudad dice Manizales pero la sede es Villamaría.'
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Fuente pública
+      description: URL que respalde el cambio (sitio oficial, registro mercantil, LinkedIn de la organización).
+      placeholder: https://fuente-publica.com
+    validations:
+      required: true
+  - type: checkboxes
+    id: confirm
+    attributes:
+      label: Confirmación
+      options:
+        - label: La información es pública y no incluye datos sensibles.
+          required: true

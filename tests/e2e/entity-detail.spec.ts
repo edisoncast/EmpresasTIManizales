@@ -22,7 +22,9 @@ test.describe('Páginas detalle', () => {
       ).toBeVisible();
       await expect(page.getByRole('heading', { name: /fuentes/i })).toBeVisible();
       await expect(
-        page.getByText(/sugerir una corrección|corregir este registro/i).first(),
+        page
+          .getByText(/sugerir una corrección|solicitar ajuste o retiro|corregir/i)
+          .first(),
       ).toBeVisible();
     });
   }

@@ -11,6 +11,12 @@ export const site = {
   get issuesUrl() {
     return `${this.repoUrl}/issues/new/choose`;
   },
+  get correctionUrl() {
+    return `${this.repoUrl}/issues/new?template=correct-record.yml`;
+  },
+  get removalUrl() {
+    return `${this.repoUrl}/issues/new?template=report-removal.yml`;
+  },
   get newPrUrl() {
     return `${this.repoUrl}/compare`;
   },

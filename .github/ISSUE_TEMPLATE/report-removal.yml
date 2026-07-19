@@ -1,0 +1,41 @@
+name: '🚫 Reportar retiro o inactividad'
+description: Solicita el ajuste o retiro de una ficha, o reporta que una entidad dejó de operar.
+title: '[Retiro/Inactividad] '
+labels: ['data', 'removal']
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Usa este formulario para pedir el **ajuste o retiro de información**, o para avisar que una comunidad, empresa o entidad **dejó de operar**.
+        Para datos personales no publicamos información sensible; indícanos el registro y el motivo.
+  - type: input
+    id: record
+    attributes:
+      label: Registro
+      description: URL de la ficha en el sitio, o nombre y slug.
+    validations:
+      required: true
+  - type: dropdown
+    id: reason
+    attributes:
+      label: Motivo
+      options:
+        - Ya no opera / inactiva
+        - Solicito ajuste de mi información
+        - Solicito retiro de mi ficha
+        - Corrección de un dato sensible
+        - Otro
+    validations:
+      required: true
+  - type: textarea
+    id: detail
+    attributes:
+      label: Detalle
+      description: Explica el motivo y, si aplica, tu relación con el registro.
+    validations:
+      required: true
+  - type: input
+    id: source
+    attributes:
+      label: Evidencia o fuente (opcional)
+      placeholder: URL que respalde el reporte, si existe.

@@ -98,7 +98,7 @@ for (const l of person.personalBrandLinks ?? []) links.push({ label: displayUrl(
           <SourceBadge sourceUrl={person.sourceUrl} reviewedAt={person.lastVerifiedAt} />
         </div>
         <div class="mt-5">
-          <ContributionCTA variant="correct" entityName={person.name} compact />
+          <ContributionCTA variant="person" entityName={person.name} compact />
         </div>
       </section>
     </div>
