@@ -1,1 +1,70 @@
-[]
+[
+  {
+    "name": "Manizales Más",
+    "slug": "manizales-mas",
+    "description": "Alianza entre universidad, empresa y Estado que crea condiciones para crear y crecer empresas en la región. Ofrece programas de mentoría, formación y aceleración, y articula al ecosistema de emprendimiento de Manizales.",
+    "kind": "other",
+    "city": "Manizales",
+    "department": "Caldas",
+    "website": "https://manizalesmas.com.co",
+    "focus": ["Emprendimiento", "Ecosistema", "Aceleración"],
+    "sourceUrl": "https://manizalesmas.com.co",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
+    "name": "Clúster Mantix",
+    "slug": "cluster-mantix",
+    "description": "Iniciativa clúster de tecnologías de la información de Manizales y Caldas, liderada por la Cámara de Comercio de Manizales por Caldas. Agrupa y fortalece empresas TIC del sector (software, datos, ciberseguridad, cloud) y las conecta con mercados.",
+    "kind": "cluster",
+    "city": "Manizales",
+    "department": "Caldas",
+    "focus": ["TIC", "Software", "Competitividad"],
+    "sourceUrl": "https://ccmpc.org.co",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true
+  },
+  {
+    "name": "Cámara de Comercio de Manizales por Caldas",
+    "slug": "camara-comercio-manizales-caldas",
+    "description": "Entidad gremial que apoya la competitividad del tejido empresarial regional. Lidera iniciativas clúster —incluido el clúster TIC Mantix— y programas de fortalecimiento y formalización empresarial.",
+    "kind": "chamber",
+    "city": "Manizales",
+    "department": "Caldas",
+    "website": "https://ccmpc.org.co",
+    "focus": ["Competitividad", "Clústeres", "Registro empresarial"],
+    "sourceUrl": "https://ccmpc.org.co",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
+    "name": "Fundación Luker",
+    "slug": "fundacion-luker",
+    "description": "Fundación de Manizales que trabaja en educación, emprendimiento y desarrollo rural mediante alianzas público-privadas y académicas. Impulsora de programas del ecosistema de emprendimiento regional.",
+    "kind": "ngo",
+    "city": "Manizales",
+    "department": "Caldas",
+    "website": "https://fundacionluker.org.co",
+    "focus": ["Educación", "Emprendimiento", "Desarrollo rural"],
+    "sourceUrl": "https://fundacionluker.org.co",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
+    "name": "iNNpulsa Colombia",
+    "slug": "innpulsa-colombia",
+    "description": "Agencia nacional de emprendimiento e innovación del Gobierno de Colombia (adscrita al MinCIT). Apoya startups y pymes con financiación no reembolsable, mentoría y conexión con mercados, con programas que llegan a Caldas.",
+    "kind": "public",
+    "department": "Colombia",
+    "website": "https://www.innpulsacolombia.com",
+    "focus": ["Emprendimiento", "Innovación", "Fomento"],
+    "sourceUrl": "https://www.innpulsacolombia.com",
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  }
+]
