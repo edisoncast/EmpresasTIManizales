@@ -629,5 +629,50 @@
     "verificationStatus": "partially_verified",
     "needsVerification": true,
     "notes": "La noticia de 2018 confirma su rol público como Gerente General de DSI S.A. La relación como creador de D.S.I. proviene de una contribución de la comunidad y requiere una fuente institucional o histórica adicional."
+  },
+  {
+    "name": "Fernando Betancourt Escobar",
+    "slug": "fernando-betancourt-escobar",
+    "headline": "Cofundador y gerente de Data & Service",
+    "shortBio": "Cofundador y gerente de Data & Service, empresa tecnológica de Manizales fundada en 1996. Su trayectoria pública se ha centrado en tecnología, seguridad de la información e infraestructura para organizaciones.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "areas": ["Emprendimiento", "Infraestructura tecnológica", "Ciberseguridad", "Software"],
+    "roles": ["Cofundador", "Gerente"],
+    "organizations": ["Data & Service"],
+    "contributions": [
+      "Cofundación y gerencia de Data & Service en Manizales desde 1996",
+      "Desarrollo de una trayectoria empresarial regional en infraestructura tecnológica y seguridad de la información"
+    ],
+    "linkedin": "https://www.linkedin.com/in/fernandobetancourtescobar/",
+    "personalBrandLinks": ["https://teraeduca.com/experto/fernando-betancourt-escobar"],
+    "isPublicProfile": true,
+    "sourceUrl": "https://manizalesmas.com.co/mirar-al-pasado-para-construir-el-ahora/",
+    "sources": [
+      {
+        "url": "https://manizalesmas.com.co/mirar-al-pasado-para-construir-el-ahora/",
+        "title": "Manizales Más: Fernando Betancourt Escobar, cofundador y gerente de Data & Service",
+        "reviewedAt": "2026-07-18"
+      },
+      {
+        "url": "https://datayservice.com/acerca-de-nosotros/",
+        "title": "Data & Service: trayectoria y enfoque de la empresa",
+        "reviewedAt": "2026-07-18"
+      },
+      {
+        "url": "https://www.linkedin.com/in/fernandobetancourtescobar/",
+        "title": "Perfil público de LinkedIn de Fernando Betancourt Escobar",
+        "reviewedAt": "2026-07-18"
+      },
+      {
+        "url": "https://teraeduca.com/experto/fernando-betancourt-escobar",
+        "title": "Perfil profesional público en Tera Educa",
+        "reviewedAt": "2026-07-18"
+      }
+    ],
+    "lastVerifiedAt": "2026-07-18",
+    "verificationStatus": "verified",
+    "needsVerification": false
   }
 ]
