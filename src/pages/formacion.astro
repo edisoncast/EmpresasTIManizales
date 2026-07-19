@@ -17,6 +17,35 @@ const areas = [
     text: 'Técnicos, tecnológicos, pregrados y posgrados del área TIC, con nivel, modalidad y área.',
   },
 ];
+
+// Ruta para empezar: guía por punto de partida, reutilizando los filtros de Programas.
+const byLevel = (level: string) => `/programas?level=${encodeURIComponent(level)}`;
+const routes = [
+  {
+    title: 'Para empezar',
+    text: 'Programas técnicos y tecnológicos: bases prácticas del área en menos tiempo.',
+    href: byLevel('Tecnológico'),
+    cta: 'Ver tecnológicos',
+  },
+  {
+    title: 'Un pregrado',
+    text: 'Ingenierías y pregrados en sistemas, software y computación.',
+    href: byLevel('Pregrado'),
+    cta: 'Ver pregrados',
+  },
+  {
+    title: 'Profundizar',
+    text: 'Especializaciones, maestrías y doctorados para quien ya trabaja.',
+    href: byLevel('Maestría'),
+    cta: 'Ver posgrados',
+  },
+  {
+    title: 'Siguiente paso',
+    text: 'Al elegir una ruta, súmate a una comunidad para practicar y conectar.',
+    href: '/comunidades',
+    cta: 'Ver comunidad',
+  },
+];
 ---
 
 <Layout
@@ -52,6 +81,38 @@ const areas = [
         ))
       }
     </div>
+
+    <section class="mt-12 border-t border-ink-200 pt-10">
+      <h2 class="font-display text-2xl font-semibold text-ink-900">¿Por dónde empiezo?</h2>
+      <p class="mt-1 max-w-reading text-ink-600">
+        Una guía breve según tu punto de partida. No es orientación laboral: son rutas para explorar
+        la oferta local.
+      </p>
+      <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
+        {
+          routes.map((r) => (
+            <a
+              href={r.href}
+              class="group flex flex-col rounded-lg border border-ink-200 bg-surface p-5 no-underline transition-colors duration-fast hover:border-accent"
+            >
+              <h3 class="font-display text-lg font-semibold text-ink-900 group-hover:text-accent">
+                {r.title}
+              </h3>
+              <p class="mt-1 flex-1 text-sm text-ink-600">{r.text}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent">
+                {r.cta} <span aria-hidden="true">→</span>
+              </span>
+            </a>
+          ))
+        }
+      </div>
+      <p class="mt-4 text-sm text-ink-500">
+        ¿Prefieres estudiar en modalidad virtual? Filtra por modalidad en <a
+          href={`/programas?modality=${encodeURIComponent('Virtual / Remoto')}`}
+          class="link">Programas</a
+        >.
+      </p>
+    </section>
 
     <p class="mt-8 max-w-reading text-sm text-ink-500">
       La vigencia de un programa no equivale a calidad: verifícala siempre con la institución y el
