@@ -24,8 +24,9 @@ export const site = {
   // Contexto histórico del proyecto.
   startedYear: 2020,
   currentYear: 2026,
-  // Fecha de corte de la revalidación comunitaria (auditoría 2026).
-  auditDate: '2026-07-16',
+  // Fecha del último corte auditado del inventario. Cada ficha además lleva su
+  // propia fecha de revisión (lastVerifiedAt), que puede ser posterior.
+  auditDate: '2026-07-18',
   coordinates: '5.07° N, 75.52° O',
   // Fuentes institucionales citadas (condición de uso de sus datos).
   sources: {
