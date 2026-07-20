@@ -260,24 +260,6 @@
     "description": "El programa de pregrado en Ingeniería de Sistemas de la Universidad Católica Luis Amigó forma profesionales para el diseño, desarrollo y evaluación de sistemas de información y soluciones informáticas orientadas a la productividad de las organizaciones. El plan integra el pensamiento sistémico, la programación de aplicaciones, las bases de datos, las redes y telecomunicaciones, la ingeniería y calidad del software, y el modelado y simulación de sistemas. Desarrolla capacidades para gestionar el recurso informático, coordinar proyectos de tecnología y mejorar de forma continua la calidad de los productos. Sus egresados pueden desempeñarse en desarrollo e integración de software, administración de sistemas, consultoría tecnológica y gestión de proyectos en distintos sectores."
   },
   {
-    "name": "Ingeniería de Sistemas (Virtual)",
-    "slug": "ing-sistemas-virtual-remington",
-    "institutionName": "Corporación Universitaria Remington",
-    "institutionSlug": "corporacion-universitaria-remington",
-    "level": "undergraduate",
-    "modality": "remote",
-    "city": "Manizales",
-    "area": ["Desarrollo de software", "Sistemas de información"],
-    "credits": 145,
-    "durationSemesters": 9,
-    "sniesCode": "104431",
-    "website": "https://www.uniremington.edu.co/manizales/",
-    "sourceUrl": "https://www.uniremington.edu.co/manizales/",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified",
-    "description": "Programa de pregrado en ingeniería que forma profesionales capaces de analizar, diseñar, construir y administrar sistemas de información en modalidad totalmente virtual. Combina fundamentos de matemáticas, estadística y ciencias de la computación con áreas técnicas como programación, bases de datos, redes e ingeniería de software, apoyándose en estándares internacionales y buenas prácticas del desarrollo. El estudiante adquiere competencias para gestionar proyectos de tecnología, evaluar y auditar sistemas, y diseñar arquitecturas de software que respondan a necesidades organizacionales. Su enfoque integra la formación técnica con componentes de ética y responsabilidad social, orientando al egresado hacia la dirección de áreas de sistemas, la gestión de proyectos de TI y el desarrollo de soluciones informáticas en distintos sectores productivos."
-  },
-  {
     "name": "Tecnología en Análisis y Programación de Sistemas de Información",
     "slug": "tecnologia-analisis-programacion-uam",
     "institutionName": "Universidad Autónoma de Manizales",

@@ -230,22 +230,6 @@
     "verificationStatus": "partially_verified"
   },
   {
-    "name": "Corporación Universitaria Remington - Sede Manizales",
-    "slug": "corporacion-universitaria-remington",
-    "description": "Sede Manizales de la Corporación Universitaria Remington, con ingeniería de sistemas en modalidad virtual.",
-    "website": "https://www.uniremington.edu.co/manizales/",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "institutionType": "private",
-    "accredited": false,
-    "sniesCode": "2833",
-    "programs": ["ing-sistemas-virtual-remington"],
-    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/ies",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
-  },
-  {
     "name": "SENA - Regional Caldas",
     "slug": "sena-caldas",
     "description": "Servicio Nacional de Aprendizaje (SENA), Regional Caldas. Oferta técnica, tecnológica y de especialización tecnológica en desarrollo de software, cloud, bases de datos y redes.",
