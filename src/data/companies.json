@@ -2,7 +2,7 @@
   {
     "name": "2share Colombia S.A.S.",
     "slug": "2share-colombia",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Sociedad registrada en Manizales con actividad declarada de desarrollo de software. No se identificó un sitio o canal corporativo atribuible durante la revisión de 2026.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -13,8 +13,15 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/2share-colombia-s-a-s-901294327",
+        "title": "Ficha pública de matrícula mercantil de 2share Colombia",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901294327-2",
     "registeredAt": "2023-04-18"
@@ -369,7 +376,8 @@
   {
     "name": "Adminsoft S.A.S.",
     "slug": "adminsoft",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa registrada en Manizales cuyo sitio público presenta Software Dentalcloud, una plataforma en la nube para la gestión de clínicas odontológicas, con historia clínica, RIPS, facturación electrónica y agenda.",
+    "website": "https://adminsoft.com.co/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -385,11 +393,25 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://adminsoft.com.co/",
+        "title": "Sitio oficial de Adminsoft / Software Dentalcloud",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902069495-1",
-    "registeredAt": "2026-05-25"
+    "registeredAt": "2026-05-25",
+    "technologies": [
+      "Software de gestión para clínicas odontológicas",
+      "Historia clínica digital",
+      "RIPS",
+      "Facturación electrónica",
+      "Agenda en la nube"
+    ]
   },
   {
     "name": "Advancit S.A.S.",
@@ -947,11 +969,11 @@
     "sources": [
       {
         "url": "https://apolosoft.com",
-        "title": "Sitio web de Apolosoft",
-        "reviewedAt": "2026-07-17"
+        "title": "Sitio oficial y portafolio de Apolosoft",
+        "reviewedAt": "2026-07-20"
       }
     ],
-    "description": "Desarrolla software contable y de gestión empresarial para pymes. Su portafolio incluye Mekano ERP, facturación electrónica, nómina, herramientas con inteligencia artificial y desarrollo web, tiendas en línea y aplicaciones a la medida.",
+    "description": "Empresa de Manizales que desarrolla software contable y de gestión empresarial para pymes. Su portafolio público incluye Mekano ERP, facturación y nómina electrónica, herramientas de análisis asistidas por inteligencia artificial y desarrollo de sitios, tiendas y aplicaciones a la medida.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -963,11 +985,18 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "810000494-3",
     "registeredAt": "1996-02-08",
-    "website": "https://apolosoft.com"
+    "website": "https://apolosoft.com",
+    "technologies": [
+      "ERP",
+      "Software contable",
+      "Facturación electrónica",
+      "Nómina electrónica",
+      "Desarrollo web"
+    ]
   },
   {
     "name": "Appis Group S.A.S.",
@@ -1044,7 +1073,7 @@
   {
     "name": "Appsernet S.A.S.",
     "slug": "appsernet",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa de Manizales que publica RX – Gestor de cobranza, una aplicación para la gestión de cobros. La ficha oficial de la aplicación identifica a Appsernet S.A.S. como desarrollador.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1060,11 +1089,24 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://apps.apple.com/dk/app/rx-gestor-de-cobranza/id6761082208?l=da",
+        "title": "Ficha oficial de RX – Gestor de cobranza en App Store",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/appsernet-s-a-s-902025433",
+        "title": "Ficha pública de matrícula mercantil de Appsernet",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902025433-6",
-    "registeredAt": "2026-01-19"
+    "registeredAt": "2026-01-19",
+    "technologies": ["Aplicaciones móviles", "Gestión de cobranza"]
   },
   {
     "name": "Appyempresa S.A.S.",
@@ -1214,7 +1256,7 @@
   {
     "name": "Ardor Learning Colombia S.A.S.",
     "slug": "ardor-learning-colombia",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Sociedad registrada en Manizales con actividades declaradas de hosting, procesamiento de datos y desarrollo de sistemas informáticos.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1225,8 +1267,15 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/ardor-learning-colombia-s-a-s-902031125",
+        "title": "Ficha empresarial de Ardor Learning Colombia S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902031125-7",
     "registeredAt": "2026-02-03"
@@ -1525,7 +1574,8 @@
   {
     "name": "Atrion Systems S.A.S.",
     "slug": "atrion-systems",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa de Manizales que ofrece desarrollo de software, automatización de procesos e implementación de soluciones con inteligencia artificial para organizaciones.",
+    "website": "https://atrionsystems.com/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1541,11 +1591,23 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://atrionsystems.com/",
+        "title": "Sitio oficial de Atrion Systems",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902068503-8",
-    "registeredAt": "2026-05-21"
+    "registeredAt": "2026-05-21",
+    "technologies": [
+      "Desarrollo de software",
+      "Automatización de procesos",
+      "Inteligencia artificial"
+    ]
   },
   {
     "name": "Aurora Pixel Studio S.A.S.",
@@ -1570,7 +1632,7 @@
   {
     "name": "Automatizacion Y Virtualizacion Ingenieria S.A.S.",
     "slug": "automatizacion-y-virtualizacion-ingenieria",
-    "description": "Desarrolla soluciones para monitoreo ambiental e industrial y redes de apoyo a sistemas de alerta temprana. Su plataforma Albatros Suite integra aplicaciones de escritorio, web y APIs para gestionar, almacenar, procesar y visualizar datos de redes de monitoreo.",
+    "description": "Empresa de Manizales que desarrolla soluciones para monitoreo ambiental e industrial y redes de apoyo a sistemas de alerta temprana. Su plataforma Albatros Suite integra aplicaciones de escritorio, web y APIs para gestionar, almacenar, procesar y visualizar datos de redes de monitoreo.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1585,16 +1647,23 @@
     "sources": [
       {
         "url": "https://ayving.com/home/",
-        "title": "Sitio web de AYV Ingeniería",
-        "reviewedAt": "2026-07-17"
+        "title": "Sitio oficial y portafolio de AYV Ingeniería",
+        "reviewedAt": "2026-07-20"
       }
     ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "810002209-1",
     "registeredAt": "1998-07-24",
-    "notes": "Registro consolidado: el establecimiento de comercio “A Y V Ingenieria S.A.S.” con la misma fecha de matrícula corresponde a esta razón social."
+    "notes": "Registro consolidado: el establecimiento de comercio “A Y V Ingenieria S.A.S.” con la misma fecha de matrícula corresponde a esta razón social.",
+    "technologies": [
+      "Monitoreo ambiental",
+      "Sistemas de alerta temprana",
+      "Internet de las cosas",
+      "Computación en la nube",
+      "APIs"
+    ]
   },
   {
     "name": "Automyx Studio S.A.S.",
@@ -1701,11 +1770,11 @@
     "sources": [
       {
         "url": "https://azen.com.co/",
-        "title": "Sitio web de Azen",
-        "reviewedAt": "2026-07-17"
+        "title": "Sitio oficial y portafolio de Azen",
+        "reviewedAt": "2026-07-20"
       }
     ],
-    "description": "Desarrolla soluciones empresariales en la nube: ERP, aplicaciones móviles, automatización de procesos, capacitación y consultoría TI. Su sitio también presenta proyectos de logística, georreferenciación y arquitectura en AWS.",
+    "description": "Empresa de Manizales que desarrolla soluciones empresariales en la nube: ERP, aplicaciones móviles, automatización de procesos, capacitación y consultoría TI. Su portafolio público también incluye soluciones de logística y georreferenciación, así como arquitectura e infraestructura en AWS.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1717,10 +1786,17 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "800154051-9",
-    "registeredAt": "1992-02-25"
+    "registeredAt": "1992-02-25",
+    "technologies": [
+      "ERP",
+      "Aplicaciones móviles",
+      "Automatización de procesos",
+      "AWS",
+      "Microservicios"
+    ]
   },
   {
     "name": "Azura Consulting S.A.S.",
@@ -1745,7 +1821,8 @@
   {
     "name": "Barco Visión Producciones S.A.S.",
     "slug": "barco-vision-producciones",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa de Manizales de producción audiovisual y marketing que también ofrece diseño y desarrollo de páginas web.",
+    "website": "https://barcovision.pro/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -1756,11 +1833,19 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://barcovision.pro/",
+        "title": "Sitio oficial de Barco Visión Producciones",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902030273-4",
-    "registeredAt": "2026-01-30"
+    "registeredAt": "2026-01-30",
+    "technologies": ["Desarrollo web", "Producción audiovisual", "Marketing digital"]
   },
   {
     "name": "Baron Horizons S.A.S.",
@@ -2040,7 +2125,8 @@
   {
     "name": "Bibisoft S.A.S.",
     "slug": "bibisoft",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Empresa de Manizales que desarrolla una plataforma SaaS para la operación administrativa de establecimientos gastronómicos, con punto de venta, facturación, inventario y analítica.",
+    "website": "https://bibisoft.co/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -2051,11 +2137,19 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://bibisoft.co/terminos-y-condiciones",
+        "title": "Términos de Bibisoft S.A.S. y plataforma gastronómica",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901673320-8",
-    "registeredAt": "2023-01-20"
+    "registeredAt": "2023-01-20",
+    "technologies": ["SaaS", "Punto de venta", "Facturación", "Inventario", "Analítica"]
   },
   {
     "name": "Biombo S.A.S. En Liquidacion",
@@ -2081,7 +2175,8 @@
   {
     "name": "Bit Technologies Colombia S.A.S.",
     "slug": "bit-technologies-colombia",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Empresa de Manizales que ofrece desarrollo web y de aplicaciones, infraestructura cloud, laboratorios STEAM, LMS y servicios de ciberseguridad.",
+    "website": "https://bitecol.com/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -2097,11 +2192,30 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://bitecol.com/",
+        "title": "Sitio oficial de Bit Technologies Colombia",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://bitecol.com.co/wp-content/uploads/2024/05/Camara-y-comercio-14-de-abril-2024.pdf",
+        "title": "Certificado de Cámara publicado por Bit Technologies Colombia",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901710775-4",
-    "registeredAt": "2023-05-08"
+    "registeredAt": "2023-05-08",
+    "technologies": [
+      "Desarrollo web",
+      "Aplicaciones",
+      "Computación en la nube",
+      "LMS",
+      "Ciberseguridad"
+    ]
   },
   {
     "name": "Blackbuffer S.A.S.",
@@ -2171,7 +2285,7 @@
   {
     "name": "Box 360 S.A.S.",
     "slug": "box-360",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Sociedad registrada en Manizales con actividad principal declarada de desarrollo de sistemas informáticos.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -2182,8 +2296,15 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.informacion-empresas.co/Empresa_BOX-360-SAS.html",
+        "title": "Ficha empresarial de Box 360 S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902039395-5",
     "registeredAt": "2026-02-23"
@@ -2414,6 +2535,9 @@
     "slug": "cafenet-comunicaciones",
     "description": "Empresa de telecomunicaciones de Manizales que ofrece radiocomunicaciones, redes inalámbricas, conectividad a internet para empresas y zona rural, telefonía IP, CCTV y telemetría. Atiende soluciones de voz y datos para organizaciones de distintos sectores.",
     "website": "https://cafenet.com.co/",
+    "facebook": "https://www.facebook.com/profile.php?id=100089768053795",
+    "instagram": "https://www.instagram.com/cafenet.sa/",
+    "x": "https://twitter.com/cafenet_sa",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -2442,7 +2566,7 @@
       {
         "url": "https://cafenet.com.co/nosotros",
         "title": "Historia y portafolio de Cafenet Comunicaciones",
-        "reviewedAt": "2026-07-19"
+        "reviewedAt": "2026-07-20"
       },
       {
         "url": "https://www.lasempresas.com.co/manizales/cafenet-comunicaciones-sa/",
@@ -2451,7 +2575,7 @@
       }
     ],
     "firstSeenAt": "2026-07-19",
-    "lastVerifiedAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-20",
     "verificationStatus": "verified",
     "needsVerification": false,
     "notes": "El sitio corporativo sitúa el inicio de la empresa en Manizales en 1994; la matrícula mercantil consultada corresponde al 20 de junio de 1996. Se conservan ambas fechas por referirse a hitos distintos."
@@ -3433,8 +3557,8 @@
     "sources": [
       {
         "url": "https://controlsoft.com.co/",
-        "title": "Sitio web de Controlsoft",
-        "reviewedAt": "2026-07-17"
+        "title": "Sitio oficial y productos de Controlsoft",
+        "reviewedAt": "2026-07-20"
       }
     ],
     "description": "Desarrolla software para control de pesaje en básculas camioneras. Sus soluciones incluyen control de entradas y salidas, análisis de calidad, cálculo de faltantes e integración con sistemas ERP.",
@@ -3449,10 +3573,16 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "810001800-9",
-    "registeredAt": "1998-02-03"
+    "registeredAt": "1998-02-03",
+    "technologies": [
+      "Control de pesaje",
+      "Integración ERP",
+      "Reconocimiento de matrículas",
+      "Automatización industrial"
+    ]
   },
   {
     "name": "Coreflow S.A.S.",
@@ -3668,15 +3798,28 @@
   {
     "name": "D.s.i. S.A.",
     "slug": "d-s-i",
-    "website": "https://dsi.com.co/dsi/index.html",
+    "website": "https://dsi-software.co/",
+    "linkedin": "https://co.linkedin.com/company/dsi-sa",
+    "instagram": "https://www.instagram.com/dsi.sa/",
+    "facebook": "https://www.facebook.com/profile.php?id=61551851919321",
     "sources": [
       {
         "url": "https://dsi.com.co/dsi/index.html",
         "title": "Sitio web de D.S.I.",
         "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://dsi-software.co/",
+        "title": "Sitio oficial actual de DSI y sus soluciones empresariales",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://co.linkedin.com/company/dsi-sa",
+        "title": "Perfil corporativo de DSI S.A. en LinkedIn",
+        "reviewedAt": "2026-07-20"
       }
     ],
-    "description": "Desarrolla software empresarial para gestión administrativa y financiera. Su sitio presenta las soluciones Vision y Fortuner, con módulos como contabilidad, inventarios, facturación, nómina y punto de venta, además de desarrollos móviles.",
+    "description": "Empresa de Manizales que desarrolla software empresarial para gestión administrativa y financiera. Su oferta pública incluye ERP Fortuner, Vision, facturación y nómina electrónica, punto de venta, soluciones para restaurantes y servicios públicos, movilidad e inteligencia analítica.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -3688,10 +3831,17 @@
     "legalForm": "Sociedad anónima",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "800122217-7",
-    "registeredAt": "1991-05-22"
+    "registeredAt": "1991-05-22",
+    "technologies": [
+      "ERP",
+      "Facturación electrónica",
+      "Nómina electrónica",
+      "Punto de venta",
+      "Inteligencia analítica"
+    ]
   },
   {
     "name": "Dani Daniel Marin Gallego",
@@ -3741,6 +3891,9 @@
     "slug": "data-3000",
     "description": "Empresa de Manizales especializada en gestión documental: diagnóstico, organización, digitalización, custodia y almacenamiento de archivos físicos y digitales para organizaciones.",
     "website": "https://data3000.co/",
+    "linkedin": "https://co.linkedin.com/company/data-3000-sas",
+    "facebook": "https://www.facebook.com/profile.php?id=100063638196947&locale=es_LA",
+    "instagram": "https://www.instagram.com/data3000sas/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -3778,6 +3931,11 @@
         "url": "https://www.emis.com/php/company-profile/CO/Data3000_SAS_es_4921173.html",
         "title": "Perfil público de Data3.000",
         "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://co.linkedin.com/company/data-3000-sas",
+        "title": "Perfil corporativo de Data 3000 S.A.S. en LinkedIn",
+        "reviewedAt": "2026-07-20"
       }
     ],
     "firstSeenAt": "2026-07-19",
@@ -3838,6 +3996,11 @@
         "url": "https://datayservice.com",
         "title": "Sitio web de Data y Service",
         "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://www.linkedin.com/company/datayservice1/",
+        "title": "Perfil corporativo de Data y Service en LinkedIn",
+        "reviewedAt": "2026-07-20"
       }
     ],
     "description": "Integra infraestructura TI, ciberseguridad y datos para organizaciones. Su portafolio incluye continuidad de negocio, consultoría, gobierno y analítica de datos, tableros asistidos por inteligencia artificial y servicios de seguridad administrada.",
@@ -3857,11 +4020,19 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "810001025-7",
     "registeredAt": "1996-12-11",
-    "website": "https://datayservice.com"
+    "website": "https://datayservice.com",
+    "linkedin": "https://www.linkedin.com/company/datayservice1/",
+    "technologies": [
+      "Ciberseguridad",
+      "Infraestructura TI",
+      "Continuidad de negocio",
+      "Gobierno de datos",
+      "Analítica de datos"
+    ]
   },
   {
     "name": "Datalab Tech Systems Sociedad Por Acciones Simplificada",
@@ -5027,7 +5198,8 @@
   {
     "name": "Envirox Ecotech S.A.S.",
     "slug": "envirox-ecotech",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa de Manizales enfocada en ingeniería ambiental e integración tecnológica; su presencia corporativa describe monitoreo, análisis de datos y una plataforma de sostenibilidad.",
+    "linkedin": "https://www.linkedin.com/company/envirox-ecotech",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -5038,11 +5210,19 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.linkedin.com/company/envirox-ecotech",
+        "title": "Perfil corporativo de Envirox Ecotech",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902034965-0",
-    "registeredAt": "2026-02-12"
+    "registeredAt": "2026-02-12",
+    "technologies": ["Monitoreo ambiental", "Análisis de datos", "Plataforma de sostenibilidad"]
   },
   {
     "name": "Epica Consultores S.A.S.",
@@ -5067,7 +5247,7 @@
   {
     "name": "Estratec 360 S.A.S.",
     "slug": "estratec-360",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Sociedad de Manizales dedicada a consultoría estratégica y desarrollo tecnológico, con oferta pública de automatización y analítica de datos.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -5078,16 +5258,29 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://empresas.portafolio.co/ESTRATEC-360-SAS.html",
+        "title": "Ficha empresarial de Estratec 360 S.A.S.",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://aunclic.com.co/business/3652",
+        "title": "Directorio local de Estratec 360 S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902059838-1",
-    "registeredAt": "2026-04-23"
+    "registeredAt": "2026-04-23",
+    "technologies": ["Automatización", "Analítica de datos", "Desarrollo tecnológico"]
   },
   {
     "name": "Estructura Tech Company S.A.S.",
     "slug": "estructura-tech-company",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa de Manizales que desarrolla agentes de inteligencia artificial, automatizaciones por WhatsApp, integraciones y software a la medida para procesos empresariales.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -5098,11 +5291,29 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.registronit.com/902028876",
+        "title": "Ficha empresarial de Estructura Tech Company S.A.S.",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://clutch.co/profile/estructura-tech-company-sas",
+        "title": "Perfil de servicios de Estructura Tech Company S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902028876-9",
-    "registeredAt": "2026-01-28"
+    "registeredAt": "2026-01-28",
+    "technologies": [
+      "Agentes de inteligencia artificial",
+      "Automatización por WhatsApp",
+      "Integraciones",
+      "Software a la medida"
+    ]
   },
   {
     "name": "Eteriux Solutions S.A.S.",
@@ -5855,7 +6066,8 @@
   {
     "name": "Geek Bunker Solutions S.A.S.",
     "slug": "geek-bunker-solutions",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Empresa de Manizales que se presenta como consultora de software y cloud, con productos SaaS y servicios de desarrollo tecnológico.",
+    "website": "https://www.geekbunker.co/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -5871,11 +6083,24 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.geekbunker.co/",
+        "title": "Sitio oficial de Geek Bunker Solutions",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/geek-bunker-solutions-s-a-s-901747503",
+        "title": "Ficha pública de matrícula mercantil de Geek Bunker Solutions",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "900130646-1",
-    "registeredAt": "2024-01-09"
+    "registeredAt": "2024-01-09",
+    "technologies": ["SaaS", "Computación en la nube", "Desarrollo de software"]
   },
   {
     "name": "Geomedical Health S.A.S. Geomedical S.A.S.",
@@ -7365,7 +7590,7 @@
   {
     "name": "Insoft S.A.S.",
     "slug": "insoft",
-    "description": "Casa desarrolladora de software de Manizales. Su oferta pública incluye ContaPyme, un programa contable, y soluciones de software y soporte para clientes empresariales.",
+    "description": "Casa desarrolladora de software de Manizales. Su producto ContaPyme integra contabilidad bajo NIIF, facturación electrónica, nómina, inventarios, cartera y proveedores para pymes; también ofrece módulos, planes y soporte para su operación empresarial.",
     "website": "https://www.contapyme.com/",
     "city": "Manizales",
     "department": "Caldas",
@@ -7376,7 +7601,14 @@
       "Software contable",
       "Soporte tecnológico"
     ],
-    "technologies": ["ContaPyme", "Software contable"],
+    "technologies": [
+      "ContaPyme",
+      "Software contable",
+      "NIIF",
+      "Facturación electrónica",
+      "Nómina electrónica",
+      "Punto de venta"
+    ],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
     "size": "medium",
@@ -7403,7 +7635,7 @@
       }
     ],
     "firstSeenAt": "2026-07-19",
-    "lastVerifiedAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-20",
     "verificationStatus": "verified",
     "needsVerification": false
   },
@@ -7717,7 +7949,8 @@
   {
     "name": "It Forensic Company S.A.S.",
     "slug": "it-forensic-company",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2021.",
+    "description": "Empresa de ciberseguridad y forense digital con sitio corporativo; una fuente universitaria identifica a su CEO en Manizales.",
+    "website": "https://www.itforensic-la.com/pages/contacto.html",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -7728,11 +7961,24 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.itforensic-la.com/pages/contacto.html",
+        "title": "Sitio oficial de IT Forensic Company",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.usc.edu.co/expertos-de-talla-mundial-aterrizan-en-la-usc-para-impulsar-la-seguridad-digital/",
+        "title": "Fuente universitaria sobre IT Forensic y su vínculo con Manizales",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901450295-4",
-    "registeredAt": "2021-01-29"
+    "registeredAt": "2021-01-29",
+    "technologies": ["Ciberseguridad", "Forense digital"]
   },
   {
     "name": "It Marketing S.A. En Liquidacion",
@@ -8824,11 +9070,19 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/luxurylive-s-a-s-901406447",
+        "title": "Ficha pública que informa matrícula cancelada de Luxurylive",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "verificationStatus": "inactive_or_unverified",
+    "lastVerifiedAt": "2026-07-20",
+    "needsVerification": true,
     "nit": "901406447-0",
-    "registeredAt": "2020-08-31"
+    "registeredAt": "2020-08-31",
+    "notes": "La ficha pública consultada indica matrícula cancelada; se conserva como registro histórico y no debe presentarse como vigente."
   },
   {
     "name": "M&p Consultorias Contables Y Tributarias S.A.S. En Liquidacion",
@@ -9046,11 +9300,19 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/manizales-marketing-co-s-a-s-901772242",
+        "title": "Ficha pública que informa matrícula cancelada de Manizales Marketing Co",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "verificationStatus": "inactive_or_unverified",
+    "lastVerifiedAt": "2026-07-20",
+    "needsVerification": true,
     "nit": "901772242-6",
-    "registeredAt": "2023-11-14"
+    "registeredAt": "2023-11-14",
+    "notes": "La ficha pública consultada indica matrícula cancelada; se conserva como registro histórico y no debe presentarse como vigente."
   },
   {
     "name": "Mapale Software S.A.S.",
@@ -9421,7 +9683,8 @@
   {
     "name": "Mia Tech Cloud S.A.S.",
     "slug": "mia-tech-cloud",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa de Manizales que desarrolla MIA Coster, una plataforma para cotización y operación turística, y ofrece automatización, analítica y software a la medida.",
+    "website": "https://miatech.cloud/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -9432,11 +9695,29 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.informacion-empresas.co/Empresa_MIA-TECH-CLOUD-SAS.html",
+        "title": "Ficha empresarial de Mia Tech Cloud S.A.S.",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://miatech.cloud/",
+        "title": "Sitio de la plataforma MIA Coster",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902037595-2",
-    "registeredAt": "2026-02-18"
+    "registeredAt": "2026-02-18",
+    "technologies": [
+      "Automatización",
+      "Analítica",
+      "Software a la medida",
+      "Tecnología para turismo"
+    ]
   },
   {
     "name": "Miconia S.A.S.",
@@ -9907,6 +10188,7 @@
     "name": "Nativo Digital Lab S.A.S.",
     "slug": "nativo-digital-lab",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "website": "https://www.nativoadspro.com/contactanos/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -9922,6 +10204,13 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.nativodigital.co/politica-de-privacidad/",
+        "title": "Política de Nativo Digital Lab y sus plataformas",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
@@ -10429,6 +10718,7 @@
     "name": "Onepay S.A.S.",
     "slug": "onepay",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "website": "https://www.onepay.la/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10439,6 +10729,18 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://www.onepay.la/",
+        "title": "Sitio oficial de OnePay",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.colombiafintech.co/fintechs",
+        "title": "Directorio Colombia Fintech con referencia de OnePay en Manizales",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
@@ -10490,6 +10792,7 @@
     "name": "Openmarkt S.A.S.",
     "slug": "openmarkt",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "website": "https://gabotrix.com/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10500,6 +10803,18 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://centrodeinformacion.manizales.gov.co/wp-content/uploads/2025/04/Seleccionados-Feria-Empresarial-2025.pdf",
+        "title": "Documento de Alcaldía de Manizales que relaciona Gabotrix y Openmarkt",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://gabotrix.com/",
+        "title": "Sitio de Gabotrix",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
     "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
@@ -10968,7 +11283,9 @@
   {
     "name": "Pixel House Technologies",
     "slug": "pixel-house-technologies",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: actividades de desarrollo de sistemas informáticos capacitaciones y consultoría de los mismos y comercio al por mayor en general. Matrícula desde 2024.",
+    "description": "Empresa de Manizales dedicada al diseño y desarrollo web, marketing digital y software; su perfil corporativo también menciona capacitación y consultoría tecnológica.",
+    "website": "https://www.pixelhousetech.com/",
+    "linkedin": "https://co.linkedin.com/company/pixel-house-technologies",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10979,10 +11296,23 @@
     "ciiu": "J6201",
     "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://co.linkedin.com/company/pixel-house-technologies",
+        "title": "Perfil corporativo de Pixel House Technologies en LinkedIn",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.pixelhousetech.com/",
+        "title": "Sitio de Pixel House Technologies",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
-    "registeredAt": "2024-02-20"
+    "registeredAt": "2024-02-20",
+    "technologies": ["Desarrollo web", "Software", "Marketing digital"]
   },
   {
     "name": "Pls Fracor Manizales",
@@ -12164,6 +12494,13 @@
     "name": "Scribette S.A.S.",
     "slug": "scribette",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "sources": [
+      {
+        "url": "https://play.google.com/store/apps/details?hl=es&id=org.scribette.demo",
+        "title": "Ficha oficial de Scribette en Google Play",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -12534,7 +12871,7 @@
       {
         "url": "https://sites.google.com/view/sistemasmunicipales/inicio",
         "title": "Sitio web de Sistemas Municipales",
-        "reviewedAt": "2026-07-17"
+        "reviewedAt": "2026-07-20"
       }
     ],
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 1993.",
@@ -12549,7 +12886,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "800182377-3",
     "registeredAt": "1993-01-12",
@@ -12810,7 +13147,14 @@
   {
     "name": "Softory S.A.S.",
     "slug": "softory",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Compañía manizaleña de desarrollo de software a la medida. Una fuente de CHEC registra su propuesta ChecKeaap en InnovaTech 2024.",
+    "sources": [
+      {
+        "url": "https://www.chec.com.co/home/institucional/innovacion/programas/innovatech-2024",
+        "title": "CHEC InnovaTech 2024: referencia a Softory y ChecKeaap",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -12835,7 +13179,7 @@
   {
     "name": "Software De Colombia S.A.S.",
     "slug": "software-de-colombia",
-    "description": "Empresa de Manizales que desarrolla aplicaciones en la nube para gestión empresarial. Su plataforma ClausERP reúne funciones de contabilidad, inventarios, ventas, compras, impuestos, nómina y fuerza de ventas; el sitio señala un origen del producto en 1993 y la formalización de la empresa en 1994.",
+    "description": "Empresa de Manizales que desarrolla Claus, una plataforma en la nube para gestión contable, fiscal y empresarial. Su oferta pública incluye facturación electrónica, nómina electrónica, inventarios, producción, punto de venta, conciliación bancaria, indicadores financieros y gestión de fuerza de ventas.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -12847,16 +13191,34 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "800241389-5",
     "registeredAt": "1994-10-03",
-    "website": "https://www.softwaredecolombia.com/",
+    "website": "https://claus.co/",
+    "youtube": "https://www.youtube.com/c/Clauserp",
+    "technologies": [
+      "ERP",
+      "Computación en la nube",
+      "Facturación electrónica",
+      "Nómina electrónica",
+      "Gestión empresarial"
+    ],
     "sources": [
       {
         "url": "https://www.softwaredecolombia.com/",
         "title": "Sitio web de Software de Colombia",
         "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://claus.co/",
+        "title": "Sitio oficial de Claus, plataforma de Software de Colombia",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.youtube.com/c/Clauserp",
+        "title": "Canal oficial de YouTube de ClausERP",
+        "reviewedAt": "2026-07-20"
       }
     ]
   },
@@ -14175,8 +14537,8 @@
     "sources": [
       {
         "url": "https://venusingenieria.com/",
-        "title": "Sitio web de Venus Ingeniería",
-        "reviewedAt": "2026-07-17"
+        "title": "Sitio oficial y oferta de Venus Ingeniería",
+        "reviewedAt": "2026-07-20"
       }
     ],
     "description": "Desarrolla aplicaciones de software para el manejo de información y la productividad de sus clientes. También ofrece soporte y asesoría tecnológica de hardware; su sitio menciona cobertura en alcaldías, hospitales e IPS.",
@@ -14191,10 +14553,11 @@
     "legalForm": "Sociedad limitada",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "810003157-1",
-    "registeredAt": "1999-12-21"
+    "registeredAt": "1999-12-21",
+    "technologies": ["Desarrollo de software", "Soporte TI", "Hardware", "Gestión de información"]
   },
   {
     "name": "Video Dog Network S.A.S.",
@@ -14576,7 +14939,11 @@
   {
     "name": "Zeissen Software S.A.S.",
     "slug": "zeissen-software",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2026.",
+    "description": "Empresa registrada en Manizales que ofrece consultoría técnica y desarrollo de software a la medida. Su sitio público describe modernización de sistemas heredados, arquitectura cloud, integración de sistemas y soporte proactivo para organizaciones.",
+    "website": "https://zeissen.com/",
+    "linkedin": "https://www.linkedin.com/company/zeissen",
+    "instagram": "https://www.instagram.com/zeissensoftware/",
+    "youtube": "https://www.youtube.com/@ZeissenSoftware",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -14587,11 +14954,25 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://zeissen.com/",
+        "title": "Sitio oficial de Zeissen Software",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902063986-9",
-    "registeredAt": "2026-05-07"
+    "registeredAt": "2026-05-07",
+    "technologies": [
+      "Desarrollo de software a la medida",
+      "Modernización de sistemas heredados",
+      "Arquitectura cloud",
+      "Integración de sistemas",
+      "Soporte proactivo"
+    ]
   },
   {
     "name": "Zeta Seguridad De La Informacion S.A.S.",

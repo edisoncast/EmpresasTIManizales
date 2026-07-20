@@ -5,19 +5,21 @@ Alcance: únicamente registros de `src/data/companies.json` cuya fecha `register
 
 ## Resultado ejecutivo
 
-Se revisaron **383 registros**. La inscripción de Cámara de Comercio se trató como evidencia de relación registral con Manizales o Caldas y de actividad declarada, no como prueba automática de actividad operativa en 2026.
+Se procesaron **383 registros** en una primera pasada y una **segunda pasada exhaustiva de descubrimiento**. La inscripción de Cámara de Comercio se trató como evidencia de relación registral con Manizales o Caldas y de actividad declarada, no como prueba automática de actividad operativa en 2026. El hallazgo posterior de Zeissen Software corrigió una omisión de la primera pasada y motivó la revisión completa de los pendientes por razón social, nombre comercial, dominio y canales corporativos.
+
+El 20 de julio se aplicó además una revisión reforzada a los registros aún pendientes de 2026: razón social exacta, NIT, variantes del nombre, dominios previsibles, perfiles corporativos y fuentes empresariales públicas. Este corte confirmó ocho empresas adicionales (incluida Adminsoft) y descartó dominios homónimos que no corresponden a sociedades de Caldas.
 
 | Decisión | Registros | Tratamiento público |
 | --- | ---: | --- |
-| `include` | 22 | Se encontró una fuente corporativa o empresarial adicional que confirma identidad, actividad tecnológica y vínculo regional. |
-| `needs_review` | 268 | Se mantiene la ficha con estado **Verificación parcial**; no debe describirse como empresa activa verificada. |
+| `include` | 43 | Se encontró una fuente corporativa o empresarial adicional que confirma identidad, actividad tecnológica y vínculo regional. |
+| `needs_review` | 238 | Se mantiene la ficha con estado **Verificación parcial**; no debe describirse como empresa activa verificada. |
 | `exclude_person_natural` | 71 | Se preserva el registro mercantil, pero no se genera tarjeta ni ruta pública de empresa. |
-| `exclude_liquidation` | 20 | Se conserva para trazabilidad con estado posiblemente inactivo; no se presenta como vigente. |
+| `exclude_liquidation` | 22 | Se conserva para trazabilidad con estado posiblemente inactivo; no se presenta como vigente. |
 | `exclude_no_local_connection` | 1 | `advancit`: sus canales corporativos sitúan su operación en Bogotá y Bucaramanga; no se confirmó vínculo actual con Caldas. |
-| `exclude_not_technology_related` | 1 | `tecnnia`: la actividad descrita en el registro consultado corresponde a metales y extracción, no a una oferta tecnológica comprobada. |
+| `exclude_not_technology_related` | 8 | Incluye `tecnnia` y siete sociedades o establecimientos cuya evidencia identifica comercio, publicidad, comunicación o servicios jurídicos, sin una capacidad tecnológica sustantiva comprobada. |
 | **Total** | **383** | |
 
-Los 268 casos pendientes no son una afirmación de cierre: indican que no se obtuvo una segunda fuente pública atribuible para confirmar oferta, operación actual y canales institucionales. La revisión no asignó URLs por coincidencia nominal.
+Los 238 casos pendientes no son una afirmación de cierre: indican que no se obtuvo una segunda fuente pública atribuible para confirmar oferta, operación actual y canales institucionales. La revisión no asignó URLs por coincidencia nominal.
 
 ## Empresas con evidencia adicional
 
@@ -32,12 +34,26 @@ Los 268 casos pendientes no son una afirmación de cierre: indican que no se obt
 | 2023–2024 | Santisite; Formativa Technologies S.A.S.; Latinia S.A.S.; Startti S.A.S. | Sitio corporativo o registro empresarial público adicional. |
 | 2025–2026 | Megapagos.co S.A.S.; Desarrollando Ando S.A.S.; Colombia Tech Festival S.A.S. | Plataformas o registro empresarial público adicional con vínculo regional. |
 | 2025–2026 | Datalab Tech Systems S.A.S.; IAConexiones S.A.S.; Chatforse S.A.S. | Registro empresarial activo o sitio corporativo con oferta tecnológica y localización. |
+| 2025–2026 | Zeissen Software S.A.S. | Sitio oficial: desarrollo a la medida, modernización de sistemas heredados, arquitectura cloud e integración. |
+| Segunda pasada | Bibisoft, Bit Technologies, Geek Bunker, Pixel House, Softory, Openmarkt, Appsernet, Barco Visión, IT Forensic, Scribette, Nativo Digital Lab y OnePay. | Sitio corporativo, tienda oficial de aplicaciones o fuente institucional con identidad, oferta y vínculo regional comprobables. |
 
 Las evidencias, los límites de cada conclusión y las fichas de los **383** registros están en los informes por lote:
 
 - [2020–2022](research-2020-2022.md)
 - [2023–2024](research-2023-2024.md)
 - [2025–2026](research-2025-2026.md)
+
+La segunda pasada queda documentada, por cada pendiente consultado, en:
+
+- [2020–2022: segunda pasada](research-2020-2022-second-pass.md)
+- [2023–2024: segunda pasada](research-2023-2024-second-pass.md)
+- [2025–2026: segunda pasada](research-2025-2026-second-pass.md)
+
+La revisión reforzada de los registros de 2026 está separada por grupos para facilitar su auditoría:
+
+- [Grupo A](research-2026-reinforced-a.md)
+- [Grupo B](research-2026-reinforced-b.md)
+- [Grupo C](research-2026-reinforced-c.md)
 
 ## Canales públicos incorporados o confirmados
 
@@ -70,7 +86,7 @@ Las fichas que sólo cuentan con la fuente general de Cámara permanecen en revi
 
 ## Archivos modificados
 
-- `src/data/companies.json`: fuentes, canales confirmados, descripciones y fechas de 22 casos con evidencia adicional.
+- `src/data/companies.json`: fuentes, canales confirmados, descripciones y fechas de 43 casos con evidencia adicional.
 - `src/schemas/company.schema.ts`: campos de canales corporativos.
 - `src/pages/empresas/[slug].astro`: presentación segura de los canales corporativos disponibles.
 - `src/lib/company-review.ts` y `src/lib/data.ts`: decisiones de inclusión pública y estado parcial para casos sin evidencia adicional.
@@ -89,7 +105,7 @@ Las fichas que sólo cuentan con la fuente general de Cámara permanecen en revi
 
 ## Próxima revisión humana
 
-1. Consultar un certificado o consulta oficial vigente por NIT para los 268 pendientes, especialmente los 26 establecimientos de comercio cuyo titular no se confirmó.
+1. Solicitar por el flujo de contribución una URL corporativa o perfil institucional a los 238 pendientes que, aun tras dos pasadas, no tienen una coincidencia pública atribuible.
 2. Solicitar a cada organización pendiente una URL corporativa o perfil enlazado desde su propio sitio.
 3. Revalidar trimestralmente los casos incluidos con evidencia de directorio empresarial secundario, pues esa evidencia puede cambiar.
 4. No promover un registro pendiente a verificado sólo por mantener CIIU tecnológico o por coincidencia de nombre en redes sociales.
