@@ -27,6 +27,11 @@ const facts = [
 const links = [];
 if (company.website) links.push({ label: 'Sitio web', href: company.website });
 if (company.linkedin) links.push({ label: 'LinkedIn', href: company.linkedin });
+if (company.instagram) links.push({ label: 'Instagram', href: company.instagram });
+if (company.facebook) links.push({ label: 'Facebook', href: company.facebook });
+if (company.x) links.push({ label: 'X / Twitter', href: company.x });
+if (company.github) links.push({ label: 'GitHub', href: company.github });
+if (company.youtube) links.push({ label: 'Canal de YouTube', href: company.youtube });
 
 const jsonLd = {
   '@context': 'https://schema.org',
@@ -34,6 +39,14 @@ const jsonLd = {
   name: company.name,
   description: company.description,
   url: company.website,
+  sameAs: [
+    company.linkedin,
+    company.instagram,
+    company.facebook,
+    company.x,
+    company.github,
+    company.youtube,
+  ].filter(Boolean),
   address: {
     '@type': 'PostalAddress',
     addressLocality: company.city,
@@ -69,6 +82,7 @@ const jsonLd = {
     verificationStatus={company.verificationStatus}
     lastVerifiedAt={company.lastVerifiedAt}
     sourceUrl={company.sourceUrl}
+    sources={company.sources}
     facts={facts}
     links={links}
     tags={company.technologies ?? []}

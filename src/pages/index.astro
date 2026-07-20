@@ -16,12 +16,13 @@ import {
 } from '../lib/verification';
 
 const cutoff = formatDate(site.auditDate);
+const activeCommunities = communities.filter((community) => community.status === 'active');
 
 const metrics = [
   { label: 'Empresas', value: stats.companies, href: '/empresas' },
   { label: 'Universidades', value: stats.universities, href: '/universidades' },
   { label: 'Programas', value: stats.programs, href: '/programas' },
-  { label: 'Comunidades', value: stats.communities, href: '/comunidades' },
+  { label: 'Comunidades activas', value: activeCommunities.length, href: '/comunidades' },
   { label: 'Personas', value: stats.people, href: '/personas' },
   { label: 'Agenda', value: stats.events, href: '/eventos' },
 ];
@@ -86,9 +87,9 @@ const index = [
   {
     n: '05',
     href: '/comunidades',
-    title: 'Comunidades',
-    count: stats.communities,
-    text: 'Meetups y comunidades técnicas de la región.',
+    title: 'Comunidades activas',
+    count: activeCommunities.length,
+    text: 'Meetups activos y archivo histórico de comunidades técnicas de la región.',
   },
   {
     n: '06',

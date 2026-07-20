@@ -10,6 +10,7 @@ import peopleRaw from '../data/people.json';
 import communitiesRaw from '../data/communities.json';
 import eventsRaw from '../data/events.json';
 import supportEntitiesRaw from '../data/supportEntities.json';
+import { applyCompanyReview, isExcludedFromPublicDirectory } from './company-review';
 
 import {
   companiesSchema,
@@ -39,11 +40,22 @@ function parseOrThrow<T>(schema: { parse: (v: unknown) => T }, raw: unknown, nam
 
 const byName = (a: { name: string }, b: { name: string }) => a.name.localeCompare(b.name, 'es');
 
-export const companies: Company[] = parseOrThrow(
-  companiesSchema,
-  companiesRaw,
-  'companies.json',
-).sort(byName);
+const allCompanyRecords: Company[] = parseOrThrow(companiesSchema, companiesRaw, 'companies.json');
+
+/**
+ * La exportación mercantil conserva registros de personas naturales para
+ * trazabilidad, pero el directorio público sólo representa organizaciones.
+ * Las exclusiones y sus NIT/fechas quedan documentadas en la auditoría de
+ * empresas; no se generan rutas ni tarjetas para dichos registros.
+ */
+export const excludedNaturalPersonCompanies: Company[] = allCompanyRecords
+  .filter((company) => company.legalForm === 'Persona natural')
+  .sort(byName);
+
+export const companies: Company[] = allCompanyRecords
+  .filter((company) => !isExcludedFromPublicDirectory(company))
+  .map(applyCompanyReview)
+  .sort(byName);
 export const universities: University[] = parseOrThrow(
   universitiesSchema,
   universitiesRaw,

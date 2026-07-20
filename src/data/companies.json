@@ -395,7 +395,9 @@
     "name": "Advancit S.A.S.",
     "slug": "advancit",
     "website": "https://advancit.co",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2021.",
+    "linkedin": "https://www.linkedin.com/company/advancitco",
+    "facebook": "https://www.facebook.com/AdvancitCo/",
+    "description": "Empresa de consultoría en infraestructura tecnológica, nube y ciberseguridad. Sus canales oficiales indican operación principal en Bogotá; el registro mercantil en Manizales requiere aclaración antes de incluirla en el directorio regional.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -413,11 +415,12 @@
         "reviewedAt": "2026-07-17"
       }
     ],
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
+    "verificationStatus": "partially_verified",
+    "lastVerifiedAt": "2026-07-20",
+    "needsVerification": true,
     "nit": "901353946-5",
-    "registeredAt": "2021-12-30"
+    "registeredAt": "2021-12-30",
+    "notes": "Excluida del directorio público: el sitio y LinkedIn corporativo sitúan sus sedes en Bogotá y Bucaramanga; no se confirmó una operación actual en Manizales o Caldas."
   },
   {
     "name": "Adytic S.A.S.",
@@ -721,7 +724,7 @@
   {
     "name": "Am Soft S.A.S.",
     "slug": "am-soft",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2020.",
+    "description": "Empresa de Manizales que desarrolla y alquila software para gestión de cartera e inventario, y ofrece desarrollos a la medida.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -745,16 +748,19 @@
       }
     ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901372068-4",
     "registeredAt": "2020-02-27",
-    "website": "https://www.amsoftsas.com"
+    "website": "https://www.amsoftsas.com",
+    "instagram": "https://www.instagram.com/smartst.co/",
+    "facebook": "https://www.facebook.com/Smart-ST-Soluciones-Tecnol%C3%B3gicas-Inteligentes-264681447569249/",
+    "x": "https://twitter.com/SmartSTco"
   },
   {
     "name": "Am Tecnologic S.A.S.",
     "slug": "am-tecnologic",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Empresa de Manizales que desarrolla plataformas transaccionales y soluciones a medida para automatizar procesos y gestionar información.",
     "city": "Villamaria",
     "department": "Caldas",
     "country": "Colombia",
@@ -766,7 +772,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901772276-6",
     "registeredAt": "2023-11-14"
@@ -880,7 +886,7 @@
   {
     "name": "Apicreate S.A.S.",
     "slug": "apicreate",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2021.",
+    "description": "Empresa de tecnología que ofrece una plataforma de gestión de prospectos y servicios de integración, datos, inteligencia de negocio e inteligencia artificial.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -891,9 +897,21 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
+    "sources": [
+      {
+        "url": "https://calimatechnologies.com/",
+        "title": "Sitio oficial de Calima Technologies",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://ccas.org.co/wp-content/uploads/NOTICIA-MERCANTIL-2021-MAYO.pdf",
+        "title": "Noticia mercantil: cambio de domicilio de Calima Technologies Colombia S.A.S. a Manizales",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "verificationStatus": "partially_verified",
+    "lastVerifiedAt": "2026-07-20",
+    "needsVerification": true,
     "nit": "901457654-7",
     "registeredAt": "2021-02-15"
   },
@@ -2457,7 +2475,9 @@
     "needsVerification": false,
     "nit": "901442611-5",
     "registeredAt": "2021-05-21",
-    "website": "https://calimatechnologies.com"
+    "website": "https://calimatechnologies.com",
+    "linkedin": "https://www.linkedin.com/company/49117137",
+    "notes": "El sitio oficial confirma la oferta tecnológica y una fuente mercantil documenta el domicilio en Manizales en 2021. Una ficha pública de RUES indexada posteriormente indica estado no activo; hace falta confirmar la vigencia jurídica y operativa de la sociedad colombiana."
   },
   {
     "name": "Cañizares Puerto Carlos Eduardo",
@@ -2769,7 +2789,7 @@
   {
     "name": "Chatforse S.A.S.",
     "slug": "chatforse",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
+    "description": "Empresa de Manizales con presencia web corporativa para servicios de tecnología y atención digital; la oferta comercial detallada requiere revisión periódica.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -2794,7 +2814,7 @@
   {
     "name": "Chekup S.A.S.",
     "slug": "chekup",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Empresa de Manizales que desarrolla sitios web, comercio electrónico y sistemas a la medida, e identifica a Bidmax como una plataforma propia de subastas digitales.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -2806,7 +2826,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901682562-1",
     "registeredAt": "2023-02-14"
@@ -3079,7 +3099,7 @@
   {
     "name": "Colombia Tech Festival S.A.S.",
     "slug": "colombia-tech-festival",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
+    "description": "Organización de Manizales con actividades registradas de desarrollo y consultoría informática, investigación y desarrollo, y organización de eventos tecnológicos.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -3846,7 +3866,7 @@
   {
     "name": "Datalab Tech Systems Sociedad Por Acciones Simplificada",
     "slug": "datalab-tech-systems-sociedad-por-acciones-simplificada",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
+    "description": "Sociedad de Manizales con servicios de tecnologías de información registrados; se confirmó matrícula activa en una fuente empresarial pública.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -3992,7 +4012,7 @@
   {
     "name": "Dateando S.A.S.",
     "slug": "dateando",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Empresa de Manizales orientada a inteligencia artificial, analítica de datos e inteligencia de negocios.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -4130,7 +4150,7 @@
   {
     "name": "Desarrollando Ando S.A.S.",
     "slug": "desarrollando-ando",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
+    "description": "Empresa de Manizales que presenta servicios digitales, automatización y asistentes basados en inteligencia artificial.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -5217,7 +5237,7 @@
   {
     "name": "Fazzil S.A.S.",
     "slug": "fazzil",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Sociedad de Villamaría con actividades registradas de desarrollo de sistemas, servicios TI, alojamiento de datos y portales web.",
     "city": "Villamaria",
     "department": "Caldas",
     "country": "Colombia",
@@ -5228,8 +5248,63 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "website": "https://chatforse.com/",
+    "sources": [
+      {
+        "url": "https://chatforse.com/",
+        "title": "Sitio oficial de Chatforse",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://chatforse.com/politicas-de-cookies/",
+        "title": "Política de cookies de Chatforse S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://www.datacreditoempresas.com.co/directorio/datalab-tech-systems-sociedad-por-acciones-simplificada.html",
+        "title": "Registro empresarial público de Datalab Tech Systems S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/colombia-tech-festival-s-a-s-901909287",
+        "title": "Ficha empresarial pública de Colombia Tech Festival S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "website": "https://desarrollandoando.com/",
+    "sources": [
+      {
+        "url": "https://desarrollandoando.com/",
+        "title": "Sitio oficial de Desarrollando Ando",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://desarrollandoando.com/politica-de-privacidad_desarrollando-ando-s-a-s/",
+        "title": "Política de privacidad de Desarrollando Ando S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "linkedin": "https://co.linkedin.com/company/dateando-co",
+    "sources": [
+      {
+        "url": "https://co.linkedin.com/company/dateando-co",
+        "title": "Perfil corporativo de Dateando S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/villamaria/fazzil-s-a-s-901694743",
+        "title": "Ficha empresarial pública de Fazzil S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901694743-1",
     "registeredAt": "2023-03-16"
@@ -5249,7 +5324,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901946837-6",
     "registeredAt": "2025-05-19"
@@ -5269,7 +5344,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "902054278-4",
     "registeredAt": "2026-04-08"
@@ -5289,7 +5364,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901603139-1",
     "registeredAt": "2022-05-26"
@@ -5309,7 +5384,7 @@
     "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "registeredAt": "2024-03-19"
   },
@@ -5356,7 +5431,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901204824-7",
     "registeredAt": "2024-01-09"
@@ -5425,7 +5500,7 @@
   {
     "name": "Formativa Technologies S.A.S.",
     "slug": "formativa-technologies",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Sociedad de Manizales con actividades registradas de desarrollo de sistemas, consultoría y servicios de tecnologías de información.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -7028,7 +7103,7 @@
   {
     "name": "Iaconexiones S.A.S.",
     "slug": "iaconexiones",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
+    "description": "Empresa de Manizales que ofrece soluciones de inteligencia artificial, automatización, desarrollo de software a la medida, aplicaciones, APIs y formación.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -8200,7 +8275,21 @@
     "needsVerification": false,
     "nit": "901726202-6",
     "registeredAt": "2023-06-23",
-    "website": "https://kivio.com.co"
+    "website": "https://www.kivio.com.co/",
+    "linkedin": "https://www.linkedin.com/company/kivio-sas",
+    "technologies": [
+      "Desarrollo web",
+      "Comercio electrónico",
+      "Inteligencia artificial",
+      "Sistemas a la medida"
+    ],
+    "sources": [
+      {
+        "url": "https://www.linkedin.com/company/kivio-sas",
+        "title": "Perfil corporativo de KIVIO S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ]
   },
   {
     "name": "Kiwanolab S.A.S.",
@@ -8326,7 +8415,7 @@
   {
     "name": "Latinia S.A.S.",
     "slug": "latinia",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Empresa de software para banca que ofrece motores de decisión, alertas y gestión de comunicaciones en tiempo real.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -8337,12 +8426,21 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
-    "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
-    "needsVerification": false,
+    "sources": [
+      {
+        "url": "https://latinia.com/",
+        "title": "Sitio oficial de Latinia",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "verificationStatus": "partially_verified",
+    "lastVerifiedAt": "2026-07-20",
+    "needsVerification": true,
     "nit": "901825730-8",
     "registeredAt": "2024-08-23",
-    "website": "https://latinia.com"
+    "website": "https://latinia.com",
+    "linkedin": "https://www.linkedin.com/company/latinia",
+    "notes": "El sitio oficial confirma la actividad de software. La matrícula disponible está asociada a Manizales, pero el sitio corporativo no permite confirmar una sede u operación local actual; requiere verificación adicional."
   },
   {
     "name": "Legion Data Consulting S.A.S.",
@@ -8604,7 +8702,7 @@
   {
     "name": "Logiexpo S.A.S.",
     "slug": "logiexpo",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2021.",
+    "description": "Empresa de tecnología originada en Manizales que combina implementación de inteligencia artificial y automatización de procesos con conexión de talento tecnológico para clientes internacionales.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -8616,7 +8714,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901473180-5",
     "registeredAt": "2021-04-08"
@@ -8977,7 +9075,7 @@
   {
     "name": "Maquinando Controls S.A.S.",
     "slug": "maquinando-controls",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Empresa de Manizales dedicada a automatización industrial, monitoreo y control de procesos, con soluciones de datos y eficiencia operativa.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -9193,12 +9291,26 @@
     "needsVerification": false,
     "nit": "901478787-8",
     "registeredAt": "2021-04-22",
-    "website": "https://meeteam.co"
+    "website": "https://meeteam.co",
+    "linkedin": "https://www.linkedin.com/company/meeteam-oficial",
+    "technologies": [
+      "Inteligencia artificial",
+      "Automatización",
+      "Desarrollo de software",
+      "Talento tecnológico"
+    ],
+    "sources": [
+      {
+        "url": "https://www.linkedin.com/company/meeteam-oficial",
+        "title": "Perfil corporativo de Meeteam",
+        "reviewedAt": "2026-07-20"
+      }
+    ]
   },
   {
     "name": "Megapagos.co S.A.S.",
     "slug": "megapagos-co",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2025.",
+    "description": "Empresa de Aguadas que opera plataformas privadas para facilitar servicios y trámites en línea.",
     "city": "Aguadas",
     "department": "Caldas",
     "country": "Colombia",
@@ -9520,7 +9632,7 @@
   {
     "name": "Moneibox S.A.S.",
     "slug": "moneibox",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2022.",
+    "description": "Empresa de software que desarrolla conectores para automatizar la extracción, integración y visualización de datos de marketing en herramientas de analítica.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -9532,7 +9644,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901632713-3",
     "registeredAt": "2022-08-19"
@@ -9749,7 +9861,7 @@
   {
     "name": "Nat.io S.A.S.",
     "slug": "nat-io",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Empresa de Manizales con presencia pública corporativa orientada a inteligencia artificial y aprendizaje automático.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -9983,7 +10095,7 @@
   {
     "name": "Notarias Web S.A.S.",
     "slug": "notarias-web",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Sociedad de Manizales con actividades registradas de desarrollo de software, consultoría TI, servicios TI y alojamiento de datos.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10185,7 +10297,7 @@
   {
     "name": "Odoo Xpert S.A.S.",
     "slug": "odoo-xpert",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2023.",
+    "description": "Empresa de Manizales que presta consultoría, desarrollo, implementación y migración de soluciones ERP basadas en Odoo.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10196,8 +10308,78 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "website": "https://www.iaconexiones.com/",
+    "sources": [
+      {
+        "url": "https://www.iaconexiones.com/",
+        "title": "Sitio oficial de IAConexiones",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "website": "https://certificadosenlinea.com/",
+    "sources": [
+      {
+        "url": "https://certificadosinmobiliarios.com/terminos-y-condiciones",
+        "title": "Términos de plataforma operada por Megapagos.co S.A.S.",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://certificadosenlinea.com/",
+        "title": "Plataforma atribuida a Megapagos.co S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/formativa-technologies-s-a-s-901861192",
+        "title": "Ficha empresarial pública de Formativa Technologies S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/notarias-web-s-a-s-901853412",
+        "title": "Ficha empresarial pública de Notarias Web S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "website": "https://maquinandocontrols.com.co/",
+    "linkedin": "https://www.linkedin.com/company/maquinandocontrols/",
+    "instagram": "https://instagram.com/maquinandocontrols.sas",
+    "sources": [
+      {
+        "url": "https://maquinandocontrols.com.co/",
+        "title": "Sitio oficial de Maquinando Controls S.A.S.",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.linkedin.com/company/maquinandocontrols/",
+        "title": "Perfil corporativo de Maquinando Controls",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "sources": [
+      {
+        "url": "https://huggingface.co/natio123",
+        "title": "Cuenta corporativa de Nat.IO S.A.S. en Hugging Face",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "website": "https://odooxp.com/",
+    "sources": [
+      {
+        "url": "https://odooxp.com/our-services",
+        "title": "Servicios de Odoo Xpert",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://odooxp.com/contactus",
+        "title": "Contacto de Odoo Xpert S.A.S. en Manizales",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901722296-1",
     "registeredAt": "2023-06-09"
@@ -10217,7 +10399,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901180517-5",
     "registeredAt": "2018-05-11",
@@ -10238,7 +10420,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901479339-6",
     "registeredAt": "2021-04-23"
@@ -10258,7 +10440,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901715267-7",
     "registeredAt": "2023-05-19"
@@ -10278,7 +10460,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "900561649-0",
     "registeredAt": "2012-10-10"
@@ -10298,7 +10480,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "inactive_or_unverified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": true,
     "nit": "900903462-1",
     "registeredAt": "2015-10-28",
@@ -10319,7 +10501,7 @@
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901750431-7",
     "registeredAt": "2023-09-06"
@@ -10880,7 +11062,21 @@
     "needsVerification": false,
     "nit": "901634823-4",
     "registeredAt": "2022-09-19",
-    "website": "https://portermetrics.com"
+    "website": "https://portermetrics.com",
+    "linkedin": "https://www.linkedin.com/company/porter-metrics",
+    "technologies": ["Analítica de datos", "Integración de datos", "Looker Studio", "BigQuery"],
+    "sources": [
+      {
+        "url": "https://portermetrics.com/en/home/",
+        "title": "Sitio oficial de Porter Metrics",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.linkedin.com/company/porter-metrics",
+        "title": "Perfil corporativo de Porter Metrics",
+        "reviewedAt": "2026-07-20"
+      }
+    ]
   },
   {
     "name": "Porter Metrics S.A.S.",
@@ -11915,7 +12111,7 @@
   {
     "name": "Santisite",
     "slug": "santisite",
-    "description": "Establecimiento de comercio con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Actividad declarada: analizar  crear  actualizar  desarrollar y diseñar el contenido y/o escritura del código informático necesario para crear y poner en práctica programas de sistemas operativos  aplicaciones de programas informáticos (incluyendo actualizaciones y parches de corrección)  creación y actualización de aplicaciones web  chatbots para whatsapp  messenger  telegram y entre otros canales de comunicación. también diseñar  crear y mantener bases de datos. Matrícula desde 2024.",
+    "description": "Establecimiento de comercio de Manizales que ofrece chatbots para canales de mensajería, CRM e integraciones; su titular jurídico requiere confirmación adicional.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -11931,8 +12127,16 @@
     "ciiu": "J6201",
     "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "website": "https://www.santisite.com/",
+    "sources": [
+      {
+        "url": "https://www.santisite.com/",
+        "title": "Sitio oficial de Santisite",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "registeredAt": "2024-07-30"
   },
@@ -12921,7 +13125,7 @@
   {
     "name": "Startti S.A.S.",
     "slug": "startti",
-    "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2024.",
+    "description": "Sociedad de Manizales con actividades registradas de desarrollo de software, alojamiento de datos y consultoría TI.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -12932,8 +13136,20 @@
     "ciiu": "J6201",
     "legalForm": "S.A.S.",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/startti-s-a-s-901880220",
+        "title": "Ficha empresarial pública de Startti S.A.S.",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.datacreditoempresas.com.co/directorio/startti-sas.html",
+        "title": "Registro empresarial público de Startti S.A.S.",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-16",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "nit": "901880220-7",
     "registeredAt": "2024-10-16"
