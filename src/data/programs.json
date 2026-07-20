@@ -356,25 +356,6 @@
     "verificationStatus": "partially_verified"
   },
   {
-    "name": "Especialización Tecnológica en Redes",
-    "slug": "esp-tec-redes-umanizales",
-    "institutionName": "Universidad de Manizales",
-    "institutionSlug": "universidad-de-manizales",
-    "level": "specialization",
-    "modality": "onsite",
-    "city": "Manizales",
-    "area": ["Redes y telecomunicaciones"],
-    "credits": 21,
-    "durationSemesters": 2,
-    "sniesCode": "52398",
-    "website": "https://umanizales.edu.co/?u_course=especializacion-tecnologica-en-redes",
-    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/detallePrograma",
-    "lastVerifiedAt": "2026-07-17",
-    "needsVerification": true,
-    "verificationStatus": "inactive_or_unverified",
-    "notes": "HECAA reporta el SNIES 52398 como inactivo. Se conserva como registro histórico hasta contar con una fuente institucional sobre su estado actual."
-  },
-  {
     "name": "Especialización en Sistemas de Información Geográfica",
     "slug": "esp-sistemas-informacion-geografica-umanizales",
     "institutionName": "Universidad de Manizales",
@@ -589,25 +570,6 @@
     "verificationStatus": "inactive_or_unverified",
     "notes": "HECAA reporta el SNIES 107284 como inactivo. Se conserva como registro histórico hasta contar con una fuente institucional sobre su estado actual.",
     "description": "Esta maestría prepara para afrontar los retos de la protección de la información en torno a la confidencialidad, la integridad y la disponibilidad. El plan articula la seguridad en la infraestructura tecnológica —redes, desarrollo de software, bases de datos, análisis forense digital y hardening— con la seguridad organizacional, incluyendo sistemas de gestión (SGSI), gestión del riesgo, cumplimiento normativo y respuesta a incidentes (CSIRT), además de un componente investigativo. Los magíster quedan en capacidad de diseñar, auditar e implementar modelos y políticas de seguridad y de evaluar soluciones tecnológicas según las necesidades de operación y protección de datos. Se cursa en dos años presenciales con cincuenta y dos créditos."
-  },
-  {
-    "name": "Maestría en Gestión Estratégica de la Información",
-    "slug": "maestria-gestion-estrategica-informacion-umanizales",
-    "institutionName": "Universidad de Manizales",
-    "institutionSlug": "universidad-de-manizales",
-    "level": "masters",
-    "modality": "onsite",
-    "city": "Manizales",
-    "area": ["Gestión de la información", "Datos"],
-    "credits": 50,
-    "durationSemesters": 4,
-    "sniesCode": "107283",
-    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/detallePrograma",
-    "lastVerifiedAt": "2026-07-17",
-    "needsVerification": true,
-    "verificationStatus": "inactive_or_unverified",
-    "notes": "HECAA reporta el SNIES 107283 como inactivo. Se conserva como registro histórico hasta contar con una fuente institucional sobre su estado actual.",
-    "description": "Esta maestría se centra en el aprovechamiento estratégico de los datos y la información como motor de las organizaciones. El plan combina un área de gestión de la información —modelos de bases de datos, inteligencia de negocios, arquitectura de datos, minería de datos, Big Data y Open Data y técnicas estadísticas— con un área de gestión organizacional que aborda la teoría de la decisión, el análisis organizacional y la analítica aplicada, junto a un componente investigativo. Los graduados quedan en capacidad de potenciar tecnologías para la gestión, el análisis y la visualización de datos y de diseñar modelos, políticas y estrategias de gestión del conocimiento. Se cursa en dos años presenciales."
   },
   {
     "name": "Maestría en Gestión y Desarrollo de Proyectos de Software",
