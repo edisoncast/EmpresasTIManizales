@@ -64,8 +64,9 @@ docker run --rm -v "${PWD}:/app" -w /app mcr.microsoft.com/playwright:v1.61.1-no
 - **Personas:** solo perfiles públicos con contribución pública; enfoque en aportes al ecosistema,
   **sin lenguaje de ranking** ("top", "mejor") ni orden por tamaño/prestigio. Orden alfabético.
   Empresas: NIT solo de personas jurídicas (no de naturales/establecimientos).
-- **Fuentes citadas:** Cámara de Comercio de Manizales por Caldas (empresas, CIIU J6201) y
-  SNIES/HECAA (universidades/programas). La institución empresarial exige citar la fuente y uso no
+- **Fuentes citadas:** Cámara de Comercio de Manizales por Caldas (empresas, actividades CIIU
+  relacionadas con tecnología) y fuentes públicas específicas por empresa; SNIES/HECAA
+  (universidades/programas). La institución empresarial exige citar la fuente y uso no
   comercial — ya reforzado en `/empresas` y `/acerca`.
 - Relaciones que valida `validate-data`: programa→universidad (`institutionSlug`), comunidad→persona
   (`organizerSlug`), evento→comunidad (`organizerCommunitySlug`). Slugs referenciados deben existir.

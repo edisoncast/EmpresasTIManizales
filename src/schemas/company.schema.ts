@@ -18,7 +18,7 @@ export const companySchema = z
     linkedin: urlSchema.optional(),
     // NIT (sin dígito de verificación o con guion), solo para personas jurídicas.
     nit: z.string().optional(),
-    // Código CIIU de actividad económica principal (ej. J6201).
+    // Código CIIU de actividad económica principal, cuando esté disponible.
     ciiu: z.string().optional(),
     // Forma jurídica (S.A.S., Persona natural, Establecimiento de comercio, etc.).
     legalForm: z.string().optional(),
