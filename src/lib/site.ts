@@ -26,7 +26,7 @@ export const site = {
   currentYear: 2026,
   // Fecha del último corte auditado del inventario. Cada ficha además lleva su
   // propia fecha de revisión (lastVerifiedAt), que puede ser posterior.
-  auditDate: '2026-07-18',
+  auditDate: '2026-07-20',
   coordinates: '5.07° N, 75.52° O',
   // Fuentes institucionales citadas (condición de uso de sus datos).
   sources: {

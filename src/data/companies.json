@@ -1760,6 +1760,45 @@
     "registeredAt": "2025-02-11"
   },
   {
+    "name": "Business Solutions On The Cloud S.A.S.",
+    "slug": "business-solutions-on-the-cloud",
+    "description": "Empresa de Manizales que desarrolla soluciones de software en la nube. Su publicación oficial de aplicaciones describe una plataforma para monitorear alertas y soluciones móviles asociadas.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Desarrollo de software", "Producto de software", "Nube y datos", "Aplicaciones móviles"],
+    "technologies": ["SaaS", "Aplicaciones móviles", "Monitoreo", "Servicios en la nube"],
+    "hasSoftwareDevelopmentHouse": true,
+    "workModel": "unknown",
+    "size": "micro",
+    "ciiu": "J6202",
+    "legalForm": "S.A.S.",
+    "nit": "900379588-0",
+    "registeredAt": "2010-09-01",
+    "sourceUrl": "https://play.google.com/store/apps/details?id=com.bscloud.intranet",
+    "sources": [
+      {
+        "url": "https://play.google.com/store/apps/details?id=com.bscloud.intranet",
+        "title": "Ficha oficial de BsCloud en Google Play",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://apps.apple.com/us/app/bscloud/id6753984443",
+        "title": "Ficha de BsCloud en App Store",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://mifuturoempleo.co/empresa/bscloud/16051",
+        "title": "Perfil público de la empresa y su origen en Manizales",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
     "name": "Bcan S.A.S.",
     "slug": "bcan",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2021.",
@@ -2341,6 +2380,42 @@
     "website": "https://cafexport.com",
     "linkedin": "https://www.linkedin.com/company/cafexport/",
     "notes": "El sitio web de Cafexport se encontraba en mantenimiento durante la revisión de 2026."
+  },
+  {
+    "name": "Cafenet Comunicaciones S.A.",
+    "slug": "cafenet-comunicaciones",
+    "description": "Empresa de telecomunicaciones de Manizales que ofrece radiocomunicaciones, redes inalámbricas, conectividad a internet para empresas y zona rural, telefonía IP, CCTV y telemetría. Atiende soluciones de voz y datos para organizaciones de distintos sectores.",
+    "website": "https://cafenet.com.co/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Telecomunicaciones", "Redes y conectividad", "Infraestructura TI", "Internet empresarial"],
+    "technologies": ["Radiocomunicaciones", "Redes inalámbricas", "Telefonía IP", "CCTV", "Telemetría"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "small",
+    "ciiu": "J6120",
+    "legalForm": "Sociedad anónima",
+    "nit": "830015006-0",
+    "registeredAt": "1996-06-20",
+    "sourceUrl": "https://cafenet.com.co/nosotros",
+    "sources": [
+      {
+        "url": "https://cafenet.com.co/nosotros",
+        "title": "Historia y portafolio de Cafenet Comunicaciones",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.lasempresas.com.co/manizales/cafenet-comunicaciones-sa/",
+        "title": "Ficha pública de matrícula mercantil de Cafenet",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false,
+    "notes": "El sitio corporativo sitúa el inicio de la empresa en Manizales en 1994; la matrícula mercantil consultada corresponde al 20 de junio de 1996. Se conservan ambas fechas por referirse a hitos distintos."
   },
   {
     "name": "Calima Technologies Colombia S.A.S.",
@@ -3131,6 +3206,41 @@
     "notes": "La ficha pública consultada por NIT coincide con la matrícula y registra actividades de consultoría informática, desarrollo de software y consultoría de gestión. No se identificó un sitio web o perfil oficial de la organización."
   },
   {
+    "name": "Computar S.A.S.",
+    "slug": "computar",
+    "description": "Empresa de Manizales dedicada a la comercialización mayorista de computadores, periféricos y software, junto con arrendamiento, mantenimiento y soporte de equipos. Fuentes públicas documentan servicios de conectividad, redes y firewall para organizaciones locales.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Infraestructura TI", "Comercio de equipos informáticos", "Soporte técnico", "Redes y conectividad"],
+    "technologies": ["Computadores", "Periféricos", "Redes", "Firewall", "Impresión"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "medium",
+    "ciiu": "G4651",
+    "legalForm": "S.A.S.",
+    "nit": "800226784-9",
+    "registeredAt": "1994-05-06",
+    "sourceUrl": "https://www.lasempresas.com.co/manizales/computar-sas/",
+    "sources": [
+      {
+        "url": "https://www.lasempresas.com.co/manizales/computar-sas/",
+        "title": "Ficha pública de matrícula mercantil de Computar",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://contraloriageneraldecaldas.gov.co/wp-content/uploads/2021/01/Informe-planeacion-20191120-1.pdf",
+        "title": "Informe público de soporte, conectividad y firewall prestados por Computar",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true,
+    "notes": "La matrícula y la actividad se encuentran respaldadas por fuentes públicas. No se identificó un sitio web corporativo actual durante esta revisión; conviene confirmar el portafolio vigente directamente con la empresa."
+  },
+  {
     "name": "Conectamos Eje S.A.S.",
     "slug": "conectamos-eje",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2022.",
@@ -3569,6 +3679,40 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "registeredAt": "2022-09-22"
+  },
+  {
+    "name": "Data3.000 S.A.S.",
+    "slug": "data-3000",
+    "description": "Empresa de Manizales registrada para actividades de consultoría informática y administración de instalaciones informáticas. La evidencia pública disponible no detalla su portafolio actual.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Consultoría informática", "Servicios de información"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "small",
+    "ciiu": "J6202",
+    "legalForm": "S.A.S.",
+    "nit": "810002311-3",
+    "registeredAt": "1998-09-15",
+    "sourceUrl": "https://empresas.larepublica.co/colombia/caldas/manizales/data3-000-s-a-s-810002311",
+    "sources": [
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/data3-000-s-a-s-810002311",
+        "title": "Consulta pública RUES de Data3.000",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.emis.com/php/company-profile/CO/Data3000_SAS_es_4921173.html",
+        "title": "Perfil público de Data3.000",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true,
+    "notes": "La matrícula y la actividad económica están respaldadas por fuentes públicas. Hace falta una fuente primaria que permita describir la oferta de la empresa y confirmar si presta desarrollo de software."
   },
   {
     "name": "Data Quantity S.A.S.",
@@ -5436,6 +5580,46 @@
     "registeredAt": "2023-08-14"
   },
   {
+    "name": "FW Ingeniería S.A.S.",
+    "slug": "fw-ingenieria",
+    "description": "Empresa de Manizales especializada en ciberseguridad gestionada, con SOC y NOC, pruebas de seguridad, implementación de soluciones Fortinet, consultoría e infraestructura para proteger activos digitales.",
+    "website": "https://fwingenieria.com/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Ciberseguridad", "Servicios gestionados", "Infraestructura TI", "Consultoría tecnológica"],
+    "technologies": ["SOC", "NOC", "Fortinet", "Seguridad perimetral", "Pruebas de seguridad"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "small",
+    "ciiu": "J6209",
+    "legalForm": "S.A.S.",
+    "nit": "901054867-9",
+    "registeredAt": "2017-02-17",
+    "sourceUrl": "https://fwingenieria.com/",
+    "sources": [
+      {
+        "url": "https://fwingenieria.com/",
+        "title": "Sitio oficial de FW Ingeniería",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/fw-ingenieria-s-a-s-901054867",
+        "title": "Ficha pública del Registro Único Empresarial y Social para FW Ingeniería",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.lasempresas.com.co/manizales/fw-ingenieria-sas/",
+        "title": "Ficha pública de matrícula mercantil de FW Ingeniería",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
     "name": "G & J E-approach S.A.S.",
     "slug": "g-j-e-approach",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2013.",
@@ -6257,6 +6441,59 @@
     "registeredAt": "2025-06-27"
   },
   {
+    "name": "GTI - Alberto Álvarez López S.A.S.",
+    "slug": "gti-alberto-alvarez-lopez",
+    "description": "Integrador tecnológico con presencia en Manizales y cobertura nacional. Ofrece infraestructura y servicios de TI, incluyendo nube y data center, NOC, redes, ciberseguridad, DaaS, IaaS, XaaS, workplace y consultoría. La sociedad actual fue matriculada en 2016; el sitio corporativo reporta una trayectoria comercial de más de 30 años.",
+    "website": "https://gti.net.co/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": [
+      "Integración tecnológica",
+      "Infraestructura TI",
+      "Servicios gestionados",
+      "Nube y data center",
+      "Ciberseguridad",
+      "Redes"
+    ],
+    "technologies": ["Nube", "Data center", "NOC", "Redes", "Ciberseguridad", "DaaS", "IaaS", "XaaS"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "medium",
+    "ciiu": "G4651",
+    "legalForm": "S.A.S.",
+    "nit": "901039927-1",
+    "registeredAt": "2016-12-29",
+    "sourceUrl": "https://gti.net.co/",
+    "sources": [
+      {
+        "url": "https://gti.net.co/",
+        "title": "Sitio oficial de GTI - Alberto Álvarez López S.A.S.",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/gti-alberto-alvarez-lopez-s-a-s-901039927",
+        "title": "Ficha pública del Registro Único Empresarial y Social para GTI",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://manizalesmas.com.co/tarjeta/gti-alberto-alvarez-lopez-s-a-s/",
+        "title": "Ficha de GTI en el directorio de Manizales Más",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.lasempresas.com.co/manizales/ax2-ingenieria-sas/",
+        "title": "Ficha pública de matrícula mercantil de GTI",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false,
+    "notes": "La matrícula mercantil de la S.A.S. consultada corresponde al 29 de diciembre de 2016. El export de Cámara de Comercio revisado en 2026 registra a Alberto Álvarez López como persona natural desde el 10 de agosto de 1994, con CIIU G4651; esto es consistente con la trayectoria corporativa declarada, pero requiere un documento de transición para modelarlo como antecedente societario formal. No se encontró evidencia suficiente para clasificarla como casa de desarrollo de software."
+  },
+  {
     "name": "Habitako S.A.S.",
     "slug": "habitako",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2019.",
@@ -6986,6 +7223,46 @@
     "registeredAt": "2025-06-06"
   },
   {
+    "name": "Insoft S.A.S.",
+    "slug": "insoft",
+    "description": "Casa desarrolladora de software de Manizales. Su oferta pública incluye ContaPyme, un programa contable, y soluciones de software y soporte para clientes empresariales.",
+    "website": "https://www.contapyme.com/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Desarrollo de software", "Producto de software", "Software contable", "Soporte tecnológico"],
+    "technologies": ["ContaPyme", "Software contable"],
+    "hasSoftwareDevelopmentHouse": true,
+    "workModel": "unknown",
+    "size": "medium",
+    "ciiu": "J6202",
+    "legalForm": "S.A.S.",
+    "nit": "810000630-9",
+    "registeredAt": "1996-04-08",
+    "sourceUrl": "https://www.contapyme.com/contactenos/",
+    "sources": [
+      {
+        "url": "https://www.contapyme.com/contactenos/",
+        "title": "Contacto y presentación de Insoft como casa desarrolladora",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.contapyme.com/download/recursos/04_Generales/RUT-insoft-sas.pdf",
+        "title": "RUT público de Insoft S.A.S.",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.datacreditoempresas.com.co/directorio/insoft-sas.html",
+        "title": "Ficha pública de matrícula mercantil de Insoft",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
     "name": "Innova Arquitectura Y Tecnologia S.A.S.",
     "slug": "innova-arquitectura-y-tecnologia",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2017.",
@@ -7271,6 +7548,40 @@
     "needsVerification": false,
     "nit": "901652484-7",
     "registeredAt": "2022-11-09"
+  },
+  {
+    "name": "Idatos Limitada",
+    "slug": "idatos",
+    "description": "Empresa de Manizales registrada para procesamiento de datos, alojamiento y otros servicios informáticos. No fue posible confirmar públicamente su oferta comercial actual.",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Hosting y datos", "Servicios de información"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "micro",
+    "ciiu": "J6311",
+    "legalForm": "Sociedad limitada",
+    "nit": "800122234-2",
+    "registeredAt": "1991-03-21",
+    "sourceUrl": "https://www.lasempresas.com.co/manizales/idatos-ltda/",
+    "sources": [
+      {
+        "url": "https://www.lasempresas.com.co/manizales/idatos-ltda/",
+        "title": "Ficha pública de matrícula y actividad económica de Idatos",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.informacolombia.com/directorio-empresas/actividad/630_ACTIVIDADES-DE-SERVICIOS-DE-INFORMACION/localidad_manizales",
+        "title": "Directorio sectorial público con presencia de Idatos en Manizales",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true,
+    "notes": "Las fuentes públicas confirman matrícula activa y actividades CIIU, pero no aportan un sitio oficial ni evidencia suficiente para detallar su producto o servicio histórico."
   },
   {
     "name": "Iotics S.A.S.",
@@ -7670,6 +7981,46 @@
     "needsVerification": false,
     "nit": "902005788-1",
     "registeredAt": "2025-11-05"
+  },
+  {
+    "name": "Kavantic S.A.S.",
+    "slug": "kavantic",
+    "description": "Empresa de Manizales especializada en ciberseguridad y seguridad de la información. Ofrece gestión de vulnerabilidades, prevención de fuga de datos, consultoría ISO 27001, pruebas de seguridad, soporte técnico e implementación de soluciones TI.",
+    "website": "https://www.kavantic.com/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Ciberseguridad", "Seguridad de la información", "Infraestructura TI", "Soporte tecnológico"],
+    "technologies": ["Gestión de vulnerabilidades", "ISO 27001", "Seguridad en nube", "Firewall", "XDR"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "small",
+    "ciiu": "G4741",
+    "legalForm": "S.A.S.",
+    "nit": "900344843-3",
+    "sourceUrl": "https://www.kavantic.com/",
+    "sources": [
+      {
+        "url": "https://www.kavantic.com/",
+        "title": "Sitio oficial de Kavantic",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://ccmpc.org.co/cooperacion/convenio-kavantic-s-a-s/",
+        "title": "Cámara de Comercio de Manizales: convenio con Kavantic",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://empresas.portafolio.co/KAVANTIC-SAS.html",
+        "title": "Ficha pública de Kavantic con actividad económica y domicilio",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false,
+    "notes": "La actividad económica pública consultada corresponde a comercio especializado de equipos informáticos y de telecomunicaciones. Las capacidades de ciberseguridad y soporte se respaldan en el sitio de la empresa y en la ficha de la Cámara de Comercio."
   },
   {
     "name": "Kekiiwaa Development S.A.S. En Liquidacion",
@@ -10841,9 +11192,14 @@
         "url": "https://quantica.com.co/",
         "title": "Sitio web de Quantica Marketing Digital",
         "reviewedAt": "2026-07-17"
+      },
+      {
+        "url": "https://manizalesmas.com.co/quantica-una-empresa-de-alto-potencial-con-intencion-de-expansion-global/",
+        "title": "Manizales Más: trayectoria, oferta y expansión de Quántica",
+        "reviewedAt": "2026-07-19"
       }
     ],
-    "description": "Agencia de marketing digital con sede en Manizales que desarrolla e implementa soluciones CRM, sitios web, tiendas virtuales, intranets y plataformas de email y SMS marketing. También ofrece gestión y mantenimiento web, SEO y SEM.",
+    "description": "Agencia de marketing digital de Manizales que desarrolla e implementa CRM a la medida, sitios web, tiendas virtuales, intranets y plataformas de email y SMS marketing. También ofrece gestión y mantenimiento web, SEO y SEM.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
@@ -10855,9 +11211,10 @@
     "legalForm": "Establecimiento de comercio",
     "sourceUrl": "https://ccmpc.org.co/basededatos/",
     "verificationStatus": "verified",
-    "lastVerifiedAt": "2026-07-17",
+    "lastVerifiedAt": "2026-07-19",
     "needsVerification": false,
-    "registeredAt": "2004-08-10"
+    "registeredAt": "2004-08-10",
+    "notes": "Manizales Más (2022) identifica a Juan Manuel Pérez Saldías como CEO, informa que Quántica se conformó en 2010 y documenta clientes/proyectos y negocios en Ecuador, Chile, República Dominicana, Canadá y Guatemala. La fecha declarada en la nota contradice la matrícula de 2004 registrada en Cámara: se conserva la fecha original hasta contrastar la historia societaria o de la marca."
   },
   {
     "name": "Quantica Digital S.A.S.",
@@ -10956,6 +11313,46 @@
     "lastVerifiedAt": "2026-07-16",
     "needsVerification": false,
     "registeredAt": "2025-11-11"
+  },
+  {
+    "name": "Reactiva Soporte Y Desarrollo S.A.S.",
+    "slug": "reactiva-soporte-y-desarrollo",
+    "description": "Empresa de Manizales que desarrolla e implementa sistemas de información y soluciones tecnológicas para organizaciones. Su portafolio público incluye proyectos propios para servicios públicos, transporte, crédito y gestión de personas.",
+    "website": "https://www.reactiva.com.co/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Desarrollo de software", "Producto de software", "Transformación digital", "Hosting y datos"],
+    "technologies": ["Sistemas de información", "Aplicaciones móviles", "Geolocalización"],
+    "hasSoftwareDevelopmentHouse": true,
+    "workModel": "unknown",
+    "size": "medium",
+    "ciiu": "J6209",
+    "legalForm": "S.A.S.",
+    "nit": "830513753-0",
+    "registeredAt": "2005-01-20",
+    "sourceUrl": "https://www.reactiva.com.co/",
+    "sources": [
+      {
+        "url": "https://www.reactiva.com.co/",
+        "title": "Portafolio y proyectos de Reactiva",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://empresas.larepublica.co/colombia/caldas/manizales/reactiva-soporte-y-desarrollo-s-a-s-830513753",
+        "title": "Consulta pública RUES de Reactiva",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.lasempresas.com.co/manizales/reactiva-soporte-y-desarrollo-sas/",
+        "title": "Ficha pública de matrícula y actividades económicas de Reactiva",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Redes Sociales Para Inclusion Digital S.A.S. En Liquidacion",
@@ -11796,6 +12193,46 @@
     "registeredAt": "2016-02-15"
   },
   {
+    "name": "Sigma Ingenieria S.A.S.",
+    "slug": "sigma-ingenieria",
+    "description": "Empresa de Manizales que desarrolla software especializado de georreferenciación y sistemas de información geográfica para apoyar la gestión pública, ambiental, de alumbrado y de aseo.",
+    "website": "https://www.sigmaingenieria.com.co/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Desarrollo de software", "Producto de software", "Sistemas de información geográfica", "Transformación digital"],
+    "technologies": ["SIG", "Georreferenciación", "GPS", "Aplicaciones móviles", "Analítica de datos"],
+    "hasSoftwareDevelopmentHouse": true,
+    "workModel": "unknown",
+    "size": "medium",
+    "ciiu": "J6202",
+    "legalForm": "S.A.S.",
+    "nit": "810005747-4",
+    "registeredAt": "2003-04-03",
+    "sourceUrl": "https://www.sigmaingenieria.com.co/",
+    "sources": [
+      {
+        "url": "https://www.sigmaingenieria.com.co/",
+        "title": "Portafolio de soluciones SIG de Sigma Ingeniería",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://manizalesmas.com.co/sigma-ingenieria-una-empresa-ti-con-impacto-social/",
+        "title": "Perfil de Sigma Ingeniería y sus sectores atendidos",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.registronit.com/810005747",
+        "title": "Ficha pública de registro mercantil de Sigma Ingeniería",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  },
+  {
     "name": "Sistemas De Informacion Administrativos Y Logisticos S.A.S. En Liquidacion",
     "slug": "sistemas-de-informacion-administrativos-y-logisticos-s-a-s-en-liquidacion",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2013.",
@@ -11864,6 +12301,47 @@
     "needsVerification": false,
     "nit": "900686971-5",
     "registeredAt": "2013-12-31"
+  },
+  {
+    "name": "Skynet Domotics S.A.S.",
+    "slug": "skynet-domotics",
+    "description": "Empresa de Manizales que diseña e implementa espacios inteligentes, integrando domótica, seguridad, redes y automatización para hogares, oficinas y edificios.",
+    "website": "https://www.skynetdomotics.com/",
+    "city": "Manizales",
+    "department": "Caldas",
+    "country": "Colombia",
+    "categories": ["Domótica", "Automatización", "Seguridad electrónica", "Redes y conectividad"],
+    "technologies": ["Domótica", "Control de acceso", "Videovigilancia", "Redes", "IoT"],
+    "hasSoftwareDevelopmentHouse": false,
+    "workModel": "unknown",
+    "size": "micro",
+    "ciiu": "J6209",
+    "legalForm": "S.A.S.",
+    "nit": "900815733-3",
+    "registeredAt": "2015-02-03",
+    "sourceUrl": "https://www.linkedin.com/company/skynet-domotics-s-a-s-",
+    "sources": [
+      {
+        "url": "https://www.linkedin.com/company/skynet-domotics-s-a-s-",
+        "title": "Perfil corporativo de Skynet Domotics",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://www.lasempresas.com.co/manizales/skynet-domotics-sas/",
+        "title": "Ficha pública de matrícula y actividades de Skynet Domotics",
+        "reviewedAt": "2026-07-19"
+      },
+      {
+        "url": "https://construyored.com/empresas/6750-skynet-domotics",
+        "title": "Portafolio público de soluciones de domótica de Skynet",
+        "reviewedAt": "2026-07-19"
+      }
+    ],
+    "firstSeenAt": "2026-07-19",
+    "lastVerifiedAt": "2026-07-19",
+    "verificationStatus": "partially_verified",
+    "needsVerification": true,
+    "notes": "Las fuentes confirman su origen y oferta en Manizales. El sitio web actual publica datos de contacto en Florida; se requiere confirmar si la operación local continúa activa."
   },
   {
     "name": "Smart App S.A.S.",

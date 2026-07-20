@@ -1,6 +1,6 @@
 # Auditoría de datos 2026
 
-Fecha de corte: **2026-07-18**  
+Fecha de corte: **2026-07-20**  
 Comando reproducible: `npm run audit:data`  
 Resumen legible por máquina: `src/data/data-audit.json`
 
@@ -8,7 +8,7 @@ Resumen legible por máquina: `src/data/data-audit.json`
 
 ## Resumen ejecutivo
 
-El repositorio contiene **755 registros**. Después de la revisión preproducción, la comprobación de perfiles profesionales públicos, la ampliación de la oferta académica y la consolidación de pares empresa/establecimiento de comercio, **615** se presentan como verificados, **47** como parcialmente verificados y **93** se muestran como posiblemente inactivos. Este último estado incluye 88 empresas cuya razón social contiene “En liquidación” y otros registros preservados sin actividad confirmada (programas inactivos en HECAA). No existen registros en estado desconocido ni registros verificados sin fuente declarada.
+El repositorio contiene **780 registros**. Después de la revisión preproducción, la comprobación de perfiles profesionales públicos, la ampliación de la oferta académica, la incorporación curada de empresas y entidades de apoyo, y la consolidación de pares empresa/establecimiento de comercio, **634** se presentan como verificados, **53** como parcialmente verificados y **93** se muestran como posiblemente inactivos. Este último estado incluye 88 empresas cuya razón social contiene “En liquidación” y otros registros preservados sin actividad confirmada (programas inactivos en HECAA). No existen registros en estado desconocido ni registros verificados sin fuente declarada.
 
 La auditoría sintáctica y referencial pasa, pero la cadena de procedencia no es completa: las empresas apuntan a un portal registral general y no a permalinks individuales; universidades y programas heredados no tenían fecha de revisión; el listado empresarial original de 2020 estaba en un Drive externo no preservado. Por estas razones se requiere mantenimiento humano continuo y no se debe interpretar el directorio como certificación de actividad.
 
@@ -29,28 +29,28 @@ Los cinco organizadores del documento de meetups son referencias a personas, per
 
 | Conjunto | Registros |
 |---|---:|
-| Empresas | 650 |
+| Empresas | 662 |
 | Universidades | 9 |
 | Programas | 70 |
-| Personas | 23 |
+| Personas | 24 |
 | Comunidades | 3 |
 | Eventos | 0 |
-| Entidades de apoyo | 0 |
-| **Total** | **755** |
+| Entidades de apoyo | 12 |
+| **Total** | **780** |
 
 ## Estado de verificación
 
 | Estado | Registros | Interpretación |
 |---|---:|---|
-| `verified` | 615 | Fuente registrada y sin señal pendiente en el modelo actual. Incluye perfiles de personas con LinkedIn público contrastado, instituciones verificadas y programas con evidencia oficial específica. |
-| `partially_verified` | 47 | Instituciones, programas y personas con fuente, pero con verificación incompleta o pendiente de una URL pública específica. |
+| `verified` | 634 | Fuente registrada y sin señal pendiente en el modelo actual. Incluye empresas con sitio oficial, perfiles de personas con LinkedIn público contrastado, instituciones verificadas, programas con evidencia oficial y entidades de apoyo con fuente pública. |
+| `partially_verified` | 53 | Empresas, instituciones, programas y personas con fuente, pero con verificación incompleta o pendiente de una URL pública específica. |
 | `unknown` | 0 | No hay fichas en estado desconocido. |
 | `inactive_or_unverified` | 93 | 88 empresas cuya razón social contiene “En liquidación” y otros registros preservados sin actividad confirmada (programas inactivos en HECAA); se conservan con trazabilidad y requieren revisión humana. |
 | `archived` | 0 | No hay fichas formalmente archivadas todavía. |
 
 Otros indicadores:
 
-- **140** registros mantienen `needsVerification: true`.
+- **146** registros mantienen `needsVerification: true`.
 - **25** registros no tienen `lastVerifiedAt`.
 - **0** registros carecen de fuente declarada.
 - **0** registros `verified` carecen de fuente.
@@ -59,10 +59,10 @@ Otros indicadores:
 
 ## Cambios relevantes frente a 2020
 
-- El alcance empresarial pasó de un archivo externo no reproducible a 650 registros JSON consultables y validados. Se consolidaron pares empresa/establecimiento de comercio para evitar duplicados en el directorio.
+- El alcance empresarial pasó de un archivo externo no reproducible a 662 registros JSON consultables y validados. Se consolidaron pares empresa/establecimiento de comercio para evitar duplicados en el directorio.
 - Las 9 instituciones y los 30 programas del estudio histórico se preservan. En 2026 se incorporaron 16 registros SNIES adicionales de la Universidad de Caldas, 3 fichas por modalidad de la Universidad Autónoma de Manizales, 4 programas de la Universidad Católica de Manizales, 5 programas de la Universidad Nacional de Colombia - Sede Manizales, 7 programas de la Universidad de Manizales y 5 programas del SENA Regional Caldas, para un total actual de 70 programas; las fichas permanecen parciales o pendientes cuando no existe evidencia específica suficiente.
 - De las 5 comunidades históricas, el conjunto actual contiene 3. Manizales Tech Talks continúa; AI Tinkerers Manizales y AWS User Group Manizales son incorporaciones posteriores. Seguridad Informática Hacking Manizales, Kommit, CoffeeDev y ManizalesJS requieren revisión antes de reingresar o archivarse.
-- El conjunto actual contiene 23 personas basadas en contribuciones públicas, sin ranking. La mayoría tiene una URL pública de LinkedIn o de perfil académico contrastada y se consideran completos según el criterio editorial definido por el mantenedor. Andrés Marino Álvarez Meza y Herman Freddy Hincapié Ochoa conservan estado parcial porque no se encontró una URL personal atribuible sin ambigüedad.
+- El conjunto actual contiene 24 personas basadas en contribuciones públicas, sin ranking. La mayoría tiene una URL pública de LinkedIn o de perfil académico contrastada y se consideran completos según el criterio editorial definido por el mantenedor. Andrés Marino Álvarez Meza y Herman Freddy Hincapié Ochoa conservan estado parcial porque no se encontró una URL personal atribuible sin ambigüedad.
 - Eventos y entidades de apoyo tienen schema y UI, pero no contienen registros; el estado vacío es intencional y no se llenó con datos ficticios.
 - Se introdujeron estados de verificación, fechas, fuentes, notas y conservación del material `legacy/`.
 
