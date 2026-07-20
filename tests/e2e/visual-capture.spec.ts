@@ -58,7 +58,7 @@ test('estado vacío y registro pendiente', async ({ page }, testInfo) => {
     animations: 'disabled',
   });
 
-  await page.goto('/programas/esp-tec-redes-umanizales');
+  await page.goto('/programas/doctorado-ingenieria-ucaldas');
   await expect(page.getByText(/Estado por confirmar|Verificación parcial/i).first()).toBeVisible();
   await page.screenshot({
     path: 'test-results/screenshots/registro-pendiente-desktop.png',
