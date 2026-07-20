@@ -52,5 +52,33 @@
     "sourceUrl": "https://manizales.aitinkerers.org/",
     "lastVerifiedAt": "2026-07-18",
     "needsVerification": false
+  },
+  {
+    "name": "DragonJAR",
+    "slug": "dragonjar",
+    "description": "Comunidad histórica de seguridad informática, iniciada en línea en 2001 y vinculada a Manizales. Se conserva como antecedente por sus contenidos, formación y encuentros presenciales en la ciudad; no se presenta como un meetup local activo.",
+    "focus": ["Ciberseguridad", "Hacking ético", "Investigación", "Comunidad"],
+    "city": "Manizales",
+    "department": "Caldas",
+    "website": "https://www.dragonjar.org/",
+    "status": "inactive",
+    "sourceUrl": "https://www.dragonjar.org/los-15-de-la-comunidad-dragonjar.xhtml",
+    "sources": [
+      {
+        "url": "https://www.dragonjar.org/los-15-de-la-comunidad-dragonjar.xhtml",
+        "title": "Historia y encuentro de los 15 años de la comunidad DragonJAR en Manizales",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.linkedin.com/company/dragonjar/",
+        "title": "Perfil público de la comunidad DragonJAR",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "firstSeenAt": "2026-07-20",
+    "lastVerifiedAt": "2026-07-20",
+    "verificationStatus": "archived",
+    "needsVerification": false,
+    "notes": "El estado inactivo se refiere a un meetup local vigente: no se encontró una agenda local actual. No implica que DragonJAR.org ni su actividad empresarial estén inactivos."
   }
 ]
