@@ -7,16 +7,24 @@ import EmptyState from '../../components/EmptyState.astro';
 import { people } from '../../lib/data';
 import { encodeFacet, uniqueSorted } from '../../lib/search';
 
-const areas = uniqueSorted(people.flatMap((p) => p.areas));
-const roles = uniqueSorted(people.flatMap((p) => p.roles ?? []));
+const specialties = uniqueSorted(people.flatMap((p) => p.specialties));
+const trajectories = uniqueSorted(people.flatMap((p) => p.ecosystemTrajectory));
 const orgs = uniqueSorted(people.flatMap((p) => p.organizations ?? []));
-const contributions = uniqueSorted(people.flatMap((p) => p.contributions ?? []));
 
 const facets = [
-  { key: 'area', label: 'Área', options: areas, allLabel: 'Todas las áreas' },
-  { key: 'role', label: 'Rol', options: roles, allLabel: 'Todos los roles' },
+  {
+    key: 'specialty',
+    label: 'Especialidad',
+    options: specialties,
+    allLabel: 'Todas las especialidades',
+  },
+  {
+    key: 'trajectory',
+    label: 'Trayectoria y aporte',
+    options: trajectories,
+    allLabel: 'Todas las trayectorias',
+  },
   { key: 'org', label: 'Organización', options: orgs, allLabel: 'Todas' },
-  { key: 'contribution', label: 'Contribución', options: contributions, allLabel: 'Todas' },
 ];
 ---
 
@@ -52,7 +60,7 @@ const facets = [
           facets={facets}
           total={people.length}
           noun="personas"
-          searchPlaceholder="Buscar por nombre, área u organización…"
+          searchPlaceholder="Buscar por nombre, especialidad u organización…"
           gridClass="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {people.map((p) => (
@@ -65,12 +73,13 @@ const facets = [
                   p.headline ?? '',
                   p.shortBio ?? '',
                   ...p.areas,
+                  ...p.specialties,
+                  ...p.ecosystemTrajectory,
                   ...(p.organizations ?? []),
                 ].join(' '),
-                'data-facet-area': encodeFacet(p.areas),
-                'data-facet-role': encodeFacet(p.roles ?? []),
+                'data-facet-specialty': encodeFacet(p.specialties),
+                'data-facet-trajectory': encodeFacet(p.ecosystemTrajectory),
                 'data-facet-org': encodeFacet(p.organizations ?? []),
-                'data-facet-contribution': encodeFacet(p.contributions ?? []),
               }}
             />
           ))}
