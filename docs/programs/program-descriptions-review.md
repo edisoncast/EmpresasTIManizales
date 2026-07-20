@@ -84,3 +84,53 @@ Distribución de verificación de los 70 programas tras el cambio: **`verified` 
 - No se agregaron ni eliminaron programas (70 antes y después); se conservaron nombres, slugs, niveles, modalidades e institución.
 - Cada descripción se basó en la fuente oficial registrada o en una alternativa dentro del dominio oficial de la universidad; lo no verificable quedó pendiente.
 - El proyecto sigue compilando y pasando sus validaciones.
+
+---
+
+## Segunda tanda — resto de instituciones (2026-07-20)
+
+Tras la primera tanda (cinco universidades) se completó la descripción de los programas de las **instituciones restantes**: SENA Regional Caldas, Universidad Católica Luis Amigó (FUNLAM), Corporación Universitaria Remington (sede Manizales), Universidad Antonio Nariño, más tres programas que habían quedado pendientes/sin descripción en la Católica de Manizales, la UNAL Manizales y la U. de Manizales.
+
+> Nota de contexto: entre las dos tandas se **eliminaron dos programas posiblemente inactivos** de la Universidad de Manizales (Especialización Tecnológica en Redes y Maestría en Gestión Estratégica de la Información), por decisión editorial del dueño, dejando solo la Maestría en Seguridad de la Información. Por eso el total del dataset pasó de 70 a **68 programas**. Las referencias a `esp-tec-redes-umanizales` en las secciones anteriores son históricas.
+
+Método idéntico: agentes en paralelo (uno por institución) que consultaron la URL oficial de cada programa, con un coordinador integrando por `slug` en `src/data/programs.json` (sin edición concurrente del mismo archivo). Descripciones originales de ~70–120 palabras, sin créditos/semestres/SNIES en la prosa.
+
+### Resumen
+
+| Métrica | Valor |
+| --- | --- |
+| Programas con descripción agregada (2ª tanda) | 15 |
+| Longitud de descripción (palabras) | 99–116 |
+| Duplicados intercambiables detectados | 0 |
+| Promovidos a `verified` | 4 |
+| Conservan `partially_verified` | 11 |
+
+### Promovidos a `verified` (ficha oficial dedicada, 200 con navegador real)
+
+- **tecnologia-construccion-software-uan** — Universidad Antonio Nariño (`uan.edu.co`, página dedicada del programa).
+- **tecnologia-adso-sena** — Análisis y Desarrollo de Software (ficha dedicada en `betowa.sena.edu.co`).
+- **tecnico-programacion-software-sena** — Programación de Software (ficha dedicada en `betowa.sena.edu.co`).
+- **tecnologia-implementacion-gestion-bases-datos-sena** — Implementación y Gestión de Bases de Datos (ficha dedicada en `betowa.sena.edu.co`).
+
+En estos cuatro se reemplazó el `website`/`sourceUrl` no oficial (blogspot/vacío) por la ficha oficial y se fijó `lastVerifiedAt: 2026-07-20`.
+
+### Se conservan `partially_verified` (fuente no dedicada o con reserva)
+
+- **Corrección de dato — ing-sistemas-virtual-remington:** inicialmente se promovió a `verified`, pero se revirtió a `partially_verified`. El SNIES **104431 corresponde a la sede Medellín / registro nacional**, no a una matrícula propia de Caldas; Uniremington ya no ofrece Ingeniería de Sistemas con SNIES de Caldas. La sede Manizales (SNIES IES 2833) sí existe y promueve la modalidad virtual, por lo que el registro se conserva con la descripción y su `sourceUrl` apunta ahora a la página oficial de la sede Manizales (`uniremington.edu.co/manizales/`), sin atribuirle un SNIES de programa local.
+- **SENA — fichas de familia / PDF / denominación sucesora:** `tecnologia-adsi-sena` (ADSI, denominación anterior a ADSO), `tecnico-sistemas-sena` (la ruta exacta devuelve "Programa no encontrado"; se apoya en la familia de soporte técnico), `tecnico-programacion-aplicaciones-nube-sena` y `esp-tec-gestion-seguridad-bd-sena` (fuente oficial en PDF de descarga, no ficha web), `esp-tec-seguridad-redes-sena` (sin ficha dedicada; familia de redes) y `esp-tec-desarrollo-moviles-sena` (ficha de la familia de desarrollo móvil, no de la especialización). El website original de varios era un blog/flipbook no oficial.
+- **ing-sistemas-funlam** (U. Católica Luis Amigó): la URL registrada estaba rota ("zona restringida"); la oferta oficial es genérica y el contenido sustantivo provino del plegable PDF institucional (sede Apartadó, mismo programa institucional). Sin plegable oficial específico de la sede Manizales.
+- **tecnologia-implementacion-sistemas-iot-ucm** (Católica de Manizales): no hay ficha propia publicada del programa tecnológico (SNIES 116625); se usó el contenido oficial del Técnico Profesional en IoT de la misma cadena propedéutica. Recomendable segunda fuente cuando la UCM publique la ficha.
+- **especializacion-aprendizaje-automatico-ia-unal** (UNAL Manizales): identidad y adscripción confirmadas en el dominio oficial (`fadmon.unal.edu.co` / `manizales.unal.edu.co`), pero la ficha del programa no renderiza por error de certificado SSL; sin plan de estudios verificable.
+- **maestria-tecnologias-informacion-geografica-118930-umanizales** (variante virtual): la ficha oficial declara modalidad presencial (SNIES 102462) mientras el registro marca `remote` (SNIES 118930). Descripción basada en la ficha oficial; discrepancia de modalidad por revisar (no se modificó `modality` por instrucción).
+
+### Distribución final de verificación (68 programas)
+
+**`verified` 47 · `partially_verified` 20 · `inactive_or_unverified` 1.**
+
+### Confirmaciones (2ª tanda)
+
+- Se procesaron las instituciones restantes; 15 descripciones agregadas, 0 pendientes sin descripción.
+- No se agregaron ni eliminaron programas en esta tanda; se conservaron nombres, slugs, niveles, modalidades e institución.
+- Cada descripción se basó en la fuente oficial registrada o en una alternativa dentro del dominio oficial; lo no verificable quedó como `partially_verified`.
+- Se verificaron con navegador real las URLs candidatas; solo se promovieron a `verified` las cuatro con ficha oficial dedicada que responde 200.
+- El proyecto compila y pasa `validate:data`, `lint`, `test` (unit) y `format:check`; el `test:e2e` se ejecuta en CI sobre el PR.

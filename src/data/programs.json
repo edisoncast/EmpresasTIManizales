@@ -72,7 +72,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Oferta presencial de Manizales: HECAA confirma el SNIES 107351 para Caldas, mientras el 91151 corresponde a Medellín."
+    "notes": "Oferta presencial de Manizales: HECAA confirma el SNIES 107351 para Caldas, mientras el 91151 corresponde a Medellín.",
+    "description": "Este programa de nivel tecnológico forma en el análisis, diseño y construcción de sistemas de información que apoyan los procesos de las organizaciones. El estudiante aprende a levantar y documentar requisitos, modelar datos, construir y administrar bases de datos relacionales y desarrollar aplicaciones que integran la información del negocio. Combina fundamentos de programación con el ciclo de vida del software y prácticas de calidad. El egresado puede participar en proyectos de sistematización de la información en empresas, entidades públicas y áreas de tecnología, apoyando la implementación, prueba y mantenimiento de soluciones que gestionan datos y flujos de información organizacional."
   },
   {
     "name": "Técnico en Sistemas",
@@ -88,7 +89,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como presencial, con jornadas diurna y nocturna y duración prevista de 14 meses. Falta confirmar código de programa SENA y apertura vigente."
+    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como presencial, con jornadas diurna y nocturna y duración prevista de 14 meses. Falta confirmar código de programa SENA y apertura vigente.",
+    "description": "Esta formación de nivel técnico laboral prepara para el ensamble, la configuración y el mantenimiento de equipos de cómputo y sus periféricos. El aprendiz adquiere destrezas para diagnosticar y corregir fallas de hardware y software, instalar sistemas operativos y aplicaciones, y montar redes de área local con sus dispositivos de interconexión. Incluye prácticas de soporte técnico y atención a usuarios. Su enfoque es operativo y orientado al servicio, con conocimientos básicos de electrónica y seguridad en el trabajo. El egresado puede desempeñarse en áreas de soporte, mesas de ayuda, mantenimiento de infraestructura tecnológica y servicios de instalación en organizaciones de distintos sectores."
   },
   {
     "name": "Técnico en Programación de Software",
@@ -99,12 +101,13 @@
     "modality": "onsite",
     "city": "Manizales",
     "area": ["Desarrollo de software"],
-    "website": "https://automatizacioncaldas.blogspot.com/p/formacion.html",
-    "sourceUrl": "https://automatizacioncaldas.blogspot.com/p/formacion.html",
-    "lastVerifiedAt": "2026-07-17",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified",
-    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como presencial, con jornada diurna o mixta y duración prevista de 12 meses. Falta confirmar código de programa SENA y apertura vigente."
+    "website": "https://betowa.sena.edu.co/oferta/programacion-de-software",
+    "sourceUrl": "https://betowa.sena.edu.co/oferta/programacion-de-software",
+    "lastVerifiedAt": "2026-07-20",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como presencial, con jornada diurna o mixta y duración prevista de 12 meses. Falta confirmar código de programa SENA y apertura vigente.",
+    "description": "Programa de nivel técnico laboral centrado en la codificación de soluciones de software a partir de diseños y requisitos ya definidos. El aprendiz desarrolla habilidades para programar en lenguajes orientados a objetos, construir y consultar bases de datos, aplicar metodologías de desarrollo y realizar pruebas básicas sobre las aplicaciones. Trabaja en la interpretación de especificaciones técnicas y en la escritura de código funcional y ordenado. Su enfoque es práctico y de apoyo a equipos de desarrollo. El egresado puede vincularse como programador junior en empresas de tecnología, áreas de sistemas o proyectos que requieran construir y mantener componentes de software."
   },
   {
     "name": "Técnico en Programación de Aplicaciones y Servicios para la Nube",
@@ -120,7 +123,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como virtual, en jornada mixta y con duración prevista de 14 meses. Falta confirmar código de programa SENA y apertura vigente."
+    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como virtual, en jornada mixta y con duración prevista de 14 meses. Falta confirmar código de programa SENA y apertura vigente.",
+    "description": "Formación de nivel técnico laboral, ofrecida de manera virtual, enfocada en el desarrollo de aplicaciones y servicios que se despliegan en plataformas de computación en la nube. El aprendiz aprende a programar soluciones, integrar servicios en línea, administrar datos y aprovechar entornos cloud para mejorar la disponibilidad y eficiencia de las aplicaciones. Incluye pruebas funcionales y de desempeño para asegurar la calidad del software. Su enfoque combina programación con el uso de infraestructura distribuida y modelos de servicio remotos. El egresado puede apoyar equipos que construyen y mantienen aplicaciones web y servicios alojados en la nube dentro de empresas de tecnología."
   },
   {
     "name": "Tecnología en Análisis y Desarrollo de Software",
@@ -133,12 +137,13 @@
     "area": ["Desarrollo de software"],
     "credits": 83,
     "sniesCode": "110595",
-    "website": "https://automatizacioncaldas.blogspot.com/p/formacion.html",
-    "sourceUrl": "https://automatizacioncaldas.blogspot.com/p/formacion.html",
-    "lastVerifiedAt": "2026-07-17",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified",
-    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como presencial, en jornada diurna o mixta, con 83 créditos y duración prevista de 27 meses. Falta contrastar en HECAA la vigencia y cobertura actual del SNIES 110595."
+    "website": "https://betowa.sena.edu.co/oferta/analisis-y-desarrollo-de-software?programId=136456",
+    "sourceUrl": "https://betowa.sena.edu.co/oferta/analisis-y-desarrollo-de-software?programId=136456",
+    "lastVerifiedAt": "2026-07-20",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "notes": "El Centro de Automatización Industrial de SENA Caldas publica este programa como presencial, en jornada diurna o mixta, con 83 créditos y duración prevista de 27 meses. Falta contrastar en HECAA la vigencia y cobertura actual del SNIES 110595.",
+    "description": "Programa de nivel tecnológico dedicado al ciclo completo de desarrollo de software, desde el análisis de requisitos hasta la implementación y el control de calidad. El estudiante aprende a establecer y evaluar requisitos, diseñar soluciones y bases de datos, codificar en lenguajes orientados a objetos y aplicar metodologías de desarrollo y pruebas. Se enfatiza el uso de estándares técnicos y modelos de referencia para producir software confiable. Su enfoque es más analítico y de diseño que el nivel técnico. El egresado puede desempeñarse como desarrollador, analista o diseñador de soluciones en empresas de tecnología y en áreas de sistemas de distintas organizaciones."
   },
   {
     "name": "Tecnología en Implementación y Gestión de Bases de Datos",
@@ -151,11 +156,13 @@
     "area": ["Bases de datos", "Infraestructura TI"],
     "credits": 83,
     "sniesCode": "118598",
-    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/detallePrograma",
-    "lastVerifiedAt": "2026-07-17",
+    "sourceUrl": "https://betowa.sena.edu.co/oferta/implementacion-y-gestion-de-bases-de-datos?programId=178214",
+    "lastVerifiedAt": "2026-07-20",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "HECAA confirma una oferta activa, presencial y principal en Manizales, Caldas. Los SNIES 118599 (a distancia) y 118600 (virtual) pertenecen a ofertas publicadas para Cauca y no se atribuyen a la Regional Caldas."
+    "notes": "HECAA confirma una oferta activa, presencial y principal en Manizales, Caldas. Los SNIES 118599 (a distancia) y 118600 (virtual) pertenecen a ofertas publicadas para Cauca y no se atribuyen a la Regional Caldas.",
+    "description": "Este programa tecnológico se especializa en el diseño, la implementación y la administración de bases de datos que soportan los sistemas de información de las organizaciones. El estudiante aprende a modelar datos, construir bases de datos relacionales y espaciales, gestionar su rendimiento, integridad y seguridad, y alimentar sistemas de información según procedimientos técnicos. Complementa estos conocimientos con nociones de desarrollo de software y pruebas. Su enfoque se centra en la gestión del dato como activo organizacional. El egresado puede trabajar como administrador de bases de datos o apoyar áreas de tecnología en la implementación y el mantenimiento de repositorios de información.",
+    "website": "https://betowa.sena.edu.co/oferta/implementacion-y-gestion-de-bases-de-datos?programId=178214"
   },
   {
     "name": "Ingeniería en Informática",
@@ -249,7 +256,8 @@
     "website": "https://www.funlam.edu.co/modules/sedemanizales/item.php?itemid=172",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "El programa de pregrado en Ingeniería de Sistemas de la Universidad Católica Luis Amigó forma profesionales para el diseño, desarrollo y evaluación de sistemas de información y soluciones informáticas orientadas a la productividad de las organizaciones. El plan integra el pensamiento sistémico, la programación de aplicaciones, las bases de datos, las redes y telecomunicaciones, la ingeniería y calidad del software, y el modelado y simulación de sistemas. Desarrolla capacidades para gestionar el recurso informático, coordinar proyectos de tecnología y mejorar de forma continua la calidad de los productos. Sus egresados pueden desempeñarse en desarrollo e integración de software, administración de sistemas, consultoría tecnológica y gestión de proyectos en distintos sectores."
   },
   {
     "name": "Ingeniería de Sistemas (Virtual)",
@@ -263,10 +271,11 @@
     "credits": 145,
     "durationSemesters": 9,
     "sniesCode": "104431",
-    "website": "https://www.uniremington.edu.co/facultades/facultad-de-ingenierias/ingenieria-de-sistemas-virtual/",
-    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
+    "website": "https://www.uniremington.edu.co/manizales/",
+    "sourceUrl": "https://www.uniremington.edu.co/manizales/",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Programa de pregrado en ingeniería que forma profesionales capaces de analizar, diseñar, construir y administrar sistemas de información en modalidad totalmente virtual. Combina fundamentos de matemáticas, estadística y ciencias de la computación con áreas técnicas como programación, bases de datos, redes e ingeniería de software, apoyándose en estándares internacionales y buenas prácticas del desarrollo. El estudiante adquiere competencias para gestionar proyectos de tecnología, evaluar y auditar sistemas, y diseñar arquitecturas de software que respondan a necesidades organizacionales. Su enfoque integra la formación técnica con componentes de ética y responsabilidad social, orientando al egresado hacia la dirección de áreas de sistemas, la gestión de proyectos de TI y el desarrollo de soluciones informáticas en distintos sectores productivos."
   },
   {
     "name": "Tecnología en Análisis y Programación de Sistemas de Información",
@@ -299,10 +308,12 @@
     "credits": 104,
     "durationSemesters": 6,
     "sniesCode": "107668",
-    "website": "http://www.uan.edu.co/tecnologia-en-construccion-de-software",
-    "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
-    "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "website": "https://www.uan.edu.co/tecnologia-en-construccion-de-software",
+    "sourceUrl": "https://www.uan.edu.co/tecnologia-en-construccion-de-software",
+    "needsVerification": false,
+    "verificationStatus": "verified",
+    "description": "Programa de nivel tecnológico centrado en la construcción de aplicaciones software, desde el análisis de un problema hasta la codificación y las pruebas. Combina fundamentos de ciencias básicas e informática con programación, ingeniería de software y gestión de datos, de modo que quien lo cursa aprende a traducir requisitos de una organización en soluciones funcionales y a elegir las tecnologías adecuadas para cada caso. Desarrolla capacidades para construir y depurar módulos, verificar su calidad mediante pruebas y coordinar el trabajo dentro de equipos de proyecto. Se orienta a roles de desarrollo, soporte y acompañamiento funcional en empresas de tecnología y áreas de sistemas, con atención a las necesidades del entorno regional.",
+    "lastVerifiedAt": "2026-07-20"
   },
   {
     "name": "Especialización Tecnológica en Gestión y Seguridad de Bases de Datos",
@@ -319,7 +330,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "El código SENA 217219 se conserva separado de SNIES: no debe presentarse como código SNIES. La convocatoria oficial SENA confirma formación titulada virtual, nacional y de 880 horas en 2019; falta confirmar la oferta vigente y su relación actual con la Regional Caldas."
+    "notes": "El código SENA 217219 se conserva separado de SNIES: no debe presentarse como código SNIES. La convocatoria oficial SENA confirma formación titulada virtual, nacional y de 880 horas en 2019; falta confirmar la oferta vigente y su relación actual con la Regional Caldas.",
+    "description": "Dirigida a tecnólogos del área informática, esta especialización tecnológica profundiza en la administración avanzada y la protección de bases de datos. El participante fortalece competencias para optimizar el rendimiento, gestionar respaldos y recuperación, controlar accesos y aplicar mecanismos de seguridad frente a amenazas y pérdidas de información. Aborda estándares y buenas prácticas para garantizar la disponibilidad, integridad y confidencialidad de los datos. Su enfoque es virtual y especializado, orientado a quienes ya administran motores de bases de datos. El egresado puede asumir roles de administración segura de datos, definición de políticas de acceso y aseguramiento de la información en organizaciones."
   },
   {
     "name": "Especialización Tecnológica en Seguridad en Redes de Computadores",
@@ -336,7 +348,8 @@
     "website": "http://online.fliphtml5.com/xslre/cxrn/#p=14",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Esta especialización tecnológica se orienta a proteger la infraestructura de redes de datos frente a riesgos y ataques informáticos. El participante desarrolla competencias para administrar la seguridad de hardware y software en la red, configurar dispositivos de interconexión, gestionar la infraestructura tecnológica según modelos de referencia y aplicar estándares internacionales de seguridad. Aborda el monitoreo, el control de accesos y la respuesta ante incidentes en entornos de red. Su enfoque profundiza los conocimientos de quienes provienen de programas de redes o sistemas. El egresado puede desempeñarse en la administración y el aseguramiento de redes en organizaciones que requieren proteger sus comunicaciones y datos."
   },
   {
     "name": "Especialización Tecnológica en Desarrollo de Aplicaciones para Dispositivos Móviles",
@@ -353,7 +366,8 @@
     "website": "http://online.fliphtml5.com/xslre/cxrn/#p=14",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Esta especialización tecnológica profundiza en la creación de aplicaciones para teléfonos y tabletas. El participante fortalece competencias para definir plataformas de desarrollo móvil según las necesidades del usuario, diseñar interfaces gráficas centradas en la experiencia, programar soluciones siguiendo metodologías de desarrollo, administrar bases de datos y realizar pruebas sobre las aplicaciones. Aborda patrones técnicos propios de los entornos móviles y su integración con servicios web. Su enfoque está dirigido a tecnólogos que buscan especializarse en el ecosistema móvil. El egresado puede integrar equipos de desarrollo como programador de aplicaciones móviles, analista o responsable de pruebas y soporte en empresas de software."
   },
   {
     "name": "Especialización en Sistemas de Información Geográfica",
@@ -1064,7 +1078,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad presencial."
+    "notes": "Programa ofrecido en modalidad presencial.",
+    "description": "Programa de nivel tecnológico enfocado en la puesta en marcha de soluciones basadas en el Internet de las Cosas, dentro de la cadena propedéutica de formación en IoT de la institución. Aborda fundamentos de electrónica, telecomunicaciones y programación de microcontroladores y dispositivos conectados, junto con los modelos de comunicación y protocolos que integran sensores y sistemas embebidos. Desarrolla capacidades para configurar, operar e integrar redes de dispositivos y para gestionar los datos que estos generan: almacenamiento, visualización y análisis exploratorio. Su aplicación se orienta al monitoreo ambiental, la agricultura de precisión y otras soluciones digitales que responden a necesidades sociales y productivas de la región."
   },
   {
     "name": "Especialización en Aprendizaje Automático Mediante Inteligencia Artificial",
@@ -1081,7 +1096,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Código y denominación confirmados en la consulta HECAA/SNIES. Pendiente incorporar una URL institucional específica con modalidad, créditos y duración."
+    "notes": "Código y denominación confirmados en la consulta HECAA/SNIES. Pendiente incorporar una URL institucional específica con modalidad, créditos y duración.",
+    "description": "Programa de posgrado de nivel especialización centrado en el aprendizaje automático como rama aplicada de la inteligencia artificial. Aborda el diseño, entrenamiento y evaluación de modelos que aprenden a partir de datos para reconocer patrones, clasificar información y generar predicciones. Desarrolla capacidades para seleccionar algoritmos, preparar y depurar conjuntos de datos, medir el desempeño de las soluciones e interpretar sus resultados en situaciones reales. Ofrecido por la Facultad de Administración de la Sede Manizales dentro de su oferta de posgrados en informática y computación, orienta estas técnicas hacia la analítica de datos y el apoyo a la toma de decisiones en organizaciones e industria."
   },
   {
     "name": "Especialización en Inteligencia Artificial",
@@ -1303,6 +1319,7 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Ficha HECAA consultada por SNIES 118930: programa activo, virtual, de 35 créditos y 3 períodos. Comparte el registro único 1999 con la oferta presencial SNIES 102462."
+    "notes": "Ficha HECAA consultada por SNIES 118930: programa activo, virtual, de 35 créditos y 3 períodos. Comparte el registro único 1999 con la oferta presencial SNIES 102462.",
+    "description": "Programa de maestría orientado a la gestión avanzada de información geográfica mediante sistemas de información geográfica (SIG), análisis espacial, teledetección y aplicaciones geoespaciales. Su enfoque combina investigación aplicada y desarrollo tecnológico para modelar el territorio y resolver problemas relacionados con datos espaciales. Quienes lo cursan aprenden a diseñar y administrar SIG, construir infraestructuras de datos espaciales, desarrollar software geoespacial y trabajar con imágenes de sensores remotos. Estas capacidades se aplican en el ordenamiento territorial, la gestión ambiental, la planeación pública y la transformación digital del territorio, así como en la investigación en geomática dentro de entidades públicas, privadas y académicas."
   }
 ]
