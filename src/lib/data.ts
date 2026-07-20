@@ -111,7 +111,8 @@ export function organizerForCommunity(community: Community): Person | undefined 
 
 /** Todas las personas organizadoras registradas de una comunidad. */
 export function organizersForCommunity(community: Community): Person[] {
-  const slugs = community.organizerSlugs ?? (community.organizerSlug ? [community.organizerSlug] : []);
+  const slugs =
+    community.organizerSlugs ?? (community.organizerSlug ? [community.organizerSlug] : []);
   return slugs.map((slug) => getPerson(slug)).filter((p): p is Person => Boolean(p));
 }
 

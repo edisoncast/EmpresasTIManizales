@@ -112,9 +112,7 @@ for (const c of parsed['communities.json'] ?? []) {
   }
   for (const slug of c.organizerSlugs ?? []) {
     if (!peopleSlugs.has(slug)) {
-      errors.push(
-        `[communities.json] "${c.slug}" referencia una persona inexistente: "${slug}"`,
-      );
+      errors.push(`[communities.json] "${c.slug}" referencia una persona inexistente: "${slug}"`);
     }
   }
 }

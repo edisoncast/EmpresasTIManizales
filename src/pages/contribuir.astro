@@ -115,7 +115,10 @@ const companyExample = `{
           {
             include.map((i) => (
               <li class="flex items-start gap-2">
-                <span aria-hidden="true" class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent" />
+                <span
+                  aria-hidden="true"
+                  class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 rounded-full bg-accent"
+                />
                 <span>{i}</span>
               </li>
             ))
@@ -219,8 +222,8 @@ const companyExample = `{
       <div class="rounded-lg border border-ink-200 bg-surface p-5">
         <h2 class="kicker">Fuente de verdad</h2>
         <p class="mt-2 text-sm text-ink-600">
-          Todo el contenido vive en el repositorio. No usamos base de datos ni CMS: son archivos JSON
-          versionados y revisables.
+          Todo el contenido vive en el repositorio. No usamos base de datos ni CMS: son archivos
+          JSON versionados y revisables.
         </p>
         <a
           href={site.repoUrl}

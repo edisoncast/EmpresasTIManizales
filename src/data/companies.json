@@ -60,7 +60,12 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Consultoría de gestión", "Desarrollo de software", "Marketing digital", "Experiencia de cliente"],
+    "categories": [
+      "Consultoría de gestión",
+      "Desarrollo de software",
+      "Marketing digital",
+      "Experiencia de cliente"
+    ],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
     "size": "micro",
@@ -1766,7 +1771,12 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Desarrollo de software", "Producto de software", "Nube y datos", "Aplicaciones móviles"],
+    "categories": [
+      "Desarrollo de software",
+      "Producto de software",
+      "Nube y datos",
+      "Aplicaciones móviles"
+    ],
     "technologies": ["SaaS", "Aplicaciones móviles", "Monitoreo", "Servicios en la nube"],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
@@ -2389,8 +2399,19 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Telecomunicaciones", "Redes y conectividad", "Infraestructura TI", "Internet empresarial"],
-    "technologies": ["Radiocomunicaciones", "Redes inalámbricas", "Telefonía IP", "CCTV", "Telemetría"],
+    "categories": [
+      "Telecomunicaciones",
+      "Redes y conectividad",
+      "Infraestructura TI",
+      "Internet empresarial"
+    ],
+    "technologies": [
+      "Radiocomunicaciones",
+      "Redes inalámbricas",
+      "Telefonía IP",
+      "CCTV",
+      "Telemetría"
+    ],
     "hasSoftwareDevelopmentHouse": false,
     "workModel": "unknown",
     "size": "small",
@@ -3208,12 +3229,23 @@
   {
     "name": "Computar S.A.S.",
     "slug": "computar",
-    "description": "Empresa de Manizales dedicada a la comercialización mayorista de computadores, periféricos y software, junto con arrendamiento, mantenimiento y soporte de equipos. Fuentes públicas documentan servicios de conectividad, redes y firewall para organizaciones locales.",
+    "description": "Empresa de Manizales que integra soluciones tecnológicas corporativas a la medida. Su sitio oficial presenta servicios de seguridad de la información y continuidad operativa, junto con soporte e integración de tecnología.",
+    "website": "http://www.computar.co/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Infraestructura TI", "Comercio de equipos informáticos", "Soporte técnico", "Redes y conectividad"],
-    "technologies": ["Computadores", "Periféricos", "Redes", "Firewall", "Impresión"],
+    "categories": [
+      "Infraestructura TI",
+      "Integración tecnológica",
+      "Soporte técnico",
+      "Seguridad de la información"
+    ],
+    "technologies": [
+      "Integración tecnológica",
+      "Seguridad de la información",
+      "Continuidad operativa",
+      "Soporte TI"
+    ],
     "hasSoftwareDevelopmentHouse": false,
     "workModel": "unknown",
     "size": "medium",
@@ -3221,8 +3253,13 @@
     "legalForm": "S.A.S.",
     "nit": "800226784-9",
     "registeredAt": "1994-05-06",
-    "sourceUrl": "https://www.lasempresas.com.co/manizales/computar-sas/",
+    "sourceUrl": "http://www.computar.co/",
     "sources": [
+      {
+        "url": "http://www.computar.co/",
+        "title": "Sitio oficial de Computar",
+        "reviewedAt": "2026-07-20"
+      },
       {
         "url": "https://www.lasempresas.com.co/manizales/computar-sas/",
         "title": "Ficha pública de matrícula mercantil de Computar",
@@ -3235,10 +3272,9 @@
       }
     ],
     "firstSeenAt": "2026-07-19",
-    "lastVerifiedAt": "2026-07-19",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true,
-    "notes": "La matrícula y la actividad se encuentran respaldadas por fuentes públicas. No se identificó un sitio web corporativo actual durante esta revisión; conviene confirmar el portafolio vigente directamente con la empresa."
+    "lastVerifiedAt": "2026-07-20",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Conectamos Eje S.A.S.",
@@ -3683,11 +3719,22 @@
   {
     "name": "Data3.000 S.A.S.",
     "slug": "data-3000",
-    "description": "Empresa de Manizales registrada para actividades de consultoría informática y administración de instalaciones informáticas. La evidencia pública disponible no detalla su portafolio actual.",
+    "description": "Empresa de Manizales especializada en gestión documental: diagnóstico, organización, digitalización, custodia y almacenamiento de archivos físicos y digitales para organizaciones.",
+    "website": "https://data3000.co/",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Consultoría informática", "Servicios de información"],
+    "categories": [
+      "Gestión documental",
+      "Digitalización",
+      "Custodia documental",
+      "Servicios de información"
+    ],
+    "technologies": [
+      "Digitalización de archivos",
+      "Gestión documental",
+      "Almacenamiento de archivos"
+    ],
     "hasSoftwareDevelopmentHouse": false,
     "workModel": "unknown",
     "size": "small",
@@ -3695,8 +3742,13 @@
     "legalForm": "S.A.S.",
     "nit": "810002311-3",
     "registeredAt": "1998-09-15",
-    "sourceUrl": "https://empresas.larepublica.co/colombia/caldas/manizales/data3-000-s-a-s-810002311",
+    "sourceUrl": "https://data3000.co/",
     "sources": [
+      {
+        "url": "https://data3000.co/",
+        "title": "Sitio oficial de Data 3000",
+        "reviewedAt": "2026-07-20"
+      },
       {
         "url": "https://empresas.larepublica.co/colombia/caldas/manizales/data3-000-s-a-s-810002311",
         "title": "Consulta pública RUES de Data3.000",
@@ -3709,10 +3761,9 @@
       }
     ],
     "firstSeenAt": "2026-07-19",
-    "lastVerifiedAt": "2026-07-19",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true,
-    "notes": "La matrícula y la actividad económica están respaldadas por fuentes públicas. Hace falta una fuente primaria que permita describir la oferta de la empresa y confirmar si presta desarrollo de software."
+    "lastVerifiedAt": "2026-07-20",
+    "verificationStatus": "verified",
+    "needsVerification": false
   },
   {
     "name": "Data Quantity S.A.S.",
@@ -5587,7 +5638,12 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Ciberseguridad", "Servicios gestionados", "Infraestructura TI", "Consultoría tecnológica"],
+    "categories": [
+      "Ciberseguridad",
+      "Servicios gestionados",
+      "Infraestructura TI",
+      "Consultoría tecnológica"
+    ],
     "technologies": ["SOC", "NOC", "Fortinet", "Seguridad perimetral", "Pruebas de seguridad"],
     "hasSoftwareDevelopmentHouse": false,
     "workModel": "unknown",
@@ -6456,7 +6512,16 @@
       "Ciberseguridad",
       "Redes"
     ],
-    "technologies": ["Nube", "Data center", "NOC", "Redes", "Ciberseguridad", "DaaS", "IaaS", "XaaS"],
+    "technologies": [
+      "Nube",
+      "Data center",
+      "NOC",
+      "Redes",
+      "Ciberseguridad",
+      "DaaS",
+      "IaaS",
+      "XaaS"
+    ],
     "hasSoftwareDevelopmentHouse": false,
     "workModel": "unknown",
     "size": "medium",
@@ -7230,7 +7295,12 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Desarrollo de software", "Producto de software", "Software contable", "Soporte tecnológico"],
+    "categories": [
+      "Desarrollo de software",
+      "Producto de software",
+      "Software contable",
+      "Soporte tecnológico"
+    ],
     "technologies": ["ContaPyme", "Software contable"],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
@@ -7990,8 +8060,19 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Ciberseguridad", "Seguridad de la información", "Infraestructura TI", "Soporte tecnológico"],
-    "technologies": ["Gestión de vulnerabilidades", "ISO 27001", "Seguridad en nube", "Firewall", "XDR"],
+    "categories": [
+      "Ciberseguridad",
+      "Seguridad de la información",
+      "Infraestructura TI",
+      "Soporte tecnológico"
+    ],
+    "technologies": [
+      "Gestión de vulnerabilidades",
+      "ISO 27001",
+      "Seguridad en nube",
+      "Firewall",
+      "XDR"
+    ],
     "hasSoftwareDevelopmentHouse": false,
     "workModel": "unknown",
     "size": "small",
@@ -8582,7 +8663,13 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Transformación digital", "Gestión TI", "Consultoría de gestión", "Investigación e innovación", "Desarrollo de software"],
+    "categories": [
+      "Transformación digital",
+      "Gestión TI",
+      "Consultoría de gestión",
+      "Investigación e innovación",
+      "Desarrollo de software"
+    ],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
     "size": "micro",
@@ -11322,7 +11409,12 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Desarrollo de software", "Producto de software", "Transformación digital", "Hosting y datos"],
+    "categories": [
+      "Desarrollo de software",
+      "Producto de software",
+      "Transformación digital",
+      "Hosting y datos"
+    ],
     "technologies": ["Sistemas de información", "Aplicaciones móviles", "Geolocalización"],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
@@ -12200,8 +12292,19 @@
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "categories": ["Desarrollo de software", "Producto de software", "Sistemas de información geográfica", "Transformación digital"],
-    "technologies": ["SIG", "Georreferenciación", "GPS", "Aplicaciones móviles", "Analítica de datos"],
+    "categories": [
+      "Desarrollo de software",
+      "Producto de software",
+      "Sistemas de información geográfica",
+      "Transformación digital"
+    ],
+    "technologies": [
+      "SIG",
+      "Georreferenciación",
+      "GPS",
+      "Aplicaciones móviles",
+      "Analítica de datos"
+    ],
     "hasSoftwareDevelopmentHouse": true,
     "workModel": "unknown",
     "size": "medium",
