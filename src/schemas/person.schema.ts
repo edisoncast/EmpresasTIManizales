@@ -1,6 +1,22 @@
 import { z } from 'zod';
 import { slugSchema, urlSchema, auditableFields, enforceVerificationRules } from './common';
 
+const personSpecialtySchema = z.enum([
+  'Software y producto',
+  'Datos e inteligencia artificial',
+  'Cloud, infraestructura y seguridad',
+  'Desarrollo web y móvil',
+  'Innovación y transformación digital',
+]);
+
+const ecosystemTrajectorySchema = z.enum([
+  'Academia, formación e investigación',
+  'Empresa y emprendimiento',
+  'Comunidad y divulgación',
+  'Mentoría y articulación',
+  'Código abierto y proyectos públicos',
+]);
+
 /**
  * Personas relevantes del ecosistema.
  * Reglas de privacidad aplicadas por el schema:
@@ -18,6 +34,8 @@ export const personSchema = z
     department: z.string().optional(),
     country: z.string().optional(),
     areas: z.array(z.string().min(1)).default([]),
+    specialties: z.array(personSpecialtySchema).default([]),
+    ecosystemTrajectory: z.array(ecosystemTrajectorySchema).default([]),
     roles: z.array(z.string().min(1)).optional(),
     organizations: z.array(z.string().min(1)).optional(),
     contributions: z.array(z.string().min(1)).optional(),

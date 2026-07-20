@@ -40,12 +40,40 @@ const includedSlugs = new Set([
   'datalab-tech-systems-sociedad-por-acciones-simplificada',
   'iaconexiones',
   'chatforse',
+  'zeissen-software',
+  'adminsoft',
+  'ardor-learning-colombia',
+  'atrion-systems',
+  'box-360',
+  'envirox-ecotech',
+  'estratec-360',
+  'estructura-tech-company',
+  'mia-tech-cloud',
+  'bibisoft',
+  'bit-technologies-colombia',
+  'geek-bunker-solutions',
+  'pixel-house-technologies',
+  'softory',
+  'appsernet',
+  'barco-vision-producciones',
+  'it-forensic-company',
+  'scribette',
+  'nativo-digital-lab',
+  'onepay',
+  'openmarkt',
 ]);
 
 /** Casos con evidencia explícita para no aparecer en el directorio público. */
 export const excludedCompanySlugs = new Set([
   'advancit', // Canales corporativos sitúan la operación en Bogotá/Bucaramanga, no Caldas.
   'tecnnia', // La actividad mercantil descrita es comercialización/extracción de metales.
+  'gabotech', // Comercio electrónico de productos; no se confirmó oferta tecnológica propia.
+  'aramo-legal-consulting', // Oferta jurídica, no tecnológica, como actividad sustantiva.
+  'magos-de-la-ciencia', // Comunicación y apropiación de ciencia, sin capacidad tecnológica comprobada.
+  'brandtiva-2', // Agencia de branding y comunicación sin desarrollo tecnológico confirmado.
+  'peludines-pet-shop', // Comercio de productos para mascotas.
+  'mago-agencia-digital', // Agencia de contenido y redes, sin oferta tecnológica sustantiva confirmada.
+  'click-and-blue-agencia-de-ecommerce-y-marketing-digital', // Publicidad y marketing sin producto tecnológico confirmado.
 ]);
 
 const isReviewPeriod = (company: CompanyReviewable) => {
@@ -60,6 +88,7 @@ export function applyCompanyReview<T extends CompanyReviewable>(company: T): T {
     !isReviewPeriod(company) ||
     company.legalForm === 'Persona natural' ||
     isLiquidation(company) ||
+    company.verificationStatus === 'inactive_or_unverified' ||
     includedSlugs.has(company.slug) ||
     excludedCompanySlugs.has(company.slug)
   ) {

@@ -78,12 +78,29 @@ for (const l of person.personalBrandLinks ?? []) links.push({ label: displayUrl(
       }
 
       {
+        person.specialties.length > 0 && (
+          <section class="mt-6">
+            <h2 class="kicker">Especialidades</h2>
+            <div class="mt-2 flex flex-wrap gap-1.5">
+              {person.specialties.map((specialty) => (
+                <Tag
+                  label={specialty}
+                  tone="soft"
+                  href={`/personas?specialty=${encodeURIComponent(specialty)}`}
+                />
+              ))}
+            </div>
+          </section>
+        )
+      }
+
+      {
         person.areas.length > 0 && (
           <section class="mt-6">
-            <h2 class="kicker">Áreas de acción</h2>
+            <h2 class="kicker">Temas relacionados</h2>
             <div class="mt-2 flex flex-wrap gap-1.5">
-              {person.areas.map((a) => (
-                <Tag label={a} tone="soft" href={`/personas?area=${encodeURIComponent(a)}`} />
+              {person.areas.map((area) => (
+                <Tag label={area} tone="soft" />
               ))}
             </div>
           </section>
@@ -116,9 +133,17 @@ for (const l of person.personalBrandLinks ?? []) links.push({ label: displayUrl(
             )
           }
           {
+            person.ecosystemTrajectory.length > 0 && (
+              <div>
+                <dt class="text-xs text-ink-500">Trayectoria y aporte</dt>
+                <dd class="text-sm text-ink-900">{person.ecosystemTrajectory.join(', ')}</dd>
+              </div>
+            )
+          }
+          {
             person.roles && person.roles.length > 0 && (
               <div>
-                <dt class="text-xs text-ink-500">Roles</dt>
+                <dt class="text-xs text-ink-500">Roles profesionales</dt>
                 <dd class="text-sm text-ink-900">{person.roles.join(', ')}</dd>
               </div>
             )

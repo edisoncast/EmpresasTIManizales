@@ -1,1 +1,33 @@
-[]
+[
+  {
+    "name": "Feria Tech MZL 2026",
+    "slug": "feria-tech-mzl-2026",
+    "description": "Feria de ciencia, tecnología e innovación de Manizales con agenda académica y experiencial, demostraciones de robótica, zona de gaming y rueda de negocios para el sector de software y tecnologías de la información.",
+    "date": "2026-07-31",
+    "endDate": "2026-08-02",
+    "city": "Manizales",
+    "venue": "Expoferias",
+    "modality": "onsite",
+    "topics": [
+      "Ciencia y tecnología",
+      "Inteligencia artificial",
+      "Desarrollo de software",
+      "Transformación digital",
+      "Robótica",
+      "Gaming",
+      "Rueda de negocios"
+    ],
+    "url": "https://centrodeinformacion.manizales.gov.co/esto-es-lo-que-encontraras-en-la-feria-tech-mzl-2026/",
+    "sources": [
+      {
+        "url": "https://centrodeinformacion.manizales.gov.co/esto-es-lo-que-encontraras-en-la-feria-tech-mzl-2026/",
+        "title": "Alcaldía de Manizales: Feria Tech MZL 2026",
+        "reviewedAt": "2026-07-20"
+      }
+    ],
+    "firstSeenAt": "2026-07-02",
+    "lastVerifiedAt": "2026-07-20",
+    "verificationStatus": "verified",
+    "needsVerification": false
+  }
+]

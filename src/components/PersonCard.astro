@@ -52,9 +52,9 @@ const firstContribution = person.contributions?.[0];
   }
 
   {
-    person.areas.length > 0 && (
+    person.specialties.length > 0 && (
       <div class="mt-4 flex flex-wrap gap-1.5">
-        {person.areas.slice(0, 4).map((a) => (
+        {person.specialties.slice(0, 3).map((a) => (
           <Tag label={a} tone="soft" />
         ))}
       </div>

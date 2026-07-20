@@ -8,6 +8,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Cloud", "AWS", "Comunidad", "Divulgación tecnológica"],
+    "specialties": ["Cloud, infraestructura y seguridad"],
+    "ecosystemTrajectory": ["Comunidad y divulgación"],
     "roles": ["Organizador de comunidad"],
     "organizations": ["Manizales Tech Talks"],
     "contributions": ["Organización y liderazgo de la comunidad Manizales Tech Talks"],
@@ -28,6 +30,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Ciberseguridad", "Comunidad"],
+    "specialties": ["Cloud, infraestructura y seguridad"],
+    "ecosystemTrajectory": ["Comunidad y divulgación"],
     "roles": ["Organizador de comunidad", "Divulgador"],
     "organizations": [
       "Seguridad Informática Hacking Manizales",
@@ -56,6 +60,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Desarrollo web", "JavaScript", "Comunidad"],
+    "specialties": ["Desarrollo web y móvil"],
+    "ecosystemTrajectory": ["Comunidad y divulgación"],
     "roles": ["Organizador de comunidad"],
     "organizations": ["ManizalesJS"],
     "contributions": ["Organización y liderazgo de la comunidad ManizalesJS"],
@@ -76,6 +82,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Ciberseguridad", "Inteligencia artificial", "Investigación", "Docencia"],
+    "specialties": ["Datos e inteligencia artificial", "Cloud, infraestructura y seguridad"],
+    "ecosystemTrajectory": ["Academia, formación e investigación"],
     "roles": ["Profesor titular", "Investigador"],
     "organizations": ["Universidad de Caldas"],
     "contributions": [
@@ -103,6 +111,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Inteligencia artificial", "Sistemas cognitivos", "Investigación", "Docencia"],
+    "specialties": ["Datos e inteligencia artificial"],
+    "ecosystemTrajectory": ["Academia, formación e investigación"],
     "roles": ["Investigador", "Docente", "Líder de grupo de investigación"],
     "organizations": ["Universidad de Caldas"],
     "contributions": [
@@ -127,6 +137,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Juegos pervasivos", "Web semántica", "Arquitectura de software", "Investigación"],
+    "specialties": ["Software y producto", "Desarrollo web y móvil"],
+    "ecosystemTrajectory": ["Academia, formación e investigación"],
     "roles": ["Profesor", "Investigador"],
     "organizations": ["Universidad de Caldas"],
     "contributions": [
@@ -154,6 +166,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Software", "SaaS", "Inteligencia artificial"],
+    "specialties": ["Software y producto", "Datos e inteligencia artificial"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Fundador", "CEO"],
     "organizations": ["Oversai"],
     "contributions": [
@@ -190,6 +204,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Producto", "Datos"],
+    "specialties": ["Software y producto", "Datos e inteligencia artificial"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Cofundador", "CEO"],
     "organizations": ["Porter Metrics"],
     "contributions": [
@@ -212,6 +228,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Desarrollo de negocio"],
+    "specialties": ["Innovación y transformación digital"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Cofundador"],
     "organizations": ["Porter Metrics"],
     "contributions": [
@@ -234,6 +252,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Desarrollo de software", "Datos"],
+    "specialties": ["Software y producto", "Datos e inteligencia artificial"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Cofundador", "CTO"],
     "organizations": ["Porter Metrics"],
     "contributions": [
@@ -256,6 +276,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Talento tech", "Automatización", "Inteligencia artificial"],
+    "specialties": ["Datos e inteligencia artificial", "Innovación y transformación digital"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Fundador", "CEO"],
     "organizations": ["Meeteam"],
     "contributions": [
@@ -296,6 +318,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Cloud", "AWS", "Comunidad"],
+    "specialties": ["Cloud, infraestructura y seguridad"],
+    "ecosystemTrajectory": ["Comunidad y divulgación"],
     "roles": ["Líder de comunidad", "Cloud Architect"],
     "organizations": ["AWS User Group Manizales"],
     "contributions": [
@@ -318,6 +342,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Cloud", "AWS", "Comunidad"],
+    "specialties": ["Cloud, infraestructura y seguridad"],
+    "ecosystemTrajectory": ["Comunidad y divulgación"],
     "roles": ["Organizador de comunidad"],
     "organizations": ["AWS User Group Manizales"],
     "contributions": [
@@ -340,6 +366,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Machine learning", "Procesamiento de señales", "Investigación", "Docencia"],
+    "specialties": ["Datos e inteligencia artificial"],
+    "ecosystemTrajectory": ["Academia, formación e investigación"],
     "roles": ["Profesor", "Investigador"],
     "organizations": ["Universidad Nacional de Colombia - Sede Manizales"],
     "contributions": [
@@ -366,6 +394,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Movilidad y tecnología", "Transformación digital", "Emprendimiento", "Mentoría"],
+    "specialties": ["Innovación y transformación digital"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento", "Mentoría y articulación"],
     "roles": ["CEO", "Cofundadora", "Mentora"],
     "organizations": ["Taxia Life"],
     "contributions": [
@@ -407,6 +437,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Innovación", "Estrategia", "Formación"],
+    "specialties": ["Innovación y transformación digital"],
+    "ecosystemTrajectory": ["Academia, formación e investigación", "Mentoría y articulación"],
     "roles": ["Coordinador de emprendimiento", "Docente", "Consultor"],
     "organizations": ["Universidad Autónoma de Manizales"],
     "contributions": [
@@ -441,6 +473,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Ecosistema emprendedor", "Innovación", "Articulación", "Desarrollo empresarial"],
+    "specialties": ["Innovación y transformación digital"],
+    "ecosystemTrajectory": ["Mentoría y articulación"],
     "roles": ["Directora", "Articuladora de ecosistema"],
     "organizations": ["Manizales Más"],
     "contributions": [
@@ -481,6 +515,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Procesamiento de señales", "Machine learning", "Investigación", "Docencia"],
+    "specialties": ["Datos e inteligencia artificial"],
+    "ecosystemTrajectory": ["Academia, formación e investigación"],
     "roles": ["Profesor titular", "Investigador", "Líder de grupo de investigación"],
     "organizations": ["Universidad Nacional de Colombia - Sede Manizales"],
     "contributions": [
@@ -508,6 +544,11 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Bioinformática", "Machine learning", "Datos", "Open source"],
+    "specialties": ["Datos e inteligencia artificial"],
+    "ecosystemTrajectory": [
+      "Academia, formación e investigación",
+      "Código abierto y proyectos públicos"
+    ],
     "roles": ["Investigador", "Docente"],
     "organizations": ["Universidad Autónoma de Manizales"],
     "contributions": [
@@ -536,6 +577,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Desarrollo móvil", "Software"],
+    "specialties": ["Software y producto", "Desarrollo web y móvil"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Cofundador", "Desarrollador"],
     "organizations": ["CityTaxi", "Mobility Solutions"],
     "contributions": [
@@ -558,6 +601,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Desarrollo móvil", "Software"],
+    "specialties": ["Software y producto", "Desarrollo web y móvil"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Cofundador"],
     "organizations": ["CityTaxi"],
     "contributions": [
@@ -581,6 +626,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Software", "Desarrollo de software"],
+    "specialties": ["Software y producto"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Fundador", "Líder de desarrollo"],
     "organizations": ["Apolo Ingeniería (Apolosoft)"],
     "contributions": [
@@ -604,6 +651,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Software empresarial", "Tecnología"],
+    "specialties": ["Software y producto"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Creador de empresa", "Liderazgo empresarial"],
     "organizations": ["D.S.I."],
     "contributions": [
@@ -639,6 +688,8 @@
     "department": "Caldas",
     "country": "Colombia",
     "areas": ["Emprendimiento", "Infraestructura tecnológica", "Ciberseguridad", "Software"],
+    "specialties": ["Software y producto", "Cloud, infraestructura y seguridad"],
+    "ecosystemTrajectory": ["Empresa y emprendimiento"],
     "roles": ["Cofundador", "Gerente"],
     "organizations": ["Data & Service"],
     "contributions": [
