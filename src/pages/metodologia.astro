@@ -36,7 +36,7 @@ for (const e of allEntities) dist[resolveVerification(e)]++;
 const inclusion = [
   {
     t: 'Empresas',
-    d: 'Registros con actividad económica de desarrollo de software (principalmente CIIU J6201) en el registro mercantil de la Cámara de Comercio de Manizales por Caldas. No se publican correos, direcciones, teléfonos ni el número de identificación de personas naturales.',
+    d: 'Registros mercantiles y fuentes públicas de empresas con actividades relacionadas con software, servicios TI, infraestructura, conectividad, datos o ciberseguridad. Una actividad CIIU no basta por sí sola: se registra el estado de verificación de cada ficha. No se publican correos, direcciones, teléfonos ni el número de identificación de personas naturales.',
   },
   {
     t: 'Universidades y programas',
@@ -90,7 +90,8 @@ const sourceHierarchy = [
         <p class="mt-3 text-ink-700">
           Estas cifras se calculan en vivo desde los datos publicados, con corte del <strong
             >{cutoff}</strong
-          >. Cada ficha muestra además su propia fecha de revisión, que puede ser posterior al corte.
+          >. Cada ficha muestra además su propia fecha de revisión, que puede ser posterior al
+          corte.
         </p>
         <dl class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {
@@ -123,8 +124,8 @@ const sourceHierarchy = [
           }
         </div>
         <p class="mt-3 text-sm text-ink-500">
-          El “último corte auditado” es la fecha del inventario; la “fecha de revisión” es la de cada
-          ficha. No toda la cobertura tiene la misma profundidad de verificación.
+          El “último corte auditado” es la fecha del inventario; la “fecha de revisión” es la de
+          cada ficha. No toda la cobertura tiene la misma profundidad de verificación.
         </p>
       </section>
 
@@ -187,9 +188,9 @@ const sourceHierarchy = [
         </h2>
         <p class="mt-3 text-ink-700">
           El material de 2020 se conserva como archivo histórico y no se elimina por falta de
-          certeza; se contextualiza. Un registro <em>Posiblemente inactivo</em> mantiene una señal
-          explícita (por ejemplo, “En liquidación”) y requiere revisión humana antes de archivarse.
-          Distinguimos un dato heredado de 2020, una actualización de 2026 y un registro archivado.
+          certeza; se contextualiza. Un registro <em>Posiblemente inactivo</em> mantiene una señal explícita
+          (por ejemplo, “En liquidación”) y requiere revisión humana antes de archivarse. Distinguimos
+          un dato heredado de 2020, una actualización de 2026 y un registro archivado.
         </p>
       </section>
 
@@ -242,7 +243,9 @@ const sourceHierarchy = [
             <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link"
               >{site.sources.ccmpc.name}</a
             >
-            <span class="block text-xs text-ink-500">Empresas · registro mercantil (CIIU J6201)</span>
+            <span class="block text-xs text-ink-500"
+              >Empresas · registro mercantil y fuentes públicas</span
+            >
           </li>
           <li>
             <a href={site.sources.snies.url} target="_blank" rel="noopener noreferrer" class="link"
@@ -252,8 +255,8 @@ const sourceHierarchy = [
           </li>
         </ul>
         <p class="mt-3 text-xs text-ink-500">
-          La información empresarial se usa con fines no comerciales, citando a la Cámara de Comercio
-          de Manizales por Caldas como fuente, conforme a sus condiciones de uso.
+          La información empresarial se usa con fines no comerciales, citando a la Cámara de
+          Comercio de Manizales por Caldas como fuente, conforme a sus condiciones de uso.
         </p>
       </div>
     </aside>
