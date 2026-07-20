@@ -49,7 +49,6 @@ Un CIIU indica una actividad mercantil declarada, pero no prueba por sí solo qu
 | Kavantic S.A.S. | Incorporar | Sitio oficial y evidencia de Cámara. |
 | Reactiva Soporte Y Desarrollo S.A.S. | Incorporar | Sitio oficial y RUES. |
 | Sigma Ingeniería S.A.S. | Incorporar | Sitio oficial, RUES y Manizales Más. |
-| Idatos Limitada | Incorporar con verificación parcial | Matrícula activa y CIIU; no se encontró portafolio oficial. |
 | Data3.000 S.A.S. | Incorporar con verificación parcial | RUES activo y actividad de consultoría; no se encontró portafolio oficial. |
 | Business Solutions On The Cloud S.A.S. | Incorporar | Aplicaciones publicadas por la empresa y fuentes de presencia local. |
 | Skynet Domotics S.A.S. | Incorporar con verificación parcial | Perfil corporativo y portafolio histórico local; se debe confirmar la continuidad de la operación local. |
@@ -58,6 +57,7 @@ Un CIIU indica una actividad mercantil declarada, pero no prueba por sí solo qu
 
 - **Comcel CAV Manizales, Conexcel S.A. Manizales Ppal, Alianza Cellmovil Manizales y Moviltienda Manizales** son puntos, sucursales o actividades de telecomunicaciones sin evidencia de una empresa tecnológica local independiente.
 - **Datecsa S.A.** cuenta con evidencia histórica de equipos y suministros de impresión, no de una oferta de software o servicios TI dentro del alcance editorial.
+- **Idatos Limitada** se retiró: su presencia pública apunta a servicios de crédito, no a una oferta tecnológica dentro del alcance editorial.
 - **IT Forensic S.A.S. (NIT 900213800-5)** tiene evidencia histórica de ciberseguridad, pero existen entidades posteriores de nombre relacionado y NIT distintos. Se debe confirmar la continuidad legal antes de crear una ficha histórica adicional.
 - **Comunicar Limitada, @S S.A.S., Image Quality Outsourcing S.A.S., Global Corp Services S.A., Aporte Médico S.A.S. y Sports Lab S.A.S.** requieren una fuente oficial, entrevista o documento público que permita describir con precisión su oferta tecnológica.
 
