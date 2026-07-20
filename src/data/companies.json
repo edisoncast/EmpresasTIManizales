@@ -7620,40 +7620,6 @@
     "registeredAt": "2022-11-09"
   },
   {
-    "name": "Idatos Limitada",
-    "slug": "idatos",
-    "description": "Empresa de Manizales registrada para procesamiento de datos, alojamiento y otros servicios informáticos. No fue posible confirmar públicamente su oferta comercial actual.",
-    "city": "Manizales",
-    "department": "Caldas",
-    "country": "Colombia",
-    "categories": ["Hosting y datos", "Servicios de información"],
-    "hasSoftwareDevelopmentHouse": false,
-    "workModel": "unknown",
-    "size": "micro",
-    "ciiu": "J6311",
-    "legalForm": "Sociedad limitada",
-    "nit": "800122234-2",
-    "registeredAt": "1991-03-21",
-    "sourceUrl": "https://www.lasempresas.com.co/manizales/idatos-ltda/",
-    "sources": [
-      {
-        "url": "https://www.lasempresas.com.co/manizales/idatos-ltda/",
-        "title": "Ficha pública de matrícula y actividad económica de Idatos",
-        "reviewedAt": "2026-07-19"
-      },
-      {
-        "url": "https://www.informacolombia.com/directorio-empresas/actividad/630_ACTIVIDADES-DE-SERVICIOS-DE-INFORMACION/localidad_manizales",
-        "title": "Directorio sectorial público con presencia de Idatos en Manizales",
-        "reviewedAt": "2026-07-19"
-      }
-    ],
-    "firstSeenAt": "2026-07-19",
-    "lastVerifiedAt": "2026-07-19",
-    "verificationStatus": "partially_verified",
-    "needsVerification": true,
-    "notes": "Las fuentes públicas confirman matrícula activa y actividades CIIU, pero no aportan un sitio oficial ni evidencia suficiente para detallar su producto o servicio histórico."
-  },
-  {
     "name": "Iotics S.A.S.",
     "slug": "iotics",
     "description": "S.A.S. con actividad de desarrollo de software (CIIU J6201), registrada en la Cámara de Comercio de Manizales por Caldas. Matrícula desde 2018.",
