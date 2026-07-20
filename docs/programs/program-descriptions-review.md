@@ -68,6 +68,16 @@ No se encontraron descripciones intercambiables entre programas distintos.
 | `npm run format:check` | OK |
 | `npm run test:e2e` (Playwright) | Se ejecuta en CI (job `validate`) sobre el PR |
 
+## Promoción de verificación (2026-07-20)
+
+Los programas estaban en `partially_verified` porque su `sourceUrl` registrado era el portal general de consulta HECAA/SNIES, no un permalink por programa. Como parte de esta investigación se localizó la **página oficial dedicada** de cada programa; con esa evidencia se actualizó el estado:
+
+- **Promovidos a `verified`: 37 programas.** Se actualizó su `sourceUrl` a la ficha oficial dedicada (perfil, plan y competencias) y se verificó que cada URL responde **200 con navegador real** (35 URLs únicas comprobadas; incluye `fadmon.edu.co`, confirmado como dominio oficial de la Facultad de Administración de la UNAL).
+- **Se conservan `partially_verified`: 17 programas** cuya fuente encontrada no es una ficha dedicada sino una nota/noticia del portal, un folleto PDF o una categoría del aula virtual (varios técnicos de la U. de Caldas y dos maestrías de la U. de Manizales en PDF). Su `sourceUrl` se conserva sin cambio.
+- **Los 4 pendientes** permanecen `partially_verified` (sin descripción).
+
+Distribución de verificación de los 70 programas tras el cambio: **`verified` 44 · `partially_verified` 23 · `inactive_or_unverified` 3**. No se modificó ningún programa fuera de las cinco universidades.
+
 ## Confirmaciones
 
 - Se procesaron las cinco universidades.
