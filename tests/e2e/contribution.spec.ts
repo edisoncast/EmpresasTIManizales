@@ -1,6 +1,8 @@
 import { test, expect } from '@playwright/test';
 
-test('contribuir ofrece rutas no tecnicas, fuentes y revision del legado 2020', async ({ page }) => {
+test('contribuir ofrece rutas no tecnicas, fuentes y revision del legado 2020', async ({
+  page,
+}) => {
   await page.goto('/contribuir');
   await expect(page.getByRole('heading', { level: 1 })).toHaveText(/cómo contribuir/i);
 
