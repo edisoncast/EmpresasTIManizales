@@ -14,6 +14,7 @@ import {
   verificationMeta,
   type VerifiableLike,
 } from '../src/lib/verification.ts';
+import { applyCompanyReview } from '../src/lib/company-review.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataDir = join(__dirname, '..', 'src', 'data');
@@ -21,7 +22,7 @@ const dataDir = join(__dirname, '..', 'src', 'data');
 const load = (f: string): any[] => JSON.parse(readFileSync(join(dataDir, f), 'utf-8'));
 
 const datasets: Record<string, any[]> = {
-  companies: load('companies.json'),
+  companies: load('companies.json').map(applyCompanyReview),
   universities: load('universities.json'),
   programs: load('programs.json'),
   people: load('people.json'),

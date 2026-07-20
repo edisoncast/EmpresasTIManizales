@@ -16,6 +16,12 @@ export const companySchema = z
     description: z.string().optional(),
     website: urlSchema.optional(),
     linkedin: urlSchema.optional(),
+    instagram: urlSchema.optional(),
+    facebook: urlSchema.optional(),
+    // Perfil de X/Twitter, cuando la organización lo enlace o se confirme públicamente.
+    x: urlSchema.optional(),
+    github: urlSchema.optional(),
+    youtube: urlSchema.optional(),
     // NIT (sin dígito de verificación o con guion), solo para personas jurídicas.
     nit: z.string().optional(),
     // Código CIIU de actividad económica principal, cuando esté disponible.
