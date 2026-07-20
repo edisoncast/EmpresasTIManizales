@@ -12,6 +12,8 @@ export const programSchema = z
   .object({
     name: z.string().trim().min(1),
     slug: slugSchema,
+    // Descripción editorial breve (qué estudia, capacidades, áreas y enfoque).
+    description: z.string().trim().min(1).optional(),
     institutionName: z.string().min(1),
     // slug de la universidad (relación programa -> universidad). Opcional para
     // programas de instituciones aún no registradas como universidad.

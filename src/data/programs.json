@@ -14,7 +14,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/ingenieria-de-sistemas-y-computacion/",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Este pregrado presencial forma ingenieros capaces de planear, diseñar, desarrollar, implementar y administrar soluciones computacionales para las organizaciones. Su plan de estudios combina fundamentos de matemáticas, ciencias de la ingeniería, diseño de sistemas e infraestructura de tecnologías de información y comunicaciones, con énfasis en la actualización frente a tecnologías emergentes. Los estudiantes desarrollan capacidades para analizar problemas organizacionales, construir sistemas de software y trabajar en equipos interdisciplinarios con criterio ético. Los conocimientos se aplican en desarrollo de software, ciencia de datos, aprendizaje automático, ciberseguridad e innovación digital, tanto en empresas como en proyectos de investigación."
   },
   {
     "name": "Administración de Sistemas Informáticos",
@@ -31,7 +32,8 @@
     "website": "https://manizales.unal.edu.co/index.php/administracion-de-sistemas-informaticos/",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Este pregrado forma profesionales que integran la administración de organizaciones con las tecnologías de la información y la comunicación. Los estudiantes aprenden a planear, integrar y controlar procesos productivos y administrativos apoyados en sistemas informáticos, combinando fundamentos de matemáticas, estadística, investigación de operaciones y áreas económicas, contables y financieras. El programa desarrolla capacidades para seleccionar, implementar y gestionar recursos informáticos según las necesidades de una empresa, así como una orientación al emprendimiento y la creación de nuevas iniciativas. Sus egresados pueden desempeñarse en áreas de sistemas y administración de distintos sectores de la economía, la industria y las organizaciones."
   },
   {
     "name": "Tecnología en Sistemas Informáticos",
@@ -48,7 +50,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/tecnologia-en-sistemas-informaticos/",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Programa tecnológico a distancia orientado al análisis, diseño e implementación de sistemas informáticos para mejorar procesos organizacionales. A lo largo de 92 créditos, los estudiantes aprenden a administrar y mantener equipos de cómputo y redes de datos, desarrollar software web y móvil, y diseñar bases de datos con lenguajes como SQL. La formación combina soporte técnico, infraestructura y buenas prácticas de trabajo colaborativo. Quienes egresan pueden vincularse a áreas de desarrollo, administración de sistemas, soporte y gestión de información en empresas de distintos sectores, o continuar su formación en ciclos superiores relacionados con la computación y las tecnologías de información."
   },
   {
     "name": "Tecnología en Análisis y Desarrollo de Sistemas de Información",
@@ -166,7 +169,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/ingenieria-en-informatica/",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Pregrado presencial de ocho semestres y 149 créditos centrado en el uso y la gestión de las tecnologías y los sistemas de información, con componentes de inteligencia artificial integrados de forma transversal. Los estudiantes desarrollan capacidades para diseñar sistemas de información, evaluar la calidad de desarrollos tecnológicos, administrar infraestructura de datos y liderar proyectos multidisciplinarios. La formación articula fundamentos técnicos con analítica de datos y criterios éticos. Estos conocimientos se aplican en desarrollo de software, ciencia de datos, aprendizaje automático, ciberseguridad basada en IA, consultoría en gobernanza tecnológica y gestión de la innovación digital dentro de organizaciones públicas y privadas."
   },
   {
     "name": "Ingeniería de Sistemas y Telecomunicaciones",
@@ -183,7 +187,8 @@
     "website": "https://umanizales.edu.co/?u_course=ingenieria-de-sistemas-y-telecomunicaciones",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Este pregrado integra la formación en redes, telecomunicaciones, desarrollo de software y gestión de datos bajo estándares internacionales. Los estudiantes aprenden a diseñar, implementar y administrar infraestructuras de comunicación que garanticen la disponibilidad y transmisión continua de la información, así como a construir soluciones de software y aplicar criterios de arquitectura y seguridad tecnológica. La formación combina fundamentos técnicos con responsabilidad ética y social, y habilita para liderar proyectos de innovación. Los egresados pueden desempeñarse en administración de redes y telecomunicaciones, desarrollo de software, análisis de datos, consultoría tecnológica e inteligencia artificial. El plan comprende diez períodos académicos con jornadas diurna y nocturna."
   },
   {
     "name": "Ingeniería en Analítica de Datos",
@@ -202,7 +207,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido presencialmente en Manizales."
+    "notes": "Programa ofrecido presencialmente en Manizales.",
+    "description": "Este pregrado forma ingenieros capaces de transformar datos en decisiones estratégicas mediante el modelado predictivo, la visualización y las soluciones basadas en evidencia. El plan aborda la captura, gestión y análisis de datos, junto con el desarrollo de modelos de aprendizaje automático y su integración en procesos empresariales. Los estudiantes desarrollan competencias técnicas y comprensión de la estrategia organizacional para diseñar tableros de control y metodologías analíticas. Los conocimientos se aplican en sectores como banca, salud, gobierno, retail y startups, en roles de ingeniería o análisis de datos, inteligencia de negocios y consultoría analítica. Comprende nueve períodos académicos en modalidad presencial."
   },
   {
     "name": "Ingeniería de Sistemas",
@@ -219,7 +225,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://www.autonoma.edu.co/oferta-academica/pregrado/ingenieria-de-sistemas",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Programa de pregrado que forma ingenieros capaces de proponer y desarrollar soluciones informáticas con una visión sistémica de los problemas. La formación integra fundamentos científicos y tecnológicos de los sistemas computacionales, el desarrollo de software bajo estándares de calidad y la formalización de procesos. Los estudiantes participan en grupos de investigación desde los primeros semestres y pueden optar por doble titulación. El plan desarrolla competencias para identificar oportunidades de transformación tecnológica, emprender iniciativas y construir aplicaciones. Sus egresados pueden desempeñarse en desarrollo de software, gestión de proyectos informáticos, consultoría y creación de empresas de base tecnológica. Se cursa de forma presencial en Manizales."
   },
   {
     "name": "Ingeniería de Sistemas",
@@ -270,7 +277,8 @@
     "website": "https://www.autonoma.edu.co/oferta-academica/pregrados/tecnologia-en-analisis-y-programacion-de-sistemas-de-informacion",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Programa tecnológico orientado al análisis, desarrollo, adaptación y programación de sistemas de información. Los estudiantes aprenden a construir y probar aplicaciones web y móviles, aplicar metodologías de desarrollo y trabajar con lenguajes de programación actuales bajo criterios de calidad del software. La formación combina fundamentos de programación, ingeniería de software y administración de sistemas mediante proyectos vinculados a empresas de la región. Prepara para implementar soluciones informáticas, adaptar sistemas y apoyar la administración tecnológica en organizaciones diversas. El enfoque práctico atiende tanto a recién egresados de bachillerato como a personas que trabajan o emprenden. Se cursa de manera presencial en siete semestres."
   },
   {
     "name": "Tecnología en Construcción del Software",
@@ -374,7 +382,8 @@
     "website": "https://umanizales.edu.co/?u_course=especializacion-en-sistema-de-informacion-geografica",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Esta especialización aborda los fundamentos científicos, tecnológicos y aplicados de los sistemas de información geográfica orientados a la toma de decisiones territoriales. A través de teoría, laboratorios y práctica con herramientas geoinformáticas, los participantes trabajan el diseño de SIG, el análisis espacial, las infraestructuras de datos, los sensores remotos y el procesamiento digital de imágenes. El programa desarrolla la capacidad de gestionar información geoespacial y coordinar proyectos en distintos sectores. Sus conocimientos se aplican en urbanismo, medio ambiente, salud, agricultura, minería y desarrollo territorial, en funciones como analista SIG, coordinador de proyectos geoespaciales o consultor en ordenamiento territorial. Se cursa en cuatro períodos presenciales."
   },
   {
     "name": "Especialización en Ingeniería de Software con Énfasis en Pruebas",
@@ -393,7 +402,8 @@
     "needsVerification": false,
     "website": "https://www.autonoma.edu.co/oferta-academica/especializaciones/especializacion-en-ingenieria-de-software-con-enfasis-en-pruebas",
     "verificationStatus": "verified",
-    "notes": "Registro SNIES correspondiente a la modalidad presencial."
+    "notes": "Registro SNIES correspondiente a la modalidad presencial.",
+    "description": "Especialización dirigida a ingenieros de sistemas, computación e informática, y a profesionales con experiencia en desarrollo interesados en el control de calidad del software. El programa profundiza en cuatro ejes: calidad del software, procesos de software, gestión de requisitos y, como énfasis distintivo, las pruebas de software. Los participantes estudian métodos y herramientas para diseñar y ejecutar pruebas estáticas y dinámicas, abordando problemáticas de aseguramiento de calidad con pensamiento científico. Habilita para roles como analista de sistemas, ingeniero de requerimientos, ingeniero o líder de pruebas y consultor de proyectos de software. Esta versión corresponde al registro presencial y tiene una duración de dos semestres."
   },
   {
     "name": "Especialización en Ingeniería de Software con Énfasis en Pruebas",
@@ -413,7 +423,8 @@
     "needsVerification": false,
     "website": "https://www.autonoma.edu.co/oferta-academica/especializaciones/especializacion-en-ingenieria-de-software-con-enfasis-en-pruebas",
     "verificationStatus": "verified",
-    "notes": "Registro SNIES correspondiente a la modalidad virtual."
+    "notes": "Registro SNIES correspondiente a la modalidad virtual.",
+    "description": "Versión virtual de la especialización que forma en aseguramiento y control de calidad del software con énfasis en pruebas. Se orienta a ingenieros de sistemas, computación e informática y a profesionales con experiencia en desarrollo que buscan especializarse en calidad. El plan aborda calidad del software, procesos, ingeniería de requisitos y el diseño y ejecución de pruebas estáticas y dinámicas mediante métodos y herramientas actuales. Desarrolla capacidad para enfrentar problemáticas de control de calidad con autonomía y rigor. Prepara para desempeñarse como ingeniero de requerimientos, ingeniero de pruebas, líder de pruebas o consultor. Se cursa a distancia con encuentros sincrónicos quincenales los sábados, en dos semestres."
   },
   {
     "name": "Especialización en Inteligencia Artificial",
@@ -433,7 +444,8 @@
     "needsVerification": false,
     "website": "https://www.autonoma.edu.co/oferta-academica/especializaciones/especializacion-en-inteligencia-artificial",
     "verificationStatus": "verified",
-    "notes": "Registro SNIES correspondiente a la modalidad presencial."
+    "notes": "Registro SNIES correspondiente a la modalidad presencial.",
+    "description": "Especialización enfocada en el diseño, análisis e implementación de soluciones tecnológicas basadas en inteligencia artificial y ciencia de datos. El programa desarrolla capacidades para estructurar modelos, resolver problemas propios de distintos sectores con herramientas de cómputo en la nube y generar valor a partir de los datos, incorporando consideraciones de ética, innovación, visualización y ciberseguridad. Está dirigido a profesionales de campos diversos como ingeniería, estadística, administración, matemáticas o ciencias naturales, además de emprendedores y empresas que buscan adoptar estas tecnologías. Habilita para roles como científico de datos, analista de datos, ingeniero de inteligencia artificial o de aprendizaje automático. Este registro corresponde a la modalidad presencial, en dos semestres."
   },
   {
     "name": "Especialización en Inteligencia Artificial",
@@ -453,7 +465,8 @@
     "needsVerification": false,
     "website": "https://www.autonoma.edu.co/oferta-academica/especializaciones/especializacion-en-inteligencia-artificial",
     "verificationStatus": "verified",
-    "notes": "Registro SNIES correspondiente a la modalidad virtual."
+    "notes": "Registro SNIES correspondiente a la modalidad virtual.",
+    "description": "Modalidad virtual de la especialización orientada a diseñar, analizar e implementar soluciones basadas en inteligencia artificial y ciencia de datos. Los participantes aprenden a estructurar tecnologías de IA, aplicarlas a problemas específicos de cada sector mediante herramientas de cómputo en la nube y sustentar decisiones en datos, con atención a la ética, la innovación, la visualización y la ciberseguridad. El programa acoge profesionales de áreas variadas —ingeniería, estadística, administración, ciencias exactas o naturales— y a emprendedores interesados en incorporar estas tecnologías. Prepara para ejercer como científico o analista de datos, ingeniero de inteligencia artificial o de aprendizaje automático, y como asesor de proyectos. Se cursa a distancia con sesiones sincrónicas los sábados, durante dos semestres."
   },
   {
     "name": "Especialización en Gestión de Redes de Datos",
@@ -470,7 +483,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://fadmon.unal.edu.co/inicio/formacion/posgrados-en-informatica-y-computacion/especializacion-en-gestion-de-redes-de-datos.html",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Programa de posgrado dirigido a profesionales de sistemas, computación, telemática, electrónica y áreas afines que buscan profundizar en la administración de redes de datos. La especialización aborda el diseño e implementación de redes en sus niveles físico y lógico, tanto locales como de área amplia, junto con el desarrollo de software de red atendiendo condiciones de seguridad y la evaluación de infraestructuras existentes en términos de compatibilidad. También trabaja estrategias de adquisición y negociación de redes de comunicaciones. El egresado queda en capacidad de liderar, asesorar y gestionar proyectos que involucren la operación y evolución de redes de datos."
   },
   {
     "name": "Especialización en Auditoría de Sistemas",
@@ -487,7 +501,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://fadmon.unal.edu.co/inicio/formacion/posgrados-en-informatica-y-computacion/especializacion-en-auditoria-de-sistemas.html",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Esta especialización forma profesionales en gestión tecnológica con orientación a la auditoría y una visión empresarial. El programa desarrolla capacidades para planear y ejecutar actividades de control y auditoría sobre procesos soportados en tecnologías de la información y la comunicación, evaluando su gestión, seguridad y cumplimiento dentro de las organizaciones. Su plan de estudios está alineado con estándares internacionales de la asociación ISACA, referente en la certificación de auditores de sistemas. Los egresados pueden desempeñarse en el ejercicio y la asesoría de auditorías de sistemas y en el aseguramiento de los procesos informáticos en distintos tipos de entidades."
   },
   {
     "name": "Maestría en Ingeniería Computacional",
@@ -504,7 +519,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/maestria-en-ingenieria-computacional/",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Maestría de investigación dirigida a profesionales de ingeniería computacional, electrónica, telecomunicaciones y áreas afines que buscan generar soluciones basadas en tecnologías de la información y las comunicaciones. El programa profundiza en líneas como analítica de datos, ingeniería de software, gestión tecnológica y del conocimiento, inteligencia computacional aplicada, bioinformática, internet de las cosas y computación distribuida. Los estudiantes fortalecen competencias para investigar, desarrollar y transferir tecnología con impacto sociotécnico sostenible, además de liderar procesos de innovación. Los aprendizajes se aplican en desarrollo tecnológico, mejoramiento empresarial y proyectos de investigación en los ámbitos regional e internacional."
   },
   {
     "name": "Maestría en Bioinformática y Biología Computacional",
@@ -521,7 +537,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://ingenierias.ucaldas.edu.co/oferta-academica/maestria-en-bioinformatica-y-biologia-computacional/",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Maestría interdisciplinaria que integra las ciencias biológicas con las ciencias de la información para organizar y analizar grandes volúmenes de datos biológicos. Dirigida a profesionales de biología, computación, ciencias básicas e ingeniería, aborda líneas como alineación de secuencias, reconstrucción de árboles evolutivos, genómica funcional, búsquedas en bases de datos biológicas y predicción de estructura de proteínas. Los estudiantes desarrollan competencias para resolver problemas biológicos mediante herramientas computacionales y estadísticas. Estos conocimientos se aplican en investigación, biotecnología y en el aprovechamiento sostenible de la biodiversidad, apoyando el descubrimiento de genes, moléculas y compuestos de interés industrial."
   },
   {
     "name": "Maestría en Tecnologías de la Información Geográfica",
@@ -538,7 +555,8 @@
     "website": "https://umanizales.edu.co/?u_course=maestria-en-tecnologias-de-la-informacion-geografica",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Esta maestría profundiza en la gestión de información geográfica mediante sistemas de información geográfica, análisis espacial, percepción remota y aplicaciones geoespaciales. Con un enfoque que integra formación investigativa y aplicación práctica en laboratorios y proyectos, prepara a los magíster para diseñar e implementar SIG, desarrollar soluciones territoriales y liderar procesos de investigación en geomática. El carácter interdisciplinario del programa vincula la ingeniería, las ciencias ambientales y el urbanismo. Los egresados pueden desempeñarse como investigadores en geomática, coordinadores de proyectos geoespaciales, especialistas en ordenamiento territorial, desarrolladores de software SIG o consultores ambientales. El plan se cursa en cinco períodos académicos presenciales con cincuenta y dos créditos."
   },
   {
     "name": "Maestría en Seguridad de la Información",
@@ -556,7 +574,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "inactive_or_unverified",
-    "notes": "HECAA reporta el SNIES 107284 como inactivo. Se conserva como registro histórico hasta contar con una fuente institucional sobre su estado actual."
+    "notes": "HECAA reporta el SNIES 107284 como inactivo. Se conserva como registro histórico hasta contar con una fuente institucional sobre su estado actual.",
+    "description": "Esta maestría prepara para afrontar los retos de la protección de la información en torno a la confidencialidad, la integridad y la disponibilidad. El plan articula la seguridad en la infraestructura tecnológica —redes, desarrollo de software, bases de datos, análisis forense digital y hardening— con la seguridad organizacional, incluyendo sistemas de gestión (SGSI), gestión del riesgo, cumplimiento normativo y respuesta a incidentes (CSIRT), además de un componente investigativo. Los magíster quedan en capacidad de diseñar, auditar e implementar modelos y políticas de seguridad y de evaluar soluciones tecnológicas según las necesidades de operación y protección de datos. Se cursa en dos años presenciales con cincuenta y dos créditos."
   },
   {
     "name": "Maestría en Gestión Estratégica de la Información",
@@ -574,7 +593,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "inactive_or_unverified",
-    "notes": "HECAA reporta el SNIES 107283 como inactivo. Se conserva como registro histórico hasta contar con una fuente institucional sobre su estado actual."
+    "notes": "HECAA reporta el SNIES 107283 como inactivo. Se conserva como registro histórico hasta contar con una fuente institucional sobre su estado actual.",
+    "description": "Esta maestría se centra en el aprovechamiento estratégico de los datos y la información como motor de las organizaciones. El plan combina un área de gestión de la información —modelos de bases de datos, inteligencia de negocios, arquitectura de datos, minería de datos, Big Data y Open Data y técnicas estadísticas— con un área de gestión organizacional que aborda la teoría de la decisión, el análisis organizacional y la analítica aplicada, junto a un componente investigativo. Los graduados quedan en capacidad de potenciar tecnologías para la gestión, el análisis y la visualización de datos y de diseñar modelos, políticas y estrategias de gestión del conocimiento. Se cursa en dos años presenciales."
   },
   {
     "name": "Maestría en Gestión y Desarrollo de Proyectos de Software",
@@ -591,7 +611,8 @@
     "website": "https://www.autonoma.edu.co/oferta-academica/maestrias/maestria-en-gestion-y-desarrollo-de-proyectos-de-software",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Maestría que articula dos ámbitos complementarios: el desarrollo de software y la gestión de proyectos tecnológicos. En el componente técnico se profundiza en calidad, procesos y arquitecturas de software, con opciones en inteligencia artificial, desarrollo de aplicaciones móviles y analítica de datos. En el componente de gestión se abordan la dirección y mejora de proyectos, la gestión del conocimiento, los sistemas de información gerencial, la seguridad de la información, el gobierno de TI y la gestión del cambio organizacional. Forma para liderar equipos y proyectos como gerente de proyectos, arquitecto, desarrollador senior o responsable de calidad. Se cursa de forma presencial, con encuentros de fin de semana, en cuatro semestres."
   },
   {
     "name": "Maestría en Ingeniería",
@@ -607,7 +628,8 @@
     "website": "https://www.autonoma.edu.co/oferta-academica/maestrias/maestria-en-ingenieria",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Maestría orientada a formar profesionales e investigadores capaces de responder a necesidades de diseño, investigación y adaptación tecnológica en distintos campos de la ingeniería. Combina la profundización en conceptos teóricos y prácticos con la gestión de proyectos y la investigación aplicada junto a grupos locales, nacionales e internacionales. El programa se organiza en líneas como bioingeniería, gestión tecnológica y mejora de procesos, mecánica aplicada, materiales inteligentes y funcionales, energías renovables y eficiencia energética, y sistemas inteligentes. Los estudiantes emplean herramientas computacionales y matemáticas para la simulación, el modelado y la optimización de sistemas. Está dirigida a ingenieros de diversas disciplinas y se cursa de manera presencial en cuatro semestres."
   },
   {
     "name": "Maestría en Administración de Sistemas Informáticos",
@@ -624,7 +646,8 @@
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
     "website": "https://fadmon.unal.edu.co/inicio/formacion/posgrados-en-informatica-y-computacion/maestria-en-administracion-de-sistemas-informaticos-profundizacion.html",
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Programa de maestría, en su modalidad de profundización, orientado a profesionales y directivos vinculados a los sistemas y las tecnologías de la información que desean fortalecer competencias avanzadas en su administración. El plan aborda la gestión de infraestructura tecnológica, la auditoría de procesos de TI, el diseño de servicios y el desarrollo de aplicaciones, considerando el contexto y el impacto social de las TIC. Los estudiantes desarrollan capacidad para identificar necesidades de los usuarios, diseñar, implementar y evaluar soluciones informáticas, aplicar buenas prácticas y estándares, e integrar y dirigir proyectos. Busca aportar al avance tecnológico y a la relación entre la universidad y el sector productivo."
   },
   {
     "name": "Doctorado en Ingeniería",
@@ -643,7 +666,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Doctorado interinstitucional de la Red Universitaria Mutis, ofrecido por UAM, UNAB y UAO. La página oficial de UAM declara SNIES 105180; HECAA puede mostrar una institución participante distinta según la sede consultada."
+    "notes": "Doctorado interinstitucional de la Red Universitaria Mutis, ofrecido por UAM, UNAB y UAO. La página oficial de UAM declara SNIES 105180; HECAA puede mostrar una institución participante distinta según la sede consultada.",
+    "description": "Doctorado orientado a formar investigadores capaces de conducir y orientar de manera autónoma procesos académicos, investigativos y de desarrollo tecnológico en ingeniería. Se ofrece bajo un modelo interinstitucional en red (Red Universitaria Mutis) y estructura la investigación en tres líneas: automática —que abarca automatización, control, bioingeniería, diseño, manufactura, materiales y mecatrónica—, energía —eficiencia, conversión, fuentes renovables y no renovables, sistemas de potencia y sostenibilidad— e informática —ingeniería de software, sistemas inteligentes y tecnologías de la información—. Los egresados pueden dirigir grupos de investigación, asesorar procesos de innovación tecnológica, ejercer como consultores o vincularse a la academia y a centros de investigación. Se cursa de forma presencial en ocho semestres."
   },
   {
     "name": "Doctorado en Ingeniería",
@@ -660,7 +684,8 @@
     "website": "http://www.ucaldas.edu.co/portal/doctorado-en-ingenieria/",
     "sourceUrl": "https://hecaa.mineducacion.gov.co/consultaspublicas/programas",
     "needsVerification": true,
-    "verificationStatus": "partially_verified"
+    "verificationStatus": "partially_verified",
+    "description": "Doctorado orientado a la formación de investigadores capaces de generar conocimiento original en ingeniería con pertinencia regional. El programa articula el trabajo doctoral con problemáticas del territorio, como el aprovechamiento de residuos agroindustriales, la microencapsulación con materias primas locales, el mejoramiento de procesos de fermentación del café y los estudios genómicos de plantas. Los doctorandos desarrollan competencias para conducir investigación rigurosa, publicar en revistas indexadas y consolidar grupos de investigación. Una modalidad reciente vincula a profesionales de empresas para orientar tesis hacia la industria. Sus aportes buscan impacto socioeconómico y fortalecimiento de la capacidad científica regional en ingeniería."
   },
   {
     "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial — Presencial",
@@ -679,7 +704,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad presencial. El registro calificado también cubre Anserma, Chinchiná, La Dorada, Neira, Palestina y Villamaría."
+    "notes": "Registro SNIES correspondiente a la modalidad presencial. El registro calificado también cubre Anserma, Chinchiná, La Dorada, Neira, Palestina y Villamaría.",
+    "description": "Programa técnico profesional que introduce a los estudiantes en las bases del procesamiento, la depuración y la limpieza de datos como paso previo al desarrollo de soluciones de inteligencia artificial. La formación enfatiza la calidad de la información y prepara para recolectar, organizar y depurar conjuntos de datos que alimentan modelos y análisis. En esta modalidad presencial, constituye el primer nivel de una cadena formativa en inteligencia artificial que continúa con tecnologías, pregrados y posgrados de la Universidad. Los conocimientos se aplican en el apoyo a proyectos de datos e IA en organizaciones de distintos sectores."
   },
   {
     "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial — A distancia",
@@ -698,7 +724,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad a distancia. La interfaz agrupa las modalidades virtual y a distancia bajo el filtro Virtual / Remoto."
+    "notes": "Registro SNIES correspondiente a la modalidad a distancia. La interfaz agrupa las modalidades virtual y a distancia bajo el filtro Virtual / Remoto.",
+    "description": "Técnico profesional ofrecido a distancia que forma en las bases del procesamiento, la depuración y la limpieza de datos para la inteligencia artificial. Los estudiantes aprenden a recolectar, organizar y preparar conjuntos de datos con criterios de calidad, de modo que puedan alimentar modelos analíticos y sistemas inteligentes. La modalidad a distancia favorece la flexibilidad para quienes combinan estudio y otras ocupaciones. El programa funciona como puerta de entrada a una ruta formativa en inteligencia artificial que incluye niveles tecnológico, profesional y de posgrado. Sus egresados apoyan tareas de preparación y gestión de datos en proyectos de IA."
   },
   {
     "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial — Virtual",
@@ -717,7 +744,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad virtual. La interfaz agrupa las modalidades virtual y a distancia bajo el filtro Virtual / Remoto."
+    "notes": "Registro SNIES correspondiente a la modalidad virtual. La interfaz agrupa las modalidades virtual y a distancia bajo el filtro Virtual / Remoto.",
+    "description": "Técnico profesional en modalidad virtual centrado en las bases del procesamiento, la depuración y la limpieza de datos para la inteligencia artificial. A través de entornos en línea, los estudiantes desarrollan capacidades para recolectar, organizar y depurar información con estándares de calidad, insumo esencial de los modelos y análisis de IA. El formato virtual permite acceder a clases y materiales desde cualquier lugar con conexión, promoviendo autonomía y autorregulación. El programa es el primer eslabón de una cadena formativa en inteligencia artificial dentro de la Universidad. Los conocimientos se aplican al apoyo de proyectos de datos e IA en diversos sectores."
   },
   {
     "name": "Técnico Profesional en Programación para Dispositivos Móviles — A distancia",
@@ -734,7 +762,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad a distancia. El código 117720 se incorporó una sola vez porque estaba repetido en la lista recibida."
+    "notes": "Registro SNIES correspondiente a la modalidad a distancia. El código 117720 se incorporó una sola vez porque estaba repetido en la lista recibida.",
+    "description": "Técnico profesional a distancia orientado al desarrollo de aplicaciones para dispositivos móviles. A lo largo de cuatro semestres, los estudiantes adquieren fundamentos de programación y del ciclo de construcción de apps, desde el diseño hasta la implementación en plataformas móviles. La modalidad a distancia ofrece flexibilidad horaria y acceso en línea a clases y materiales, fomentando la autonomía en el aprendizaje. Estos conocimientos permiten vincularse a equipos de desarrollo de software móvil, apoyar proyectos digitales o continuar la formación en ciclos superiores de sistemas y computación. El programa forma parte de la oferta técnica de la Facultad de Inteligencia Artificial e Ingenierías."
   },
   {
     "name": "Técnico Profesional en Análisis y Reporte de Datos",
@@ -754,7 +783,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "El registro calificado presencial incluye Manizales y otros municipios de Caldas."
+    "notes": "El registro calificado presencial incluye Manizales y otros municipios de Caldas.",
+    "description": "Técnico profesional presencial que forma para transformar datos en decisiones mediante herramientas matemáticas, estadísticas y computacionales. En cuatro semestres y 58 créditos, los estudiantes aprenden a diseñar proyectos analíticos, gestionar grandes volúmenes de información y presentar reportes con rigor técnico y ético. La formación busca desarrollar capacidad crítica y sentido de liderazgo, con opción de desempeñarse como empleados o emprendedores. Los conocimientos se aplican en sectores como comercio, servicios, finanzas y turismo, en el ámbito público y privado. Los créditos pueden homologarse en la Tecnología en Analítica Predictiva de Datos y en el Profesional en Ciencia de Datos de la Universidad."
   },
   {
     "name": "Profesional en Ciencia de Datos",
@@ -774,7 +804,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "El registro calificado presencial incluye Manizales, Aguadas, La Dorada y Anserma."
+    "notes": "El registro calificado presencial incluye Manizales, Aguadas, La Dorada y Anserma.",
+    "description": "Pregrado presencial de ocho semestres que integra matemáticas, estadística y computación para la ciencia de datos. Los estudiantes aprenden a modelar y analizar datos, construir modelos predictivos, descriptivos y prescriptivos, y manejar herramientas como Python, R, SQL, Tableau, Power BI y plataformas de Big Data como Hadoop y Spark. La formación incluye liderazgo, comunicación, ética y bilingüismo. Los egresados pueden desempeñarse como analistas y modeladores de datos o líderes de proyectos de analítica en entidades públicas y privadas de cualquier sector que requiera decisiones basadas en datos. Es la primera oferta de este tipo en una universidad pública de la región."
   },
   {
     "name": "Técnico Profesional en Programación Web — A distancia",
@@ -793,7 +824,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad a distancia."
+    "notes": "Registro SNIES correspondiente a la modalidad a distancia.",
+    "description": "Técnico profesional a distancia enfocado en el desarrollo de aplicaciones y sitios web. Durante cuatro semestres, los estudiantes adquieren fundamentos de programación y de construcción de soluciones web, abarcando la creación de interfaces y la puesta en funcionamiento de aplicaciones en línea. La modalidad a distancia brinda flexibilidad horaria y acceso remoto a clases y materiales, promoviendo la autonomía del estudiante. Estos conocimientos habilitan para integrarse a equipos de desarrollo web, apoyar proyectos digitales o continuar estudios en programas de sistemas y computación. El programa hace parte de la oferta técnica virtual y a distancia de la Facultad de Inteligencia Artificial e Ingenierías."
   },
   {
     "name": "Técnico Profesional en Programación para Videojuegos — A distancia",
@@ -812,7 +844,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad a distancia."
+    "notes": "Registro SNIES correspondiente a la modalidad a distancia.",
+    "description": "Técnico profesional a distancia dedicado a la programación de videojuegos. En cuatro semestres, los estudiantes desarrollan fundamentos de programación aplicados a la creación de juegos, incluyendo la lógica interactiva y la implementación de mecánicas dentro de entornos de desarrollo. La modalidad a distancia permite acceder a clases y materiales en línea con flexibilidad, fomentando el aprendizaje autónomo. Los conocimientos adquiridos habilitan para participar en equipos de desarrollo de videojuegos y contenidos interactivos, apoyar proyectos digitales o avanzar hacia programas superiores en sistemas y computación. Forma parte de la oferta técnica virtual y a distancia de la Facultad de Inteligencia Artificial e Ingenierías."
   },
   {
     "name": "Especialización en Inteligencia Artificial y Analítica de Datos",
@@ -832,7 +865,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Modalidad presencial mediada por TIC."
+    "notes": "Modalidad presencial mediada por TIC.",
+    "description": "Especialización de dos semestres y 30 créditos que profundiza en técnicas de inteligencia artificial, aprendizaje automático, aprendizaje profundo y procesamiento de datos. Mediante una metodología basada en la resolución de problemas, los participantes desarrollan capacidad para diseñar e implementar modelos de IA, extraer valor de grandes volúmenes de datos y automatizar procesos organizacionales. La formación incorpora comunicación, liderazgo y principios éticos sobre privacidad, seguridad y equidad. Los conocimientos se aplican en sectores como salud, finanzas e industria, en tareas de análisis avanzado, visualización, optimización de operaciones, investigación e innovación, y asesoría en transformación digital. Se ofrece de forma presencial mediada por tecnologías."
   },
   {
     "name": "Ingeniería en Inteligencia Artificial",
@@ -851,7 +885,8 @@
     "firstSeenAt": "2026-07-17",
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
-    "verificationStatus": "verified"
+    "verificationStatus": "verified",
+    "description": "Pregrado presencial de ocho semestres y 144 créditos que forma ingenieros para diseñar, desarrollar y administrar sistemas inteligentes. El plan combina fundamentos matemáticos, ciencia de datos, aprendizaje automático, visión por computadora y robótica, junto con criterios éticos y de sostenibilidad. Los estudiantes desarrollan capacidades para construir soluciones basadas en inteligencia artificial y evaluar su impacto social. Estos conocimientos se aplican en manufactura y automatización, salud, finanzas, agricultura e industria 4.0, logística, ciberseguridad y emprendimiento tecnológico. El egresado puede desempeñarse como ingeniero de aprendizaje automático, científico de datos, especialista en análisis predictivo o consultor en ética y gobernanza de la IA."
   },
   {
     "name": "Tecnología en Analítica Predictiva de Datos",
@@ -870,7 +905,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "El programa se ofrece presencialmente en Manizales, Aguadas, Anserma y La Dorada."
+    "notes": "El programa se ofrece presencialmente en Manizales, Aguadas, Anserma y La Dorada.",
+    "description": "Programa tecnológico centrado en las matemáticas y la estadística aplicadas a la analítica predictiva. Los estudiantes se forman en el uso de herramientas y técnicas avanzadas para recolectar, procesar y analizar grandes volúmenes de datos, e incorporan métodos de aprendizaje automático y minería de datos para anticipar comportamientos futuros. La formación busca identificar patrones, tendencias y correlaciones con criterio ético. Estos conocimientos permiten apoyar la toma de decisiones y la optimización de recursos en organizaciones de los sectores público y privado. El programa, adscrito al Departamento de Matemáticas, se plantea como una oferta poco común en las universidades públicas del país."
   },
   {
     "name": "Técnico Profesional en Marketing Digital — Presencial",
@@ -889,7 +925,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad presencial. También se ofrece en Aguadas, Anserma y La Dorada."
+    "notes": "Registro SNIES correspondiente a la modalidad presencial. También se ofrece en Aguadas, Anserma y La Dorada.",
+    "description": "Técnico profesional presencial de cuatro semestres y 56 créditos orientado al marketing en entornos digitales. La formación responde a la demanda del mercado laboral y a las tendencias del ámbito digital, y prepara a los estudiantes para apoyar y ejecutar procesos de marketing en un entorno tecnológico en constante evolución. Se ofrece dentro de la estrategia Universidad en tu Colegio, con presencia en Manizales, La Dorada, Anserma y Aguadas. Los conocimientos se aplican en la promoción de productos y servicios, la gestión de presencia digital y el apoyo a estrategias comerciales de empresas y emprendimientos de la región."
   },
   {
     "name": "Técnico Profesional en Marketing Digital — A distancia",
@@ -908,7 +945,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad a distancia. También se ofrece en Aguadas, Anserma y La Dorada."
+    "notes": "Registro SNIES correspondiente a la modalidad a distancia. También se ofrece en Aguadas, Anserma y La Dorada.",
+    "description": "Técnico profesional en modalidad a distancia dedicado al marketing digital, con un plan de cuatro semestres y 56 créditos. El programa forma a los estudiantes para apoyar procesos de marketing en un entorno tecnológico cambiante, atendiendo la creciente demanda de competencias digitales en el mercado laboral. La modalidad a distancia facilita el acceso a la formación desde distintos municipios, como La Dorada, Anserma y Aguadas, en el marco de la estrategia Universidad en tu Colegio. Los conocimientos se aplican en la gestión de la presencia digital, la promoción de productos y servicios y el apoyo a estrategias comerciales de empresas y emprendimientos."
   },
   {
     "name": "Técnico Profesional en Programación Web — Presencial",
@@ -927,7 +965,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad presencial."
+    "notes": "Registro SNIES correspondiente a la modalidad presencial.",
+    "description": "Técnico profesional presencial enfocado en el desarrollo de aplicaciones y sitios web. Organizado en cuatro semestres, el programa introduce los fundamentos de la programación y la construcción de soluciones web, desde la elaboración de interfaces hasta la puesta en marcha de aplicaciones. La modalidad presencial favorece el acompañamiento docente y la práctica guiada. Los conocimientos adquiridos habilitan para integrarse a equipos de desarrollo web, apoyar proyectos digitales de empresas y emprendimientos, o continuar la formación en programas de sistemas y computación. Hace parte de la oferta técnica de la Facultad de Inteligencia Artificial e Ingenierías, disponible en varios municipios de Caldas."
   },
   {
     "name": "Técnico Profesional en Programación para Dispositivos Móviles — Presencial",
@@ -946,7 +985,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad presencial."
+    "notes": "Registro SNIES correspondiente a la modalidad presencial.",
+    "description": "Técnico profesional presencial orientado al desarrollo de aplicaciones para dispositivos móviles. A lo largo de cuatro semestres, los estudiantes adquieren fundamentos de programación y del proceso de creación de apps, abarcando el diseño y la implementación en plataformas móviles. La modalidad presencial facilita la práctica guiada y el acompañamiento docente. Estos conocimientos permiten vincularse a equipos de desarrollo de software móvil, apoyar proyectos digitales de organizaciones y emprendimientos, o continuar estudios en ciclos superiores de sistemas y computación. El programa integra la oferta técnica de la Facultad de Inteligencia Artificial e Ingenierías, con presencia en distintos municipios del departamento."
   },
   {
     "name": "Técnico Profesional en Programación para Videojuegos — Presencial",
@@ -964,7 +1004,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Registro SNIES correspondiente a la modalidad presencial."
+    "notes": "Registro SNIES correspondiente a la modalidad presencial.",
+    "description": "Técnico profesional presencial dedicado a la programación de videojuegos. En cuatro semestres, los estudiantes desarrollan fundamentos de programación aplicados a la creación de juegos, incluyendo la lógica interactiva y la implementación de mecánicas en entornos de desarrollo. La modalidad presencial permite el trabajo práctico y el acompañamiento docente en laboratorios. Los conocimientos habilitan para participar en equipos de desarrollo de videojuegos y contenidos interactivos, apoyar proyectos digitales o avanzar hacia programas superiores en sistemas y computación. Forma parte de la oferta técnica de la Facultad de Inteligencia Artificial e Ingenierías, ofrecida en varios municipios de Caldas."
   },
   {
     "name": "Licenciatura en Tecnología e Informática",
@@ -983,7 +1024,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad a distancia."
+    "notes": "Programa ofrecido en modalidad a distancia.",
+    "description": "Este pregrado forma licenciados capacitados para enseñar tecnología e informática en instituciones educativas. El plan articula tres componentes: ciencias básicas (matemáticas, física y lógica), fundamentos técnicos (programación, diseño web, bases de datos y redes) y formación pedagógica y sociohumanística (didáctica, ética y educación). Los estudiantes desarrollan competencias para diseñar currículos y estrategias didácticas, evaluar software educativo y gestionar ambientes virtuales de aprendizaje, junto con habilidades investigativas aplicadas al aula. Sus egresados pueden desempeñarse en la docencia de educación básica, media y superior, la coordinación de recursos tecnológicos y la innovación educativa. Se imparte a distancia, con enfoque en la integración de las TIC en los procesos de enseñanza."
   },
   {
     "name": "Especialización en Ciberseguridad",
@@ -1003,7 +1045,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad presencial."
+    "notes": "Programa ofrecido en modalidad presencial.",
+    "description": "Esta especialización profundiza en la protección, administración y regulación de la información dentro de las organizaciones. El plan aborda hacking ético, pruebas de penetración, seguridad en la transmisión de datos, cómputo forense, gestión de incidentes y legislación sobre protección de datos, combinando enfoques de seguridad ofensiva y defensiva. Los participantes desarrollan competencias para identificar y analizar tipos de ciberataques, diseñar sistemas de gestión de seguridad, evaluar riesgos y responder a incidentes desde perspectivas técnicas y jurídicas. Estos conocimientos se aplican en la consultoría de seguridad, el análisis forense digital, la gestión del riesgo y el cumplimiento normativo, tanto en el sector público como privado. Su enfoque integra la gestión ética del riesgo organizacional."
   },
   {
     "name": "Técnico Profesional en Internet de las Cosas IoT",
@@ -1023,7 +1066,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad presencial."
+    "notes": "Programa ofrecido en modalidad presencial.",
+    "description": "Este programa técnico profesional prepara para operar, instalar y poner en funcionamiento sistemas de Internet de las Cosas (IoT). La formación integra tres áreas: electrónica y telecomunicaciones, orientadas al funcionamiento de dispositivos interconectados; programación de microcontroladores y dispositivos IoT; y gestión de datos para su almacenamiento, visualización y análisis. Los estudiantes adquieren habilidades prácticas en selección, conexión, configuración y mantenimiento de sensores, así como en protocolos de transmisión y diseño básico de redes. Estas capacidades se aplican en empresas e instituciones que requieren soluciones tecnológicas para optimizar procesos, resolver problemáticas ambientales o generar beneficio social. Se cursa de forma presencial en la Facultad de Ingeniería y Arquitectura, con un enfoque técnico y aplicado."
   },
   {
     "name": "Tecnología en Implementación de Sistemas de Internet de las Cosas IoT",
@@ -1077,7 +1121,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Código informado desde HECAA/SNIES. La página institucional vigente usa el SNIES 666 para un programa con la misma denominación; requiere conciliación antes de confirmar modalidad, créditos y duración para este código."
+    "notes": "Código informado desde HECAA/SNIES. La página institucional vigente usa el SNIES 666 para un programa con la misma denominación; requiere conciliación antes de confirmar modalidad, créditos y duración para este código.",
+    "description": "Especialización enfocada en el diseño e implementación de soluciones basadas en inteligencia artificial dentro de entornos empresariales y de la industria 4.0. El programa integra la construcción de sistemas de IA con criterios de ética, innovación, visualización de datos y ciberseguridad, de modo que las soluciones consideren tanto su desempeño técnico como su responsabilidad y protección. Está dirigida a profesionales con título universitario que buscan aplicar estas técnicas en proyectos con impacto organizacional y social. Su plan combina asignaturas obligatorias y elegibles a lo largo de dos semestres, y el egresado queda capacitado para desarrollar e implementar sistemas de inteligencia artificial."
   },
   {
     "name": "Especialización en Analítica",
@@ -1095,7 +1140,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": true,
     "verificationStatus": "partially_verified",
-    "notes": "Código informado desde HECAA/SNIES. La página institucional vigente usa el SNIES 665 para un programa con la misma denominación; requiere conciliación antes de confirmar modalidad, créditos y duración para este código."
+    "notes": "Código informado desde HECAA/SNIES. La página institucional vigente usa el SNIES 665 para un programa con la misma denominación; requiere conciliación antes de confirmar modalidad, créditos y duración para este código.",
+    "description": "Esta especialización forma profesionales capaces de analizar datos para apoyar la toma de decisiones estratégicas en las organizaciones. El programa desarrolla competencias en técnicas avanzadas de modelado predictivo y en el análisis de grandes volúmenes de información, orientadas a interpretar datos complejos y convertirlos en criterios útiles para la gestión. Está dirigida a profesionales con título universitario interesados en profundizar en el análisis y la inteligencia de datos. Los conocimientos adquiridos pueden aplicarse en los sectores empresarial, gubernamental y científico. El plan se cursa en dos semestres y otorga el título de Especialista en Analítica."
   },
   {
     "name": "Especialización en Nanotecnología",
@@ -1114,7 +1160,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa presencial ofrecido en Manizales."
+    "notes": "Programa presencial ofrecido en Manizales.",
+    "description": "Esta especialización forma profesionales con conocimientos y habilidades prácticas de carácter multidisciplinario en el estudio y la manipulación de la materia a escala nanométrica. El programa aborda los fundamentos físicos, químicos y biológicos que permiten controlar el comportamiento de los materiales a esa escala, así como técnicas de síntesis y caracterización y la interpretación de datos experimentales. Su enfoque conecta la nanotecnología con áreas de relevancia socioeconómica como la ciencia e ingeniería de materiales, la energía y el medioambiente, los alimentos, la agricultura y la industria. El egresado puede integrarse a equipos interdisciplinarios de investigación y aplicación tecnológica."
   },
   {
     "name": "Ciencias de la Computación",
@@ -1132,7 +1179,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa de pregrado ofrecido en la Sede Manizales."
+    "notes": "Programa de pregrado ofrecido en la Sede Manizales.",
+    "description": "Pregrado con un fuerte componente matemático orientado a los fundamentos y aplicaciones de la computación. Los estudiantes aprenden a representar información mediante estructuras matemáticas y datos, a manejar herramientas computacionales para el procesamiento y análisis de información, y a modelar problemas con los métodos propios de la disciplina. La formación incluye temas como criptografía, ciberseguridad y modelamiento computacional. Su carácter multidisciplinario habilita al egresado para aplicar la computación en campos diversos como la física, la biología, la química, las matemáticas, la ingeniería, la economía y las finanzas, la interacción humano-máquina, la lingüística y el análisis de dinámicas sociales."
   },
   {
     "name": "Ingeniería de Sistemas",
@@ -1152,7 +1200,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad virtual."
+    "notes": "Programa ofrecido en modalidad virtual.",
+    "description": "Este pregrado en modalidad virtual forma profesionales para analizar, diseñar, desarrollar, implementar, auditar y mantener sistemas de procesamiento y transmisión de datos. Los estudiantes aprenden a identificar situaciones susceptibles de digitalización y a construir soluciones a la medida con herramientas actuales, fortaleciendo la adaptabilidad, el trabajo colaborativo y el aprendizaje continuo. La formación abarca desarrollo de software, administración de redes y sistemas, gestión de datos, arquitectura y seguridad informática. Estos conocimientos se aplican en desarrollo de software, consultoría tecnológica y gestión de proyectos de TI. El programa se cursa de forma virtual a lo largo de nueve períodos académicos con ciento cuarenta y seis créditos."
   },
   {
     "name": "Especialización en Sistemas de Información Geográfica",
@@ -1172,7 +1221,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad virtual."
+    "notes": "Programa ofrecido en modalidad virtual.",
+    "description": "Esta especialización, ofrecida en ambientes virtuales de aprendizaje, forma en geotecnologías integrando herramientas SIG, sensores remotos, bases de datos espaciales y análisis territorial para apoyar la toma de decisiones. Los participantes desarrollan la capacidad de diseñar e implementar sistemas de información geográfica, gestionar bases de datos espaciales, aplicar análisis del territorio e integrar percepción remota en proyectos de transformación digital territorial. Al ser virtual, está dirigida a profesionales de diversas disciplinas sin restricciones geográficas. Sus conocimientos se aplican en funciones como analista SIG, especialista en geomática, coordinador de proyectos geoespaciales, consultor en planificación territorial o gestor de infraestructuras de datos espaciales. Comprende dos períodos académicos con veinticuatro créditos."
   },
   {
     "name": "Ingeniería en Analítica de Datos",
@@ -1192,7 +1242,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad virtual."
+    "notes": "Programa ofrecido en modalidad virtual.",
+    "description": "Versión virtual de la ingeniería en analítica de datos, este pregrado forma profesionales para transformar información en decisiones estratégicas mediante modelado predictivo, visualización de datos y soluciones basadas en evidencia. El plan abarca la captura, gestión y análisis de datos y el desarrollo de modelos de aprendizaje automático, combinando dominio técnico con comprensión de la estrategia empresarial y la transformación digital. Al impartirse en modalidad virtual, ofrece flexibilidad de tiempo y lugar. Los conocimientos se aplican en banca, salud, gobierno, industria, retail y startups, en roles de ingeniería o análisis de datos, inteligencia de negocios y liderazgo de proyectos en mercadeo, finanzas y operaciones. Comprende nueve períodos académicos."
   },
   {
     "name": "Ingeniería en Seguridad de la Información",
@@ -1212,7 +1263,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido en modalidad virtual."
+    "notes": "Programa ofrecido en modalidad virtual.",
+    "description": "Este pregrado virtual forma profesionales para diseñar, auditar e implementar modelos y políticas de seguridad de la información, gestionar riesgos y responder a incidentes mediante análisis forense. La formación se apoya en metodologías y estándares internacionales orientados a proteger infraestructuras tecnológicas y datos críticos. Los estudiantes desarrollan competencias para evaluar soluciones tecnológicas, realizar análisis forense digital y asesorar proyectos de innovación en seguridad informática. Estos conocimientos se aplican en empresas públicas y privadas, centros de datos y organizaciones con sistemas críticos, en roles como especialista en seguridad informática, auditor de sistemas, analista forense digital, consultor en gestión de riesgos o líder de proyectos de ciberseguridad. Se cursa virtualmente en nueve períodos."
   },
   {
     "name": "Tecnología en Desarrollo de Software para Negocios Digitales",
@@ -1232,7 +1284,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido presencialmente en Manizales."
+    "notes": "Programa ofrecido presencialmente en Manizales.",
+    "description": "Este programa tecnológico prepara para crear soluciones de software orientadas a los negocios digitales. A lo largo de cinco semestres, el plan desarrolla capacidades en desarrollo e investigación de software, operación de bases de datos, posicionamiento digital y configuración de servicios en línea, con dominio de tecnologías y metodologías ajustadas a las necesidades de los negocios digitales. Los tecnólogos pueden desempeñarse en el desarrollo e implementación de software con estándares de calidad, el soporte operativo de bases de datos, la ejecución de estrategias de marketing digital en redes sociales y publicidad en línea, y la configuración técnica de servicios digitales. Se ofrece en modalidad presencial con jornadas diurna y nocturna."
   },
   {
     "name": "Ingeniería en Seguridad de la Información",
@@ -1252,7 +1305,8 @@
     "lastVerifiedAt": "2026-07-17",
     "needsVerification": false,
     "verificationStatus": "verified",
-    "notes": "Programa ofrecido presencialmente en Manizales."
+    "notes": "Programa ofrecido presencialmente en Manizales.",
+    "description": "Este pregrado forma profesionales para proteger los datos y la infraestructura tecnológica de las organizaciones. El plan desarrolla la capacidad de diseñar, auditar e implementar modelos y políticas de seguridad, gestionar riesgos y responder a incidentes con análisis forense, aplicando metodologías y estándares internacionales. Los estudiantes aprenden a tomar decisiones sobre soluciones tecnológicas y a asesorar proyectos de innovación en seguridad informática. Estos conocimientos se aplican en entornos empresariales con sistemas críticos, en funciones como especialista en seguridad informática, auditor de sistemas, analista forense digital, consultor en gestión de riesgos, administrador de infraestructura segura o líder de proyectos de ciberseguridad. Se cursa de forma presencial en nueve períodos, con jornadas diurna y nocturna."
   },
   {
     "name": "Maestría en Tecnologías de la Información Geográfica",
