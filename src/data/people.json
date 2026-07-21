@@ -595,25 +595,30 @@
   {
     "name": "Andrés Silva Gómez",
     "slug": "andres-silva-gomez",
-    "headline": "Cocreador de CityTaxi",
-    "shortBio": "Ingeniero de sistemas de Manizales, cocreador junto a Juan David Montes de la aplicación CityTaxi, una de las primeras plataformas móviles de solicitud de taxis de la ciudad, desarrollada hacia 2012 desde la Universidad de Caldas con apoyo de su Centro de Innovación y del SENA. La aplicación operó inicialmente con cooperativas y empresas de taxi locales y obtuvo reconocimientos en Start Up Weekend, Hackathon y la Red de Emprendimiento de Caldas. Los fundadores crearon la empresa Mobility para sostener el proyecto y desarrollar nuevas soluciones de software.",
+    "headline": "Cofundador y CEO de OnePay",
+    "shortBio": "Ingeniero de sistemas de Manizales con más de una década emprendiendo en tecnología. Hacia 2012 cofundó Taxia Life, una de las primeras aplicaciones de solicitud de taxis de la ciudad, gestada desde la Universidad de Caldas con apoyo de su Centro de Innovación y del SENA y reconocida en Start Up Weekend, Hackathon y la Red de Emprendimiento de Caldas. Luego lideró ingeniería en Frubana y, en 2023, cofundó OnePay, fintech que integra el recaudo de pagos de empresas en WhatsApp. Como CEO, cerró una alianza con Mastercard, levantó una ronda pre-seed de US$1,3 millones y llevó a OnePay al batch ScaleUp 2026 de Endeavor Colombia.",
     "city": "Manizales",
     "department": "Caldas",
     "country": "Colombia",
-    "areas": ["Emprendimiento", "Desarrollo móvil", "Software"],
-    "specialties": ["Software y producto", "Desarrollo web y móvil"],
+    "areas": ["Fintech", "Pagos digitales", "Inclusión financiera", "Emprendimiento", "Software"],
+    "specialties": [
+      "Software y producto",
+      "Desarrollo web y móvil",
+      "Innovación y transformación digital"
+    ],
     "ecosystemTrajectory": ["Empresa y emprendimiento"],
-    "roles": ["Cofundador"],
-    "organizations": ["CityTaxi"],
+    "roles": ["Cofundador", "CEO"],
+    "organizations": ["OnePay", "Frubana", "Taxia Life"],
     "contributions": [
-      "Cocreación de CityTaxi, app de taxis de Manizales (2012)",
-      "Emprendimiento de base tecnológica surgido desde la academia"
+      "OnePay (2023–): infraestructura de recaudo de pagos instantáneos sobre WhatsApp, con foco en sectores de baja bancarización como servicios públicos e inmobiliario",
+      "Alianza estratégica con Mastercard para inclusión financiera y seguridad en pagos",
+      "Taxia Life (2012): emprendimiento de base tecnológica surgido desde la academia en Manizales"
     ],
     "linkedin": "https://www.linkedin.com/in/andresilvagomez/",
     "github": "https://github.com/andresilvagomez",
     "isPublicProfile": true,
-    "sourceUrl": "https://www.lapatria.com/manizales/city-taxi-aplicacion-movil-para-un-servicio-52994",
-    "lastVerifiedAt": "2026-07-17",
+    "sourceUrl": "https://forbes.co/2024/04/17/emprendedores/esta-compania-que-recauda-pagos-instantaneos-por-whatsapp-inicia-con-us1-3-millones",
+    "lastVerifiedAt": "2026-07-20",
     "verificationStatus": "verified",
     "needsVerification": false
   },
