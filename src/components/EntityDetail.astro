@@ -15,7 +15,9 @@ export interface LinkItem {
   href: string;
 }
 export interface SourceItem {
-  href: string;
+  /** `href` es el formato interno; `url` es el formato que usan los datasets. */
+  href?: string;
+  url?: string;
   title?: string;
   reviewedAt?: string;
 }
@@ -59,7 +61,10 @@ const {
 const state = resolveVerification({ verificationStatus, needsVerification, status });
 const showCallout =
   state === 'unknown' || state === 'partially_verified' || state === 'inactive_or_unverified';
-const sourceList: SourceItem[] = sources ?? (sourceUrl ? [{ href: sourceUrl }] : []);
+const sourceList = (sources ?? (sourceUrl ? [{ href: sourceUrl }] : [])).flatMap((source) => {
+  const href = source.href ?? source.url;
+  return href ? [{ href, title: source.title, reviewedAt: source.reviewedAt }] : [];
+});
 ---
 
 <article class="container-detail py-8">
