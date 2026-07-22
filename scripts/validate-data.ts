@@ -13,6 +13,7 @@ import { z } from 'zod';
 
 import {
   companiesSchema,
+  decadesSchema,
   universitiesSchema,
   programsSchema,
   peopleSchema,
@@ -20,6 +21,7 @@ import {
   eventsSchema,
   supportEntitiesSchema,
 } from '../src/schemas/index.ts';
+import { excludedCompanySlugs } from '../src/lib/company-review.ts';
 
 const __dirname = dirname(fileURLToPath(import.meta.url));
 const dataDir = join(__dirname, '..', 'src', 'data');
@@ -37,6 +39,7 @@ const datasets: Dataset[] = [
   { file: 'communities.json', schema: communitiesSchema },
   { file: 'events.json', schema: eventsSchema },
   { file: 'supportEntities.json', schema: supportEntitiesSchema },
+  { file: 'decades.json', schema: decadesSchema },
 ];
 
 const errors: string[] = [];
@@ -125,7 +128,149 @@ for (const e of parsed['events.json'] ?? []) {
   }
 }
 
-// 4) Programas homónimos: el mismo nombre en la misma institución solo se
+// 4) Décadas: el contenido de investigación debe ser consistente con los datos.
+// Evita métricas rotas: slugs inexistentes, empresas fuera del rango, dobles
+// clasificaciones o coberturas que no suman el universo del periodo.
+{
+  const allCompanies = parsed['companies.json'] ?? [];
+  const companyBySlug = new Map(allCompanies.map((c) => [c.slug, c]));
+  // Universo público del periodo: mismo criterio del sitio (sin personas
+  // naturales ni registros excluidos del directorio).
+  const publicDecadeSlugs = (start: number, end: number) =>
+    allCompanies
+      .filter((c) => {
+        const year = Number(c.registeredAt?.slice(0, 4));
+        return (
+          Number.isFinite(year) &&
+          year >= start &&
+          year <= end &&
+          c.legalForm !== 'Persona natural' &&
+          !excludedCompanySlugs.has(c.slug)
+        );
+      })
+      .map((c) => c.slug);
+
+  const decadesData = parsed['decades.json'] ?? [];
+  for (const decade of decadesData) {
+    const label = `[decades.json] "${decade.slug}"`;
+    if (decade.slug !== `${decade.startYear}-${decade.endYear}`) {
+      errors.push(`${label} el slug no coincide con startYear-endYear.`);
+    }
+    for (const other of decadesData) {
+      if (
+        other !== decade &&
+        decade.startYear <= other.endYear &&
+        other.startYear <= decade.endYear
+      ) {
+        if (decade.startYear < other.startYear) {
+          errors.push(`${label} se solapa con "${other.slug}".`);
+        }
+      }
+    }
+
+    // Recolecta cada referencia a empresas con su contexto.
+    const refGroups: Array<{ context: string; slugs: string[] }> = [];
+    for (const group of decade.offerClassification?.groups ?? []) {
+      refGroups.push({ context: `oferta "${group.label}"`, slugs: group.slugs });
+    }
+    for (const group of decade.confidence?.groups ?? []) {
+      refGroups.push({ context: `confianza "${group.label}"`, slugs: group.slugs });
+    }
+    if (decade.publicSignal) {
+      refGroups.push({
+        context: 'publicSignal.corporateSite',
+        slugs: decade.publicSignal.corporateSite,
+      });
+      refGroups.push({
+        context: 'publicSignal.registralOnly',
+        slugs: decade.publicSignal.registralOnly,
+      });
+    }
+    for (const layer of decade.layers ?? []) {
+      refGroups.push({ context: `capa "${layer.title}"`, slugs: layer.slugs });
+    }
+    for (const entry of decade.representative ?? []) {
+      refGroups.push({ context: 'trayectoria representativa', slugs: entry.slugs });
+    }
+
+    for (const { context, slugs } of refGroups) {
+      for (const slug of slugs) {
+        const company = companyBySlug.get(slug);
+        if (!company) {
+          errors.push(`${label} ${context}: la empresa "${slug}" no existe en companies.json.`);
+          continue;
+        }
+        const year = Number(company.registeredAt?.slice(0, 4));
+        if (!Number.isFinite(year) || year < decade.startYear || year > decade.endYear) {
+          errors.push(
+            `${label} ${context}: "${slug}" tiene matrícula ${company.registeredAt ?? 'sin fecha'}, fuera del rango ${decade.startYear}-${decade.endYear}.`,
+          );
+        }
+      }
+    }
+
+    // Sin dobles clasificaciones dentro de un mismo bloque.
+    const assertDisjoint = (context: string, groups: Array<{ label: string; slugs: string[] }>) => {
+      const seen = new Map<string, string>();
+      for (const group of groups) {
+        for (const slug of group.slugs) {
+          const prev = seen.get(slug);
+          if (prev) {
+            errors.push(
+              `${label} ${context}: "${slug}" aparece en "${prev}" y en "${group.label}" a la vez.`,
+            );
+          } else {
+            seen.set(slug, group.label);
+          }
+        }
+      }
+      return new Set(seen.keys());
+    };
+    const offerSet = decade.offerClassification
+      ? assertDisjoint('oferta', decade.offerClassification.groups)
+      : undefined;
+    const confidenceSet = decade.confidence
+      ? assertDisjoint('confianza', decade.confidence.groups)
+      : undefined;
+
+    // Oferta y confianza clasifican el mismo universo investigado.
+    if (offerSet && confidenceSet) {
+      const same =
+        offerSet.size === confidenceSet.size && [...offerSet].every((s) => confidenceSet.has(s));
+      if (!same) {
+        errors.push(
+          `${label} la clasificación de oferta (${offerSet.size}) y la de confianza (${confidenceSet.size}) no cubren el mismo conjunto de empresas investigadas.`,
+        );
+      }
+    }
+
+    // La señal pública debe cubrir exactamente el universo público del periodo.
+    if (decade.publicSignal) {
+      const union = [...decade.publicSignal.corporateSite, ...decade.publicSignal.registralOnly];
+      if (new Set(union).size !== union.length) {
+        errors.push(
+          `${label} publicSignal: hay empresas repetidas entre corporateSite y registralOnly.`,
+        );
+      }
+      const expected = publicDecadeSlugs(decade.startYear, decade.endYear);
+      const unionSet = new Set(union);
+      const missing = expected.filter((slug) => !unionSet.has(slug));
+      const extra = union.filter((slug) => !expected.includes(slug));
+      if (missing.length > 0) {
+        errors.push(
+          `${label} publicSignal no cubre ${missing.length} empresas del periodo: ${missing.join(', ')}. Actualiza la validación de la década.`,
+        );
+      }
+      if (extra.length > 0) {
+        errors.push(
+          `${label} publicSignal incluye empresas fuera del universo público: ${extra.join(', ')}.`,
+        );
+      }
+    }
+  }
+}
+
+// 5) Programas homónimos: el mismo nombre en la misma institución solo se
 // permite si la modalidad difiere (evita tarjetas que parecen duplicadas).
 const seenPrograms = new Map<string, string>();
 for (const p of parsed['programs.json'] ?? []) {

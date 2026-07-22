@@ -6,3 +6,4 @@ export * from './person.schema';
 export * from './community.schema';
 export * from './event.schema';
 export * from './support-entity.schema';
+export * from './decade.schema';

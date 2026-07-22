@@ -1,0 +1,206 @@
+[
+  {
+    "slug": "1990-1999",
+    "startYear": 1990,
+    "endYear": 1999,
+    "status": "published",
+    "title": "Software para operar organizaciones",
+    "lede": "En los noventa, la tecnología local se orientó a organizar, controlar y sostener operaciones empresariales mediante software de gestión, automatización, integración y soporte.",
+    "description": "Entre 1990 y 1999, los registros empresariales del proyecto muestran una tecnología estrechamente conectada con el funcionamiento cotidiano de las organizaciones. Sistemas administrativos, contables y de nómina convivían con soluciones para pesaje, control operativo, monitoreo, infraestructura y soporte. Más que una escena de productos masivos, aparece un tejido de empresas que traducía procesos de negocio en software, implementaba herramientas y acompañaba su operación. Varias de esas trayectorias mantienen hoy sitios, productos o señales públicas de actividad, aunque la evidencia disponible no siempre permite reconstruir su portafolio original. Esta etapa se presenta como un archivo verificable: reconoce la persistencia de empresas pioneras y también hace explícito dónde todavía faltan fuentes históricas.",
+    "researchCutoff": "2026-07-20",
+    "findings": [
+      "13 registros con matrícula en la década se conservan en los datos; 12 tienen un sitio corporativo consultado en 2026 y uno solo cuenta con señal registral secundaria.",
+      "Entre las empresas con ficha de investigación predomina la oferta actual de software empresarial o vertical: 6 de 9.",
+      "Administración, control operativo e integración son los problemas más visibles del conjunto.",
+      "Producto, implementación y soporte aparecen como un modelo combinado: incluso las plataformas requieren acompañamiento.",
+      "La mayor brecha es histórica: faltan catálogos y fuentes fechadas de los años noventa, así que la oferta actual no se proyecta hacia atrás."
+    ],
+    "offerClassification": {
+      "note": "Clasifica la oferta observable hoy (2026) de las 9 empresas con ficha de investigación de la década. No describe el portafolio que cada una tenía en los noventa: esa evidencia fechada aún no existe.",
+      "groups": [
+        {
+          "label": "Producto de software empresarial o vertical",
+          "slugs": [
+            "d-s-i",
+            "azen-consultoria-en-sistemas",
+            "software-de-colombia",
+            "apolo-ingenieria",
+            "controlsoft",
+            "automatizacion-y-virtualizacion-ingenieria"
+          ]
+        },
+        {
+          "label": "Servicios e integración",
+          "slugs": ["data-service"]
+        },
+        {
+          "label": "Desarrollo y soporte mixto",
+          "slugs": ["venus-ingenieria-de-software"]
+        },
+        {
+          "label": "Sin información suficiente",
+          "slugs": ["sistemas-municipales"]
+        }
+      ]
+    },
+    "confidence": {
+      "note": "Confianza de la investigación sobre la identidad y la oferta actual de cada empresa; no sobre la reconstrucción de su historia en la década.",
+      "groups": [
+        {
+          "label": "Media-alta",
+          "slugs": ["d-s-i", "apolo-ingenieria", "controlsoft", "data-service"]
+        },
+        {
+          "label": "Media",
+          "slugs": [
+            "azen-consultoria-en-sistemas",
+            "software-de-colombia",
+            "automatizacion-y-virtualizacion-ingenieria",
+            "venus-ingenieria-de-software"
+          ]
+        },
+        {
+          "label": "Baja",
+          "slugs": ["sistemas-municipales"]
+        }
+      ]
+    },
+    "publicSignal": {
+      "note": "Validación pública del 20 de julio de 2026: un sitio vigente confirma identidad y oferta actual, no la actividad de la década completa.",
+      "corporateSite": [
+        "d-s-i",
+        "azen-consultoria-en-sistemas",
+        "computar",
+        "software-de-colombia",
+        "apolo-ingenieria",
+        "insoft",
+        "cafenet-comunicaciones",
+        "data-service",
+        "controlsoft",
+        "automatizacion-y-virtualizacion-ingenieria",
+        "data-3000",
+        "venus-ingenieria-de-software"
+      ],
+      "registralOnly": ["sistemas-municipales"]
+    },
+    "sectorsObserved": {
+      "note": "Sectores visibles en la comunicación actual de las empresas, no un censo histórico. No hay evidencia suficiente para cuantificar clientes, tamaño de mercado ni participación sectorial de la década.",
+      "items": [
+        "Organizaciones administrativas y comerciales",
+        "Industria y logística",
+        "Entidades públicas",
+        "Salud",
+        "Infraestructura y servicios empresariales"
+      ]
+    },
+    "geographyNote": "Los 13 registros tienen origen registrado en Manizales. Hay señales actuales de alcance colombiano o internacional para algunas trayectorias, pero no permiten medir el alcance del periodo: la clasificación prudente es origen local registrado y alcance histórico no determinado en la mayoría.",
+    "layers": [
+      {
+        "title": "Software de gestión",
+        "text": "Sistemas administrativos, contables, de nómina, inventario y facturación para operar organizaciones.",
+        "slugs": ["d-s-i", "apolo-ingenieria", "software-de-colombia", "insoft"]
+      },
+      {
+        "title": "Control y automatización",
+        "text": "Software conectado a operaciones físicas: pesaje, monitoreo ambiental e industrial, alerta temprana.",
+        "slugs": ["controlsoft", "automatizacion-y-virtualizacion-ingenieria"]
+      },
+      {
+        "title": "Integración y soporte",
+        "text": "Infraestructura, continuidad, conectividad, implementación y acompañamiento de la operación tecnológica.",
+        "slugs": ["data-service", "computar", "cafenet-comunicaciones"]
+      }
+    ],
+    "representative": [
+      {
+        "pattern": "Continuidad de software de gestión empresarial.",
+        "slugs": ["d-s-i", "apolo-ingenieria"]
+      },
+      {
+        "pattern": "Software especializado conectado a una operación física, en este caso pesaje.",
+        "slugs": ["controlsoft"]
+      },
+      {
+        "pattern": "Automatización, medición y datos aplicados a contextos ambiental e industrial.",
+        "slugs": ["automatizacion-y-virtualizacion-ingenieria"]
+      },
+      {
+        "pattern": "Infraestructura, soporte e integración como componente visible del ecosistema, además del producto.",
+        "slugs": ["data-service"]
+      }
+    ],
+    "closuresNote": "No se documentó ningún cierre ni adquisición en el conjunto. La ausencia de cierres confirmados no equivale a que todas las operaciones estén vigentes: significa que no hay evidencia registral o pública que lo afirme.",
+    "contextNotes": [
+      {
+        "title": "La formación llegó antes que las primeras matrículas",
+        "text": "El programa de Ingeniería de Sistemas de la Universidad Autónoma de Manizales celebró sus 40 años en noviembre de 2024, lo que sitúa su origen hacia 1984: la formación universitaria en sistemas precede por varios años a las primeras matrículas de software conservadas en este archivo (1991). Es plausible que los primeros egresados de la región alimentaran estas empresas, pero ese vínculo, persona a persona, aún no está verificado con fuentes públicas.",
+        "sources": [
+          {
+            "title": "40 años de Ingeniería de Sistemas UAM — La Patria, columna de opinión (2024-11-29)",
+            "url": "https://www.lapatria.com/opinion/columnistas/elizabeth-ramirez-correa/40-anos-de-ingenieria-de-sistemas-uam",
+            "consultedAt": "2026-07-22"
+          }
+        ]
+      },
+      {
+        "title": "D.S.I.: trayectoria corroborada por prensa",
+        "text": "Una nota social de La Patria registra en junio de 2014 la celebración del 23.º aniversario de DSI como empresa desarrolladora de software: la cuenta coincide con su matrícula de 1991 y constituye una de las pocas evidencias históricas independientes de trayectoria disponibles para las empresas del periodo.",
+        "sources": [
+          {
+            "title": "Celebración del 23.º aniversario de DSI — La Patria, sociales (2014-06-01)",
+            "url": "https://archivo.lapatria.com/sociales/celebracion-262",
+            "consultedAt": "2026-07-22"
+          }
+        ]
+      }
+    ],
+    "gaps": [
+      "Casi ninguna fuente publica el catálogo exacto del primer año de cada empresa: la oferta de los noventa no se puede reconstruir con los sitios actuales.",
+      "Sistemas Municipales no dispone de una descripción comercial verificable; requiere una fuente empresarial directa o archivística.",
+      "El sitio de Software de Colombia aplicó controles que impidieron revisar su contenido; el origen de ClausERP necesita una fuente fechada.",
+      "No hay evidencia para cuantificar clientes históricos, tamaño de mercado ni participación sectorial de la década.",
+      "Cuatro registros validados en 2026 (Computar, Insoft, Cafenet y Data3.000) aún no tienen ficha de investigación de década ni clasificación de oferta.",
+      "El vínculo entre los primeros egresados de Ingeniería de Sistemas de la región (UAM, hacia 1984) y la fundación de las empresas de los noventa es plausible pero no está verificado: perfiles profesionales confirmables y testimonios documentables permitirían establecerlo."
+    ],
+    "sources": [
+      {
+        "title": "Análisis de empresas 1990–1999",
+        "path": "docs/companies/1990-1999-analysis.md",
+        "consultedAt": "2026-07-18"
+      },
+      {
+        "title": "Fichas de enriquecimiento 1990–2009",
+        "path": "docs/companies/company-enrichment-1990-2009.md",
+        "consultedAt": "2026-07-18"
+      },
+      {
+        "title": "Validación pública de empresas 1991–1999",
+        "path": "docs/companies/companies-validation-1991-1999.md",
+        "consultedAt": "2026-07-20"
+      },
+      {
+        "title": "Vacíos de investigación 1990–2009",
+        "path": "docs/companies/research-gaps-1990-2009.md",
+        "consultedAt": "2026-07-18"
+      }
+    ]
+  },
+  {
+    "slug": "2000-2009",
+    "startYear": 2000,
+    "endYear": 2009,
+    "status": "in_research"
+  },
+  {
+    "slug": "2010-2019",
+    "startYear": 2010,
+    "endYear": 2019,
+    "status": "in_research"
+  },
+  {
+    "slug": "2020-2026",
+    "startYear": 2020,
+    "endYear": 2026,
+    "status": "in_research"
+  }
+]

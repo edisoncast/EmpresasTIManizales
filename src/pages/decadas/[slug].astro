@@ -1,0 +1,546 @@
+---
+import Layout from '../../components/Layout.astro';
+import Breadcrumbs from '../../components/Breadcrumbs.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import BarRows from '../../components/BarRows.astro';
+import Tag from '../../components/Tag.astro';
+import VerificationStatus from '../../components/VerificationStatus.astro';
+import ContributionCTA from '../../components/ContributionCTA.astro';
+import { companies, decades, getCompany } from '../../lib/data';
+import {
+  companiesInRange,
+  yearDistribution,
+  verificationDistribution,
+  classificationRows,
+} from '../../lib/decades';
+import { verificationMeta, verificationOrder } from '../../lib/verification';
+import { formatDate } from '../../lib/format';
+import { site } from '../../lib/site';
+
+export function getStaticPaths() {
+  return decades
+    .filter((decade) => decade.status === 'published')
+    .map((decade) => ({ params: { slug: decade.slug }, props: { decade } }));
+}
+
+const { decade } = Astro.props;
+const range = `${decade.startYear}–${decade.endYear}`;
+
+/* ---------- Métricas calculadas desde los datos (reproducibles) ---------- */
+const decadeCompanies = companiesInRange(companies, decade.startYear, decade.endYear).sort(
+  (a, b) =>
+    (a.registeredAt ?? '').localeCompare(b.registeredAt ?? '') ||
+    a.name.localeCompare(b.name, 'es'),
+);
+const total = decadeCompanies.length;
+const decadeSlugs = decadeCompanies.map((company) => company.slug);
+const byYear = yearDistribution(decadeCompanies, decade.startYear, decade.endYear);
+const maxYearCount = Math.max(...byYear.map((y) => y.count));
+const yearsWithRegistrations = byYear.filter((y) => y.count > 0).length;
+const emptyYears = byYear.filter((y) => y.count === 0).map((y) => y.year);
+const verification = verificationDistribution(decadeCompanies);
+
+/* ---------- Contenido de investigación (decades.json, validado) ---------- */
+const linksFor = (slugs: string[]) =>
+  slugs
+    .map((slug) => getCompany(slug))
+    .filter((company) => company !== undefined)
+    .map((company) => ({ label: company.name, href: `/empresas/${company.slug}` }));
+
+const offer = decade.offerClassification
+  ? classificationRows(decade.offerClassification.groups, decadeSlugs)
+  : undefined;
+const offerRows = decade.offerClassification
+  ? decade.offerClassification.groups.map((group) => ({
+      label: group.label,
+      count: group.slugs.length,
+      links: linksFor(group.slugs),
+    }))
+  : [];
+const unclassifiedCompanies = offer
+  ? decadeCompanies.filter(
+      (company) =>
+        !decade.offerClassification!.groups.some((group) => group.slugs.includes(company.slug)),
+    )
+  : [];
+
+const confidenceRows = decade.confidence
+  ? decade.confidence.groups.map((group) => ({
+      label: group.label,
+      count: group.slugs.length,
+      links: linksFor(group.slugs),
+    }))
+  : [];
+const researched = offer?.classified ?? 0;
+
+const corporateSiteCount = decade.publicSignal?.corporateSite.length ?? 0;
+
+const stats = [
+  { value: total, label: 'Empresas registradas', note: `matrícula ${range}` },
+  {
+    value: `${yearsWithRegistrations} de ${byYear.length}`,
+    label: 'Años con matrículas conservadas',
+    note: 'línea de tiempo abajo',
+  },
+  {
+    value: corporateSiteCount,
+    label: 'Con sitio corporativo consultado',
+    note: `validación ${formatDate(decade.researchCutoff)}`,
+  },
+  {
+    value: researched,
+    label: 'Con ficha de investigación de década',
+    note: `de ${total} registros`,
+  },
+  {
+    value: 0,
+    label: 'Cierres o adquisiciones documentados',
+    note: 'ninguno consta en el conjunto',
+  },
+];
+
+const nextDecade = decades.find((d) => d.startYear > decade.endYear);
+---
+
+<Layout title={`Décadas · ${range}`} description={`${range}: ${decade.lede}`}>
+  <div class="container-content pt-6">
+    <Breadcrumbs
+      items={[
+        { label: 'Inicio', href: '/' },
+        { label: 'Décadas', href: '/decadas' },
+        { label: range },
+      ]}
+    />
+  </div>
+
+  <PageHeader
+    eyebrow={`Archivo · ${decade.startYear} → ${decade.endYear}`}
+    title={decade.title ?? range}
+    description={decade.lede}
+    showCutoff={false}
+  >
+    <p class="inline-flex flex-wrap items-center gap-x-2 gap-y-1 font-mono text-xs text-ink-500">
+      <span>Corte de investigación: {formatDate(decade.researchCutoff)}</span>
+      <span aria-hidden="true">·</span>
+      <a href="/metodologia" class="link font-normal">Metodología</a>
+    </p>
+  </PageHeader>
+
+  <div class="container-content py-10">
+    <!-- Descripción editorial -->
+    <div class="max-w-reading">
+      <p class="text-md leading-relaxed text-ink-700">{decade.description}</p>
+      <p class="bg-mist/60 mt-5 rounded-lg border border-ink-200 p-4 text-sm text-ink-600">
+        <strong>Cómo leer estos números:</strong> las fechas son de matrícula mercantil, no de fundación.
+        La evidencia consultada es actual (2026): confirma identidad y oferta de hoy, pero no reconstruye
+        el portafolio original de los noventa. Cada cifra indica su tamaño de muestra.
+      </p>
+    </div>
+
+    <!-- Métricas destacadas -->
+    <section class="mt-12" aria-labelledby="cifras">
+      <h2 id="cifras" class="font-display text-2xl font-semibold text-ink-900">
+        La década en cifras
+      </h2>
+      <ul
+        class="mt-5 grid grid-cols-1 gap-px overflow-hidden rounded-lg border border-ink-200 bg-ink-200 sm:grid-cols-2 lg:grid-cols-5"
+      >
+        {
+          stats.map((stat) => (
+            <li class="bg-surface p-4">
+              <span class="block font-display text-2xl font-semibold tabular-nums text-ink-900">
+                {stat.value}
+              </span>
+              <span class="mt-1 block text-sm text-ink-600">{stat.label}</span>
+              <span class="mt-0.5 block font-mono text-xs text-ink-400">{stat.note}</span>
+            </li>
+          ))
+        }
+      </ul>
+      <p class="mt-3 text-xs text-ink-500">
+        Conteos calculados desde el directorio público de empresas y la validación documentada; son
+        registros del archivo, no indicadores de desempeño.
+      </p>
+    </section>
+
+    <!-- Línea de tiempo -->
+    <section class="mt-14 grid gap-10 lg:grid-cols-5" aria-labelledby="linea-tiempo">
+      <div class="lg:col-span-2">
+        <h2 id="linea-tiempo" class="font-display text-2xl font-semibold text-ink-900">
+          Matrículas por año
+        </h2>
+        <p class="mt-2 max-w-reading text-sm leading-relaxed text-ink-600">
+          Las {total} matrículas conservadas se concentran entre {decade.startYear + 1} y
+          {decade.endYear}. Los años sin barra ({emptyYears.join(', ')}) no tienen registros
+          conservados en los datos: puede significar ausencia real de matrículas tecnológicas o
+          registros que no sobrevivieron en el archivo.
+        </p>
+      </div>
+      <div class="lg:col-span-3">
+        <BarRows
+          items={byYear.map((y) => ({ label: String(y.year), count: y.count }))}
+          max={maxYearCount}
+          monoLabels={true}
+        />
+      </div>
+    </section>
+
+    <!-- Clasificación de oferta -->
+    {
+      decade.offerClassification && (
+        <section class="mt-14 grid gap-10 lg:grid-cols-5" aria-labelledby="oferta">
+          <div class="lg:col-span-2">
+            <h2 id="oferta" class="font-display text-2xl font-semibold text-ink-900">
+              Qué ofrecen hoy las empresas investigadas
+            </h2>
+            <p class="mt-2 max-w-reading text-sm leading-relaxed text-ink-600">
+              {decade.offerClassification.note}
+            </p>
+          </div>
+          <div class="lg:col-span-3">
+            <BarRows items={offerRows} max={researched} sampleSize={researched} />
+            {unclassifiedCompanies.length > 0 && (
+              <p class="bg-mist/60 mt-4 rounded-lg border border-ink-200 p-3 text-xs leading-relaxed text-ink-600">
+                <strong>
+                  {unclassifiedCompanies.length} registros más sin clasificación de oferta:
+                </strong>{' '}
+                {unclassifiedCompanies.map((company, i) => (
+                  <>
+                    {i > 0 && <span aria-hidden="true"> · </span>}
+                    <a href={`/empresas/${company.slug}`} class="link font-normal">
+                      {company.name}
+                    </a>
+                  </>
+                ))}
+                . Su identidad y oferta actual están validadas, pero aún no tienen ficha de
+                investigación de la década.
+              </p>
+            )}
+          </div>
+        </section>
+      )
+    }
+
+    <!-- Capas del periodo -->
+    {
+      decade.layers && (
+        <section class="mt-14" aria-labelledby="capas">
+          <h2 id="capas" class="font-display text-2xl font-semibold text-ink-900">
+            Tres capas de una misma década
+          </h2>
+          <p class="mt-2 max-w-reading text-sm text-ink-600">
+            El foco del periodo no fue un producto masivo sino operar organizaciones. Estas capas
+            estructuran el relato; una empresa puede participar en más de una.
+          </p>
+          <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
+            {decade.layers.map((layer) => (
+              <div class="rounded-lg border border-ink-200 bg-surface p-5">
+                <h3 class="font-display text-lg font-semibold text-ink-900">{layer.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-600">{layer.text}</p>
+                {layer.slugs.length > 0 && (
+                  <p class="mt-3 text-xs leading-relaxed text-ink-500">
+                    {linksFor(layer.slugs).map((link, i) => (
+                      <>
+                        {i > 0 && <span aria-hidden="true"> · </span>}
+                        <a href={link.href} class="link font-normal">
+                          {link.label}
+                        </a>
+                      </>
+                    ))}
+                  </p>
+                )}
+              </div>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <!-- Sectores y alcance -->
+    {
+      decade.sectorsObserved && (
+        <section class="mt-14 grid gap-10 lg:grid-cols-2" aria-labelledby="sectores">
+          <div>
+            <h2 id="sectores" class="font-display text-2xl font-semibold text-ink-900">
+              Sectores y problemas atendidos
+            </h2>
+            <p class="mt-2 max-w-reading text-sm leading-relaxed text-ink-600">
+              {decade.sectorsObserved.note}
+            </p>
+            <div class="mt-4 flex flex-wrap gap-1.5">
+              {decade.sectorsObserved.items.map((sector) => (
+                <Tag label={sector} tone="outline" />
+              ))}
+            </div>
+          </div>
+          <div>
+            <h2 class="font-display text-2xl font-semibold text-ink-900">Alcance geográfico</h2>
+            <p class="mt-2 max-w-reading text-sm leading-relaxed text-ink-600">
+              {decade.geographyNote}
+            </p>
+          </div>
+        </section>
+      )
+    }
+
+    <!-- Contexto documentado del periodo -->
+    {
+      decade.contextNotes && (
+        <section class="mt-14" aria-labelledby="contexto">
+          <h2 id="contexto" class="font-display text-2xl font-semibold text-ink-900">
+            Contexto documentado del periodo
+          </h2>
+          <p class="mt-2 max-w-reading text-sm text-ink-600">
+            Piezas de evidencia fechada que conectan la década con otros frentes del ecosistema.
+            Cada nota distingue lo que su fuente prueba de lo que sigue siendo un vínculo por
+            verificar.
+          </p>
+          <div class="mt-6 grid grid-cols-1 gap-4 lg:grid-cols-2">
+            {decade.contextNotes.map((note) => (
+              <article class="rounded-lg border border-ink-200 bg-surface p-5">
+                <h3 class="font-display text-lg font-semibold text-ink-900">{note.title}</h3>
+                <p class="mt-2 text-sm leading-relaxed text-ink-600">{note.text}</p>
+                <ul class="mt-3 space-y-1">
+                  {note.sources.map((source, index) => (
+                    <li class="flex flex-wrap items-baseline gap-x-2 text-xs">
+                      <span class="font-mono text-ink-400">Fuente {index + 1}</span>
+                      <a
+                        href={source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="link font-normal"
+                      >
+                        {source.title}
+                      </a>
+                      {source.consultedAt && (
+                        <span class="font-mono text-ink-500">
+                          consultada el {formatDate(source.consultedAt)}
+                        </span>
+                      )}
+                    </li>
+                  ))}
+                </ul>
+              </article>
+            ))}
+          </div>
+        </section>
+      )
+    }
+
+    <!-- Continuidad y confianza -->
+    <section class="mt-14 grid gap-10 lg:grid-cols-2" aria-labelledby="continuidad">
+      <div>
+        <h2 id="continuidad" class="font-display text-2xl font-semibold text-ink-900">
+          Continuidad y verificación
+        </h2>
+        <p class="mt-2 max-w-reading text-sm leading-relaxed text-ink-600">
+          Estado de verificación de los {total} registros del periodo, con la misma lectura que el resto
+          del archivo. {decade.closuresNote}
+        </p>
+        <div class="mt-4">
+          <BarRows
+            items={verificationOrder
+              .filter((state) => verification[state] > 0)
+              .map((state) => ({
+                label: verificationMeta[state].label,
+                count: verification[state],
+              }))}
+            max={total}
+            sampleSize={total}
+          />
+        </div>
+      </div>
+      {
+        decade.confidence && (
+          <div>
+            <h2 class="font-display text-2xl font-semibold text-ink-900">
+              Confianza de la investigación
+            </h2>
+            <p class="mt-2 max-w-reading text-sm leading-relaxed text-ink-600">
+              {decade.confidence.note}
+            </p>
+            <div class="mt-4">
+              <BarRows items={confidenceRows} max={researched} sampleSize={researched} />
+            </div>
+          </div>
+        )
+      }
+    </section>
+
+    <!-- Hallazgos -->
+    {
+      decade.findings && (
+        <section
+          class="bg-mist/40 -mx-4 mt-14 rounded-lg border border-ink-200 px-4 py-8 sm:-mx-6 sm:px-6"
+          aria-labelledby="hallazgos"
+        >
+          <h2 id="hallazgos" class="font-display text-2xl font-semibold text-ink-900">
+            Hallazgos de la década
+          </h2>
+          <ol class="mt-5 max-w-3xl space-y-4">
+            {decade.findings.map((finding, index) => (
+              <li class="flex gap-4">
+                <span class="font-mono text-xs leading-6 text-coffee">
+                  {String(index + 1).padStart(2, '0')}
+                </span>
+                <span class="text-sm leading-relaxed text-ink-700">{finding}</span>
+              </li>
+            ))}
+          </ol>
+        </section>
+      )
+    }
+
+    <!-- Trayectorias representativas -->
+    {
+      decade.representative && (
+        <section class="mt-14" aria-labelledby="trayectorias">
+          <h2 id="trayectorias" class="font-display text-2xl font-semibold text-ink-900">
+            Trayectorias que ilustran el periodo
+          </h2>
+          <p class="mt-2 max-w-reading text-sm text-ink-600">
+            Cada empresa ejemplifica un patrón documentado del conjunto. No es un ranking: no
+            implica mayor tamaño, calidad ni relevancia relativa.
+          </p>
+          <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+            {decade.representative.map((entry) => (
+              <li class="rounded-lg border border-ink-200 bg-surface p-5">
+                <p class="text-sm font-medium leading-relaxed text-ink-800">{entry.pattern}</p>
+                <p class="mt-2 text-xs leading-relaxed text-ink-500">
+                  {linksFor(entry.slugs).map((link, i) => (
+                    <>
+                      {i > 0 && <span aria-hidden="true"> · </span>}
+                      <a href={link.href} class="link font-normal">
+                        {link.label}
+                      </a>
+                    </>
+                  ))}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      )
+    }
+
+    <!-- Registro completo -->
+    <section class="mt-14" aria-labelledby="registro">
+      <h2 id="registro" class="font-display text-2xl font-semibold text-ink-900">
+        Las {total} empresas del periodo
+      </h2>
+      <p class="mt-2 max-w-reading text-sm text-ink-600">
+        Orden cronológico de matrícula; cada ficha muestra sus fuentes y su estado de verificación.
+      </p>
+      <ul class="mt-5 divide-y divide-ink-200 rounded-lg border border-ink-200 bg-surface">
+        {
+          decadeCompanies.map((company) => (
+            <li class="flex flex-wrap items-center justify-between gap-x-4 gap-y-2 p-4">
+              <div class="min-w-0">
+                <span class="font-mono text-xs text-coffee">
+                  {company.registeredAt?.slice(0, 4)}
+                </span>
+                <a
+                  href={`/empresas/${company.slug}`}
+                  class="ml-2 font-medium text-ink-900 no-underline hover:text-accent"
+                >
+                  {company.name}
+                </a>
+                <span class="mt-0.5 block text-xs text-ink-500 sm:ml-9">
+                  {company.categories.slice(0, 3).join(' · ')}
+                </span>
+              </div>
+              <VerificationStatus
+                verificationStatus={company.verificationStatus}
+                needsVerification={company.needsVerification}
+                lastVerifiedAt={company.lastVerifiedAt}
+              />
+            </li>
+          ))
+        }
+      </ul>
+    </section>
+
+    <!-- Vacíos -->
+    {
+      decade.gaps && (
+        <section class="mt-14" aria-labelledby="vacios">
+          <h2 id="vacios" class="font-display text-2xl font-semibold text-ink-900">
+            Lo que aún no se puede afirmar
+          </h2>
+          <p class="mt-2 max-w-reading text-sm text-ink-600">
+            Este archivo reconoce la incertidumbre en lugar de ocultarla. Estos son los vacíos
+            documentados de la década:
+          </p>
+          <ul class="mt-5 max-w-3xl space-y-3">
+            {decade.gaps.map((gap) => (
+              <li class="flex gap-3 text-sm leading-relaxed text-ink-700">
+                <span aria-hidden="true" class="mt-0.5 text-ink-400">
+                  —
+                </span>
+                <span>{gap}</span>
+              </li>
+            ))}
+          </ul>
+          <div class="mt-8">
+            <ContributionCTA variant="source" />
+          </div>
+        </section>
+      )
+    }
+
+    <!-- Fuentes -->
+    {
+      decade.sources && (
+        <section class="mt-14" aria-labelledby="fuentes">
+          <h2 id="fuentes" class="font-display text-2xl font-semibold text-ink-900">
+            Fuentes de esta investigación
+          </h2>
+          <ol class="mt-5 max-w-3xl space-y-2">
+            {decade.sources.map((source, index) => (
+              <li class="flex flex-wrap items-baseline gap-x-3 gap-y-1 text-sm">
+                <span class="font-mono text-xs text-ink-400">Fuente {index + 1}</span>
+                <a
+                  href={`${site.repoUrl}/blob/master/${source.path}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  class="link"
+                >
+                  {source.title}
+                </a>
+                {source.consultedAt && (
+                  <span class="font-mono text-xs text-ink-500">
+                    consultada el {formatDate(source.consultedAt)}
+                  </span>
+                )}
+              </li>
+            ))}
+          </ol>
+          <p class="mt-3 max-w-reading text-xs text-ink-500">
+            Las fuentes por empresa (sitios oficiales y registros) están enlazadas en cada ficha.
+          </p>
+        </section>
+      )
+    }
+
+    <!-- Siguiente periodo -->
+    {
+      nextDecade && (
+        <div class="mt-14 flex flex-wrap items-center justify-between gap-3 border-t border-ink-200 pt-6">
+          <a href="/decadas" class="text-sm font-medium text-accent no-underline hover:underline">
+            ← Todas las décadas
+          </a>
+          <p class="font-mono text-xs text-ink-500">
+            Siguiente periodo: {nextDecade.startYear} → {nextDecade.endYear} ·{' '}
+            {nextDecade.status === 'published' ? (
+              <a href={`/decadas/${nextDecade.slug}`} class="link font-normal">
+                ver análisis
+              </a>
+            ) : (
+              'investigación en curso'
+            )}
+          </p>
+        </div>
+      )
+    }
+  </div>
+</Layout>

@@ -4,6 +4,7 @@
  * Esta es la única puerta de entrada a los datos para páginas y componentes.
  */
 import companiesRaw from '../data/companies.json';
+import decadesRaw from '../data/decades.json';
 import universitiesRaw from '../data/universities.json';
 import programsRaw from '../data/programs.json';
 import peopleRaw from '../data/people.json';
@@ -14,6 +15,7 @@ import { applyCompanyReview, isExcludedFromPublicDirectory } from './company-rev
 
 import {
   companiesSchema,
+  decadesSchema,
   universitiesSchema,
   programsSchema,
   peopleSchema,
@@ -21,6 +23,7 @@ import {
   eventsSchema,
   supportEntitiesSchema,
   type Company,
+  type Decade,
   type University,
   type Program,
   type Person,
@@ -76,6 +79,10 @@ export const supportEntities: SupportEntity[] = parseOrThrow(
   supportEntitiesRaw,
   'supportEntities.json',
 ).sort(byName);
+/** Décadas del archivo, ordenadas cronológicamente (contenido de investigación). */
+export const decades: Decade[] = parseOrThrow(decadesSchema, decadesRaw, 'decades.json').sort(
+  (a, b) => a.startYear - b.startYear,
+);
 
 /** Métricas para la home y la página de ecosistema. */
 export const stats = {
@@ -128,4 +135,4 @@ export function organizersForCommunity(community: Community): Person[] {
   return slugs.map((slug) => getPerson(slug)).filter((p): p is Person => Boolean(p));
 }
 
-export type { Company, University, Program, Person, Community, Event, SupportEntity };
+export type { Company, Decade, University, Program, Person, Community, Event, SupportEntity };

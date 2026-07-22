@@ -51,6 +51,30 @@ test.describe('Estructura visual y contenido', () => {
     expect(await badges.count()).toBeGreaterThan(0);
   });
 
+  test('la década 1990-1999 cuenta un relato con datos, muestra y vacíos', async ({ page }) => {
+    await page.goto('/decadas');
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(/evolución por décadas/i);
+    // Índice: la década publicada enlaza y las demás quedan como investigación en curso.
+    await page.getByRole('link', { name: /1990 → 1999/ }).click();
+    await expect(page).toHaveURL(/\/decadas\/1990-1999\/?$/);
+    await expect(page.getByRole('heading', { level: 1 })).toHaveCount(1);
+    await expect(page.getByRole('heading', { level: 1 })).toContainText(
+      /software para operar organizaciones/i,
+    );
+    // Métricas con contexto y tamaño de muestra visible.
+    await expect(page.getByText('Empresas registradas', { exact: true })).toBeVisible();
+    await expect(page.getByText(/de 9/).first()).toBeVisible();
+    // Línea de tiempo y vacíos reconocidos.
+    await expect(page.getByRole('heading', { name: /matrículas por año/i })).toBeVisible();
+    await expect(
+      page.getByRole('heading', { name: /lo que aún no se puede afirmar/i }),
+    ).toBeVisible();
+    // Fuentes de la investigación enlazadas.
+    await expect(page.getByRole('link', { name: /análisis de empresas 1990–1999/i })).toBeVisible();
+    // Sin lenguaje de ranking.
+    await expect(page.getByText(/las mejores|top \d|más importantes/i)).toHaveCount(0);
+  });
+
   test('programas homónimos se distinguen por su badge de modalidad', async ({ page }) => {
     await page.goto('/programas');
     // Dos registros con el mismo nombre e institución, distinta modalidad.
