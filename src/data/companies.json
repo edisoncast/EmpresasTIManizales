@@ -3817,6 +3817,11 @@
         "url": "https://co.linkedin.com/company/dsi-sa",
         "title": "Perfil corporativo de DSI S.A. en LinkedIn",
         "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://archivo.lapatria.com/sociales/celebracion-262",
+        "title": "Celebración del 23.º aniversario de DSI — La Patria, sociales (2014-06-01)",
+        "reviewedAt": "2026-07-22"
       }
     ],
     "description": "Empresa de Manizales que desarrolla software empresarial para gestión administrativa y financiera. Su oferta pública incluye ERP Fortuner, Vision, facturación y nómina electrónica, punto de venta, soluciones para restaurantes y servicios públicos, movilidad e inteligencia analítica.",
@@ -3835,6 +3840,7 @@
     "needsVerification": false,
     "nit": "800122217-7",
     "registeredAt": "1991-05-22",
+    "notes": "Fuente de prensa fechada: la nota social de La Patria (2014-06-01) registra la celebración del 23.º aniversario de DSI como empresa desarrolladora de software, consistente con la matrícula de 1991. Es una de las pocas evidencias históricas independientes de trayectoria para las empresas de los noventa.",
     "technologies": [
       "ERP",
       "Facturación electrónica",

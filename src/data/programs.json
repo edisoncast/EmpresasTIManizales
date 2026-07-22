@@ -235,11 +235,24 @@
     "durationSemesters": 10,
     "sniesCode": "1918",
     "sourceUrl": "https://www.autonoma.edu.co/oferta-academica/pregrado/ingenieria-de-sistemas",
+    "sources": [
+      {
+        "url": "https://www.autonoma.edu.co/oferta-academica/pregrado/ingenieria-de-sistemas",
+        "title": "Página oficial del programa — Universidad Autónoma de Manizales",
+        "reviewedAt": "2026-07-20"
+      },
+      {
+        "url": "https://www.lapatria.com/opinion/columnistas/elizabeth-ramirez-correa/40-anos-de-ingenieria-de-sistemas-uam",
+        "title": "40 años de Ingeniería de Sistemas UAM — La Patria, columna de Elizabeth Ramírez Correa (2024-11-29)",
+        "reviewedAt": "2026-07-22"
+      }
+    ],
     "needsVerification": false,
     "website": "https://www.autonoma.edu.co/oferta-academica/pregrado/ingenieria-de-sistemas",
     "verificationStatus": "verified",
     "description": "Programa de pregrado que forma ingenieros capaces de proponer y desarrollar soluciones informáticas con una visión sistémica de los problemas. La formación integra fundamentos científicos y tecnológicos de los sistemas computacionales, el desarrollo de software bajo estándares de calidad y la formalización de procesos. Los estudiantes participan en grupos de investigación desde los primeros semestres y pueden optar por doble titulación. El plan desarrolla competencias para identificar oportunidades de transformación tecnológica, emprender iniciativas y construir aplicaciones. Sus egresados pueden desempeñarse en desarrollo de software, gestión de proyectos informáticos, consultoría y creación de empresas de base tecnológica. Se cursa de forma presencial en Manizales.",
-    "lastVerifiedAt": "2026-07-20"
+    "notes": "Hito histórico con fuente de prensa: la columna de La Patria (2024-11-29) celebra los 40 años del programa, lo que sitúa su origen hacia 1984, entre los primeros de la región. Insumo para la investigación de formación por décadas; la fecha exacta de la primera cohorte requiere confirmación institucional.",
+    "lastVerifiedAt": "2026-07-22"
   },
   {
     "name": "Ingeniería de Sistemas",
