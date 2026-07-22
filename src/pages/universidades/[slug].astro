@@ -3,6 +3,7 @@ import Layout from '../../components/Layout.astro';
 import Breadcrumbs from '../../components/Breadcrumbs.astro';
 import EntityDetail from '../../components/EntityDetail.astro';
 import Tag from '../../components/Tag.astro';
+import ModalityBadge from '../../components/ModalityBadge.astro';
 import VerificationStatus from '../../components/VerificationStatus.astro';
 import { universities, programsForUniversity } from '../../lib/data';
 import { label } from '../../lib/format';
@@ -103,7 +104,7 @@ const jsonLd = {
                   </a>
                   <div class="mt-1 flex flex-wrap gap-1.5">
                     <Tag label={label('programLevel', p.level)} tone="outline" />
-                    {p.modality && <Tag label={label('modality', p.modality)} tone="neutral" />}
+                    {p.modality && <ModalityBadge modality={p.modality} />}
                   </div>
                 </div>
                 <VerificationStatus

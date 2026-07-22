@@ -104,7 +104,8 @@ export function enforceVerificationRules(entity: AuditableEntity, ctx: z.Refinem
 export const workModelSchema = z.enum(['remote', 'hybrid', 'onsite', 'unknown']);
 export const companySizeSchema = z.enum(['micro', 'small', 'medium', 'large', 'unknown']);
 export const institutionTypeSchema = z.enum(['public', 'private', 'unknown']);
-export const modalitySchema = z.enum(['onsite', 'remote', 'hybrid', 'unknown']);
+// Modalidad SNIES/HECAA: virtual (remote) y a distancia (distance) son registros distintos.
+export const modalitySchema = z.enum(['onsite', 'remote', 'distance', 'hybrid', 'unknown']);
 
 export const programLevelSchema = z.enum([
   'technical',
@@ -139,7 +140,8 @@ export const labels = {
   },
   modality: {
     onsite: 'Presencial',
-    remote: 'Virtual / Remoto',
+    remote: 'Virtual',
+    distance: 'A distancia',
     hybrid: 'Híbrido',
     unknown: 'Sin definir',
   },
