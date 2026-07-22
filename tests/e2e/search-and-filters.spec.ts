@@ -33,6 +33,21 @@ test.describe('Búsqueda y filtros', () => {
     await expect(page.locator('[data-item]:visible')).toHaveCount(total);
   });
 
+  test('empresas filtra por década de matrícula con rangos legibles', async ({ page }) => {
+    await page.goto('/empresas');
+    const select = page.locator('select[data-facet-key="decade"]');
+    await expect(select).toBeVisible();
+    // Las opciones son rangos por década (ej. 1990–1999, 2020–2026), no años sueltos.
+    const options = await select.locator('option:not([value=""])').allTextContents();
+    expect(options.length).toBeGreaterThan(0);
+    for (const opt of options) expect(opt).toMatch(/^\d{4}–\d{4}$/);
+    const total = await page.locator('[data-item]').count();
+    await select.selectOption({ index: 1 });
+    const filtered = await page.locator('[data-item]:visible').count();
+    expect(filtered).toBeGreaterThan(0);
+    expect(filtered).toBeLessThan(total);
+  });
+
   test('universidades, programas y personas exponen filtros utilizables', async ({ page }) => {
     for (const path of ['/universidades', '/programas', '/personas']) {
       await page.goto(path);

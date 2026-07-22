@@ -6,7 +6,7 @@ import CompanySizeOverview from '../../components/CompanySizeOverview.astro';
 import EntityCard from '../../components/EntityCard.astro';
 import EmptyState from '../../components/EmptyState.astro';
 import { companies } from '../../lib/data';
-import { label } from '../../lib/format';
+import { decadeLabel, label } from '../../lib/format';
 import { encodeFacet, uniqueSorted } from '../../lib/search';
 import { site } from '../../lib/site';
 
@@ -17,7 +17,12 @@ const cities = uniqueSorted(companies.map((c) => c.city));
 const categories = uniqueSorted(companies.flatMap((c) => c.categories));
 const sizes = uniqueSorted(companies.map((c) => label('size', c.size)));
 const forms = uniqueSorted(companies.map((c) => c.legalForm ?? '').filter(Boolean));
-const years = uniqueSorted(companies.map(regYear));
+// Décadas de matrícula (la década en curso se recorta al año máximo con datos, ej. 2020–2026).
+const regYears = companies.map(regYear).filter(Boolean).map(Number);
+const maxRegYear = regYears.length > 0 ? Math.max(...regYears) : undefined;
+const regDecade = (c: (typeof companies)[number]) =>
+  regYear(c) ? decadeLabel(Number(regYear(c)), maxRegYear) : '';
+const decades = uniqueSorted(companies.map(regDecade));
 const sizeOrder = [
   { key: 'micro', label: 'Microempresa' },
   { key: 'small', label: 'Pequeña empresa' },
@@ -38,7 +43,7 @@ const facets = [
   { key: 'category', label: 'Categoría', options: categories, allLabel: 'Todas las categorías' },
   { key: 'size', label: 'Tamaño', options: sizes, allLabel: 'Todos los tamaños' },
   { key: 'form', label: 'Forma jurídica', options: forms, allLabel: 'Todas' },
-  { key: 'year', label: 'Año de matrícula', options: years, allLabel: 'Cualquier año' },
+  { key: 'decade', label: 'Década de matrícula', options: decades, allLabel: 'Cualquier década' },
 ];
 ---
 
@@ -115,7 +120,7 @@ const facets = [
                   'data-facet-category': encodeFacet(c.categories),
                   'data-facet-size': encodeFacet([label('size', c.size)]),
                   'data-facet-form': encodeFacet(c.legalForm ? [c.legalForm] : []),
-                  'data-facet-year': encodeFacet(regYear(c) ? [regYear(c)] : []),
+                  'data-facet-decade': encodeFacet(regDecade(c) ? [regDecade(c)] : []),
                 }}
               />
             ))}
