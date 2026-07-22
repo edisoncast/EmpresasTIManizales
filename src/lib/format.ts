@@ -23,6 +23,19 @@ export function formatDate(iso: string | undefined | null): string {
   });
 }
 
+/**
+ * Agrupa un año en su década como rango legible: 2013 -> '2010–2019'.
+ * Si se pasa `maxYear` y cae dentro de la década, recorta el final del rango
+ * (ej. 2023 con maxYear 2026 -> '2020–2026') para no anunciar años sin datos.
+ */
+export function decadeLabel(year: number, maxYear?: number): string {
+  if (!Number.isFinite(year)) return '';
+  const start = Math.floor(year / 10) * 10;
+  const end =
+    maxYear !== undefined && maxYear >= start && maxYear < start + 9 ? maxYear : start + 9;
+  return `${start}–${end}`;
+}
+
 /** Quita el esquema y el www de una URL para mostrarla más corta. */
 export function displayUrl(url: string | undefined | null): string {
   if (!url) return '';
