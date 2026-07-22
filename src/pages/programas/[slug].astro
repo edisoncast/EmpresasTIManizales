@@ -12,6 +12,17 @@ export function getStaticPaths() {
 const { program } = Astro.props;
 const university = universityForProgram(program);
 
+// Programas homónimos (mismo nombre e institución, distinta modalidad): la
+// modalidad se muestra en el eyebrow y desambigua el <title> y la descripción.
+const modalityText = program.modality ? label('modality', program.modality) : '';
+const hasHomonym = programs.some(
+  (other) =>
+    other.slug !== program.slug &&
+    other.name === program.name &&
+    other.institutionName === program.institutionName,
+);
+const displayName = hasHomonym && modalityText ? `${program.name} (${modalityText})` : program.name;
+
 const facts = [
   { label: 'Institución', value: program.institutionName },
   { label: 'Nivel', value: label('programLevel', program.level) },
@@ -42,8 +53,8 @@ const jsonLd = {
 ---
 
 <Layout
-  title={`${program.name} · ${program.institutionName}`}
-  description={`${program.name} en ${program.institutionName} (${label('programLevel', program.level)}).`}
+  title={`${displayName} · ${program.institutionName}`}
+  description={`${displayName} en ${program.institutionName} (${label('programLevel', program.level)}).`}
   jsonLd={jsonLd}
 >
   <div class="container-content pt-6">
@@ -57,7 +68,9 @@ const jsonLd = {
   </div>
 
   <EntityDetail
-    eyebrow={`${label('programLevel', program.level)} · ${program.city}`}
+    eyebrow={[label('programLevel', program.level), modalityText, program.city]
+      .filter(Boolean)
+      .join(' · ')}
     title={program.name}
     subtitle={program.institutionName}
     description={program.description}

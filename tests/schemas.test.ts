@@ -34,6 +34,17 @@ describe('los datasets reales cumplen su schema', () => {
   });
 });
 
+describe('programas homónimos', () => {
+  it('mismo nombre e institución solo con modalidad distinta (y modalidad definida)', () => {
+    const seen = new Set<string>();
+    for (const p of programs) {
+      const key = `${p.institutionName}|${p.name}|${(p as { modality?: string }).modality ?? 'unknown'}`;
+      expect(seen.has(key), `duplicado aparente: ${key}`).toBe(false);
+      seen.add(key);
+    }
+  });
+});
+
 describe('slugSchema', () => {
   it('acepta kebab-case', () => {
     expect(slugSchema.safeParse('universidad-de-caldas').success).toBe(true);

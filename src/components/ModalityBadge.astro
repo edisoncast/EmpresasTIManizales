@@ -1,0 +1,24 @@
+---
+import { label } from '../lib/format';
+
+/**
+ * Badge de modalidad académica (presencial, virtual, a distancia, híbrido).
+ * Distingue programas homónimos: el texto siempre está presente (nunca solo
+ * color) y cada modalidad tiene un tono sobrio propio para escanear rápido.
+ */
+export interface Props {
+  modality?: string;
+}
+const { modality } = Astro.props;
+
+const tones: Record<string, string> = {
+  onsite: 'bg-ink-100 text-ink-700',
+  remote: 'bg-accent-soft text-accent-ink',
+  distance: 'border border-ink-300 bg-surface text-ink-700',
+  hybrid: 'bg-mist border border-ink-300 text-ink-700',
+  unknown: 'border border-dashed border-ink-300 text-ink-500',
+};
+const tone = tones[modality ?? 'unknown'] ?? tones.unknown;
+---
+
+<span class={`badge ${tone}`}>Modalidad: {label('modality', modality)}</span>

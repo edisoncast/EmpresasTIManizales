@@ -662,7 +662,7 @@
     "description": "Doctorado orientado a la formación de investigadores capaces de generar conocimiento original en ingeniería con pertinencia regional. El programa articula el trabajo doctoral con problemáticas del territorio, como el aprovechamiento de residuos agroindustriales, la microencapsulación con materias primas locales, el mejoramiento de procesos de fermentación del café y los estudios genómicos de plantas. Los doctorandos desarrollan competencias para conducir investigación rigurosa, publicar en revistas indexadas y consolidar grupos de investigación. Una modalidad reciente vincula a profesionales de empresas para orientar tesis hacia la industria. Sus aportes buscan impacto socioeconómico y fortalecimiento de la capacidad científica regional en ingeniería."
   },
   {
-    "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial — Presencial",
+    "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial",
     "slug": "tp-depuracion-datos-ia-presencial-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
@@ -682,12 +682,12 @@
     "description": "Programa técnico profesional que introduce a los estudiantes en las bases del procesamiento, la depuración y la limpieza de datos como paso previo al desarrollo de soluciones de inteligencia artificial. La formación enfatiza la calidad de la información y prepara para recolectar, organizar y depurar conjuntos de datos que alimentan modelos y análisis. En esta modalidad presencial, constituye el primer nivel de una cadena formativa en inteligencia artificial que continúa con tecnologías, pregrados y posgrados de la Universidad. Los conocimientos se aplican en el apoyo a proyectos de datos e IA en organizaciones de distintos sectores."
   },
   {
-    "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial — A distancia",
+    "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial",
     "slug": "tp-depuracion-datos-ia-distancia-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
     "level": "technical",
-    "modality": "remote",
+    "modality": "distance",
     "city": "Manizales",
     "area": ["Inteligencia artificial", "Datos", "Programación"],
     "credits": 58,
@@ -702,7 +702,7 @@
     "description": "Técnico profesional ofrecido a distancia que forma en las bases del procesamiento, la depuración y la limpieza de datos para la inteligencia artificial. Los estudiantes aprenden a recolectar, organizar y preparar conjuntos de datos con criterios de calidad, de modo que puedan alimentar modelos analíticos y sistemas inteligentes. La modalidad a distancia favorece la flexibilidad para quienes combinan estudio y otras ocupaciones. El programa funciona como puerta de entrada a una ruta formativa en inteligencia artificial que incluye niveles tecnológico, profesional y de posgrado. Sus egresados apoyan tareas de preparación y gestión de datos en proyectos de IA."
   },
   {
-    "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial — Virtual",
+    "name": "Técnico Profesional en Depuración y Procesamiento de Datos para Inteligencia Artificial",
     "slug": "tp-depuracion-datos-ia-virtual-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
@@ -722,12 +722,12 @@
     "description": "Técnico profesional en modalidad virtual centrado en las bases del procesamiento, la depuración y la limpieza de datos para la inteligencia artificial. A través de entornos en línea, los estudiantes desarrollan capacidades para recolectar, organizar y depurar información con estándares de calidad, insumo esencial de los modelos y análisis de IA. El formato virtual permite acceder a clases y materiales desde cualquier lugar con conexión, promoviendo autonomía y autorregulación. El programa es el primer eslabón de una cadena formativa en inteligencia artificial dentro de la Universidad. Los conocimientos se aplican al apoyo de proyectos de datos e IA en diversos sectores."
   },
   {
-    "name": "Técnico Profesional en Programación para Dispositivos Móviles — A distancia",
+    "name": "Técnico Profesional en Programación para Dispositivos Móviles",
     "slug": "tp-programacion-movil-distancia-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
     "level": "technical",
-    "modality": "remote",
+    "modality": "distance",
     "city": "Manizales",
     "area": ["Desarrollo de software", "Desarrollo móvil"],
     "sniesCode": "117720",
@@ -782,12 +782,12 @@
     "description": "Pregrado presencial de ocho semestres que integra matemáticas, estadística y computación para la ciencia de datos. Los estudiantes aprenden a modelar y analizar datos, construir modelos predictivos, descriptivos y prescriptivos, y manejar herramientas como Python, R, SQL, Tableau, Power BI y plataformas de Big Data como Hadoop y Spark. La formación incluye liderazgo, comunicación, ética y bilingüismo. Los egresados pueden desempeñarse como analistas y modeladores de datos o líderes de proyectos de analítica en entidades públicas y privadas de cualquier sector que requiera decisiones basadas en datos. Es la primera oferta de este tipo en una universidad pública de la región."
   },
   {
-    "name": "Técnico Profesional en Programación Web — A distancia",
+    "name": "Técnico Profesional en Programación Web",
     "slug": "tp-programacion-web-distancia-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
     "level": "technical",
-    "modality": "remote",
+    "modality": "distance",
     "city": "Manizales",
     "area": ["Desarrollo de software", "Desarrollo web"],
     "credits": 59,
@@ -802,12 +802,12 @@
     "description": "Técnico profesional a distancia enfocado en el desarrollo de aplicaciones y sitios web. Durante cuatro semestres, los estudiantes adquieren fundamentos de programación y de construcción de soluciones web, abarcando la creación de interfaces y la puesta en funcionamiento de aplicaciones en línea. La modalidad a distancia brinda flexibilidad horaria y acceso remoto a clases y materiales, promoviendo la autonomía del estudiante. Estos conocimientos habilitan para integrarse a equipos de desarrollo web, apoyar proyectos digitales o continuar estudios en programas de sistemas y computación. El programa hace parte de la oferta técnica virtual y a distancia de la Facultad de Inteligencia Artificial e Ingenierías."
   },
   {
-    "name": "Técnico Profesional en Programación para Videojuegos — A distancia",
+    "name": "Técnico Profesional en Programación para Videojuegos",
     "slug": "tp-programacion-videojuegos-distancia-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
     "level": "technical",
-    "modality": "remote",
+    "modality": "distance",
     "city": "Manizales",
     "area": ["Desarrollo de software", "Videojuegos"],
     "credits": 61,
@@ -883,7 +883,7 @@
     "description": "Programa tecnológico centrado en las matemáticas y la estadística aplicadas a la analítica predictiva. Los estudiantes se forman en el uso de herramientas y técnicas avanzadas para recolectar, procesar y analizar grandes volúmenes de datos, e incorporan métodos de aprendizaje automático y minería de datos para anticipar comportamientos futuros. La formación busca identificar patrones, tendencias y correlaciones con criterio ético. Estos conocimientos permiten apoyar la toma de decisiones y la optimización de recursos en organizaciones de los sectores público y privado. El programa, adscrito al Departamento de Matemáticas, se plantea como una oferta poco común en las universidades públicas del país."
   },
   {
-    "name": "Técnico Profesional en Marketing Digital — Presencial",
+    "name": "Técnico Profesional en Marketing Digital",
     "slug": "tp-marketing-digital-presencial-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
@@ -903,12 +903,12 @@
     "description": "Técnico profesional presencial de cuatro semestres y 56 créditos orientado al marketing en entornos digitales. La formación responde a la demanda del mercado laboral y a las tendencias del ámbito digital, y prepara a los estudiantes para apoyar y ejecutar procesos de marketing en un entorno tecnológico en constante evolución. Se ofrece dentro de la estrategia Universidad en tu Colegio, con presencia en Manizales, La Dorada, Anserma y Aguadas. Los conocimientos se aplican en la promoción de productos y servicios, la gestión de presencia digital y el apoyo a estrategias comerciales de empresas y emprendimientos de la región."
   },
   {
-    "name": "Técnico Profesional en Marketing Digital — A distancia",
+    "name": "Técnico Profesional en Marketing Digital",
     "slug": "tp-marketing-digital-distancia-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
     "level": "technical",
-    "modality": "remote",
+    "modality": "distance",
     "city": "Manizales",
     "area": ["Marketing digital", "Comunicación", "Tecnología"],
     "credits": 56,
@@ -923,7 +923,7 @@
     "description": "Técnico profesional en modalidad a distancia dedicado al marketing digital, con un plan de cuatro semestres y 56 créditos. El programa forma a los estudiantes para apoyar procesos de marketing en un entorno tecnológico cambiante, atendiendo la creciente demanda de competencias digitales en el mercado laboral. La modalidad a distancia facilita el acceso a la formación desde distintos municipios, como La Dorada, Anserma y Aguadas, en el marco de la estrategia Universidad en tu Colegio. Los conocimientos se aplican en la gestión de la presencia digital, la promoción de productos y servicios y el apoyo a estrategias comerciales de empresas y emprendimientos."
   },
   {
-    "name": "Técnico Profesional en Programación Web — Presencial",
+    "name": "Técnico Profesional en Programación Web",
     "slug": "tp-programacion-web-presencial-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
@@ -943,7 +943,7 @@
     "description": "Técnico profesional presencial enfocado en el desarrollo de aplicaciones y sitios web. Organizado en cuatro semestres, el programa introduce los fundamentos de la programación y la construcción de soluciones web, desde la elaboración de interfaces hasta la puesta en marcha de aplicaciones. La modalidad presencial favorece el acompañamiento docente y la práctica guiada. Los conocimientos adquiridos habilitan para integrarse a equipos de desarrollo web, apoyar proyectos digitales de empresas y emprendimientos, o continuar la formación en programas de sistemas y computación. Hace parte de la oferta técnica de la Facultad de Inteligencia Artificial e Ingenierías, disponible en varios municipios de Caldas."
   },
   {
-    "name": "Técnico Profesional en Programación para Dispositivos Móviles — Presencial",
+    "name": "Técnico Profesional en Programación para Dispositivos Móviles",
     "slug": "tp-programacion-movil-presencial-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",
@@ -963,7 +963,7 @@
     "description": "Técnico profesional presencial orientado al desarrollo de aplicaciones para dispositivos móviles. A lo largo de cuatro semestres, los estudiantes adquieren fundamentos de programación y del proceso de creación de apps, abarcando el diseño y la implementación en plataformas móviles. La modalidad presencial facilita la práctica guiada y el acompañamiento docente. Estos conocimientos permiten vincularse a equipos de desarrollo de software móvil, apoyar proyectos digitales de organizaciones y emprendimientos, o continuar estudios en ciclos superiores de sistemas y computación. El programa integra la oferta técnica de la Facultad de Inteligencia Artificial e Ingenierías, con presencia en distintos municipios del departamento."
   },
   {
-    "name": "Técnico Profesional en Programación para Videojuegos — Presencial",
+    "name": "Técnico Profesional en Programación para Videojuegos",
     "slug": "tp-programacion-videojuegos-presencial-ucaldas",
     "institutionName": "Universidad de Caldas",
     "institutionSlug": "universidad-de-caldas",

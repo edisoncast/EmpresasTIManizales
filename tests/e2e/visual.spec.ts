@@ -51,6 +51,23 @@ test.describe('Estructura visual y contenido', () => {
     expect(await badges.count()).toBeGreaterThan(0);
   });
 
+  test('programas homónimos se distinguen por su badge de modalidad', async ({ page }) => {
+    await page.goto('/programas');
+    // Dos registros con el mismo nombre e institución, distinta modalidad.
+    const homonyms = page.locator('[data-item]').filter({
+      has: page.getByRole('heading', {
+        name: 'Técnico Profesional en Programación Web',
+        exact: true,
+      }),
+    });
+    await expect(homonyms).toHaveCount(2);
+    await expect(homonyms.filter({ hasText: 'Modalidad: Presencial' })).toHaveCount(1);
+    await expect(homonyms.filter({ hasText: 'Modalidad: A distancia' })).toHaveCount(1);
+    // La faceta separa virtual de a distancia.
+    await page.locator('select[data-facet-key="modality"]').selectOption('A distancia');
+    expect(await page.locator('[data-item]:visible').count()).toBeGreaterThan(0);
+  });
+
   test('empresas explica y visualiza el tamaño reportado por Cámara de Comercio', async ({
     page,
   }) => {

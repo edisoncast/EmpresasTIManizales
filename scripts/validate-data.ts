@@ -125,6 +125,21 @@ for (const e of parsed['events.json'] ?? []) {
   }
 }
 
+// 4) Programas homónimos: el mismo nombre en la misma institución solo se
+// permite si la modalidad difiere (evita tarjetas que parecen duplicadas).
+const seenPrograms = new Map<string, string>();
+for (const p of parsed['programs.json'] ?? []) {
+  const key = `${p.institutionName}|${p.name}|${p.modality ?? 'unknown'}`;
+  const prev = seenPrograms.get(key);
+  if (prev) {
+    errors.push(
+      `[programs.json] "${p.slug}" repite nombre, institución y modalidad de "${prev}" — diferencia la modalidad o consolida los registros`,
+    );
+  } else {
+    seenPrograms.set(key, p.slug);
+  }
+}
+
 // Resultado.
 if (errors.length > 0) {
   console.error(`\n✗ Validación fallida: ${errors.length} error(es)\n`);
