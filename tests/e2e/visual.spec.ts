@@ -11,6 +11,10 @@ test.describe('Estructura visual y contenido', () => {
     await expect(page.getByRole('heading', { level: 1 })).toContainText(/ecosistema tecnológico/i);
     // Contexto histórico visible.
     await expect(page.getByText(/2020 → 2026|iniciado en 2020/i).first()).toBeVisible();
+    // El hero responde de entrada qué es el sitio, para quién es y qué se puede hacer.
+    await expect(page.getByText('Qué es', { exact: true })).toBeVisible();
+    await expect(page.getByText('Para quién', { exact: true })).toBeVisible();
+    await expect(page.getByText('Qué puedes hacer', { exact: true })).toBeVisible();
     // Buscador global.
     await expect(page.locator('#global-search-input')).toBeVisible();
     // No debe parecer bolsa de empleo / ranking.
