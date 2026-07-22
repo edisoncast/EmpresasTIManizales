@@ -7,7 +7,7 @@ const viewports = [
   { width: 1024, height: 768 },
   { width: 1440, height: 900 },
 ];
-const paths = ['/', '/empresas', '/personas', '/ecosistema'];
+const paths = ['/', '/empresas', '/personas', '/ecosistema', '/decadas/1990-1999'];
 
 test.describe('Responsive', () => {
   for (const path of paths) {

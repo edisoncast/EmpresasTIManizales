@@ -50,6 +50,7 @@ export type NavItem = {
 
 export const nav: readonly NavItem[] = [
   { href: '/empresas', label: 'Empresas' },
+  { href: '/decadas', label: 'Décadas' },
   { href: '/formacion', label: 'Formación', match: ['/formacion', '/universidades', '/programas'] },
   { href: '/comunidades', label: 'Comunidad', match: ['/comunidades', '/eventos'] },
   { href: '/personas', label: 'Personas' },

@@ -1,0 +1,72 @@
+---
+/**
+ * Distribución en filas con barra: etiqueta + conteo textual + barra de un solo
+ * tono (magnitud). La identidad la llevan las etiquetas de texto, no el color,
+ * y cada valor es legible sin el gráfico (el SVG es decorativo, aria-hidden).
+ * Las barras usan atributos SVG —no estilos inline— para respetar la CSP
+ * `style-src 'self'` del sitio.
+ */
+export interface BarRowItem {
+  label: string;
+  count: number;
+  /** Enlaces a fichas relacionadas, mostrados bajo la barra. */
+  links?: { label: string; href: string }[];
+  note?: string;
+}
+export interface Props {
+  items: BarRowItem[];
+  /** Valor de referencia para el ancho de barra (máximo del grupo o total). */
+  max: number;
+  /** Si se define, cada conteo se muestra como “n de N” (tamaño de muestra). */
+  sampleSize?: number;
+  /** Etiquetas en monoespaciada (años, códigos). */
+  monoLabels?: boolean;
+}
+const { items, max, sampleSize, monoLabels = false } = Astro.props;
+
+const width = (count: number) => (max > 0 ? Math.round((count / max) * 1000) / 10 : 0);
+---
+
+<ul class="space-y-3">
+  {
+    items.map((item) => (
+      <li>
+        <div class="flex items-baseline justify-between gap-3">
+          <span
+            class:list={[
+              monoLabels ? 'font-mono text-xs text-ink-600' : 'text-sm font-medium text-ink-800',
+            ]}
+          >
+            {item.label}
+          </span>
+          <span class="font-mono text-xs tabular-nums text-ink-600">
+            {item.count}
+            {sampleSize !== undefined && ` de ${sampleSize}`}
+          </span>
+        </div>
+        <svg
+          class="mt-1 h-2 w-full overflow-hidden rounded-full"
+          viewBox="0 0 100 8"
+          preserveAspectRatio="none"
+          aria-hidden="true"
+        >
+          <rect width="100" height="8" class="fill-accent-soft/60" />
+          {item.count > 0 && <rect width={width(item.count)} height="8" class="fill-accent" />}
+        </svg>
+        {item.links && item.links.length > 0 && (
+          <p class="mt-1 text-xs leading-relaxed text-ink-500">
+            {item.links.map((link, i) => (
+              <>
+                {i > 0 && <span aria-hidden="true"> · </span>}
+                <a href={link.href} class="link font-normal">
+                  {link.label}
+                </a>
+              </>
+            ))}
+          </p>
+        )}
+        {item.note && <p class="mt-1 text-xs text-ink-500">{item.note}</p>}
+      </li>
+    ))
+  }
+</ul>

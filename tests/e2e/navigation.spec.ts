@@ -14,6 +14,8 @@ test.describe('Navegación', () => {
   const publicRoutes = [
     '/',
     '/empresas',
+    '/decadas',
+    '/decadas/1990-1999',
     '/formacion',
     '/universidades',
     '/programas',

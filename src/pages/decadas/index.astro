@@ -1,0 +1,98 @@
+---
+import Layout from '../../components/Layout.astro';
+import PageHeader from '../../components/PageHeader.astro';
+import ContributionCTA from '../../components/ContributionCTA.astro';
+import { companies, decades } from '../../lib/data';
+import { companiesInRange } from '../../lib/decades';
+
+// Conteos calculados desde los datos del directorio público, nunca a mano.
+const rows = decades.map((decade, index) => ({
+  decade,
+  n: String(index + 1).padStart(2, '0'),
+  count: companiesInRange(companies, decade.startYear, decade.endYear).length,
+}));
+---
+
+<Layout
+  title="Evolución por décadas"
+  description="La evolución del ecosistema tecnológico de Manizales y Caldas contada por décadas: cuántas empresas aparecen en cada periodo, qué hacían y qué tan verificable es la evidencia."
+>
+  <PageHeader
+    eyebrow="Archivo · Décadas"
+    title="Evolución por décadas"
+    description="Un relato del ecosistema contado por periodos, empezando por las empresas: cuántas aparecen en cada década, qué patrones muestra la evidencia pública y qué sigue pendiente de verificar. Cada capítulo se publica cuando su investigación está terminada; universidades, personas y comunidades se irán sumando al relato con el mismo método."
+  />
+
+  <div class="container-content py-10">
+    <p class="bg-mist/60 max-w-reading rounded-lg border border-ink-200 p-4 text-sm text-ink-600">
+      <strong>Cómo leer esta sección:</strong> las fechas corresponden a la
+      <em>matrícula mercantil</em> conservada en los datos, no necesariamente a la fundación ni al inicio
+      operativo. La evidencia consultada es pública y actual: confirma identidad y oferta de hoy, no el
+      portafolio original de cada periodo. Distinguimos siempre hechos, inferencias y vacíos.
+    </p>
+
+    <ul class="mt-8 divide-y divide-ink-200 border-y border-ink-200">
+      {
+        rows.map(({ decade, n, count }) => (
+          <li>
+            {decade.status === 'published' ? (
+              <a
+                href={`/decadas/${decade.slug}`}
+                class="hover:bg-mist/40 group flex items-baseline gap-4 py-5 no-underline transition-colors duration-fast"
+              >
+                <span class="font-mono text-xs text-ink-400">{n}</span>
+                <span class="flex-1">
+                  <span class="font-mono text-sm text-coffee">
+                    {decade.startYear} → {decade.endYear}
+                  </span>
+                  <span class="mt-0.5 block font-display text-xl font-semibold text-ink-900 group-hover:text-accent">
+                    {decade.title}
+                  </span>
+                  <span class="mt-1 block max-w-xl text-sm text-ink-600">{decade.lede}</span>
+                  <span class="mt-1.5 block font-mono text-xs text-ink-500">
+                    {count} empresas registradas en el periodo
+                  </span>
+                </span>
+                <span
+                  aria-hidden="true"
+                  class="text-ink-400 transition-transform duration-fast group-hover:translate-x-0.5"
+                >
+                  →
+                </span>
+              </a>
+            ) : (
+              <div class="flex items-baseline gap-4 py-5">
+                <span class="font-mono text-xs text-ink-400">{n}</span>
+                <span class="flex-1">
+                  <span class="font-mono text-sm text-coffee">
+                    {decade.startYear} → {decade.endYear}
+                  </span>
+                  <span class="mt-0.5 block font-display text-xl font-semibold text-ink-500">
+                    Investigación en curso
+                  </span>
+                  <span class="mt-1 block max-w-xl text-sm text-ink-500">
+                    Este periodo se publicará cuando su investigación esté terminada y verificada.
+                  </span>
+                  <span class="mt-1.5 block font-mono text-xs text-ink-500">
+                    {count} empresas registradas en el periodo
+                  </span>
+                </span>
+              </div>
+            )}
+          </li>
+        ))
+      }
+    </ul>
+
+    <p class="mt-4 text-xs text-ink-500">
+      Los conteos se calculan desde el directorio público de empresas a la fecha de corte; los
+      periodos aún no publicados muestran solo su conteo, sin interpretación. El alcance actual del
+      relato es empresarial: la evolución de universidades, programas, personas y comunidades por
+      década se incorporará cuando su investigación esté terminada y verificada.
+    </p>
+
+    <div class="mt-10">
+      <ContributionCTA variant="source" />
+    </div>
+  </div>
+</Layout>

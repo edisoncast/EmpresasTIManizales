@@ -7,6 +7,7 @@ const pages = [
   '/personas',
   '/contribuir',
   '/empresas/venus-ingenieria-de-software',
+  '/decadas/1990-1999',
 ];
 
 for (const path of pages) {
