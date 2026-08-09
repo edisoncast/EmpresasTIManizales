@@ -54,6 +54,61 @@
     "needsVerification": false
   },
   {
+    "name": "SentrySec",
+    "slug": "sentrysec",
+    "description": "Comunidad educativa de ciberseguridad con base en Manizales: write-ups, charlas y contenidos abiertos, con trabajo en análisis de vulnerabilidades y automatización con inteligencia artificial aplicada a seguridad. Su sitio y su perfil público se presentan como comunidad, no como empresa de servicios.",
+    "focus": ["Ciberseguridad", "Inteligencia artificial", "Formación", "Comunidad"],
+    "city": "Manizales",
+    "department": "Caldas",
+    "website": "https://sentrysec.wayvor.com/",
+    "contact": "https://www.linkedin.com/company/sentrysecit/",
+    "organizer": "Juan Carlos Charfuelan Caipe, Keyla Daniela Cartagena Díaz y Fabián Alberto Guancha",
+    "status": "active",
+    "sourceUrl": "https://sentrysec.wayvor.com/",
+    "sources": [
+      {
+        "url": "https://sentrysec.wayvor.com/",
+        "title": "SentrySec — Comunidad Educativa de Ciberseguridad (sitio oficial)",
+        "reviewedAt": "2026-08-09"
+      },
+      {
+        "url": "https://www.linkedin.com/company/sentrysecit/",
+        "title": "Perfil público: comunidad de ciberseguridad con sede en Manizales, Colombia",
+        "reviewedAt": "2026-08-09"
+      },
+      {
+        "url": "https://github.com/sentrysecit",
+        "title": "Organización de GitHub con repositorios públicos de seguridad e IA",
+        "reviewedAt": "2026-08-09"
+      },
+      {
+        "url": "https://krozfu.github.io/",
+        "title": "Sitio personal de Juan Carlos Charfuelan Caipe, donde se declara fundador de SentrySec",
+        "reviewedAt": "2026-08-09"
+      },
+      {
+        "url": "https://github.com/Keyla-Cartagena",
+        "title": "Perfil público de Keyla Daniela Cartagena Díaz, que se identifica como cofundadora de SentrySec",
+        "reviewedAt": "2026-08-09"
+      },
+      {
+        "url": "https://www.linkedin.com/in/fabian-alberto-guancha-a33a74204/",
+        "title": "Perfil público de Fabián Alberto Guancha, cofundador de SentrySec",
+        "reviewedAt": "2026-08-09"
+      },
+      {
+        "url": "https://www.linkedin.com/in/juan-carlos-charfuelan-caipe/",
+        "title": "Perfil público de Juan Carlos Charfuelan Caipe, fundador de SentrySec",
+        "reviewedAt": "2026-08-09"
+      }
+    ],
+    "firstSeenAt": "2026-08-09",
+    "lastVerifiedAt": "2026-08-09",
+    "verificationStatus": "verified",
+    "needsVerification": false,
+    "notes": "Iniciativa reciente: la organización de GitHub se creó en agosto de 2025 y sus repositorios registran actividad hasta julio de 2026. Los roles de fundación constan en los perfiles públicos de las tres personas; los perfiles de LinkedIn se revisaron manualmente porque LinkedIn bloquea el acceso automatizado. Aún no hay agenda pública de encuentros: la sección de charlas del sitio anuncia sesiones en preparación, por lo que la comunidad no aparece todavía en /eventos. Registrada como comunidad y no como empresa según su propia descripción."
+  },
+  {
     "name": "DragonJAR",
     "slug": "dragonjar",
     "description": "Comunidad histórica de seguridad informática, iniciada en línea en 2001 y vinculada a Manizales. Se conserva como antecedente por sus contenidos, formación y encuentros presenciales en la ciudad; no se presenta como un meetup local activo.",
