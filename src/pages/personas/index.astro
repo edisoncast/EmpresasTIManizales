@@ -6,6 +6,7 @@ import PersonCard from '../../components/PersonCard.astro';
 import EmptyState from '../../components/EmptyState.astro';
 import { people } from '../../lib/data';
 import { encodeFacet, uniqueSorted } from '../../lib/search';
+import { verificationFacetOptions, verificationSlug } from '../../lib/verification';
 
 const specialties = uniqueSorted(people.flatMap((p) => p.specialties));
 const trajectories = uniqueSorted(people.flatMap((p) => p.ecosystemTrajectory));
@@ -25,6 +26,12 @@ const facets = [
     allLabel: 'Todas las trayectorias',
   },
   { key: 'org', label: 'Organización', options: orgs, allLabel: 'Todas' },
+  {
+    key: 'estado',
+    label: 'Verificación',
+    options: verificationFacetOptions(people),
+    allLabel: 'Todos los estados',
+  },
 ];
 ---
 
@@ -78,6 +85,7 @@ const facets = [
               'data-facet-specialty': encodeFacet(p.specialties),
               'data-facet-trajectory': encodeFacet(p.ecosystemTrajectory),
               'data-facet-org': encodeFacet(p.organizations ?? []),
+              'data-facet-estado': encodeFacet([verificationSlug(p)]),
             }}
           />
         ))}

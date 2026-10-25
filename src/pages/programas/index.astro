@@ -7,6 +7,7 @@ import ModalityBadge from '../../components/ModalityBadge.astro';
 import { programs } from '../../lib/data';
 import { label } from '../../lib/format';
 import { encodeFacet, uniqueSorted } from '../../lib/search';
+import { verificationFacetOptions, verificationSlug } from '../../lib/verification';
 
 const levels = uniqueSorted(programs.map((p) => label('programLevel', p.level)));
 const modalities = uniqueSorted(programs.map((p) => label('modality', p.modality)));
@@ -18,6 +19,12 @@ const facets = [
   { key: 'modality', label: 'Modalidad', options: modalities, allLabel: 'Todas' },
   { key: 'area', label: 'Área', options: areas, allLabel: 'Todas las áreas' },
   { key: 'institution', label: 'Institución', options: institutions, allLabel: 'Todas' },
+  {
+    key: 'estado',
+    label: 'Verificación',
+    options: verificationFacetOptions(programs),
+    allLabel: 'Todos los estados',
+  },
 ];
 ---
 
@@ -62,6 +69,7 @@ const facets = [
           'data-facet-modality': encodeFacet([label('modality', p.modality)]),
           'data-facet-area': encodeFacet(p.area),
           'data-facet-institution': encodeFacet([p.institutionName]),
+          'data-facet-estado': encodeFacet([verificationSlug(p)]),
         }}
       >
         <ModalityBadge slot="badge" modality={p.modality} />

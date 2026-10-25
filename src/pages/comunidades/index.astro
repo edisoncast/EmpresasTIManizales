@@ -6,6 +6,7 @@ import EntityCard from '../../components/EntityCard.astro';
 import EmptyState from '../../components/EmptyState.astro';
 import { communities } from '../../lib/data';
 import { encodeFacet, uniqueSorted } from '../../lib/search';
+import { verificationFacetOptions, verificationSlug } from '../../lib/verification';
 
 const statusLabel: Record<string, string> = {
   active: 'Activa',
@@ -21,6 +22,12 @@ const facets = [
   { key: 'focus', label: 'Enfoque', options: focus, allLabel: 'Todos los enfoques' },
   { key: 'status', label: 'Estado', options: statuses, allLabel: 'Todos' },
   { key: 'city', label: 'Ciudad', options: cities, allLabel: 'Todas' },
+  {
+    key: 'estado',
+    label: 'Verificación',
+    options: verificationFacetOptions(communities),
+    allLabel: 'Todos los estados',
+  },
 ];
 ---
 
@@ -78,6 +85,7 @@ const facets = [
               'data-facet-focus': encodeFacet(c.focus),
               'data-facet-status': encodeFacet([statusLabel[c.status] ?? c.status]),
               'data-facet-city': encodeFacet(c.city ? [c.city] : []),
+              'data-facet-estado': encodeFacet([verificationSlug(c)]),
             }}
           />
         ))}
