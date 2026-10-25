@@ -1,125 +1,129 @@
-# CLAUDE.md
+# AGENTS.md
 
-Guía para agentes que trabajen en este repositorio. Léela antes de editar.
+Instrucciones para agentes de código (Claude Code, Codex, Copilot, Cursor y similares) que trabajen
+en este repositorio. Las personas encuentran el contexto general en `README.md` y `CONTRIBUTING.md`.
 
-## Qué es
+## Proyecto
 
-**Observatorio TIC de Manizales y Caldas** — un mapa web abierto, estático y verificable del
-ecosistema tecnológico regional: empresas, universidades, programas, personas, comunidades, eventos
-y entidades de apoyo. Evoluciona el repositorio comunitario original de 2020 (preservado en
-`legacy/`) hacia un sitio moderno. **Los datos, su procedencia y las relaciones son la identidad del
-producto.** Licenciamiento por material: **código MIT**, **datos y contenido CC BY-SA 4.0**,
-**empresas** bajo términos de la Cámara de Comercio (atribución + no comercial) y **`legacy/`** en
-CC0. Ver `LICENSE`, `LICENSE-DATA` y `docs/data-sources.md`.
+**Observatorio TIC de Manizales y Caldas**: mapa web abierto, estático y verificable del ecosistema
+tecnológico regional (empresas, universidades, programas, personas, comunidades, eventos y entidades
+de apoyo). **Los datos, su procedencia y sus relaciones son la identidad del producto.**
 
-- **Sitio en vivo:** https://ticmanizales.edisoncastrosanchez.app
-- **Repo:** `edisoncast/EmpresasTIManizales` (rama por defecto `master`, protegida).
+- Sitio: https://ticmanizales.edisoncastrosanchez.app
+- Rama por defecto: `master` (protegida). `legacy/` conserva el repositorio comunitario de 2020.
+- Licencias por material: código MIT (`LICENSE`), datos y contenido CC BY-SA 4.0 (`LICENSE-DATA`),
+  empresas bajo términos de la Cámara de Comercio (atribución, uso no comercial), `legacy/` CC0.
 
 ## Stack
 
-- **Astro 6** + **TypeScript** (strict) — generación estática, `format: 'directory'`.
-- **Tailwind CSS 3.4 vía PostCSS** (`postcss.config.mjs`, autoprefixer). **No** se usa `@astrojs/tailwind`.
-- **Sin React ni islas hidratadas.** Búsqueda y filtros son **JavaScript vanilla** en `<script>` de
-  componentes `.astro`. No añadir frameworks de cliente salvo necesidad real.
-- **Zod** valida los datos en build (`npm run build` corre `validate:data` primero).
-- **Fuentes self-hosted** (`@fontsource*`): Newsreader (display), Public Sans (cuerpo), IBM Plex Mono
-  (metadatos). Respetan la CSP `font-src 'self'` — no usar CDNs de fuentes.
-- **Vitest** (unit) + **Playwright** (`@playwright/test`, `@axe-core/playwright`) para e2e/a11y.
-- **Node 24** (ver `engines`). Ver "Cómo ejecutar".
+- Astro 6 + TypeScript strict, salida estática (`format: 'directory'`).
+- Tailwind CSS 3.4 vía PostCSS (`postcss.config.mjs`). No se usa `@astrojs/tailwind`.
+- Sin frameworks de cliente: búsqueda y filtros son JavaScript vanilla en `<script>` de componentes
+  `.astro`. No añadir React ni islas hidratadas sin una necesidad real.
+- Zod valida los datos en build. Vitest para unit; Playwright + axe para e2e y accesibilidad.
+- Node 24 (`engines`), npm 11.
 
-## Cómo ejecutar (IMPORTANTE: Node NO está instalado localmente)
-
-El host es Windows/PowerShell **sin Node ni npm en el PATH**. Todo corre en **Docker**.
+## Comandos
 
 ```bash
-# Dev / build / validaciones (Node 24)
-docker run --rm -v "${PWD}:/app" -w /app node:24-alpine sh -c "npm ci && npm run build"
-docker run --rm -d --name ticmanizales-dev -p 4321:4321 -v "${PWD}:/app" -w /app \
-  node:24-alpine sh -c "npm run dev -- --host 0.0.0.0"   # http://localhost:4321
+npm ci                  # instalar
+npm run dev             # servidor local en http://localhost:4321
+npm run validate:data   # esquemas Zod y relaciones entre slugs
+npm run audit:data      # auditoría de calidad de datos
+npm run lint            # ESLint
+npm run format:check    # Prettier (npm run format para corregir)
+npm test                # Vitest
+npm run build           # validate:data + astro build
+npm run test:e2e        # Playwright + axe (requiere build)
+```
 
-# e2e / a11y (imagen con navegadores; alinear tag con la versión de @playwright/test)
-docker run --rm -v "${PWD}:/app" -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
+Sin Node 24 local, todo corre en Docker:
+
+```bash
+docker run --rm -v "$PWD:/app" -w /app node:24-alpine sh -c "npm ci && npm run build"
+docker run --rm -v "$PWD:/app" -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
   sh -c "npm ci && npm run build && npm run test:e2e"
 ```
 
-- npm 11 en la imagen bloquea install-scripts por defecto, pero esbuild/sharp funcionan (binarios por optionalDependencies).
-- Para servir el `dist` dentro de la imagen Playwright sin conflictos de binario, se puede usar
-  `python3 -m http.server 4321 --bind 127.0.0.1` desde `dist/` y dejar que Playwright reutilice el server.
-- Scripts: `dev`, `build`, `preview`, `lint`, `format`, `format:check`, `test`, `test:e2e`,
-  `validate:data`, `audit:data`, `validate:urls`, `verify:companies`.
+La etiqueta de la imagen de Playwright debe coincidir con la versión de `@playwright/test` del lockfile.
 
-## Datos y reglas (no negociables)
+**Antes de abrir un PR** corre lo mismo que la CI: `validate:data`, `audit:data`, `lint`,
+`format:check`, `test`, `build` y `test:e2e`.
 
-- Datos versionados en `src/data/*.json`, validados por `src/schemas/*` (Zod). Cada dataset es un
-  array; `slug` en kebab-case único y estable (define la URL de detalle).
-- **Cada registro importante debe tener `sourceUrl` público o quedar con `needsVerification: true`.**
-  **No inventar datos**; si falta algo, dejar vacío o marcar por verificar. **Verificar URLs** antes
-  de agregarlas (varias del repo de 2020 estaban muertas; el SNIES migró a `hecaa.mineducacion.gov.co`).
-- Estados de verificación (5, sobrios, nunca solo color): `verified`, `partially_verified`,
-  `unknown`, `inactive_or_unverified`, `archived` (ver `src/lib/verification.ts`). Campo opcional
-  `verificationStatus`; si no está, se deriva de `needsVerification`/`status`.
-- **Privacidad (Ley 1581):** no publicar correos, direcciones, teléfonos ni cédulas. Las
-  exportaciones crudas de la Cámara de Comercio (`*.xlsx`) están **gitignored** porque contienen
-  datos personales — **nunca commitearlas**. Los datos migrados y depurados viven en `companies.json`.
-- **Personas:** solo perfiles públicos con contribución pública; enfoque en aportes al ecosistema,
-  **sin lenguaje de ranking** ("top", "mejor") ni orden por tamaño/prestigio. Orden alfabético.
-  Empresas: NIT solo de personas jurídicas (no de naturales/establecimientos).
-- **Fuentes citadas:** Cámara de Comercio de Manizales por Caldas (empresas, actividades CIIU
-  relacionadas con tecnología) y fuentes públicas específicas por empresa; SNIES/HECAA
-  (universidades/programas). La institución empresarial exige citar la fuente y uso no
-  comercial — ya reforzado en `/empresas` y `/acerca`.
-- Relaciones que valida `validate-data`: programa→universidad (`institutionSlug`), comunidad→persona
-  (`organizerSlug`), evento→comunidad (`organizerCommunitySlug`). Slugs referenciados deben existir.
+## Estructura
 
-## Despliegue (AWS, ya en producción)
+- `src/data/*.json` — datasets (cada uno es un array). `src/schemas/*` — esquemas Zod.
+- `src/lib/` — lógica pura (formato, búsqueda, verificación, serialización). Probada en `tests/*.test.ts`.
+- `src/components/` — componentes Astro. `src/pages/` — rutas. `src/styles/global.css` — tokens.
+- `tests/e2e/` — navegación, filtros, responsive (320–1440 px), accesibilidad y fichas.
+- `scripts/` — validación, auditoría y verificación de URLs y empresas.
+- `infra/terraform/` — S3 privado + CloudFront (OAC, headers de seguridad, función de reescritura).
+- `docs/` — dirección de diseño, fuentes y auditoría de datos.
 
-- Cuenta `362730983676`, región `us-east-1`, usuario IAM local `terraform` (llaves estáticas en `~/.aws`).
-- IaC en `infra/terraform`: **S3 privado + CloudFront + OAC + headers de seguridad + CloudFront
-  Function** (reescribe rutas de directorio a `index.html`). Provider AWS `~> 6.0`, Terraform >= 1.10,
-  **backend S3 con lock nativo** (`use_lockfile`, sin DynamoDB). Correr terraform vía Docker montando
-  `~/.aws`: `docker run --entrypoint /bin/sh -v "${PWD}/infra/terraform:/tf" -v "$HOME/.aws:/root/.aws:ro" -w /tf hashicorp/terraform:latest -c "terraform ..."`.
-- Recursos: bucket sitio `ticmanizales-prod-362730983676`; CloudFront `E3GZTE04P0B7K0`; bucket de
-  estado `ticmanizales-tfstate-362730983676`; dominio en la hosted zone `edisoncastrosanchez.app`.
-- **CI/CD con OIDC (sin llaves largas):** proveedor OIDC de GitHub + rol IAM
-  `ticmanizales-github-deploy` (permisos mínimos: ese bucket + CreateInvalidation en esa dist).
-  Secretos de repo: `AWS_DEPLOY_ROLE_ARN`, `S3_BUCKET_NAME`, `CLOUDFRONT_DISTRIBUTION_ID`. El workflow
-  **Deploy** corre en push a `master` (o `workflow_dispatch`); **CI** valida en cada PR.
-- **master protegida:** requiere PR + status check `validate` (CI) verde, sin force-push ni borrado.
-  Flujo: rama → PR → CI → merge → deploy automático.
-- **Un solo ambiente: prod** (decisión del dueño). No hay staging. La validación pre-producción se
-  hace con: (a) **CI obligatoria en el PR** (build + unit + e2e + axe) como gate; (b) **`npm run
-  preview` local** (build idéntico a prod) para Lighthouse y QA manual; (c) `terraform plan` (solo
-  lectura) contra la cuenta de prod. **Rollback:** el bucket tiene versioning → `git revert` + push
-  re-sincroniza el estado anterior (sitio estático, rollback limpio). No crear workspaces/entornos
-  de staging.
+## Reglas de datos (no negociables)
 
-## Convenciones y gotchas
+- **No inventar datos.** Cada registro importante lleva `sourceUrl` público o queda con
+  `needsVerification: true`. Verifica que cada URL responda antes de agregarla (el SNIES migró a
+  `hecaa.mineducacion.gov.co`).
+- `slug` en kebab-case, único y estable: define la URL de la ficha.
+- Estados de verificación: `verified`, `partially_verified`, `unknown`, `inactive_or_unverified`,
+  `archived` (`src/lib/verification.ts`). Si falta `verificationStatus`, se deriva de
+  `needsVerification` y `status`.
+- Relaciones validadas: programa → universidad (`institutionSlug`), comunidad → persona
+  (`organizerSlug`), evento → comunidad (`organizerCommunitySlug`). Los slugs referenciados deben existir.
+- **Privacidad (Ley 1581):** nunca publicar correos, teléfonos, direcciones ni cédulas. Las
+  exportaciones crudas de la Cámara de Comercio (`*.xlsx`) contienen datos personales: están en
+  `.gitignore` y **nunca** se commitean. NIT solo de personas jurídicas.
+- **Personas:** solo perfiles públicos con contribución pública, en orden alfabético. Sin lenguaje de
+  ranking ("top", "mejores", "destacada") ni orden por tamaño o prestigio.
+- Cita las fuentes: Cámara de Comercio de Manizales por Caldas (empresas, CIIU) y SNIES/HECAA
+  (universidades y programas).
+- Si una persona edita datos en paralelo, agrega registros al final del JSON en lugar de reescribirlo.
 
-- Escribir `[hidden] { display:none !important }` sigue vigente en `global.css`: `.card` usa
-  `display:flex` y sin eso el atributo `hidden` no oculta las tarjetas filtradas.
-- Grids responsive: usar `grid-cols-1` base (no solo `lg:grid-cols-3`) para que `minmax(0,1fr)` evite
-  overflow horizontal. Los e2e de responsive lo verifican en 320–1440.
-- JSON-LD y datos embebidos en HTML se serializan con `src/lib/serializeJsonForHtml` (`lib/json.ts`),
-  no con `innerHTML` de datos contribuidos (seguridad/CSP).
-- La navegación de escritorio aparece en `xl` (1280); por debajo hay menú `<details>` (los e2e usan
-  `header details summary`).
-- Un solo `h1` por página; foco visible; labels; áreas táctiles ≥44px. No romper esto.
-- Editar datos con Edit **por anexado** cuando el usuario esté editando en paralelo; leer el final del
-  archivo antes de anexar.
+## Sistema visual
 
-## Documentación
+Fuente de verdad: `docs/design-direction.md` (detalle de implementación en
+`docs/design-implementation-notes.md`).
 
-- `docs/design-direction.md` — dirección visual (fuente de verdad del diseño).
-- `docs/design-implementation-notes.md` — cómo se implementó.
-- `docs/data-sources.md`, `docs/data-audit-2026.md` — procedencia y auditoría de datos.
-- `docs/pre-deployment-review.md` — revisión preproducción (decisión NO-GO para el estado refactor
-  hasta versionarlo y validar CI sobre el SHA; ver "Pendientes").
-- `README.md` / `CONTRIBUTING.md` — cómo correr, agregar registros y desplegar.
+- "Hoja de registro": fondo `fog`, hojas `sheet`, texto `graphite`/`graphite-2`, tinta `ink-blue`
+  para lo interactivo y resaltador `highlight` solo como relleno (hover, foco, una banda de
+  contribución por vista). Tokens semánticos en `:root` de `global.css`; no reintroducir escalas
+  numéricas de color ni modificadores de opacidad `/NN`.
+- Fichas, casillas y paneles son rectos; `rounded-control` (4px) solo en botones, campos, tags y
+  sellos. El tema reemplaza la escala de radios: `rounded-lg`/`rounded-xl` no generan CSS.
+- Fuentes self-hosted con `@fontsource-variable/*` (la CSP exige `font-src 'self'`, sin CDNs):
+  Archivo con eje de ancho (`archivo/wdth.css`) para titulares, Atkinson Hyperlegible Next para el
+  cuerpo y Atkinson Hyperlegible Mono solo para datos.
+- Sin emojis, gradientes ni ilustraciones decorativas. Los estados usan sello + símbolo + texto, nunca
+  solo color.
 
-## Pendientes conocidos (de la revisión preproducción)
+## Convenciones y trampas conocidas
 
-1. Versionar el estado refactor (Astro 6 + personas nuevas) en un commit/PR y validar CI sobre ese SHA.
-2. Documentar importador reproducible + checksum + fecha de corte de los XLSX empresariales (el XLSX
-   crudo NO se versiona por privacidad).
-3. Segunda fuente y revisión humana de los perfiles nuevos `partially_verified` antes de promoverlos.
-4. `terraform plan` contra la cuenta real; Lighthouse en staging; revisar 3 enlaces externos (503/403).
+- `[hidden] { display: none !important }` en `global.css` es obligatorio: `.ficha` usa `display:flex`
+  y sin esa regla el filtrado en cliente deja tarjetas visibles.
+- Grillas con `grid-cols-1` de base (no solo `lg:grid-cols-3`) para evitar overflow horizontal.
+- JSON-LD y datos embebidos se serializan con `serializeJsonForHtml` (`src/lib/json.ts`), nunca con
+  `innerHTML` de datos contribuidos.
+- La navegación de escritorio aparece desde `xl` (1280 px); por debajo hay un menú `<details>` (los e2e
+  usan `header details summary`).
+- Accesibilidad mínima: un solo `h1` por página, foco visible, labels asociados, áreas táctiles ≥ 44 px.
+- Textos del sitio y documentación en español neutro.
+
+## Commits y pull requests
+
+- Conventional Commits con alcance: `feat(home): …`, `fix(detalle): …`, `data(empresas): …`,
+  `chore(deps): …`, `docs: …`. `data` se usa para cambios de datasets.
+- Flujo: rama → PR → CI (`validate`) en verde → merge. `master` no admite push directo ni force-push.
+- Un PR por tema; cambios de datos separados de cambios de código cuando sea posible.
+
+## Despliegue
+
+- Un solo ambiente: producción. No crear staging ni workspaces de Terraform.
+- `.github/workflows/deploy.yml` despliega automáticamente en cada push a `master` (o manualmente con
+  `workflow_dispatch`): valida, prueba, sincroniza `dist/` a S3, invalida CloudFront y corre un smoke
+  test contra el sitio.
+- Autenticación por OIDC (rol con permisos mínimos); sin llaves de larga duración. Secretos del repo:
+  `AWS_DEPLOY_ROLE_ARN`, `S3_BUCKET_NAME`, `CLOUDFRONT_DISTRIBUTION_ID`.
+- Rollback: `git revert` + merge a `master` vuelve a desplegar el estado anterior (el bucket tiene
+  versionado).
+- Cambios de infraestructura: solo `terraform plan` sin aprobación explícita; nunca `apply` desde un agente.
