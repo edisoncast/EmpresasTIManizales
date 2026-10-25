@@ -1,30 +1,15 @@
 ---
 import Layout from '../components/Layout.astro';
 import GlobalSearch from '../components/GlobalSearch.astro';
-import StatsGrid from '../components/StatsGrid.astro';
 import ContributionCTA from '../components/ContributionCTA.astro';
 import PersonCard from '../components/PersonCard.astro';
 import { stats, companies, universities, programs, people, communities } from '../lib/data';
 import { site } from '../lib/site';
 import { formatDate } from '../lib/format';
-import {
-  resolveVerification,
-  verificationMeta,
-  verificationOrder,
-  type VerificationState,
-} from '../lib/verification';
+import { resolveVerification, verificationMeta, verificationOrder } from '../lib/verification';
 
 const cutoff = formatDate(site.auditDate);
 const activeCommunities = communities.filter((community) => community.status === 'active');
-
-const metrics = [
-  { label: 'Empresas', value: stats.companies, href: '/empresas' },
-  { label: 'Universidades', value: stats.universities, href: '/universidades' },
-  { label: 'Programas', value: stats.programs, href: '/programas' },
-  { label: 'Comunidades activas', value: activeCommunities.length, href: '/comunidades' },
-  { label: 'Personas', value: stats.people, href: '/personas' },
-  { label: 'Agenda', value: stats.events, href: '/eventos' },
-];
 
 // Orientación por necesidad para quien llega por primera vez.
 const starts = [
@@ -54,7 +39,8 @@ const starts = [
   },
 ];
 
-const index = [
+// Tipos de registro del archivo: una sola tarjeta por tipo con su conteo.
+const archive = [
   {
     href: '/empresas',
     title: 'Empresas',
@@ -93,17 +79,26 @@ const index = [
   },
 ];
 
-// Distribución de estados de verificación en todo el archivo.
-const allEntities = [...companies, ...universities, ...programs, ...people, ...communities];
-const dist: Record<VerificationState, number> = {
-  verified: 0,
-  partially_verified: 0,
-  unknown: 0,
-  inactive_or_unverified: 0,
-  archived: 0,
-};
-for (const e of allEntities) dist[resolveVerification(e)]++;
-const distTotal = allEntities.length;
+// Estados de verificación en todo el archivo, con el desglose por tipo enlazado al listado
+// ya filtrado por ese estado (?estado=<slug>) para invitar a completar fuentes.
+const collections = [
+  { label: 'Empresas', href: '/empresas', items: companies },
+  { label: 'Universidades', href: '/universidades', items: universities },
+  { label: 'Programas', href: '/programas', items: programs },
+  { label: 'Personas', href: '/personas', items: people },
+  { label: 'Comunidades', href: '/comunidades', items: communities },
+];
+const distTotal = collections.reduce((sum, c) => sum + c.items.length, 0);
+const byState = verificationOrder.map((state) => {
+  const parts = collections
+    .map((c) => ({
+      label: c.label,
+      href: `${c.href}?estado=${verificationMeta[state].slug}`,
+      count: c.items.filter((e) => resolveVerification(e) === state).length,
+    }))
+    .filter((part) => part.count > 0);
+  return { state, total: parts.reduce((sum, part) => sum + part.count, 0), parts };
+});
 
 const featuredPeople = people.slice(0, 3);
 
@@ -117,51 +112,25 @@ const jsonLd = {
 ---
 
 <Layout jsonLd={jsonLd}>
-  <!-- Hero: titular, casillas de propósito y buscador. Sin ilustraciones. -->
+  <!-- Hero: la intención principal es buscar; el resto se ordena alrededor. -->
   <section class="border-b-2 border-graphite bg-fog">
-    <div class="container-content py-14 sm:py-16 lg:py-20">
+    <div class="container-content py-12 sm:py-14 lg:py-16">
       <p class="field-label flex flex-wrap items-center gap-x-2 gap-y-1">
         <span>Observatorio abierto</span>
         <span aria-hidden="true">·</span>
         <span>Manizales y Caldas</span>
         <span aria-hidden="true">·</span>
-        <span class="data font-normal normal-case tracking-normal">5.07° N · 75.52° O</span>
+        <span class="data font-normal tracking-normal normal-case">5.07° N · 75.52° O</span>
       </p>
       <h1 class="mt-4 max-w-4xl text-display">
         Mapa abierto del ecosistema tecnológico de Manizales y Caldas
       </h1>
-      <p class="mt-5 max-w-reading text-lg font-normal leading-relaxed text-graphite">
+      <p class="mt-5 max-w-reading text-lg leading-relaxed font-normal text-graphite">
         Un lugar para consultar, relacionar y verificar quién construye tecnología en la región.
         Datos abiertos, verificables y mantenidos por comunidad.
       </p>
 
-      <!-- Respuesta inmediata a: qué es, para quién es y qué se puede hacer. -->
-      <dl class="fields mt-8 max-w-5xl">
-        <div class="field p-4">
-          <dt>Qué es</dt>
-          <dd class="mt-1 font-normal leading-relaxed">
-            Un archivo público del ecosistema TIC de Manizales y Caldas: empresas, universidades,
-            programas, personas, comunidades y eventos, cada registro con su fuente y su estado de
-            verificación.
-          </dd>
-        </div>
-        <div class="field p-4">
-          <dt>Para quién</dt>
-          <dd class="mt-1 font-normal leading-relaxed">
-            Para quien estudia o quiere estudiar TIC, trabaja o emprende en tecnología, organiza
-            comunidad o investiga el territorio.
-          </dd>
-        </div>
-        <div class="field p-4">
-          <dt>Qué puedes hacer</dt>
-          <dd class="mt-1 font-normal leading-relaxed">
-            Buscar y filtrar registros, revisar fichas con fuentes públicas, explorar cómo se
-            conectan entre sí y aportar o corregir datos.
-          </dd>
-        </div>
-      </dl>
-
-      <div class="mt-8 max-w-xl">
+      <div class="mt-8">
         <GlobalSearch />
       </div>
 
@@ -172,25 +141,56 @@ const jsonLd = {
     </div>
   </section>
 
-  <!-- Empieza por aquí: orientación por necesidad -->
-  <section class="container-content py-14" aria-labelledby="empieza">
+  <!-- Empieza por aquí: orientación por necesidad, justo debajo del buscador. -->
+  <section class="container-content py-12" aria-labelledby="empieza">
     <h2 id="empieza" class="text-2xl">Empieza por aquí</h2>
     <p class="mt-1 max-w-reading text-graphite-2">
       ¿Qué te trae al mapa? Elige un punto de partida según lo que necesitas.
     </p>
-    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {starts.map((s) => <a href={s.href} class="ficha p-5 no-underline">
-        <h3 class="text-lg">
-          <span class="ficha-title-link">{s.title}</span>
-        </h3>
-        <p class="mt-1 text-sm text-graphite-2">{s.text}</p>
-        <span
-          class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue underline underline-offset-[3px]"
-        >
-          {s.cta} <span aria-hidden="true">→</span>
-        </span>
-      </a>)}
-    </div>
+    <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
+      {starts.map((s) => <li>
+        <a href={s.href} class="ficha p-5 no-underline">
+          <span class="font-display text-lg font-bold [font-stretch:108%]">
+            <span class="ficha-title-link">{s.title}</span>
+          </span>
+          <span class="mt-1 block text-sm text-graphite-2">{s.text}</span>
+          <span
+            class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue underline underline-offset-[3px]"
+          >
+            {s.cta} <span aria-hidden="true">→</span>
+          </span>
+        </a>
+      </li>)}
+    </ul>
+  </section>
+
+  <!-- Qué es, para quién y qué se puede hacer: contexto después de la intención principal. -->
+  <section class="container-content pb-12" aria-labelledby="sobre">
+    <h2 id="sobre" class="sr-only">Sobre el observatorio</h2>
+    <dl class="fields">
+      <div class="field p-4">
+        <dt>Qué es</dt>
+        <dd class="mt-1 leading-relaxed font-normal">
+          Un archivo público del ecosistema TIC de Manizales y Caldas: empresas, universidades,
+          programas, personas, comunidades y eventos, cada registro con su fuente y su estado de
+          verificación.
+        </dd>
+      </div>
+      <div class="field p-4">
+        <dt>Para quién</dt>
+        <dd class="mt-1 leading-relaxed font-normal">
+          Para quien estudia o quiere estudiar TIC, trabaja o emprende en tecnología, organiza
+          comunidad o investiga el territorio.
+        </dd>
+      </div>
+      <div class="field p-4">
+        <dt>Qué puedes hacer</dt>
+        <dd class="mt-1 leading-relaxed font-normal">
+          Buscar y filtrar registros, revisar fichas con fuentes públicas, explorar cómo se conectan
+          entre sí y aportar o corregir datos.
+        </dd>
+      </div>
+    </dl>
   </section>
 
   <!-- Nota histórica 2020 → 2026 -->
@@ -212,66 +212,75 @@ const jsonLd = {
     </div>
   </section>
 
-  <!-- Métricas del ecosistema -->
-  <section class="container-content py-14" aria-labelledby="metricas">
-    <h2 id="metricas" class="mb-6 text-2xl">El ecosistema en cifras</h2>
-    <StatsGrid
-      stats={metrics}
-      caption={`Cifras a corte de ${cutoff}. Son registros del archivo, no indicadores de desempeño ni un ranking.`}
-    />
-  </section>
-
-  <!-- Accesos principales: índice del archivo -->
-  <section class="container-content py-6" aria-labelledby="explora">
-    <h2 id="explora" class="text-2xl">Explora el archivo</h2>
+  <!-- El archivo: un solo índice con el conteo de cada tipo de registro. -->
+  <section class="container-content py-12" aria-labelledby="archivo">
+    <h2 id="archivo" class="text-2xl">Explora el archivo</h2>
     <p class="mt-1 max-w-reading text-graphite-2">
       Seis tipos de registro conforman el mapa. Cada uno se explora, filtra y verifica por separado.
     </p>
-    <ul class="mt-6 divide-y divide-rule border-y-2 border-graphite">
-      {index.map((it) => <li>
-        <a href={it.href} class="ficha flex-row items-baseline gap-4 border-0 py-4 no-underline">
-          <span class="flex-1">
-            <span class="font-display text-lg font-bold text-graphite [font-stretch:108%]">
+    <ul class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+      {archive.map((it) => <li>
+        <a href={it.href} class="ficha p-5 no-underline">
+          <span class="flex items-start justify-between gap-4">
+            <span class="font-display text-lg font-bold [font-stretch:108%]">
               <span class="ficha-title-link">{it.title}</span>
             </span>
-            <span class="data ml-2 text-xs text-graphite-2">{it.count}</span>
-            <span class="mt-0.5 block max-w-xl text-sm text-graphite-2">{it.text}</span>
+            <span class="figure text-[2.5rem] leading-none">{it.count}</span>
           </span>
-          <span aria-hidden="true" class="text-graphite-2"> → </span>
+          <span class="mt-2 block text-sm text-graphite-2">{it.text}</span>
         </a>
       </li>)}
     </ul>
+    <p class="data mt-3 text-xs text-graphite-2">
+      Cifras a corte de {cutoff}. Son registros del archivo, no indicadores de desempeño ni un
+      ranking.
+    </p>
   </section>
 
-  <!-- Verificación -->
-  <section class="mt-8 border-y border-rule bg-sheet-alt">
-    <div class="container-content py-14" aria-labelledby="verificacion">
+  <!-- Verificación: cada estado enlaza a los listados ya filtrados por ese estado. -->
+  <section class="border-y border-rule bg-sheet-alt">
+    <div class="container-content py-12" aria-labelledby="verificacion">
       <h2 id="verificacion" class="text-2xl">Cómo leemos la verificación</h2>
       <p class="mt-1 max-w-reading text-graphite-2">
         Cada registro tiene un grado de confianza. No ocultamos la incertidumbre: la mostramos y la
-        convertimos en una invitación a aportar fuentes.
+        convertimos en una invitación a aportar fuentes. Entra a un estado para ver qué registros lo
+        tienen.
       </p>
-      <dl
+      <ul
         class="mt-6 grid grid-cols-1 gap-px border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-5"
       >
-        {verificationOrder.map((s) => <div class="bg-sheet p-4">
-          <dt class="flex items-center gap-2">
-            <span class={`${verificationMeta[s].badge}`}>
-              <span aria-hidden="true">{verificationMeta[s].symbol}</span>
-              {verificationMeta[s].label}
-            </span>
-          </dt>
-          <dd class="figure mt-3 text-2xl">
-            {dist[s]}
+        {byState.map(({ state, total, parts }) => <li class="flex flex-col gap-3 bg-sheet p-4">
+          <span class={verificationMeta[state].badge}>
+            <span aria-hidden="true">{verificationMeta[state].symbol}</span>
+            {verificationMeta[state].label}
+          </span>
+          <p class="figure text-2xl">
+            {total}
             <span class="data ml-1 text-xs font-normal text-graphite-2">de {distTotal}</span>
-          </dd>
-        </div>)}
-      </dl>
+          </p>
+          {parts.length > 0 ? (
+            <ul class="grid gap-1 text-sm">
+              {parts.map((part) => <li>
+                <a
+                  href={part.href}
+                  class="link inline-flex min-h-6 items-baseline gap-1.5 font-normal"
+                >
+                  <span class="sr-only">{verificationMeta[state].label}:</span>
+                  {part.label}
+                  <span class="data text-xs">{part.count}</span>
+                </a>
+              </li>)}
+            </ul>
+          ) : (
+            <p class="text-sm text-graphite-2">Sin registros en este estado.</p>
+          )}
+        </li>)}
+      </ul>
     </div>
   </section>
 
   <!-- Muestra de personas -->
-  <section class="container-content py-14" aria-labelledby="personas">
+  <section class="container-content py-12" aria-labelledby="personas">
     <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
       <h2 id="personas" class="text-2xl">Personas que construyen ecosistema</h2>
       <a href="/personas" class="link shrink-0 text-sm">Ver todas →</a>

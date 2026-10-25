@@ -39,20 +39,17 @@ const index: IndexItem[] = [
 const serializedIndex = serializeJsonForHtml(index);
 ---
 
-<div class="relative mx-auto max-w-xl" data-global-search>
-  <label for="global-search-input" class="sr-only">Buscar en todo el ecosistema</label>
+<div class="relative w-full max-w-3xl" data-global-search>
+  <label for="global-search-input" class="field-label mb-2 block text-graphite">
+    Buscar en todo el ecosistema
+  </label>
   <div class="relative">
-    <span
-      class="pointer-events-none absolute left-4 top-1/2 -translate-y-1/2 font-mono text-base text-graphite-2"
-      aria-hidden="true"
-      >/</span
-    >
     <input
       type="search"
       id="global-search-input"
-      placeholder="Buscar empresas, universidades, programas, personas…"
+      placeholder="Buscar empresas, programas, personas, comunidades…"
       autocomplete="off"
-      class="w-full rounded-control border-2 border-graphite bg-sheet py-3.5 pl-10 pr-4 text-md text-graphite placeholder:text-graphite-2"
+      class="min-h-14 w-full rounded-control border-2 border-graphite bg-sheet px-4 py-3.5 text-lg text-graphite placeholder:text-graphite-2"
       aria-controls="global-search-results"
       data-gs-input
     />

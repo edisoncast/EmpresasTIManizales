@@ -9,7 +9,12 @@ export interface Props {
 }
 const { variant = 'general', entityName, compact = false } = Astro.props;
 
-const copy = {
+interface Action {
+  label: string;
+  href: string;
+}
+
+const copy: Record<string, { title: string; body: string; primary: Action; secondary?: Action }> = {
   add: {
     title: 'Falta un registro',
     body: 'Si conoces un actor del ecosistema que no aparece, ayúdanos a documentarlo con una fuente pública.',
@@ -33,11 +38,12 @@ const copy = {
   general: {
     title: 'Este es un archivo vivo',
     body: 'Los datos son abiertos y se mantienen entre comunidad. Sugiere, corrige o reporta con una fuente pública; no necesitas saber Git.',
-    primary: { label: 'Cómo contribuir', href: '/contribuir' },
+    primary: { label: 'Añadir mi empresa', href: site.suggestCompanyUrl },
+    secondary: { label: 'Sugerir una corrección', href: site.correctionUrl },
   },
 };
 const c = copy[variant];
-const external = c.primary.href.startsWith('http');
+const isExternal = (href: string) => href.startsWith('http');
 ---
 
 <!-- Banda de contribución: la única superficie amarilla a pleno color de la vista. -->
@@ -52,12 +58,20 @@ const external = c.primary.href.startsWith('http');
     <div class="flex shrink-0 flex-wrap gap-2">
       <a
         href={c.primary.href}
-        target={external ? '_blank' : undefined}
-        rel={external ? 'noopener noreferrer' : undefined}
+        target={isExternal(c.primary.href) ? '_blank' : undefined}
+        rel={isExternal(c.primary.href) ? 'noopener noreferrer' : undefined}
         class="btn whitespace-nowrap bg-on-highlight text-highlight hover:border-on-highlight hover:bg-transparent hover:text-on-highlight focus-visible:outline-on-highlight"
       >
         {c.primary.label}
       </a>
+      {c.secondary && <a
+        href={c.secondary.href}
+        target={isExternal(c.secondary.href) ? '_blank' : undefined}
+        rel={isExternal(c.secondary.href) ? 'noopener noreferrer' : undefined}
+        class="btn whitespace-nowrap border-on-highlight text-on-highlight hover:bg-on-highlight hover:text-highlight focus-visible:outline-on-highlight"
+      >
+        {c.secondary.label}
+      </a>}
     </div>
   </div>
 </div>

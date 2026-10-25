@@ -36,7 +36,9 @@ const firstContribution = person.contributions?.[0];
       >
       <div class="min-w-0">
         <h3 class="text-lg">
-          <a href={`/personas/${person.slug}`} class="ficha-title-link">{person.name}</a>
+          <a href={`/personas/${person.slug}`} class="ficha-title-link stretched-link"
+            >{person.name}</a
+          >
         </h3>
         {person.headline && <p class="mt-0.5 text-sm text-graphite-2">{person.headline}</p>}
       </div>
@@ -54,8 +56,11 @@ const firstContribution = person.contributions?.[0];
   </div>
 
   <div class="flex items-center justify-end border-t border-rule px-4 py-2.5">
-    <a href={`/personas/${person.slug}`} class="link text-sm">
-      Ver trayectoria <span aria-hidden="true">→</span>
-    </a>
+    <span
+      class="text-sm font-medium text-ink-blue underline underline-offset-[3px]"
+      aria-hidden="true"
+    >
+      Ver trayectoria →
+    </span>
   </div>
 </article>
