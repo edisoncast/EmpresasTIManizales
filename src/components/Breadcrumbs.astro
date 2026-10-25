@@ -11,28 +11,20 @@ const { items } = Astro.props;
 
 <nav aria-label="Ruta de navegación" class="text-sm text-graphite-2">
   <ol class="flex flex-wrap items-center gap-1.5">
-    {
-      items.map((item, i) => (
-        <li class="flex items-center gap-1.5">
-          {item.href ? (
-            <a
-              href={item.href}
-              class="underline decoration-rule-strong underline-offset-[3px] hover:bg-highlight hover:text-on-highlight hover:no-underline"
-            >
-              {item.label}
-            </a>
-          ) : (
-            <span class="text-graphite" aria-current="page">
-              {item.label}
-            </span>
-          )}
-          {i < items.length - 1 && (
-            <span class="data text-rule-strong" aria-hidden="true">
-              /
-            </span>
-          )}
-        </li>
-      ))
-    }
+    {items.map((item, i) => <li class="flex items-center gap-1.5">
+      {item.href ? (
+        <a
+          href={item.href}
+          class="underline decoration-rule-strong underline-offset-[3px] hover:bg-highlight hover:text-on-highlight hover:no-underline"
+        >
+          {item.label}
+        </a>
+      ) : (
+        <span class="text-graphite" aria-current="page">
+          {item.label}
+        </span>
+      )}
+      {i < items.length - 1 && <span class="data text-rule-strong" aria-hidden="true"> / </span>}
+    </li>)}
   </ol>
 </nav>

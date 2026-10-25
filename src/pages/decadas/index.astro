@@ -26,62 +26,61 @@ const rows = decades.map((decade, index) => ({
   <div class="container-content py-10">
     <p class="max-w-reading border border-rule bg-sheet-alt p-4 text-sm text-graphite-2">
       <strong>Cómo leer esta sección:</strong> las fechas corresponden a la
-      <em>matrícula mercantil</em> conservada en los datos, no necesariamente a la fundación ni al inicio
-      operativo. La evidencia consultada es pública y actual: confirma identidad y oferta de hoy, no el
-      portafolio original de cada periodo. Distinguimos siempre hechos, inferencias y vacíos.
+      <em>matrícula mercantil</em> conservada en los datos, no necesariamente a la fundación ni al
+      inicio operativo. La evidencia consultada es pública y actual: confirma identidad y oferta de
+      hoy, no el portafolio original de cada periodo. Distinguimos siempre hechos, inferencias y
+      vacíos.
     </p>
 
     <ul class="mt-8 divide-y divide-rule border-y border-rule">
-      {
-        rows.map(({ decade, n, count }) => (
-          <li>
-            {decade.status === 'published' ? (
-              <a
-                href={`/decadas/${decade.slug}`}
-                class="group flex items-baseline gap-4 py-5 no-underline transition-colors duration-fast hover:bg-sheet-alt"
+      {rows.map(({ decade, n, count }) => <li>
+        {decade.status === 'published' ? (
+          <a
+            href={`/decadas/${decade.slug}`}
+            class="group flex items-baseline gap-4 py-5 no-underline transition-colors duration-120 hover:bg-sheet-alt"
+          >
+            <span class="font-mono text-xs text-graphite-2">{n}</span>
+            <span class="flex-1">
+              <span class="font-mono text-sm text-graphite-2">
+                {decade.startYear} → {decade.endYear}
+              </span>
+              <span
+                class="mt-0.5 block font-display text-xl font-semibold text-graphite group-hover:text-ink-blue"
               >
-                <span class="font-mono text-xs text-graphite-2">{n}</span>
-                <span class="flex-1">
-                  <span class="font-mono text-sm text-graphite-2">
-                    {decade.startYear} → {decade.endYear}
-                  </span>
-                  <span class="mt-0.5 block font-display text-xl font-semibold text-graphite group-hover:text-ink-blue">
-                    {decade.title}
-                  </span>
-                  <span class="mt-1 block max-w-xl text-sm text-graphite-2">{decade.lede}</span>
-                  <span class="mt-1.5 block font-mono text-xs text-graphite-2">
-                    {count} empresas registradas en el periodo
-                  </span>
-                </span>
-                <span
-                  aria-hidden="true"
-                  class="text-graphite-2 transition-transform duration-fast group-hover:translate-x-0.5"
-                >
-                  →
-                </span>
-              </a>
-            ) : (
-              <div class="flex items-baseline gap-4 py-5">
-                <span class="font-mono text-xs text-graphite-2">{n}</span>
-                <span class="flex-1">
-                  <span class="font-mono text-sm text-graphite-2">
-                    {decade.startYear} → {decade.endYear}
-                  </span>
-                  <span class="mt-0.5 block font-display text-xl font-semibold text-graphite-2">
-                    Investigación en curso
-                  </span>
-                  <span class="mt-1 block max-w-xl text-sm text-graphite-2">
-                    Este periodo se publicará cuando su investigación esté terminada y verificada.
-                  </span>
-                  <span class="mt-1.5 block font-mono text-xs text-graphite-2">
-                    {count} empresas registradas en el periodo
-                  </span>
-                </span>
-              </div>
-            )}
-          </li>
-        ))
-      }
+                {decade.title}
+              </span>
+              <span class="mt-1 block max-w-xl text-sm text-graphite-2">{decade.lede}</span>
+              <span class="mt-1.5 block font-mono text-xs text-graphite-2">
+                {count} empresas registradas en el periodo
+              </span>
+            </span>
+            <span
+              aria-hidden="true"
+              class="text-graphite-2 transition-transform duration-120 group-hover:translate-x-0.5"
+            >
+              →
+            </span>
+          </a>
+        ) : (
+          <div class="flex items-baseline gap-4 py-5">
+            <span class="font-mono text-xs text-graphite-2">{n}</span>
+            <span class="flex-1">
+              <span class="font-mono text-sm text-graphite-2">
+                {decade.startYear} → {decade.endYear}
+              </span>
+              <span class="mt-0.5 block font-display text-xl font-semibold text-graphite-2">
+                Investigación en curso
+              </span>
+              <span class="mt-1 block max-w-xl text-sm text-graphite-2">
+                Este periodo se publicará cuando su investigación esté terminada y verificada.
+              </span>
+              <span class="mt-1.5 block font-mono text-xs text-graphite-2">
+                {count} empresas registradas en el periodo
+              </span>
+            </span>
+          </div>
+        )}
+      </li>)}
     </ul>
 
     <p class="mt-4 text-xs text-graphite-2">

@@ -74,40 +74,26 @@ const shownFields = fields.filter((f) => f.value);
     </h3>
     {subtitle && <p class="text-sm text-graphite-2">{subtitle}</p>}
 
-    {
-      Astro.slots.has('badge') && (
-        <div class="flex flex-wrap gap-1.5">
-          <slot name="badge" />
-        </div>
-      )
-    }
+    {Astro.slots.has('badge') && <div class="flex flex-wrap gap-1.5">
+      <slot name="badge" />
+    </div>}
 
     {description && <p class="line-clamp-3 text-sm text-graphite-2">{description}</p>}
 
-    {
-      shownTags.length > 0 && (
-        <div class="mt-1 flex flex-wrap items-center gap-1.5">
-          {shownTags.map((t) => (
-            <Tag label={t} tone="soft" />
-          ))}
-          {restTags > 0 && <span class="text-xs text-graphite-2">+{restTags} más</span>}
-        </div>
-      )
-    }
+    {shownTags.length > 0 && <div class="mt-1 flex flex-wrap items-center gap-1.5">
+      {shownTags.map((t) => (
+        <Tag label={t} tone="soft" />
+      ))}
+      {restTags > 0 && <span class="text-xs text-graphite-2">+{restTags} más</span>}
+    </div>}
   </div>
 
-  {
-    shownFields.length > 0 && (
-      <dl class="fields border-x-0 border-b-0">
-        {shownFields.map((f) => (
-          <div class="field">
-            <dt>{f.label}</dt>
-            <dd class:list={[f.code && 'data font-normal']}>{f.value}</dd>
-          </div>
-        ))}
-      </dl>
-    )
-  }
+  {shownFields.length > 0 && <dl class="fields border-x-0 border-b-0">
+    {shownFields.map((f) => <div class="field">
+      <dt>{f.label}</dt>
+      <dd class:list={[f.code && 'data font-normal']}>{f.value}</dd>
+    </div>)}
+  </dl>}
 
   <div class="flex items-center justify-end border-t border-rule px-4 py-2.5">
     <a href={href} class="link text-sm">

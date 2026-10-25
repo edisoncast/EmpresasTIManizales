@@ -38,21 +38,15 @@ const jsonLd = {
   </div>
 
   <PersonDetail person={person}>
-    {
-      relatedCommunities.length > 0 && (
-        <section class="mt-8">
-          <h2 class="text-lg">Comunidades que organiza</h2>
-          <ul class="mt-3 space-y-2">
-            {relatedCommunities.map((c) => (
-              <li>
-                <a href={`/comunidades/${c.slug}`} class="link flex items-center gap-2 text-sm">
-                  👥 {c.name}
-                </a>
-              </li>
-            ))}
-          </ul>
-        </section>
-      )
-    }
+    {relatedCommunities.length > 0 && <section class="mt-8">
+      <h2 class="text-lg">Comunidades que organiza</h2>
+      <ul class="mt-3 space-y-2">
+        {relatedCommunities.map((c) => <li>
+          <a href={`/comunidades/${c.slug}`} class="link flex items-center gap-2 text-sm">
+            👥 {c.name}
+          </a>
+        </li>)}
+      </ul>
+    </section>}
   </PersonDetail>
 </Layout>

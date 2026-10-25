@@ -61,23 +61,19 @@ const routes = [
 
   <div class="container-content py-10">
     <div class="grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {
-        areas.map((a) => (
-          <a
-            href={a.href}
-            class="group border border-rule bg-sheet p-6 no-underline transition-colors duration-fast hover:border-ink-blue"
-          >
-            <div class="flex items-baseline justify-between gap-3">
-              <h2 class="text-xl group-hover:text-ink-blue">{a.title}</h2>
-              <span class="font-mono text-xs text-graphite-2">{a.count}</span>
-            </div>
-            <p class="mt-2 text-sm text-graphite-2">{a.text}</p>
-            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-ink-blue">
-              Explorar <span aria-hidden="true">→</span>
-            </span>
-          </a>
-        ))
-      }
+      {areas.map((a) => <a
+        href={a.href}
+        class="group border border-rule bg-sheet p-6 no-underline transition-colors duration-120 hover:border-ink-blue"
+      >
+        <div class="flex items-baseline justify-between gap-3">
+          <h2 class="text-xl group-hover:text-ink-blue">{a.title}</h2>
+          <span class="font-mono text-xs text-graphite-2">{a.count}</span>
+        </div>
+        <p class="mt-2 text-sm text-graphite-2">{a.text}</p>
+        <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-ink-blue">
+          Explorar <span aria-hidden="true">→</span>
+        </span>
+      </a>)}
     </div>
 
     <section class="mt-12 border-t border-rule pt-10">
@@ -87,26 +83,20 @@ const routes = [
         la oferta local.
       </p>
       <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-4">
-        {
-          routes.map((r) => (
-            <a
-              href={r.href}
-              class="group flex flex-col border border-rule bg-sheet p-5 no-underline transition-colors duration-fast hover:border-ink-blue"
-            >
-              <h3 class="text-lg group-hover:text-ink-blue">{r.title}</h3>
-              <p class="mt-1 flex-1 text-sm text-graphite-2">{r.text}</p>
-              <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue">
-                {r.cta} <span aria-hidden="true">→</span>
-              </span>
-            </a>
-          ))
-        }
+        {routes.map((r) => <a
+          href={r.href}
+          class="group flex flex-col border border-rule bg-sheet p-5 no-underline transition-colors duration-120 hover:border-ink-blue"
+        >
+          <h3 class="text-lg group-hover:text-ink-blue">{r.title}</h3>
+          <p class="mt-1 flex-1 text-sm text-graphite-2">{r.text}</p>
+          <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue">
+            {r.cta} <span aria-hidden="true">→</span>
+          </span>
+        </a>)}
       </div>
       <p class="mt-4 text-sm text-graphite-2">
-        ¿Prefieres estudiar en modalidad virtual? Filtra por modalidad en <a
-          href={`/programas?modality=${encodeURIComponent('Virtual')}`}
-          class="link">Programas</a
-        >.
+        ¿Prefieres estudiar en modalidad virtual? Filtra por modalidad en
+        <a href={`/programas?modality=${encodeURIComponent('Virtual')}`} class="link">Programas</a>.
       </p>
     </section>
 
