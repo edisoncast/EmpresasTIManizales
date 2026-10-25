@@ -20,18 +20,14 @@ import { site, nav } from '../lib/site';
     <nav aria-label="Explorar el ecosistema" class="md:col-span-3">
       <h2 class="field-label">Explorar</h2>
       <ul class="mt-3 space-y-2">
-        {
-          nav.slice(0, 6).map((item) => (
-            <li>
-              <a
-                href={item.href}
-                class="text-sm text-graphite-2 no-underline hover:bg-highlight hover:text-on-highlight"
-              >
-                {item.label}
-              </a>
-            </li>
-          ))
-        }
+        {nav.slice(0, 6).map((item) => <li>
+          <a
+            href={item.href}
+            class="text-sm text-graphite-2 no-underline hover:bg-highlight hover:text-on-highlight"
+          >
+            {item.label}
+          </a>
+        </li>)}
       </ul>
     </nav>
 

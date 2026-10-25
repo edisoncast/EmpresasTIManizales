@@ -1,7 +1,12 @@
 # Ecosistema TIC · Manizales & Caldas
 
 Mapa abierto y colaborativo del ecosistema tecnológico de **Manizales y Caldas**: empresas de base
-tecnológica, universidades, programas académicos, personas referentes, comunidades y eventos.
+tecnológica, universidades, programas académicos, personas referentes, comunidades, eventos y
+entidades de apoyo.
+
+**Sitio en vivo:** <https://ticmanizales.edisoncastrosanchez.app>
+
+¿Eres un agente de código (Claude Code, Codex, Copilot, Cursor)? Lee [`AGENTS.md`](./AGENTS.md).
 
 Sitio **static-first**, económico y mantenible, construido con **Astro + TypeScript + Tailwind**.
 Los datos viven versionados en el repositorio (JSON validado con **Zod**) y se actualizan mediante
@@ -40,8 +45,10 @@ Los datos viven versionados en el repositorio (JSON validado con **Zod**) y se a
 
 ## Stack
 
-- **Astro 5** + **TypeScript** (strict) — generación estática.
-- **Tailwind CSS** — estilos utilitarios, diseño responsive.
+- **Astro 7** + **TypeScript 6** (strict) — generación estática.
+- **Tailwind CSS 4** vía `@tailwindcss/vite` — tokens del sistema visual "hoja de registro" en
+  `@theme` ([`docs/design-direction.md`](./docs/design-direction.md)).
+- **Fuentes self-hosted** — Archivo y Atkinson Hyperlegible (Next y Mono), sin CDNs.
 - **JavaScript nativo** — búsqueda, filtros y menú sin React ni islas hidratadas innecesarias.
 - **Zod** — validación de datos en build time.
 - **Vitest** — tests de schemas y de la lógica de filtros.
@@ -93,6 +100,7 @@ El sitio compilado queda en `dist/`.
 | `npm run preview`       | Sirve el build de producción localmente.                |
 | `npm run lint`          | ESLint sobre todo el proyecto.                          |
 | `npm run format`        | Formatea con Prettier.                                  |
+| `npm run format:check`  | Verifica el formato (lo exige la CI).                   |
 | `npm run test`          | Ejecuta los tests con Vitest.                           |
 | `npm run validate:data` | Valida los JSON contra los schemas Zod + integridad.    |
 | `npm run audit:data`    | Genera el resumen 2026 y reporta brechas de calidad.   |
@@ -107,12 +115,13 @@ El sitio compilado queda en `dist/`.
 
 ```
 src/
-  pages/            # Rutas (home, listados, detalles, ecosistema, contribuir, acerca)
+  pages/            # Rutas: home, listados y fichas, formación, ecosistema, décadas,
+                    # agenda (eventos), metodología, contribuir y acerca
   components/       # Layout, Header, Footer, EntityCard, PersonCard, Filtros, etc.
   data/             # Datos versionados en JSON (la fuente de verdad del contenido)
   schemas/          # Schemas Zod + tipos TypeScript
   lib/              # Carga/validación de datos, búsqueda/filtros, formato, config
-  styles/           # CSS global (Tailwind)
+  styles/           # global.css: tokens (@theme) y componentes de Tailwind 4
 scripts/
   validate-data.ts  # Validación de datos + integridad referencial
   audit-data.ts     # Auditoría reproducible y resumen legible por máquina
@@ -127,8 +136,9 @@ legacy/             # Markdown original preservado como referencia histórica
 
 ## Modelo de datos
 
-Cada dataset en `src/data/*.json` es un arreglo validado por su schema en `src/schemas/`.
-Campos transversales importantes:
+Cada dataset en `src/data/*.json` es un arreglo validado por su schema en `src/schemas/`:
+`companies`, `universities`, `programs`, `people`, `communities`, `events`, `supportEntities`
+(entidades de apoyo) y `decades` (relatos por década). Campos transversales importantes:
 
 - `slug`: identificador en **kebab-case**, único y estable (define la URL de detalle).
 - `sourceUrl`: fuente pública primaria; `sources` permite varias fuentes estructuradas.
@@ -188,7 +198,7 @@ por el array `programs` (slugs de programas) o por el `institutionSlug` del prog
   "accredited": true,
   "sniesCode": "0000",
   "programs": ["ing-sistemas-ejemplo"],
-  "sourceUrl": "https://snies.mineducacion.gov.co/...",
+  "sourceUrl": "https://hecaa.mineducacion.gov.co/...",
   "needsVerification": false
 }
 ```
@@ -212,7 +222,7 @@ universidad.
   "durationSemesters": 10,
   "sniesCode": "00000",
   "website": "https://www.ejemplo.edu.co/programa",
-  "sourceUrl": "https://snies.mineducacion.gov.co/...",
+  "sourceUrl": "https://hecaa.mineducacion.gov.co/...",
   "needsVerification": false
 }
 ```
@@ -314,7 +324,7 @@ Playwright levanta `npm run preview` automáticamente y cubre Chromium desktop/m
 en Docker con navegadores preinstalados:
 
 ```bash
-docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.64.1-noble \
   sh -c "npm ci && npm run build && npm run test:e2e"
 ```
 
@@ -337,15 +347,15 @@ Con Docker (imagen oficial con navegadores preinstalados; usa la versión de Pla
 
 ```bash
 # Verificar enlaces (muestra de 20)
-docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.64.1-noble \
   sh -c "npm ci && node scripts/validate-urls.mjs --limit=20"
 
 # Verificar empresas en einforma y actualizar datos
-docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.64.1-noble \
   sh -c "npm ci && node scripts/verify-companies.mjs --only=nit --write"
 ```
 
-> Ajusta el tag `v1.61.1` al valor de `playwright` en tu `package-lock.json`.
+> Ajusta el tag `v1.64.1` al valor de `@playwright/test` en tu `package-lock.json`.
 
 ---
 
@@ -353,8 +363,8 @@ docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-nobl
 
 La infraestructura vive en [`infra/terraform`](./infra/terraform): bucket S3 **privado**, CloudFront
 con **Origin Access Control**, política de bucket que solo permite lectura desde CloudFront,
-cabeceras de seguridad y (opcional) dominio propio con ACM + Route53. Usa el **provider AWS ~> 6.0**
-y **Terraform >= 1.10**.
+cabeceras de seguridad y (opcional) dominio propio con ACM + Route53. Usa el **provider AWS ~> 6.70**
+y **Terraform >= 1.17** (por ejemplo con la imagen `hashicorp/terraform:1.17.0`).
 
 **Estado remoto en S3 con bloqueo nativo (sin DynamoDB).** El estado se guarda en un bucket S3
 dedicado y el _locking_ usa escrituras condicionales de S3 (`use_lockfile = true`), disponible desde
@@ -383,7 +393,13 @@ terraform apply
 Al terminar obtendrás los outputs: `bucket_name`, `cloudfront_distribution_id`,
 `cloudfront_domain_name` y `site_url`.
 
-Primer despliegue del contenido (o deja que lo haga GitHub Actions):
+**Despliegue automático:** cada push a `master` (es decir, cada PR fusionado) ejecuta
+[`deploy.yml`](./.github/workflows/deploy.yml): valida datos, corre lint, unit y e2e, construye,
+sincroniza `dist/` a S3, invalida CloudFront y hace un smoke test contra el sitio. También se puede
+lanzar a mano con `workflow_dispatch`. Hay un solo ambiente (producción); el rollback es `git revert`
+de la fusión.
+
+Primer despliegue manual del contenido (solo al crear la infraestructura):
 
 ```bash
 npm run build
@@ -417,7 +433,7 @@ El deploy usa **OIDC**: GitHub Actions asume un rol de IAM sin llaves de larga d
          "Action": "sts:AssumeRoleWithWebIdentity",
          "Condition": {
            "StringEquals": { "token.actions.githubusercontent.com:aud": "sts.amazonaws.com" },
-           "StringLike": { "token.actions.githubusercontent.com:sub": "repo:<OWNER>/<REPO>:ref:refs/heads/main" }
+           "StringLike": { "token.actions.githubusercontent.com:sub": "repo:<OWNER>/<REPO>:ref:refs/heads/master" }
          }
        }
      ]
@@ -474,10 +490,10 @@ logs o ampliar `price_class`.
 Preparado para crecer **sin rehacer** el modelo:
 
 - Visualización tipo **red/grafo** del ecosistema (los datos ya modelan relaciones).
-- Formulario “Sugerir…” que cree un **GitHub Issue** desde el sitio (las plantillas ya existen).
+- **Tema oscuro** (los pares de color ya están definidos en el sistema de diseño).
 - Migración opcional a **DynamoDB / OpenSearch** si el volumen lo justifica.
 - Analytics respetuoso de la privacidad.
-- Automatización de verificación de enlaces y frescura de datos.
+- Alertas de frescura de datos (la verificación semanal de enlaces ya corre en `link-check.yml`).
 
 Nada de esto es necesario para el MVP y **no se incluye todavía** para mantener el costo bajo.
 

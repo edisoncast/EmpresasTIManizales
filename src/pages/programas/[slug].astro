@@ -86,18 +86,14 @@ const jsonLd = {
     tagsLabel="Áreas"
     entityName={program.name}
   >
-    {
-      university && (
-        <div slot="aside" class="border border-rule bg-sheet p-5">
-          <h2 class="field-label">Institución</h2>
-          <a
-            href={`/universidades/${university.slug}`}
-            class="mt-2 block text-sm font-medium text-ink-blue no-underline hover:underline"
-          >
-            {university.name}
-          </a>
-        </div>
-      )
-    }
+    {university && <div slot="aside" class="border border-rule bg-sheet p-5">
+      <h2 class="field-label">Institución</h2>
+      <a
+        href={`/universidades/${university.slug}`}
+        class="mt-2 block text-sm font-medium text-ink-blue no-underline hover:underline"
+      >
+        {university.name}
+      </a>
+    </div>}
   </EntityDetail>
 </Layout>

@@ -1,46 +1,123 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+/* Tailwind detecta clases en todo el proyecto; el archivo 2020 y la documentación no son UI. */
+@source not '../../legacy';
+@source not '../../repo-original';
+@source not '../../docs';
 
 /* ==========================================================================
    Tokens de diseño (fuente de verdad) — docs/design-direction.md
    Hoja de registro pública: tinta azul, resaltador amarillo y grafito sobre
-   niebla. Fichas y casillas rectas; 4px en controles, tags y sellos. El amarillo solo se usa como relleno.
+   niebla. Fichas y casillas rectas; 4px en controles, tags y sellos. El
+   amarillo solo se usa como relleno.
+   @theme publica cada token como variable CSS en :root y como utilidad.
    ========================================================================== */
+@theme {
+  /* Breakpoints del documento (por contenido, no por dispositivo). */
+  --breakpoint-*: initial;
+  --breakpoint-sm: 640px;
+  --breakpoint-md: 768px;
+  --breakpoint-lg: 1024px;
+  --breakpoint-xl: 1280px;
+
+  /* Superficies y texto. */
+  --color-fog: #eef1f3;
+  --color-sheet: #ffffff;
+  --color-sheet-alt: #e3e8eb;
+  --color-rule: #c3ccd3;
+  --color-rule-strong: #7d8a95;
+  --color-graphite: #161d24;
+  --color-graphite-2: #4b5763;
+
+  /* Tinta de bolígrafo: enlaces, acción principal, sello Verificado. */
+  --color-ink-blue: #2340b8;
+  --color-ink-blue-hover: #172f8a;
+  --color-ink-blue-soft: #e4e9fa;
+  --color-on-ink-blue: #ffffff;
+
+  /* Resaltador: solo relleno (hover, foco, coincidencias, banda de aporte). */
+  --color-highlight: #f5d33b;
+  --color-highlight-soft: #fbefb0;
+  --color-on-highlight: #161d24;
+
+  /* Óxido: exclusivo del estado "Posiblemente inactivo". */
+  --color-rust: #a2461b;
+  --color-rust-soft: #fae6da;
+
+  /* Tipografía self-hosted (@fontsource-variable/*). */
+  --font-display: 'Archivo Variable', Archivo, 'Arial Narrow', Arial, sans-serif;
+  --font-sans:
+    'Atkinson Hyperlegible Next Variable', 'Atkinson Hyperlegible Next', system-ui, -apple-system,
+    'Segoe UI', Arial, sans-serif;
+  --font-mono:
+    'Atkinson Hyperlegible Mono Variable', 'Atkinson Hyperlegible Mono', ui-monospace,
+    SFMono-Regular, Menlo, monospace;
+
+  /* Escala del sistema (12–56 px). h1/display con clamp para fluidez. */
+  --text-xs: 0.75rem;
+  --text-xs--line-height: 1.3;
+  --text-sm: 0.875rem;
+  --text-sm--line-height: 1.45;
+  --text-base: 1rem;
+  --text-base--line-height: 1.55;
+  --text-md: 1.0625rem;
+  --text-md--line-height: 1.6;
+  --text-lg: 1.25rem;
+  --text-lg--line-height: 1.2;
+  --text-xl: 1.75rem;
+  --text-xl--line-height: 1.15;
+  --text-2xl: 2.25rem;
+  --text-2xl--line-height: 1.1;
+  --text-3xl: clamp(2rem, 1.5rem + 2.2vw, 2.5rem);
+  --text-3xl--line-height: 1.05;
+  --text-display: clamp(2.5rem, 1.6rem + 3.6vw, 3.5rem);
+  --text-display--line-height: 1;
+
+  --tracking-field: 0.05em;
+
+  /* Radios: fichas y casillas rectas; 4px en botones, campos, tags y sellos. */
+  --radius-*: initial;
+  --radius: 4px;
+  --radius-sm: 4px;
+  --radius-md: 4px;
+  --radius-control: 4px;
+
+  /* Las fichas no llevan sombra; solo menús y paneles flotantes. */
+  --shadow-*: initial;
+  --shadow-overlay: 0 6px 20px rgb(22 29 36 / 0.16);
+
+  /* Contenedores (max-w-content, max-w-reading, max-w-detail). */
+  --container-content: 1280px;
+  --container-reading: 720px;
+  --container-detail: 1080px;
+
+  /* Movimiento: 120 ms para color, 180 ms para bordes. */
+  --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+}
+
 @layer base {
   :root {
     color-scheme: light;
-
-    /* Superficies y texto. */
-    --color-fog: #eef1f3;
-    --color-sheet: #ffffff;
-    --color-sheet-alt: #e3e8eb;
-    --color-rule: #c3ccd3;
-    --color-rule-strong: #7d8a95;
-    --color-graphite: #161d24;
-    --color-graphite-2: #4b5763;
-
-    /* Tinta de bolígrafo: enlaces, acción principal, sello Verificado. */
-    --color-ink-blue: #2340b8;
-    --color-ink-blue-hover: #172f8a;
-    --color-ink-blue-soft: #e4e9fa;
-    --color-on-ink-blue: #ffffff;
-
-    /* Resaltador: solo relleno (hover, foco, coincidencias, banda de aporte). */
-    --color-highlight: #f5d33b;
-    --color-highlight-soft: #fbefb0;
-    --color-on-highlight: #161d24;
-
-    /* Óxido: exclusivo del estado "Posiblemente inactivo". */
-    --color-rust: #a2461b;
-    --color-rust-soft: #fae6da;
-
     --color-focus: var(--color-graphite);
+  }
 
-    /* Movimiento. */
-    --duration-fast: 120ms;
-    --duration-base: 180ms;
-    --ease-standard: cubic-bezier(0.2, 0, 0, 1);
+  /* Tailwind 4 usa currentColor como borde por defecto; el sistema usa la línea `rule`. */
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-rule);
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    color: var(--color-graphite-2);
+  }
+
+  button:not(:disabled),
+  [role='button']:not(:disabled) {
+    cursor: pointer;
   }
 
   html {
@@ -119,6 +196,37 @@
   }
 }
 
+/* ==========================================================================
+   Utilidades propias. En Tailwind 4, @apply solo acepta utilidades: las clases
+   que otras reglas aplican (field-label, mark, btn) se declaran con @utility.
+   ========================================================================== */
+
+/* Etiqueta de casilla: tipo de entidad, leyendas y rótulos breves. */
+@utility field-label {
+  @apply font-sans text-xs font-bold tracking-field text-graphite-2 uppercase;
+}
+
+/* Dato: códigos CIIU/SNIES, fechas ISO, dominios y conteos. */
+@utility data {
+  @apply font-mono tabular-nums;
+}
+
+/* Resaltador: fondo amarillo con texto oscuro. Se usa en hover y foco de
+   enlaces y títulos de ficha. box-decoration-break mantiene el relleno en
+   títulos de varias líneas. */
+@utility mark {
+  background: var(--color-highlight);
+  color: var(--color-on-highlight);
+  box-shadow: 0 0 0 2px var(--color-highlight);
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+}
+
+/* Base de los botones. */
+@utility btn {
+  @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-control border border-transparent px-4 py-2 text-sm font-semibold no-underline transition-colors duration-120 ease-standard;
+}
+
 @layer components {
   /* Contenedores. */
   .container-content {
@@ -131,30 +239,9 @@
     @apply mx-auto w-full max-w-detail px-4 sm:px-6 lg:px-8;
   }
 
-  /* Etiqueta de casilla: tipo de entidad, leyendas y rótulos breves. */
-  .field-label {
-    @apply font-sans text-xs font-bold uppercase tracking-field text-graphite-2;
-  }
-
-  /* Dato: códigos CIIU/SNIES, fechas ISO, dominios y conteos. */
-  .data {
-    @apply font-mono tabular-nums;
-  }
-
-  /* Resaltador: fondo amarillo con texto oscuro. Se usa en hover y foco de
-     enlaces y títulos de ficha. box-decoration-break mantiene el relleno en
-     títulos de varias líneas. */
-  .mark {
-    background: var(--color-highlight);
-    color: var(--color-on-highlight);
-    box-shadow: 0 0 0 2px var(--color-highlight);
-    -webkit-box-decoration-break: clone;
-    box-decoration-break: clone;
-  }
-
   /* Enlace en tinta azul; se resalta en hover y foco. */
   .link {
-    @apply font-medium text-ink-blue underline decoration-1 underline-offset-[3px] transition-colors duration-fast;
+    @apply font-medium text-ink-blue underline decoration-1 underline-offset-[3px] transition-colors duration-120;
     -webkit-box-decoration-break: clone;
     box-decoration-break: clone;
   }
@@ -165,7 +252,7 @@
 
   /* Ficha de registro: hoja recta con borde fino; el borde se oscurece en hover. */
   .ficha {
-    @apply relative flex h-full flex-col border border-rule bg-sheet transition-colors duration-base ease-standard hover:border-graphite;
+    @apply relative flex h-full flex-col border border-rule bg-sheet transition-colors duration-180 ease-standard hover:border-graphite;
   }
   .ficha-archived {
     @apply bg-sheet-alt;
@@ -192,25 +279,22 @@
     grid-template-columns: minmax(0, 1fr);
   }
   .field {
-    @apply flex min-w-0 flex-col gap-0.5 bg-sheet px-3 pb-2.5 pt-2;
+    @apply flex min-w-0 flex-col gap-0.5 bg-sheet px-3 pt-2 pb-2.5;
   }
   .field > dt {
     @apply field-label;
   }
   .field > dd {
-    @apply m-0 text-sm font-medium text-graphite [overflow-wrap:anywhere];
+    @apply m-0 text-sm font-medium [overflow-wrap:anywhere] text-graphite;
   }
 
   /* Cifra de conteo. */
   .figure {
-    @apply font-display font-extrabold tabular-nums text-graphite;
+    @apply font-display font-extrabold text-graphite tabular-nums;
     font-stretch: 112%;
   }
 
   /* Botones. */
-  .btn {
-    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-control border border-transparent px-4 py-2 text-sm font-semibold no-underline transition-colors duration-fast ease-standard;
-  }
   .btn-primary {
     @apply btn bg-ink-blue text-on-ink-blue hover:bg-ink-blue-hover;
   }
@@ -226,12 +310,12 @@
 
   /* Campo de formulario. */
   .input {
-    @apply min-h-11 w-full rounded-control border border-rule-strong bg-sheet px-3 py-2 text-sm text-graphite transition-colors duration-fast placeholder:text-graphite-2 focus:border-graphite;
+    @apply min-h-11 w-full rounded-control border border-rule-strong bg-sheet px-3 py-2 text-sm text-graphite transition-colors duration-120 placeholder:text-graphite-2 focus:border-graphite;
   }
 
   /* Sello de verificación: se distingue por forma, símbolo y texto. */
   .stamp {
-    @apply inline-flex min-h-[26px] items-center gap-1.5 whitespace-nowrap rounded-control border-[1.5px] border-transparent px-2 py-0.5 text-xs font-bold uppercase tracking-[0.04em];
+    @apply inline-flex min-h-[26px] items-center gap-1.5 rounded-control border-[1.5px] border-transparent px-2 py-0.5 text-xs font-bold tracking-[0.04em] whitespace-nowrap uppercase;
   }
   .stamp-verified {
     @apply border-ink-blue bg-ink-blue text-on-ink-blue;

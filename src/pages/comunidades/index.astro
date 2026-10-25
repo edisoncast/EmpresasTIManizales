@@ -38,8 +38,7 @@ const facets = [
     <p class="mb-6 border border-rule bg-sheet-alt p-3 text-sm text-graphite-2">
       El listado diferencia comunidades activas de antecedentes históricos. Una ficha histórica se
       conserva con una etiqueta clara y no implica actividad vigente. ¿Conoces una comunidad activa
-      que falte?
-      <a href="/contribuir" class="link">Ayúdanos a agregarla</a>.
+      que falte? <a href="/contribuir" class="link">Ayúdanos a agregarla</a>.
     </p>
 
     <div
@@ -51,40 +50,38 @@ const facets = [
       <a href="/eventos" class="btn-secondary shrink-0">Ver la agenda →</a>
     </div>
 
-    {
-      communities.length === 0 ? (
-        <EmptyState title="Aún no hay comunidades registradas" />
-      ) : (
-        <Browser
-          facets={facets}
-          total={communities.length}
-          noun="comunidades"
-          searchPlaceholder="Buscar comunidad…"
-        >
-          {communities.map((c) => (
-            <EntityCard
-              title={c.name}
-              href={`/comunidades/${c.slug}`}
-              kicker="Comunidad"
-              subtitle={c.organizer ? `Organiza: ${c.organizer}` : undefined}
-              description={c.description}
-              tags={c.focus}
-              fields={[{ label: 'Ciudad', value: c.city ?? '' }]}
-              needsVerification={c.needsVerification}
-              verificationStatus={c.verificationStatus}
-              status={c.status}
-              lastVerifiedAt={c.lastVerifiedAt}
-              attrs={{
-                'data-item': '',
-                'data-search': [c.name, c.description ?? '', ...c.focus].join(' '),
-                'data-facet-focus': encodeFacet(c.focus),
-                'data-facet-status': encodeFacet([statusLabel[c.status] ?? c.status]),
-                'data-facet-city': encodeFacet(c.city ? [c.city] : []),
-              }}
-            />
-          ))}
-        </Browser>
-      )
-    }
+    {communities.length === 0 ? (
+      <EmptyState title="Aún no hay comunidades registradas" />
+    ) : (
+      <Browser
+        facets={facets}
+        total={communities.length}
+        noun="comunidades"
+        searchPlaceholder="Buscar comunidad…"
+      >
+        {communities.map((c) => (
+          <EntityCard
+            title={c.name}
+            href={`/comunidades/${c.slug}`}
+            kicker="Comunidad"
+            subtitle={c.organizer ? `Organiza: ${c.organizer}` : undefined}
+            description={c.description}
+            tags={c.focus}
+            fields={[{ label: 'Ciudad', value: c.city ?? '' }]}
+            needsVerification={c.needsVerification}
+            verificationStatus={c.verificationStatus}
+            status={c.status}
+            lastVerifiedAt={c.lastVerifiedAt}
+            attrs={{
+              'data-item': '',
+              'data-search': [c.name, c.description ?? '', ...c.focus].join(' '),
+              'data-facet-focus': encodeFacet(c.focus),
+              'data-facet-status': encodeFacet([statusLabel[c.status] ?? c.status]),
+              'data-facet-city': encodeFacet(c.city ? [c.city] : []),
+            }}
+          />
+        ))}
+      </Browser>
+    )}
   </div>
 </Layout>
