@@ -43,11 +43,11 @@ const faqs = [
       <section>
         <h2 class="text-2xl">Historia · 2020 → 2026</h2>
         <p class="mt-3 text-graphite">
-          En <strong>2020</strong> nació como un repositorio comunitario que reunía empresas, centros
-          de formación y meetups de la región en archivos de texto. En <strong>2026</strong> se reconstruyó
-          como un observatorio navegable: los datos pasaron a archivos versionados con fuentes y estado
-          de verificación, se amplió la oferta académica y se incorporaron personas y comunidades con
-          contribución pública.
+          En <strong>2020</strong> nació como un repositorio comunitario que reunía empresas,
+          centros de formación y meetups de la región en archivos de texto. En <strong>2026</strong>
+          se reconstruyó como un observatorio navegable: los datos pasaron a archivos versionados
+          con fuentes y estado de verificación, se amplió la oferta académica y se incorporaron
+          personas y comunidades con contribución pública.
         </p>
         <p class="mt-3 text-graphite">
           No toda la cobertura tiene la misma profundidad: parte del archivo se hereda de 2020 y se
@@ -60,8 +60,8 @@ const faqs = [
         class="flex flex-wrap items-center justify-between gap-3 border border-rule bg-sheet p-4"
       >
         <p class="text-sm text-graphite">
-          <strong>¿Cómo verificamos e incluimos cada registro?</strong> Criterios, estados, fuentes y
-          proceso de corrección o retiro.
+          <strong>¿Cómo verificamos e incluimos cada registro?</strong> Criterios, estados, fuentes
+          y proceso de corrección o retiro.
         </p>
         <a href="/metodologia" class="btn-secondary shrink-0">Ver metodología →</a>
       </div>
@@ -73,13 +73,16 @@ const faqs = [
             <span aria-hidden="true">◆</span> Datos abiertos y versionados como fuente de verdad.
           </li>
           <li class="flex gap-2">
-            <span aria-hidden="true">◆</span> Transparencia: mostramos cuándo un dato necesita verificación.
+            <span aria-hidden="true">◆</span> Transparencia: mostramos cuándo un dato necesita
+            verificación.
           </li>
           <li class="flex gap-2">
-            <span aria-hidden="true">◆</span> Reconocimiento, no competencia: sin rankings de personas.
+            <span aria-hidden="true">◆</span> Reconocimiento, no competencia: sin rankings de
+            personas.
           </li>
           <li class="flex gap-2">
-            <span aria-hidden="true">◆</span> Privacidad: solo información pública y aportes al ecosistema.
+            <span aria-hidden="true">◆</span> Privacidad: solo información pública y aportes al
+            ecosistema.
           </li>
           <li class="flex gap-2">
             <span aria-hidden="true">◆</span> Bajo costo y fácil de mantener por la comunidad.
@@ -90,14 +93,10 @@ const faqs = [
       <section>
         <h2 class="text-2xl">Preguntas frecuentes</h2>
         <div class="mt-4 space-y-3">
-          {
-            faqs.map((f) => (
-              <details class="border border-rule bg-white p-4">
-                <summary class="cursor-pointer font-medium text-graphite">{f.q}</summary>
-                <p class="mt-2 text-sm text-graphite-2">{f.a}</p>
-              </details>
-            ))
-          }
+          {faqs.map((f) => <details class="border border-rule bg-white p-4">
+            <summary class="cursor-pointer font-medium text-graphite">{f.q}</summary>
+            <p class="mt-2 text-sm text-graphite-2">{f.a}</p>
+          </details>)}
         </div>
       </section>
     </div>
@@ -117,17 +116,17 @@ const faqs = [
       <div class="border border-rule bg-sheet p-5">
         <h2 class="field-label">Licencia</h2>
         <p class="mt-2 text-sm text-graphite-2">
-          Licenciamiento por material: <strong>código MIT</strong>; <strong
-            >datos y contenido</strong
-          >
-          bajo Creative Commons Attribution-ShareAlike 4.0 (CC BY-SA 4.0); los datos de empresas se usan
-          bajo los términos de la Cámara de Comercio (atribución y uso no comercial).
+          Licenciamiento por material: <strong>código MIT</strong>;
+          <strong>datos y contenido</strong> bajo Creative Commons Attribution-ShareAlike 4.0 (CC
+          BY-SA 4.0); los datos de empresas se usan bajo los términos de la Cámara de Comercio
+          (atribución y uso no comercial).
         </p>
         <a
           href={site.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="btn-secondary mt-3 inline-flex">Repositorio</a
+          class="btn-secondary mt-3 inline-flex"
+          >Repositorio</a
         >
       </div>
     </aside>

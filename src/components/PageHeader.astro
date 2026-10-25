@@ -19,17 +19,13 @@ const { title, description, eyebrow, showCutoff = true } = Astro.props;
       {title}
     </h1>
     {description && <p class="mt-3 max-w-reading text-md text-graphite">{description}</p>}
-    {
-      showCutoff && (
-        <p class="data mt-4 inline-flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-graphite-2">
-          <span>Corte de datos: {formatDate(site.auditDate)}</span>
-          <span aria-hidden="true">·</span>
-          <a href="/acerca" class="link font-normal">
-            Metodología
-          </a>
-        </p>
-      )
-    }
+    {showCutoff && <p
+      class="data mt-4 inline-flex flex-wrap items-center gap-x-2 gap-y-1 text-xs text-graphite-2"
+    >
+      <span>Corte de datos: {formatDate(site.auditDate)}</span>
+      <span aria-hidden="true">·</span>
+      <a href="/acerca" class="link font-normal"> Metodología </a>
+    </p>}
     <div class="mt-4">
       <slot />
     </div>

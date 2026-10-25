@@ -15,15 +15,13 @@ const tones: Record<string, string> = {
 const cls = `badge font-medium ${tones[tone]}`;
 ---
 
-{
-  href ? (
-    <a
-      href={href}
-      class={`${cls} no-underline transition-colors duration-fast hover:border-highlight hover:bg-highlight hover:text-on-highlight`}
-    >
-      {label}
-    </a>
-  ) : (
-    <span class={cls}>{label}</span>
-  )
-}
+{href ? (
+  <a
+    href={href}
+    class={`${cls} no-underline transition-colors duration-120 hover:border-highlight hover:bg-highlight hover:text-on-highlight`}
+  >
+    {label}
+  </a>
+) : (
+  <span class={cls}>{label}</span>
+)}

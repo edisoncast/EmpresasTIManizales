@@ -77,33 +77,27 @@ const sourceHierarchy = [
       <section>
         <h2 class="text-2xl">Propósito y alcance</h2>
         <p class="mt-3 text-graphite">
-          Es un mapa abierto y verificable del ecosistema tecnológico de <strong
-            >Manizales y Caldas</strong
-          >. Documenta actores y relaciones con fuentes públicas; no certifica actividad, calidad ni
-          capacidad de contratación. La ausencia de una entidad no significa que no exista: puede no
-          haber sido sugerida o verificada aún.
+          Es un mapa abierto y verificable del ecosistema tecnológico de
+          <strong>Manizales y Caldas</strong>. Documenta actores y relaciones con fuentes públicas;
+          no certifica actividad, calidad ni capacidad de contratación. La ausencia de una entidad
+          no significa que no exista: puede no haber sido sugerida o verificada aún.
         </p>
       </section>
 
       <section>
         <h2 class="text-2xl">Estado del archivo</h2>
         <p class="mt-3 text-graphite">
-          Estas cifras se calculan en vivo desde los datos publicados, con corte del <strong
-            >{cutoff}</strong
-          >. Cada ficha muestra además su propia fecha de revisión, que puede ser posterior al
-          corte.
+          Estas cifras se calculan en vivo desde los datos publicados, con corte del
+          <strong>{cutoff}</strong>. Cada ficha muestra además su propia fecha de revisión, que
+          puede ser posterior al corte.
         </p>
         <dl class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
-          {
-            inventory.map((i) => (
-              <div class="border border-rule bg-sheet p-4">
-                <dt class="text-xs text-graphite-2">{i.label}</dt>
-                <dd class="font-display text-2xl font-semibold tabular-nums text-graphite">
-                  {i.value}
-                </dd>
-              </div>
-            ))
-          }
+          {inventory.map((i) => <div class="border border-rule bg-sheet p-4">
+            <dt class="text-xs text-graphite-2">{i.label}</dt>
+            <dd class="font-display text-2xl font-semibold tabular-nums text-graphite">
+              {i.value}
+            </dd>
+          </div>)}
           <div class="border border-rule bg-sheet-alt p-4">
             <dt class="text-xs text-graphite-2">Total de registros</dt>
             <dd class="font-display text-2xl font-semibold tabular-nums text-graphite">
@@ -112,16 +106,12 @@ const sourceHierarchy = [
           </div>
         </dl>
         <div class="mt-4 flex flex-wrap gap-2">
-          {
-            verificationOrder
-              .filter((s) => dist[s] > 0)
-              .map((s) => (
-                <span class={`${verificationMeta[s].badge}`}>
-                  <span aria-hidden="true">{verificationMeta[s].symbol}</span>
-                  {verificationMeta[s].label}: {dist[s]}
-                </span>
-              ))
-          }
+          {verificationOrder
+            .filter((s) => dist[s] > 0)
+            .map((s) => <span class={`${verificationMeta[s].badge}`}>
+              <span aria-hidden="true">{verificationMeta[s].symbol}</span>
+              {verificationMeta[s].label}: {dist[s]}
+            </span>)}
         </div>
         <p class="mt-3 text-sm text-graphite-2">
           El “último corte auditado” es la fecha del inventario; la “fecha de revisión” es la de
@@ -132,14 +122,10 @@ const sourceHierarchy = [
       <section>
         <h2 class="text-2xl">Criterios de inclusión</h2>
         <dl class="mt-4 space-y-4">
-          {
-            inclusion.map((i) => (
-              <div class="border border-rule bg-sheet p-4">
-                <dt class="font-semibold text-graphite">{i.t}</dt>
-                <dd class="mt-1 text-sm text-graphite-2">{i.d}</dd>
-              </div>
-            ))
-          }
+          {inclusion.map((i) => <div class="border border-rule bg-sheet p-4">
+            <dt class="font-semibold text-graphite">{i.t}</dt>
+            <dd class="mt-1 text-sm text-graphite-2">{i.d}</dd>
+          </div>)}
         </dl>
       </section>
 
@@ -150,19 +136,17 @@ const sourceHierarchy = [
           incertidumbre: la mostramos y la convertimos en una invitación a aportar fuentes.
         </p>
         <dl class="mt-4 space-y-3">
-          {
-            verificationOrder.map((s) => (
-              <div class="flex flex-col gap-1 border border-rule bg-sheet p-4 sm:flex-row sm:items-baseline sm:gap-4">
-                <dt class="shrink-0">
-                  <span class={`${verificationMeta[s].badge}`}>
-                    <span aria-hidden="true">{verificationMeta[s].symbol}</span>
-                    {verificationMeta[s].label}
-                  </span>
-                </dt>
-                <dd class="text-sm text-graphite-2">{verificationMeta[s].message}</dd>
-              </div>
-            ))
-          }
+          {verificationOrder.map((s) => <div
+            class="flex flex-col gap-1 border border-rule bg-sheet p-4 sm:flex-row sm:items-baseline sm:gap-4"
+          >
+            <dt class="shrink-0">
+              <span class={`${verificationMeta[s].badge}`}>
+                <span aria-hidden="true">{verificationMeta[s].symbol}</span>
+                {verificationMeta[s].label}
+              </span>
+            </dt>
+            <dd class="text-sm text-graphite-2">{verificationMeta[s].message}</dd>
+          </div>)}
         </dl>
       </section>
 
@@ -186,9 +170,9 @@ const sourceHierarchy = [
         <h2 class="text-2xl">Datos históricos, inactivos y legado 2020</h2>
         <p class="mt-3 text-graphite">
           El material de 2020 se conserva como archivo histórico y no se elimina por falta de
-          certeza; se contextualiza. Un registro <em>Posiblemente inactivo</em> mantiene una señal explícita
-          (por ejemplo, “En liquidación”) y requiere revisión humana antes de archivarse. Distinguimos
-          un dato heredado de 2020, una actualización de 2026 y un registro archivado.
+          certeza; se contextualiza. Un registro <em>Posiblemente inactivo</em> mantiene una señal
+          explícita (por ejemplo, “En liquidación”) y requiere revisión humana antes de archivarse.
+          Distinguimos un dato heredado de 2020, una actualización de 2026 y un registro archivado.
         </p>
       </section>
 
