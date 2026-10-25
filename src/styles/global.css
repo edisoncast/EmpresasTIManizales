@@ -254,6 +254,12 @@
   .ficha {
     @apply relative flex h-full flex-col border border-rule bg-sheet transition-colors duration-180 ease-standard hover:border-graphite;
   }
+  /* Fichas de listados: /empresas renderiza cientos. Fuera de pantalla no se maquetan ni pintan;
+     `auto` recuerda la altura real una vez mostradas, así el scroll no salta. */
+  .ficha-lazy {
+    content-visibility: auto;
+    contain-intrinsic-size: auto 22rem;
+  }
   .ficha-archived {
     @apply bg-sheet-alt;
   }
