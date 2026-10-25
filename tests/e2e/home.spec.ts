@@ -70,6 +70,19 @@ test.describe('Home', () => {
     await expect(page).toHaveURL(new RegExp(`${href}/?$`));
   });
 
+  test('las coordenadas del hero y del footer llevan al mapa del ecosistema', async ({ page }) => {
+    await page.goto('/');
+    const coordinates = page.getByRole('link', { name: /^5\.07° N · 75\.52° O/ });
+    await expect(coordinates).toHaveCount(2);
+    await expect(coordinates.last()).toContainText('2.150 m s. n. m.');
+    for (const link of await coordinates.all()) {
+      await expect(link).toHaveAttribute('href', '/ecosistema');
+      await expect(link).toHaveAccessibleName(/ver el mapa del ecosistema$/);
+    }
+    await coordinates.first().click();
+    await expect(page).toHaveURL(/\/ecosistema\/?$/);
+  });
+
   test('la banda final ofrece acciones concretas', async ({ page }) => {
     await page.goto('/');
     const band = page.locator('main > section').last();

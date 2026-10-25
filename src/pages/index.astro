@@ -2,6 +2,7 @@
 import Layout from '../components/Layout.astro';
 import GlobalSearch from '../components/GlobalSearch.astro';
 import ContributionCTA from '../components/ContributionCTA.astro';
+import Coordinates from '../components/Coordinates.astro';
 import PersonCard from '../components/PersonCard.astro';
 import { stats, companies, universities, programs, people, communities } from '../lib/data';
 import { site } from '../lib/site';
@@ -120,7 +121,7 @@ const jsonLd = {
         <span aria-hidden="true">·</span>
         <span>Manizales y Caldas</span>
         <span aria-hidden="true">·</span>
-        <span class="data font-normal tracking-normal normal-case">5.07° N · 75.52° O</span>
+        <Coordinates class="font-normal tracking-normal normal-case" />
       </p>
       <h1 class="mt-4 max-w-4xl text-display">
         Mapa abierto del ecosistema tecnológico de Manizales y Caldas
