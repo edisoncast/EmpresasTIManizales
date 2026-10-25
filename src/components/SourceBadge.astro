@@ -18,19 +18,17 @@ const reviewed = reviewedAt ? formatDate(reviewedAt) : '';
       href={sourceUrl}
       target="_blank"
       rel="noopener noreferrer"
-      class="inline-flex items-center gap-1.5 rounded-md border border-ink-200 bg-surface px-2.5 py-1 text-xs text-ink-600 no-underline transition-colors duration-fast hover:border-brand-300 hover:text-accent"
+      class="data inline-flex min-h-7 items-center gap-1.5 rounded-control border border-rule bg-sheet px-2 py-1 text-xs text-graphite no-underline transition-colors duration-fast hover:border-highlight hover:bg-highlight hover:text-on-highlight"
       title={`${label}: ${sourceUrl}`}
     >
-      <span class="font-mono text-ink-400">{label}</span>
-      <span class="font-medium">{domain}</span>
-      {reviewed && <span class="text-ink-400">· rev. {reviewed}</span>}
-      <span aria-hidden="true" class="text-ink-400">
-        ↗
-      </span>
+      <span class="text-graphite-2">{label}</span>
+      <span>{domain}</span>
+      {reviewed && <span class="text-graphite-2">· rev. {reviewed}</span>}
+      <span aria-hidden="true">↗</span>
       <span class="sr-only">(se abre en una pestaña nueva)</span>
     </a>
   ) : (
-    <span class="inline-flex items-center rounded-md border border-dashed border-ink-300 px-2.5 py-1 text-xs text-ink-500">
+    <span class="data inline-flex min-h-7 items-center rounded-control border border-dashed border-rule-strong px-2 py-1 text-xs text-graphite-2">
       Sin fuente pública registrada
     </span>
   )

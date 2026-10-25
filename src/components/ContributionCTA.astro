@@ -40,25 +40,21 @@ const c = copy[variant];
 const external = c.primary.href.startsWith('http');
 ---
 
-<div class:list={['bg-accent-soft/50 rounded-lg border border-brand-200', compact ? 'p-4' : 'p-6']}>
-  <div class="flex flex-col gap-3 sm:flex-row sm:items-center sm:justify-between">
+<!-- Banda de contribución: la única superficie amarilla a pleno color de la vista. -->
+<div class:list={['bg-highlight text-on-highlight', compact ? 'p-4' : 'p-6']}>
+  <div class="flex flex-col gap-4 sm:flex-row sm:items-center sm:justify-between">
     <div>
-      <h2
-        class:list={[
-          'font-display font-semibold text-accent-ink',
-          compact ? 'text-base' : 'text-lg',
-        ]}
-      >
+      <h2 class:list={['text-on-highlight', compact ? 'text-base' : 'text-xl']}>
         {c.title}
       </h2>
-      <p class:list={['mt-1 text-ink-700', compact ? 'text-sm' : 'text-sm']}>{c.body}</p>
+      <p class="mt-1 max-w-[60ch] text-sm">{c.body}</p>
     </div>
     <div class="flex shrink-0 flex-wrap gap-2">
       <a
         href={c.primary.href}
         target={external ? '_blank' : undefined}
         rel={external ? 'noopener noreferrer' : undefined}
-        class="btn-primary whitespace-nowrap"
+        class="btn whitespace-nowrap bg-on-highlight text-highlight hover:border-on-highlight hover:bg-transparent hover:text-on-highlight focus-visible:outline-on-highlight"
       >
         {c.primary.label}
       </a>

@@ -46,11 +46,11 @@ const facets = [
             href={`/universidades/${u.slug}`}
             kicker={label('institutionType', u.institutionType)}
             description={u.description}
-            meta={[
-              u.city,
-              `${u.programs.length} programas TIC`,
-              u.accredited ? 'Acreditada alta calidad' : '',
-            ].filter(Boolean)}
+            fields={[
+              { label: 'Ciudad', value: u.city },
+              { label: 'Programas TIC', value: String(u.programs.length), code: true },
+              { label: 'Acreditación', value: u.accredited ? 'Alta calidad' : '' },
+            ]}
             needsVerification={u.needsVerification}
             verificationStatus={u.verificationStatus}
             lastVerifiedAt={u.lastVerifiedAt}

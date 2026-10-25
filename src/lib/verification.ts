@@ -1,6 +1,6 @@
 /**
  * Resuelve y describe el estado de verificación de una entidad.
- * Cinco estados sobrios (docs/design-direction.md), nunca comunicados solo por color:
+ * Cinco estados (docs/design-direction.md) que se distinguen por forma de sello, nunca comunicados solo por color:
  * cada uno tiene label, símbolo y mensaje.
  */
 export type VerificationState =
@@ -10,7 +10,7 @@ export interface VerificationMeta {
   label: string;
   message: string;
   symbol: string;
-  /** Clases Tailwind completas (para que el JIT las genere). */
+  /** Clases completas del sello (.stamp-*) y del punto, para que el JIT las genere. */
   badge: string;
   dot: string;
 }
@@ -20,36 +20,36 @@ export const verificationMeta: Record<VerificationState, VerificationMeta> = {
     label: 'Verificado',
     message: 'Verificado con fuentes públicas.',
     symbol: '✓',
-    badge: 'bg-verified-bg text-verified',
-    dot: 'bg-verified',
+    badge: 'stamp stamp-verified',
+    dot: 'bg-ink-blue',
   },
   partially_verified: {
     label: 'Verificación parcial',
     message: 'Parte de la información está verificada.',
     symbol: '◑',
-    badge: 'bg-partial-bg text-partial',
-    dot: 'bg-partial',
+    badge: 'stamp stamp-partial',
+    dot: 'border-2 border-ink-blue bg-sheet',
   },
   unknown: {
     label: 'Estado por confirmar',
     message: 'Aún no contamos con evidencia suficiente.',
     symbol: '○',
-    badge: 'bg-pending-bg text-pending',
-    dot: 'bg-pending',
+    badge: 'stamp stamp-unknown',
+    dot: 'border-2 border-dashed border-rule-strong',
   },
   inactive_or_unverified: {
     label: 'Posiblemente inactivo',
     message: 'No se confirmó actividad reciente.',
     symbol: '–',
-    badge: 'bg-inactive-bg text-inactive',
-    dot: 'bg-inactive',
+    badge: 'stamp stamp-inactive',
+    dot: 'bg-rust',
   },
   archived: {
     label: 'Archivo histórico',
     message: 'Se conserva como parte del archivo.',
     symbol: '▤',
-    badge: 'bg-archived-bg text-archived',
-    dot: 'bg-archived',
+    badge: 'stamp stamp-archived',
+    dot: 'bg-rule-strong',
   },
 };
 

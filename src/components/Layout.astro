@@ -1,9 +1,9 @@
 ---
 // Fuentes self-hosted (WOFF2) — respetan la CSP font-src 'self' y evitan CDNs.
-import '@fontsource-variable/newsreader';
-import '@fontsource-variable/public-sans';
-import '@fontsource/ibm-plex-mono/400.css';
-import '@fontsource/ibm-plex-mono/500.css';
+// Archivo con eje de ancho (wdth): los titulares usan font-stretch 108–125%.
+import '@fontsource-variable/archivo/wdth.css';
+import '@fontsource-variable/atkinson-hyperlegible-next';
+import '@fontsource-variable/atkinson-hyperlegible-mono';
 import '../styles/global.css';
 import Header from './Header.astro';
 import Footer from './Footer.astro';
@@ -60,7 +60,7 @@ const serializedJsonLd = jsonLd ? serializeJsonForHtml(jsonLd) : undefined;
   <body class="flex min-h-screen flex-col">
     <a
       href="#main"
-      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:rounded-lg focus:bg-brand-600 focus:px-4 focus:py-2 focus:text-white"
+      class="sr-only focus:not-sr-only focus:absolute focus:left-4 focus:top-4 focus:z-50 focus:bg-highlight focus:px-4 focus:py-2 focus:text-on-highlight"
     >
       Saltar al contenido
     </a>

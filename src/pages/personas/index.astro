@@ -39,7 +39,7 @@ const facets = [
   />
 
   <div class="container-content py-8">
-    <div class="mb-6 rounded-lg border border-brand-100 bg-brand-50 p-4 text-sm text-brand-800">
+    <div class="mb-6 border border-rule bg-highlight-soft p-4 text-sm text-graphite">
       <p>
         <strong>Sobre esta sección.</strong> Solo incluimos personas con perfil o contribución pública.
         El enfoque son los aportes al ecosistema (comunidad, docencia, emprendimiento, open source, divulgación,
@@ -51,7 +51,6 @@ const facets = [
     {
       people.length === 0 ? (
         <EmptyState
-          icon="⭐"
           title="Aún no hay personas registradas"
           message="Sugiere referentes del ecosistema con su perfil público o contribución verificable."
         />
@@ -61,7 +60,7 @@ const facets = [
           total={people.length}
           noun="personas"
           searchPlaceholder="Buscar por nombre, especialidad u organización…"
-          gridClass="grid gap-4 sm:grid-cols-2 lg:grid-cols-3"
+          gridClass="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3"
         >
           {people.map((p) => (
             <PersonCard

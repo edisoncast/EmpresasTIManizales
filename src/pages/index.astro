@@ -2,7 +2,6 @@
 import Layout from '../components/Layout.astro';
 import GlobalSearch from '../components/GlobalSearch.astro';
 import StatsGrid from '../components/StatsGrid.astro';
-import TopoPattern from '../components/TopoPattern.astro';
 import ContributionCTA from '../components/ContributionCTA.astro';
 import PersonCard from '../components/PersonCard.astro';
 import { stats, companies, universities, programs, people, communities } from '../lib/data';
@@ -57,42 +56,36 @@ const starts = [
 
 const index = [
   {
-    n: '01',
     href: '/empresas',
     title: 'Empresas',
     count: stats.companies,
     text: 'Empresas de base tecnológica y casas de desarrollo de software.',
   },
   {
-    n: '02',
     href: '/universidades',
     title: 'Universidades',
     count: stats.universities,
     text: 'Instituciones con formación en software, datos, redes y afines.',
   },
   {
-    n: '03',
     href: '/programas',
     title: 'Programas',
     count: stats.programs,
     text: 'Técnicos, tecnológicos, pregrados y posgrados del área TIC.',
   },
   {
-    n: '04',
     href: '/personas',
     title: 'Personas',
     count: stats.people,
     text: 'Trayectorias públicas que construyen ecosistema.',
   },
   {
-    n: '05',
     href: '/comunidades',
     title: 'Comunidades activas',
     count: activeCommunities.length,
     text: 'Meetups activos y archivo histórico de comunidades técnicas de la región.',
   },
   {
-    n: '06',
     href: '/eventos',
     title: 'Agenda',
     count: stats.events,
@@ -124,45 +117,44 @@ const jsonLd = {
 ---
 
 <Layout jsonLd={jsonLd}>
-  <!-- Hero editorial -->
-  <section class="relative overflow-hidden border-b border-ink-200 bg-paper">
-    <TopoPattern
-      class="pointer-events-none absolute inset-x-0 bottom-0 hidden h-2/3 w-full text-brand-300/40 sm:block"
-    />
-    <div class="container-content relative py-16 sm:py-20 lg:py-24">
-      <p class="kicker flex flex-wrap items-center gap-x-2 gap-y-1">
+  <!-- Hero: titular, casillas de propósito y buscador. Sin ilustraciones. -->
+  <section class="border-b-2 border-graphite bg-fog">
+    <div class="container-content py-14 sm:py-16 lg:py-20">
+      <p class="field-label flex flex-wrap items-center gap-x-2 gap-y-1">
         <span>Observatorio abierto</span>
         <span aria-hidden="true">·</span>
-        <span>Manizales &amp; Caldas</span>
+        <span>Manizales y Caldas</span>
+        <span aria-hidden="true">·</span>
+        <span class="data font-normal normal-case tracking-normal">5.07° N · 75.52° O</span>
       </p>
-      <h1 class="mt-4 max-w-3xl font-display text-display font-semibold text-ink-900">
+      <h1 class="mt-4 max-w-4xl text-display">
         Mapa abierto del ecosistema tecnológico de Manizales y Caldas
       </h1>
-      <p class="mt-5 max-w-reading text-md leading-relaxed text-ink-700">
+      <p class="mt-5 max-w-reading text-lg font-normal leading-relaxed text-graphite">
         Un lugar para consultar, relacionar y verificar quién construye tecnología en la región.
         Datos abiertos, verificables y mantenidos por comunidad.
       </p>
 
       <!-- Respuesta inmediata a: qué es, para quién es y qué se puede hacer. -->
-      <dl class="mt-6 grid max-w-4xl grid-cols-1 gap-x-8 gap-y-4 sm:grid-cols-3">
-        <div>
-          <dt class="font-mono text-xs uppercase tracking-wide text-coffee">Qué es</dt>
-          <dd class="mt-1 text-sm leading-relaxed text-ink-700">
+      <dl class="fields mt-8 max-w-5xl">
+        <div class="field p-4">
+          <dt>Qué es</dt>
+          <dd class="mt-1 font-normal leading-relaxed">
             Un archivo público del ecosistema TIC de Manizales y Caldas: empresas, universidades,
             programas, personas, comunidades y eventos, cada registro con su fuente y su estado de
             verificación.
           </dd>
         </div>
-        <div>
-          <dt class="font-mono text-xs uppercase tracking-wide text-coffee">Para quién</dt>
-          <dd class="mt-1 text-sm leading-relaxed text-ink-700">
+        <div class="field p-4">
+          <dt>Para quién</dt>
+          <dd class="mt-1 font-normal leading-relaxed">
             Para quien estudia o quiere estudiar TIC, trabaja o emprende en tecnología, organiza
             comunidad o investiga el territorio.
           </dd>
         </div>
-        <div>
-          <dt class="font-mono text-xs uppercase tracking-wide text-coffee">Qué puedes hacer</dt>
-          <dd class="mt-1 text-sm leading-relaxed text-ink-700">
+        <div class="field p-4">
+          <dt>Qué puedes hacer</dt>
+          <dd class="mt-1 font-normal leading-relaxed">
             Buscar y filtrar registros, revisar fichas con fuentes públicas, explorar cómo se
             conectan entre sí y aportar o corregir datos.
           </dd>
@@ -182,22 +174,19 @@ const jsonLd = {
 
   <!-- Empieza por aquí: orientación por necesidad -->
   <section class="container-content py-14" aria-labelledby="empieza">
-    <h2 id="empieza" class="font-display text-2xl font-semibold text-ink-900">Empieza por aquí</h2>
-    <p class="mt-1 max-w-reading text-ink-600">
+    <h2 id="empieza" class="text-2xl">Empieza por aquí</h2>
+    <p class="mt-1 max-w-reading text-graphite-2">
       ¿Qué te trae al mapa? Elige un punto de partida según lo que necesitas.
     </p>
     <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
       {
         starts.map((s) => (
-          <a
-            href={s.href}
-            class="group rounded-lg border border-ink-200 bg-surface p-6 no-underline transition-colors duration-fast hover:border-accent"
-          >
-            <h3 class="font-display text-lg font-semibold text-ink-900 group-hover:text-accent">
-              {s.title}
+          <a href={s.href} class="ficha p-5 no-underline">
+            <h3 class="text-lg">
+              <span class="ficha-title-link">{s.title}</span>
             </h3>
-            <p class="mt-1 text-sm text-ink-600">{s.text}</p>
-            <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent">
+            <p class="mt-1 text-sm text-graphite-2">{s.text}</p>
+            <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue underline underline-offset-[3px]">
               {s.cta} <span aria-hidden="true">→</span>
             </span>
           </a>
@@ -207,12 +196,12 @@ const jsonLd = {
   </section>
 
   <!-- Nota histórica 2020 → 2026 -->
-  <section class="bg-mist/50 border-b border-ink-200">
+  <section class="border-y border-rule bg-sheet-alt">
     <div
       class="container-content flex flex-col gap-3 py-6 sm:flex-row sm:items-center sm:justify-between"
     >
-      <p class="max-w-2xl text-sm text-ink-700">
-        <span class="font-mono text-xs text-coffee">{site.startedYear} → {site.currentYear}</span>
+      <p class="max-w-2xl text-sm text-graphite">
+        <span class="data text-xs text-graphite-2">{site.startedYear} → {site.currentYear}</span>
         &nbsp; Proyecto iniciado en {site.startedYear} como repositorio comunitario y ampliado en {
           site.currentYear
         }, verificando por partes con fuentes públicas. Cada ficha muestra su estado y su fecha de
@@ -220,57 +209,43 @@ const jsonLd = {
         contribuir.
       </p>
       <span class="flex shrink-0 flex-col gap-1 sm:items-end">
-        <a href="/metodologia" class="text-sm font-medium text-accent no-underline hover:underline"
-          >Ver metodología →</a
-        >
-        <a href="/decadas" class="text-sm font-medium text-accent no-underline hover:underline"
-          >Evolución por décadas →</a
-        >
+        <a href="/metodologia" class="link text-sm">Ver metodología →</a>
+        <a href="/decadas" class="link text-sm">Evolución por décadas →</a>
       </span>
     </div>
   </section>
 
   <!-- Métricas del ecosistema -->
   <section class="container-content py-14" aria-labelledby="metricas">
-    <div class="mb-6 flex items-baseline justify-between gap-4">
-      <h2 id="metricas" class="font-display text-2xl font-semibold text-ink-900">
-        El ecosistema en cifras
-      </h2>
-    </div>
+    <h2 id="metricas" class="mb-6 text-2xl">El ecosistema en cifras</h2>
     <StatsGrid
       stats={metrics}
       caption={`Cifras a corte de ${cutoff}. Son registros del archivo, no indicadores de desempeño ni un ranking.`}
     />
   </section>
 
-  <!-- Accesos principales: índice editorial -->
+  <!-- Accesos principales: índice del archivo -->
   <section class="container-content py-6" aria-labelledby="explora">
-    <h2 id="explora" class="font-display text-2xl font-semibold text-ink-900">
-      Explora el archivo
-    </h2>
-    <p class="mt-1 max-w-reading text-ink-600">
+    <h2 id="explora" class="text-2xl">Explora el archivo</h2>
+    <p class="mt-1 max-w-reading text-graphite-2">
       Seis tipos de registro conforman el mapa. Cada uno se explora, filtra y verifica por separado.
     </p>
-    <ul class="mt-6 divide-y divide-ink-200 border-y border-ink-200">
+    <ul class="mt-6 divide-y divide-rule border-y-2 border-graphite">
       {
         index.map((it) => (
           <li>
             <a
               href={it.href}
-              class="hover:bg-mist/40 group flex items-baseline gap-4 py-4 no-underline transition-colors duration-fast"
+              class="ficha flex-row items-baseline gap-4 border-0 py-4 no-underline"
             >
-              <span class="font-mono text-xs text-ink-400">{it.n}</span>
               <span class="flex-1">
-                <span class="font-display text-lg font-semibold text-ink-900 group-hover:text-accent">
-                  {it.title}
+                <span class="font-display text-lg font-bold text-graphite [font-stretch:108%]">
+                  <span class="ficha-title-link">{it.title}</span>
                 </span>
-                <span class="ml-2 font-mono text-xs text-ink-400">{it.count}</span>
-                <span class="mt-0.5 block max-w-xl text-sm text-ink-600">{it.text}</span>
+                <span class="data ml-2 text-xs text-graphite-2">{it.count}</span>
+                <span class="mt-0.5 block max-w-xl text-sm text-graphite-2">{it.text}</span>
               </span>
-              <span
-                aria-hidden="true"
-                class="text-ink-400 transition-transform duration-fast group-hover:translate-x-0.5"
-              >
+              <span aria-hidden="true" class="text-graphite-2">
                 →
               </span>
             </a>
@@ -281,28 +256,28 @@ const jsonLd = {
   </section>
 
   <!-- Verificación -->
-  <section class="bg-mist/40 border-y border-ink-200">
+  <section class="mt-8 border-y border-rule bg-sheet-alt">
     <div class="container-content py-14" aria-labelledby="verificacion">
-      <h2 id="verificacion" class="font-display text-2xl font-semibold text-ink-900">
-        Cómo leemos la verificación
-      </h2>
-      <p class="mt-1 max-w-reading text-ink-600">
+      <h2 id="verificacion" class="text-2xl">Cómo leemos la verificación</h2>
+      <p class="mt-1 max-w-reading text-graphite-2">
         Cada registro tiene un grado de confianza. No ocultamos la incertidumbre: la mostramos y la
         convertimos en una invitación a aportar fuentes.
       </p>
-      <dl class="mt-6 grid gap-3 sm:grid-cols-2 lg:grid-cols-5">
+      <dl
+        class="mt-6 grid grid-cols-1 gap-px border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-5"
+      >
         {
           verificationOrder.map((s) => (
-            <div class="rounded-lg border border-ink-200 bg-surface p-4">
+            <div class="bg-sheet p-4">
               <dt class="flex items-center gap-2">
-                <span class={`badge ${verificationMeta[s].badge}`}>
+                <span class={`${verificationMeta[s].badge}`}>
                   <span aria-hidden="true">{verificationMeta[s].symbol}</span>
                   {verificationMeta[s].label}
                 </span>
               </dt>
-              <dd class="mt-2 font-display text-2xl font-semibold tabular-nums text-ink-900">
+              <dd class="figure mt-3 text-2xl">
                 {dist[s]}
-                <span class="ml-1 font-sans text-xs font-normal text-ink-500">de {distTotal}</span>
+                <span class="data ml-1 text-xs font-normal text-graphite-2">de {distTotal}</span>
               </dd>
             </div>
           ))
@@ -313,20 +288,15 @@ const jsonLd = {
 
   <!-- Muestra de personas -->
   <section class="container-content py-14" aria-labelledby="personas">
-    <div class="flex items-baseline justify-between gap-4">
-      <h2 id="personas" class="font-display text-2xl font-semibold text-ink-900">
-        Personas que construyen ecosistema
-      </h2>
-      <a
-        href="/personas"
-        class="shrink-0 text-sm font-medium text-accent no-underline hover:underline">Ver todas →</a
-      >
+    <div class="flex flex-wrap items-baseline justify-between gap-x-4 gap-y-1">
+      <h2 id="personas" class="text-2xl">Personas que construyen ecosistema</h2>
+      <a href="/personas" class="link shrink-0 text-sm">Ver todas →</a>
     </div>
-    <p class="mt-1 max-w-reading text-ink-600">
+    <p class="mt-1 max-w-reading text-graphite-2">
       Reconocimiento por trayectoria y contribuciones públicas, en orden alfabético. No es un
       ranking.
     </p>
-    <div class="mt-6 grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+    <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
       {featuredPeople.map((p) => <PersonCard person={p} />)}
     </div>
   </section>

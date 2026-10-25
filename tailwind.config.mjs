@@ -1,6 +1,6 @@
 /** @type {import('tailwindcss').Config} */
-// Tokens derivados de docs/design-direction.md — observatorio editorial,
-// paleta mineral/vegetal (papel cálido + verde bosque), sobriedad y confianza.
+// Tokens derivados de docs/design-direction.md — hoja de registro pública:
+// niebla fría, grafito, tinta azul y resaltador amarillo. Todo contenedor es recto.
 export default {
   content: ['./src/**/*.{astro,html,js,jsx,ts,tsx,md,mdx}'],
   theme: {
@@ -11,103 +11,86 @@ export default {
       lg: '1024px',
       xl: '1280px',
     },
+    // Radios reemplazan la escala por defecto: fichas y casillas rectas; 4px en botones, campos, tags y sellos.
+    borderRadius: {
+      none: '0',
+      control: '4px',
+      sm: '4px',
+      DEFAULT: '4px',
+      md: '4px',
+      full: '9999px',
+    },
+    // Las fichas no llevan sombra; solo menús y paneles flotantes.
+    boxShadow: {
+      none: 'none',
+      overlay: '0 6px 20px rgb(22 29 36 / 0.16)',
+    },
     extend: {
       colors: {
-        // --- Tokens semánticos (fuente de verdad en :root de global.css) ---
-        paper: 'var(--color-background)',
-        surface: 'var(--color-surface)',
-        mist: 'var(--color-surface-muted)',
-        accent: {
-          DEFAULT: 'var(--color-accent)',
-          soft: 'var(--color-accent-soft)',
-          ink: 'var(--color-accent-ink)',
+        // Fuente de verdad en :root de global.css. Sin modificadores de opacidad.
+        fog: 'var(--color-fog)',
+        sheet: {
+          DEFAULT: 'var(--color-sheet)',
+          alt: 'var(--color-sheet-alt)',
         },
-        coffee: 'var(--color-coffee)',
-        // Estados de verificación (pares fg/bg sobrios).
-        verified: { DEFAULT: '#256B4A', bg: '#DDEDE4' },
-        partial: { DEFAULT: '#8A6418', bg: '#F4EBCF' },
-        pending: { DEFAULT: '#765B38', bg: '#EFE6D8' },
-        inactive: { DEFAULT: '#8B4A3F', bg: '#F3E1DD' },
-        archived: { DEFAULT: '#58615D', bg: '#E5E9E6' },
-
-        // --- Escala neutra mineral (alias `ink`) ---
-        ink: {
-          50: '#F5F3ED', // papel cálido (fondo)
-          100: '#E8ECE7', // superficie tenue / bandas
-          200: '#C8CFC9', // bordes y divisores
-          300: '#AAB4AC',
-          400: '#5F6B64', // metadatos pequeños: contraste AA sobre papel/blanco
-          500: '#526059', // texto secundario
-          600: '#46534B',
-          700: '#38423B',
-          800: '#262F29',
-          900: '#17211C', // texto primario
-          950: '#0F1613',
+        rule: {
+          DEFAULT: 'var(--color-rule)',
+          strong: 'var(--color-rule-strong)',
         },
-        // --- Escala de acento verde (alias `brand`) ---
-        brand: {
-          50: '#DCEAE3', // accent-soft
-          100: '#C9E0D5',
-          200: '#A9CFBE',
-          300: '#7BB49E',
-          400: '#4A8F77',
-          500: '#2A6F57',
-          600: '#1F5C4A', // acento
-          700: '#174638', // acento-ink
-          800: '#123A2E',
-          900: '#0E2C24',
-          950: '#081813',
+        graphite: {
+          DEFAULT: 'var(--color-graphite)',
+          2: 'var(--color-graphite-2)',
+        },
+        'ink-blue': {
+          DEFAULT: 'var(--color-ink-blue)',
+          hover: 'var(--color-ink-blue-hover)',
+          soft: 'var(--color-ink-blue-soft)',
+        },
+        'on-ink-blue': 'var(--color-on-ink-blue)',
+        highlight: {
+          DEFAULT: 'var(--color-highlight)',
+          soft: 'var(--color-highlight-soft)',
+        },
+        'on-highlight': 'var(--color-on-highlight)',
+        rust: {
+          DEFAULT: 'var(--color-rust)',
+          soft: 'var(--color-rust-soft)',
         },
       },
       fontFamily: {
-        display: ['"Newsreader Variable"', 'Newsreader', 'Georgia', 'Cambria', 'serif'],
+        display: ['"Archivo Variable"', 'Archivo', '"Arial Narrow"', 'Arial', 'sans-serif'],
         sans: [
-          '"Public Sans Variable"',
-          'Public Sans',
+          '"Atkinson Hyperlegible Next Variable"',
+          '"Atkinson Hyperlegible Next"',
           'system-ui',
           '-apple-system',
           'Segoe UI',
-          'Roboto',
-          'Helvetica Neue',
           'Arial',
           'sans-serif',
         ],
-        mono: ['"IBM Plex Mono"', 'ui-monospace', 'SFMono-Regular', 'Menlo', 'monospace'],
+        mono: [
+          '"Atkinson Hyperlegible Mono Variable"',
+          '"Atkinson Hyperlegible Mono"',
+          'ui-monospace',
+          'SFMono-Regular',
+          'Menlo',
+          'monospace',
+        ],
       },
       fontSize: {
-        // Escala editorial (docs). h1/display con clamp para fluidez.
-        xs: ['0.75rem', { lineHeight: '1.4' }],
-        sm: ['0.875rem', { lineHeight: '1.5' }],
+        // Escala del sistema (12–56 px). h1/display con clamp para fluidez.
+        xs: ['0.75rem', { lineHeight: '1.3' }],
+        sm: ['0.875rem', { lineHeight: '1.45' }],
         base: ['1rem', { lineHeight: '1.55' }],
-        md: ['1.0625rem', { lineHeight: '1.65' }],
-        lg: ['1.3125rem', { lineHeight: '1.3' }],
-        xl: ['1.75rem', { lineHeight: '1.2' }],
+        md: ['1.0625rem', { lineHeight: '1.6' }],
+        lg: ['1.25rem', { lineHeight: '1.2' }],
+        xl: ['1.75rem', { lineHeight: '1.15' }],
         '2xl': ['2.25rem', { lineHeight: '1.1' }],
-        '3xl': ['clamp(2.25rem, 1.6rem + 2.8vw, 3rem)', { lineHeight: '1.08' }],
-        display: ['clamp(2.5rem, 1.4rem + 4.6vw, 4rem)', { lineHeight: '1.02' }],
+        '3xl': ['clamp(2rem, 1.5rem + 2.2vw, 2.5rem)', { lineHeight: '1.05' }],
+        display: ['clamp(2.5rem, 1.6rem + 3.6vw, 3.5rem)', { lineHeight: '1' }],
       },
       letterSpacing: {
-        kicker: '0.08em',
-      },
-      borderRadius: {
-        none: '0',
-        sm: '3px',
-        DEFAULT: '6px',
-        md: '6px',
-        lg: '10px',
-        xl: '10px',
-        '2xl': '10px',
-        full: '9999px',
-      },
-      boxShadow: {
-        none: 'none',
-        subtle: '0 1px 2px rgb(23 33 28 / 0.06)',
-        sm: '0 1px 2px rgb(23 33 28 / 0.06)',
-        DEFAULT: '0 1px 2px rgb(23 33 28 / 0.06)',
-        md: '0 1px 2px rgb(23 33 28 / 0.06)',
-        overlay: '0 8px 24px rgb(23 33 28 / 0.12)',
-        lg: '0 8px 24px rgb(23 33 28 / 0.12)',
-        xl: '0 8px 24px rgb(23 33 28 / 0.12)',
+        field: '0.05em',
       },
       maxWidth: {
         content: '1280px',

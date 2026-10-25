@@ -4,12 +4,12 @@
 
 Esta dirección entiende el sitio como infraestructura pública de conocimiento: un lugar para consultar, relacionar, verificar y mejorar información del territorio. La interfaz debe dar protagonismo a los datos, las fuentes y las relaciones entre actores. Debe sentirse contemporánea sin adoptar la estética intercambiable de una landing SaaS.
 
-La referencia regional aparecerá en el ritmo, los materiales visuales y algunos detalles —topografía abstracta, niebla, café, concreto y coordenadas—, no en fotografías turísticas ni símbolos literales. El resultado debe ser implementable con HTML semántico, Astro y Tailwind, con JavaScript únicamente donde la interacción lo requiera.
+La expresión visual es una **hoja de registro pública**: un formulario que alguien llena con bolígrafo azul, marca con resaltador amarillo y archiva. Cada entidad es una ficha con casillas, un sello de verificación y fuentes numeradas. La referencia regional aparece en detalles concretos —niebla, coordenadas, la línea de cable que une entidades— y no en fotografías turísticas ni símbolos literales. El resultado debe ser implementable con HTML semántico, Astro y Tailwind, con JavaScript únicamente donde la interacción lo requiera.
 
 ## Personalidad visual
 
 1. **Confiable.** Jerarquías predecibles, contraste alto, fuentes visibles y estados de verificación explícitos. La interfaz distingue hechos verificados, información parcial y registros pendientes sin ocultar incertidumbre.
-2. **Local.** Colores minerales y vegetales, referencias discretas al relieve y lenguaje propio del territorio. La identidad regional no depende de postales, monumentos o clichés cafeteros.
+2. **Local.** Niebla fría, coordenadas y la línea de cable que evoca el cable aéreo de Manizales, con lenguaje propio del territorio. La identidad regional no depende de postales, monumentos o clichés cafeteros.
 3. **Editorial.** Titulares con carácter, columnas de lectura cómodas, pies y metadatos claros, composiciones con ritmo y espacios en blanco. Las páginas se leen como fichas de un archivo vivo, no como módulos de un dashboard.
 4. **Técnica.** Datos estructurados, etiquetas precisas, fechas ISO traducidas para lectura humana y una tipografía monoespaciada usada con moderación para slugs, cifras o metadatos.
 5. **Abierta.** Las fuentes, criterios, fecha de verificación y vías de contribución están a la vista. Los CTA invitan a aportar evidencia, no a “registrarse” ni a entrar en un embudo comercial.
@@ -57,47 +57,44 @@ No se deben reproducir identidades, composiciones o sistemas visuales de marcas 
 
 ## Paleta de color
 
-La paleta clara parte de papel cálido, niebla, vegetación de montaña, concreto y café tostado. El verde profundo funciona como acento territorial y técnico; los tonos de verificación se mantienen sobrios. Ningún estado debe comunicarse únicamente mediante color.
+La paleta es la de una hoja de registro: niebla fría de fondo, hojas blancas, grafito para el texto, **tinta azul** para lo que se puede tocar y **resaltador amarillo** para marcar. Ningún estado se comunica únicamente mediante color. Las variables viven en `:root` de `src/styles/global.css` con el prefijo `--color-`.
 
-| Token | Hex sugerido | Uso recomendado | Accesibilidad |
+| Token | Hex | Uso recomendado | Accesibilidad |
 |---|---:|---|---|
-| `--color-background` | `#F5F3ED` | Fondo general, semejante a papel cálido bajo niebla. | Texto primario ofrece contraste superior a 12:1. |
-| `--color-surface` | `#FFFFFF` | Fichas, paneles de lectura y controles. | Evitar texto secundario menor de 14 px si pierde contraste. |
-| `--color-surface-muted` | `#E8ECE7` | Bandas editoriales, filtros y metadatos agrupados. | Separar también con borde o espaciado. |
-| `--color-text-primary` | `#17211C` | Títulos y texto principal. | Contraste AAA sobre fondos claros propuestos. |
-| `--color-text-secondary` | `#526059` | Descripciones, ayudas y metadatos. | Contraste aproximado AA sobre blanco; no aclararlo para texto pequeño. |
-| `--color-border` | `#C8CFC9` | Divisores, contornos de controles y tablas simples. | Es apoyo estructural, nunca el único indicador de foco. |
-| `--color-accent` | `#1F5C4A` | Enlaces, CTA principal, foco y elementos activos. | Apto para texto sobre blanco; con texto blanco requiere tamaños y pesos AA verificados. |
-| `--color-accent-soft` | `#DCEAE3` | Fondo de selección, callouts y acentos secundarios. | Usar texto `#174638`, no el acento como texto pequeño sin verificar. |
-| `--color-verified` | `#256B4A` | Estado verificado. | Combinar con label y símbolo; blanco solo en badges de peso medio. |
-| `--color-partial` | `#8A6418` | Estado parcialmente verificado. | Usar sobre fondo `#F4EBCF` con texto oscuro. |
-| `--color-pending` | `#765B38` | Estado desconocido o pendiente. | Usar sobre fondo `#EFE6D8`; evitar amarillo pálido con texto blanco. |
-| `--color-inactive` | `#8B4A3F` | Posiblemente inactivo o no verificado. | Tono terracota no alarmista; acompañar con explicación. |
-| `--color-archived` | `#58615D` | Registro archivado o histórico. | Ajustado para contraste AA sobre el fondo de estado; label textual obligatorio. |
+| `fog` | `#EEF1F3` | Fondo general: niebla fría, nunca crema. | Texto `graphite` ≈ 14.9:1. |
+| `sheet` | `#FFFFFF` | Fichas, casillas, filtros y campos. | |
+| `sheet-alt` | `#E3E8EB` | Footer, bandas secundarias, iniciales, pista de barras, fichas archivadas. | `graphite-2` ≈ 5.9:1. |
+| `rule` | `#C3CCD3` | Líneas de casilla y bordes de ficha. | Estructural: nunca el único indicador de foco o estado. |
+| `rule-strong` | `#7D8A95` | Borde de controles y sello "por confirmar". | ≥ 3:1 sobre `sheet` y `fog`. |
+| `graphite` | `#161D24` | Titulares, texto principal y la regla gruesa de 2px. | ≈ 16.9:1 sobre blanco. |
+| `graphite-2` | `#4B5763` | Texto secundario, etiquetas de casilla y metadatos. | ≈ 7.4:1 sobre blanco. |
+| `ink-blue` | `#2340B8` | Enlaces, botón principal, sello Verificado, casillas marcadas. | ≈ 8.4:1; texto blanco encima. |
+| `ink-blue-hover` / `ink-blue-soft` | `#172F8A` / `#E4E9FA` | Hover del botón principal / opción de filtro activa. | |
+| `highlight` | `#F5D33B` | Resaltador: hover y foco de enlaces, banda de contribución, coincidencias. | Solo relleno; texto encima siempre `on-highlight` (≈ 11.5:1). |
+| `highlight-soft` | `#FBEFB0` | Notas de auditoría y avisos de verificación. | Texto `graphite`. |
+| `rust` / `rust-soft` | `#A2461B` / `#FAE6DA` | Exclusivo del estado "Posiblemente inactivo". | ≈ 5.1:1 sobre `rust-soft`. |
 
-El café puede aparecer como acento auxiliar puntual (`#6D4C3D`) en fechas históricas o referencias al archivo 2020, nunca como segundo color dominante. No usar más de un acento principal por vista.
-
-Una variante oscura puede estudiarse después del MVP. Deberá redefinir todos los pares de contraste y superficies; no basta con invertir colores.
+Reglas: una sola banda amarilla a pleno ancho por vista (la de contribución); el amarillo nunca es texto ni borde informativo. El verde bosque, el crema y el café del sistema anterior quedan retirados. La variante oscura está definida en el sistema de diseño pero aún no se implementa: exige redefinir todos los pares, no invertirlos.
 
 ## Tipografía
 
-- **Títulos: Newsreader**, serif editorial de formas contemporáneas. Aporta voz propia al observatorio y contrasta con la precisión del cuerpo sin sentirse decorativa. Pesos recomendados: 500 y 600.
-- **Cuerpo e interfaz: Public Sans**, sans serif concebida para información pública y lectura digital. Es clara en tamaños pequeños y funciona bien en filtros, navegación y texto largo. Pesos: 400, 500, 600 y, excepcionalmente, 700.
-- **Metadatos y código: IBM Plex Mono**, opcional para fechas, coordenadas, slugs, conteos compactos o fragmentos de datos. No usar en párrafos ni en todas las etiquetas.
+- **Titulares y cifras: Archivo** (Omnibus-Type), siempre ancha: `font-stretch: 112%` en `h1`, `h2`, display y cifras; 108% en `h3`; 125% solo en el wordmark. Pesos 700–800. Paquete `@fontsource-variable/archivo/wdth.css` (incluye el eje de ancho).
+- **Cuerpo e interfaz: Atkinson Hyperlegible Next**, diseñada para lectura con baja visión. Pesos 400, 500, 600 y 700.
+- **Datos: Atkinson Hyperlegible Mono**, solo para códigos CIIU/SNIES, NIT de personas jurídicas, fechas ISO, dominios de fuentes, conteos y coordenadas. No usar en párrafos ni en etiquetas.
 
-Si cargar fuentes web afecta rendimiento, se pueden alojar localmente en WOFF2 con subconjuntos necesarios y `font-display: swap`. La pila de respaldo debe incluir serif y sans del sistema. El carácter no debe depender solo de la fuente: también proviene de la jerarquía, el ancho de columna, los divisores y el uso editorial del espacio.
+Las fuentes se sirven localmente en WOFF2 (`@fontsource-variable/*`) para respetar la CSP `font-src 'self'`. Las etiquetas de casilla (`.field-label`) usan la sans en mayúsculas, 12px, peso 700 y tracking 0.05em; el kicker monoespaciado anterior se retira.
 
-Jerarquía base sugerida:
+Jerarquía base:
 
-- `display`: 44–64 px desktop / 36–44 px móvil, interlineado 0.98–1.05, para el hero solamente;
-- `h1`: 36–48 px desktop / 30–36 px móvil, interlineado 1.05–1.15;
-- `h2`: 26–32 px, interlineado 1.15–1.25;
-- `h3`: 19–23 px, interlineado 1.25;
-- cuerpo principal: 17–18 px, interlineado 1.55–1.7;
-- cuerpo de interfaz: 14–16 px, interlineado 1.4–1.55;
-- metadatos: 12–14 px, nunca por debajo de 12 px.
+- `display`: 56 px desktop / 40 px móvil, interlineado 1.0, solo para el hero;
+- `h1`: 40 px desktop / 32 px móvil, interlineado 1.05;
+- `h2`: 28 px, interlineado 1.15;
+- `h3`: 20 px, interlineado 1.2;
+- cuerpo principal: 17 px, interlineado 1.6;
+- cuerpo de interfaz: 14–15 px, interlineado 1.45;
+- etiquetas y metadatos: 12 px, nunca por debajo.
 
-Evitar titulares enteros en mayúsculas. Reservar versales o monoespaciada para etiquetas breves, con espaciado moderado.
+Evitar titulares enteros en mayúsculas; las mayúsculas quedan para etiquetas de casilla, sellos y el wordmark.
 
 ## Sistema de layout
 
@@ -115,18 +112,18 @@ Evitar titulares enteros en mayúsculas. Reservar versales o monoespaciada para 
 
 | Componente | Propósito | Comportamiento visual y estados | Debe evitar |
 |---|---|---|---|
-| **Header** | Orientar y dar acceso rápido a exploración, búsqueda y contribución. | Barra sobria, fondo sólido, nombre del proyecto a la izquierda y navegación textual. Estado actual visible; menú móvil con botón nombrado, foco controlado y cierre claro. Puede usar una línea topográfica mínima como detalle. | Megamenús, header transparente sobre contenido, demasiados CTA o íconos sin label. |
+| **Header** | Orientar y dar acceso rápido a exploración, búsqueda y contribución. | Barra sobria, fondo sólido, nombre del proyecto a la izquierda y navegación textual. Estado actual visible; menú móvil con botón nombrado, foco controlado y cierre claro. Wordmark tipográfico `OBSERVATORIO TIC` en Archivo ancha y regla inferior de 2px en grafito; la página actual se marca con línea azul de 3px. | Megamenús, header transparente sobre contenido, demasiados CTA o íconos sin label. |
 | **Footer** | Cerrar con contexto, metodología, repositorio y mantenimiento. | Composición en 2–4 columnas desiguales, borde superior, nota “2020 → 2026”, licencia y enlaces a fuentes/contribución. | Repetir toda la navegación, mosaico de logos o aspecto corporativo pesado. |
-| **Hero** | Explicar propósito y abrir la exploración. | Titular editorial fuerte, párrafo concreto, buscador global y nota histórica. Patrón topográfico o coordenadas en baja opacidad; no más de dos CTA. | Promesas grandilocuentes, gradientes AI, ilustración genérica o métricas sin contexto. |
+| **Hero** | Explicar propósito y abrir la exploración. | Titular editorial fuerte, párrafo concreto, buscador global y nota histórica. Coordenadas de Manizales en datos y casillas "Qué es / Para quién / Qué puedes hacer"; no más de dos CTA. | Promesas grandilocuentes, gradientes AI, ilustración genérica o métricas sin contexto. |
 | **SearchBar** | Consultar entidades con rapidez. | Label visible o asociado, icono opcional no indispensable, borde nítido y foco de 2–3 px. Estados: vacío, escritura, cargando si aplica, resultados y sin resultados. | Placeholder como único label, animaciones largas o autocomplete inaccesible. |
 | **FilterPanel** | Refinar listados de forma comprensible. | Grupos con leyenda, checkboxes/radios nativos estilizados con moderación, conteo activo y acciones claras. En móvil es panel apilado, no una fila desbordada. | Chips infinitos, controles sin label, filtros ocultos sin indicar que están activos. |
-| **EntityCard** | Resumir un registro y llevar a su ficha. | Se parece a una ficha catalográfica: kicker de tipo, nombre, descripción, metadatos, tags y estado alineado. Variaciones sutiles por entidad mediante label y composición, no mediante arcoíris. Estados hover, foco y archivado. | Cards idénticas altas, sombra flotante, logo como protagonista o toda la tarjeta llena de badges. |
+| **EntityCard** | Resumir un registro y llevar a su ficha. | Ficha de registro recta: tipo y código (CIIU, SNIES) en la cabecera junto al sello, nombre, descripción, tags y casillas etiquetadas al pie. En hover el borde pasa a grafito y el nombre se resalta en amarillo. Variaciones sutiles por entidad mediante label y composición, no mediante arcoíris. Estados hover, foco y archivado. | Cards idénticas altas, sombra flotante, logo como protagonista o toda la tarjeta llena de badges. |
 | **PersonCard** | Mostrar contribuciones públicas y contexto profesional. | Nombre, rol contextual, 1–2 contribuciones, áreas y verificación. Retrato solo si existe, tiene procedencia y alt adecuado; inicial o composición tipográfica como fallback. | Métricas de seguidores, prominencia, estrellas, trofeos o lenguaje de celebridad. |
 | **EntityDetail** | Presentar una ficha de investigación completa. | Cabecera con tipo, nombre, estado y fecha; cuerpo con descripción, atributos, relaciones y bloque de fuentes numerado. CTA de corrección cerca de fuentes. | Hero comercial, información crítica enterrada o paneles iguales para cada campo. |
 | **VerificationStatus** | Expresar confianza y vigencia. | Badge textual compacto con símbolo, color y tooltip/explicación; versión extendida en detalle con fecha y mensaje. Cinco variantes coherentes. | Binario “válido/inválido”, solo color, rojo alarmista para incertidumbre. |
 | **SourceBadge** | Hacer visible la evidencia. | Label “Fuente 1”, dominio y, cuando sea útil, fecha de consulta. Enlace externo con indicador textual/visual y foco visible. Estado de enlace no disponible documentado. | URL cruda extensa, favicon remoto o insinuar que una fuente equivale a aprobación. |
 | **StatsGrid** | Dar escala al ecosistema con contexto. | Cifras tipográficas separadas por divisores o una grilla abierta; cada cifra tiene categoría y nota de corte temporal. | Dashboard de KPI, flechas de crecimiento no sustentadas o tarjetas clonadas con íconos. |
-| **EmptyState** | Explicar ausencia de resultados y ofrecer salida. | Título claro, criterio que no produjo resultados, acciones “Limpiar filtros” y “Sugerir registro”. Puede usar una forma topográfica simple. | Chistes, ilustración enorme o culpar a la persona usuaria. |
+| **EmptyState** | Explicar ausencia de resultados y ofrecer salida. | Título claro, criterio que no produjo resultados, acciones “Limpiar filtros” y “Sugerir registro”. Hoja con borde punteado, sin ilustraciones. | Chistes, ilustración enorme o culpar a la persona usuaria. |
 | **CTA de contribución** | Convertir incertidumbre y faltantes en colaboración. | Banda editorial diferenciada, texto específico y enlaces a Issue/PR. Variantes: agregar, corregir y aportar fuente. | Lenguaje de marketing, urgencia artificial o botón ambiguo “Empezar”. |
 
 ## Fichas de entidades
@@ -152,11 +149,11 @@ Reglas comunes:
 
 | Estado de datos | Label visible | Tono y color sugerido | Mensaje corto | Cuándo usarlo |
 |---|---|---|---|---|
-| `verified` | **Verificado** | Verde bosque `#256B4A` sobre `#DDEDE4`; seguro y sereno. | “Verificado con fuentes públicas.” | Los campos principales tienen evidencia reciente y fuentes registradas. |
-| `partially_verified` | **Verificación parcial** | Ocre `#8A6418` sobre `#F4EBCF`; atención moderada. | “Parte de la información está verificada.” | Hay fuentes, pero faltan campos importantes o la vigencia no está completamente confirmada. |
-| `unknown` | **Estado por confirmar** | Café grisáceo `#765B38` sobre `#EFE6D8`; neutral. | “Aún no contamos con evidencia suficiente.” | Información heredada o aportada sin fuente pública concluyente. |
-| `inactive_or_unverified` | **Posiblemente inactivo** | Terracota sobrio `#8B4A3F` sobre `#F3E1DD`; cauteloso, no alarmista. | “No se confirmó actividad reciente.” | Hay indicios de inactividad o no fue posible verificar vigencia; no equivale a cierre definitivo. |
-| `archived` | **Archivo histórico** | Gris verdoso `#58615D` sobre `#E5E9E6`; documental. | “Se conserva como parte del archivo.” | El registro ya no está vigente o pertenece al conjunto histórico de 2020 y se conserva con contexto. |
+| `verified` | **Verificado** | Sello sólido en tinta azul `#2340B8`, texto blanco. | “Verificado con fuentes públicas.” | Los campos principales tienen evidencia reciente y fuentes registradas. |
+| `partially_verified` | **Verificación parcial** | Sello de contorno azul sobre blanco. | “Parte de la información está verificada.” | Hay fuentes, pero faltan campos importantes o la vigencia no está completamente confirmada. |
+| `unknown` | **Estado por confirmar** | Sello de contorno punteado gris `#7D8A95`. | “Aún no contamos con evidencia suficiente.” | Información heredada o aportada sin fuente pública concluyente. |
+| `inactive_or_unverified` | **Posiblemente inactivo** | Óxido `#A2461B` sobre `#FAE6DA`; cauteloso, no alarmista. | “No se confirmó actividad reciente.” | Hay indicios de inactividad o no fue posible verificar vigencia; no equivale a cierre definitivo. |
+| `archived` | **Archivo histórico** | Relleno gris `#E3E8EB` con texto `#4B5763`; documental. | “Se conserva como parte del archivo.” | El registro ya no está vigente o pertenece al conjunto histórico de 2020 y se conserva con contexto. |
 
 Cada representación debe incluir label, símbolo sencillo y, en detalle, fecha de última verificación. El estado global no reemplaza notas por campo. Los mensajes deben invitar a aportar una fuente sin convertir la incertidumbre en error.
 
@@ -214,7 +211,7 @@ La home debe tener una apertura fuerte, editorial y útil:
 6. **Verificación:** muestra la distribución de estados y explica cómo leerlos.
 7. **CTA de contribución:** termina con acciones específicas para sugerir, corregir o aportar fuentes.
 
-El elemento visual propio recomendado es un **patrón topográfico abstracto** construido como SVG ligero, combinado con las coordenadas de Manizales (`5.07° N, 75.52° O`) y una retícula editorial. Debe tener opacidad baja, no competir con el texto y poder ocultarse en móvil si añade ruido. Como alternativa, líneas finas pueden conectar etiquetas “universidad”, “empresa”, “comunidad” y “personas”; no deben simular relaciones que los datos no soporten.
+El elemento visual propio es la **línea de cable** (`RelationLine` en el sistema de diseño): paradas en casilla unidas por un trazo grafito de 2px con una estación redonda, en referencia al cable aéreo que salía de Manizales. Solo se usa para relaciones que los datos sostienen (programa → universidad, comunidad → persona, evento → comunidad), nunca como decoración. Las coordenadas de Manizales (`5.07° N, 75.52° O`) aparecen en el hero y en el footer.
 
 ## Páginas de listado
 
@@ -235,7 +232,7 @@ Eventos deben separar “Próximos”, “Pasados” y “Por verificar” cuand
 
 Cada detalle debe sentirse como una ficha de investigación legible:
 
-- kicker con tipo de entidad y, si aporta, identificador o ciudad;
+- etiqueta de casilla con el tipo de entidad y, si aporta, el código (CIIU, SNIES) o la ciudad;
 - nombre como único `h1`;
 - descripción precisa, sin copy promocional añadido por el sitio;
 - bloque de estado con label, fecha de última verificación, alcance de la verificación y mensaje de ayuda;
@@ -291,7 +288,7 @@ En desktop, la columna de estado y metadatos puede quedar a la derecha, pero el 
 - No introducir librerías visuales, paquetes de íconos o animación pesados. Preferir SVG locales pequeños o símbolos tipográficos con significado.
 - Servir fuentes WOFF2 locales, limitar familias/pesos y precargar únicamente el recurso crítico.
 - Optimizar imágenes con dimensiones explícitas, formatos AVIF/WebP cuando aplique y carga diferida fuera del primer viewport.
-- Mantener el patrón topográfico como SVG comprimido o CSS, sin canvas ni video de fondo.
+- Sin patrones decorativos de fondo, canvas ni video: la identidad sale de casillas, tipografía y color.
 - Evitar sombras grandes, blur y filtros costosos; además son ajenos a la dirección visual.
 - Objetivo: Lighthouse superior a 90 en Performance, Accessibility, Best Practices y SEO en páginas representativas, con especial atención a LCP, CLS e INP.
 
@@ -326,16 +323,16 @@ Los valores son una base de implementación; cualquier ajuste debe conservar las
 
 | Categoría | Tokens propuestos | Valor / regla |
 |---|---|---|
-| Colores | `background`, `surface`, `surface-muted`, `text-primary`, `text-secondary`, `border`, `accent`, `accent-soft` | Usar los hex definidos en “Paleta de color”. Máximo un acento dominante por vista. |
-| Estados | `verified`, `partial`, `pending`, `inactive`, `archived` | Siempre en pares foreground/background con label y símbolo. No reutilizar como categorías decorativas. |
-| Tipografía | `font-display`, `font-body`, `font-mono` | `Newsreader`, `Public Sans`, `IBM Plex Mono`; fallbacks locales obligatorios. |
-| Tamaño | `text-xs` a `text-display` | 12, 14, 16, 18, 21, 28, 36, 48 y 64 px, usando `clamp()` en `h1`/display. |
+| Colores | `fog`, `sheet`, `sheet-alt`, `rule`, `rule-strong`, `graphite`, `graphite-2`, `ink-blue`, `highlight`, `rust` | Usar los hex de "Paleta de color". El amarillo solo como relleno; una banda amarilla por vista. |
+| Estados | `.stamp-verified`, `.stamp-partial`, `.stamp-unknown`, `.stamp-inactive`, `.stamp-archived` | Sellos que se distinguen por forma (sólido, contorno, punteado, tinte, gris), siempre con label y símbolo. |
+| Tipografía | `font-display`, `font-sans`, `font-mono` | Archivo (ancha), Atkinson Hyperlegible Next, Atkinson Hyperlegible Mono; fallbacks locales obligatorios. |
+| Tamaño | `text-xs` a `text-display` | 12, 14, 16, 17, 20, 28, 36, 40 y 56 px, usando `clamp()` en `h1`/display. |
 | Interlineado | `leading-tight`, `leading-heading`, `leading-body` | 1.05, 1.2 y 1.6. |
 | Espaciado | `space-1` a `space-24` | Escala base 4 px: 4, 8, 12, 16, 24, 32, 48, 64, 96 px. Evitar valores sueltos salvo necesidad documentada. |
 | Bordes | `border-default`, `border-strong`, `focus-ring` | 1 px `border`; 2 px para énfasis; foco de 2–3 px en `accent` con offset de 2 px. |
-| Radios | `radius-sm`, `radius-md`, `radius-lg`, `radius-pill` | 3, 6, 10 y 999 px. `pill` solo para badges/controles compactos, no contenedores. |
-| Sombras | `shadow-subtle`, `shadow-overlay` | `0 1px 2px rgb(23 33 28 / 0.06)` y `0 8px 24px rgb(23 33 28 / 0.12)`; overlay solo para menú/panel flotante. |
-| Badges | `badge-height`, `badge-padding`, `badge-font` | 24–28 px; 4 px × 8 px; 12–13 px semibold. Label siempre visible. |
+| Radios | `rounded-none`, `rounded-control` | 0 en fichas, casillas, bandas y paneles (la grilla de 1px no admite curvas); 4 px en botones, campos, tags, sellos y chips de fuente. |
+| Sombras | `shadow-overlay` | `0 6px 20px rgb(22 29 36 / 0.16)`, solo para menú y paneles flotantes. Las fichas no llevan sombra. |
+| Sellos | `.stamp` | 26 px de alto; 2 px × 8 px; 12 px bold en mayúsculas; borde de 1.5 px. Label siempre visible. |
 | Contenedores | `content-wide`, `content-reading`, `content-detail` | 1.280, 720 y 1.080 px máximos. |
 | Breakpoints | `sm`, `md`, `lg`, `xl` | 640, 768, 1.024 y 1.280 px; cambiar por necesidad del contenido, no por modelo de dispositivo. |
 | Movimiento | `duration-fast`, `duration-base`, `ease-standard` | 120 ms, 180 ms, `cubic-bezier(0.2, 0, 0, 1)`. |

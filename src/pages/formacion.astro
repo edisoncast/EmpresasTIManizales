@@ -65,16 +65,14 @@ const routes = [
         areas.map((a) => (
           <a
             href={a.href}
-            class="group rounded-lg border border-ink-200 bg-surface p-6 no-underline transition-colors duration-fast hover:border-accent"
+            class="group border border-rule bg-sheet p-6 no-underline transition-colors duration-fast hover:border-ink-blue"
           >
             <div class="flex items-baseline justify-between gap-3">
-              <h2 class="font-display text-xl font-semibold text-ink-900 group-hover:text-accent">
-                {a.title}
-              </h2>
-              <span class="font-mono text-xs text-ink-400">{a.count}</span>
+              <h2 class="text-xl group-hover:text-ink-blue">{a.title}</h2>
+              <span class="font-mono text-xs text-graphite-2">{a.count}</span>
             </div>
-            <p class="mt-2 text-sm text-ink-600">{a.text}</p>
-            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-accent">
+            <p class="mt-2 text-sm text-graphite-2">{a.text}</p>
+            <span class="mt-4 inline-flex items-center gap-1 text-sm font-medium text-ink-blue">
               Explorar <span aria-hidden="true">→</span>
             </span>
           </a>
@@ -82,9 +80,9 @@ const routes = [
       }
     </div>
 
-    <section class="mt-12 border-t border-ink-200 pt-10">
-      <h2 class="font-display text-2xl font-semibold text-ink-900">¿Por dónde empiezo?</h2>
-      <p class="mt-1 max-w-reading text-ink-600">
+    <section class="mt-12 border-t border-rule pt-10">
+      <h2 class="text-2xl">¿Por dónde empiezo?</h2>
+      <p class="mt-1 max-w-reading text-graphite-2">
         Una guía breve según tu punto de partida. No es orientación laboral: son rutas para explorar
         la oferta local.
       </p>
@@ -93,20 +91,18 @@ const routes = [
           routes.map((r) => (
             <a
               href={r.href}
-              class="group flex flex-col rounded-lg border border-ink-200 bg-surface p-5 no-underline transition-colors duration-fast hover:border-accent"
+              class="group flex flex-col border border-rule bg-sheet p-5 no-underline transition-colors duration-fast hover:border-ink-blue"
             >
-              <h3 class="font-display text-lg font-semibold text-ink-900 group-hover:text-accent">
-                {r.title}
-              </h3>
-              <p class="mt-1 flex-1 text-sm text-ink-600">{r.text}</p>
-              <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-accent">
+              <h3 class="text-lg group-hover:text-ink-blue">{r.title}</h3>
+              <p class="mt-1 flex-1 text-sm text-graphite-2">{r.text}</p>
+              <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue">
                 {r.cta} <span aria-hidden="true">→</span>
               </span>
             </a>
           ))
         }
       </div>
-      <p class="mt-4 text-sm text-ink-500">
+      <p class="mt-4 text-sm text-graphite-2">
         ¿Prefieres estudiar en modalidad virtual? Filtra por modalidad en <a
           href={`/programas?modality=${encodeURIComponent('Virtual')}`}
           class="link">Programas</a
@@ -114,7 +110,7 @@ const routes = [
       </p>
     </section>
 
-    <p class="mt-8 max-w-reading text-sm text-ink-500">
+    <p class="mt-8 max-w-reading text-sm text-graphite-2">
       La vigencia de un programa no equivale a calidad: verifícala siempre con la institución y el
       registro oficial HECAA/SNIES. ¿Falta una institución o programa?
       <a href="/contribuir" class="link">Sugiérelo con su fuente pública</a>.

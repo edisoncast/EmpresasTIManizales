@@ -41,14 +41,11 @@ const jsonLd = {
     {
       relatedCommunities.length > 0 && (
         <section class="mt-8">
-          <h2 class="text-lg font-bold text-ink-900">Comunidades que organiza</h2>
+          <h2 class="text-lg">Comunidades que organiza</h2>
           <ul class="mt-3 space-y-2">
             {relatedCommunities.map((c) => (
               <li>
-                <a
-                  href={`/comunidades/${c.slug}`}
-                  class="flex items-center gap-2 text-sm font-medium text-brand-700 no-underline hover:underline"
-                >
+                <a href={`/comunidades/${c.slug}`} class="link flex items-center gap-2 text-sm">
                   👥 {c.name}
                 </a>
               </li>

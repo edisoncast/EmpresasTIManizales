@@ -17,12 +17,12 @@ const {
 <div>
   <label
     for={id}
-    class:list={[visibleLabel ? 'mb-1 block text-sm font-medium text-ink-700' : 'sr-only']}
+    class:list={[visibleLabel ? 'mb-1 block text-sm font-medium text-graphite' : 'sr-only']}
     >{label}</label
   >
   <div class="relative">
     <span
-      class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-ink-400"
+      class="pointer-events-none absolute left-3 top-1/2 -translate-y-1/2 font-mono text-sm text-graphite-2"
       aria-hidden="true">/</span
     >
     <input
@@ -31,7 +31,7 @@ const {
       name={id}
       placeholder={placeholder}
       autocomplete="off"
-      class="input pl-8"
+      class="input border-2 border-graphite pl-8"
       data-search-input
     />
   </div>

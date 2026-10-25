@@ -11,14 +11,11 @@ export interface Props {
 const { facets } = Astro.props;
 ---
 
-<div class="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
+<div class="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
   {
     facets.map((facet) => (
       <div>
-        <label
-          for={`facet-${facet.key}`}
-          class="mb-1 block text-xs font-semibold uppercase tracking-wide text-ink-500"
-        >
+        <label for={`facet-${facet.key}`} class="field-label mb-1 block">
           {facet.label}
         </label>
         <select

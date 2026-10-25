@@ -4,35 +4,38 @@
 
 /* ==========================================================================
    Tokens de diseño (fuente de verdad) — docs/design-direction.md
-   Observatorio editorial del ecosistema TIC de Manizales y Caldas.
+   Hoja de registro pública: tinta azul, resaltador amarillo y grafito sobre
+   niebla. Fichas y casillas rectas; 4px en controles, tags y sellos. El amarillo solo se usa como relleno.
    ========================================================================== */
 @layer base {
   :root {
     color-scheme: light;
 
-    /* Paleta clara: papel cálido, niebla, vegetación, concreto, café. */
-    --color-background: #f5f3ed;
-    --color-surface: #ffffff;
-    --color-surface-muted: #e8ece7;
-    --color-text-primary: #17211c;
-    --color-text-secondary: #526059;
-    --color-border: #c8cfc9;
-    --color-accent: #1f5c4a;
-    --color-accent-soft: #dceae3;
-    --color-accent-ink: #174638;
-    --color-coffee: #6d4c3d;
+    /* Superficies y texto. */
+    --color-fog: #eef1f3;
+    --color-sheet: #ffffff;
+    --color-sheet-alt: #e3e8eb;
+    --color-rule: #c3ccd3;
+    --color-rule-strong: #7d8a95;
+    --color-graphite: #161d24;
+    --color-graphite-2: #4b5763;
 
-    /* Estados de verificación (pares fg/bg). */
-    --color-verified: #256b4a;
-    --color-verified-bg: #ddede4;
-    --color-partial: #8a6418;
-    --color-partial-bg: #f4ebcf;
-    --color-pending: #765b38;
-    --color-pending-bg: #efe6d8;
-    --color-inactive: #8b4a3f;
-    --color-inactive-bg: #f3e1dd;
-    --color-archived: #58615d;
-    --color-archived-bg: #e5e9e6;
+    /* Tinta de bolígrafo: enlaces, acción principal, sello Verificado. */
+    --color-ink-blue: #2340b8;
+    --color-ink-blue-hover: #172f8a;
+    --color-ink-blue-soft: #e4e9fa;
+    --color-on-ink-blue: #ffffff;
+
+    /* Resaltador: solo relleno (hover, foco, coincidencias, banda de aporte). */
+    --color-highlight: #f5d33b;
+    --color-highlight-soft: #fbefb0;
+    --color-on-highlight: #161d24;
+
+    /* Óxido: exclusivo del estado "Posiblemente inactivo". */
+    --color-rust: #a2461b;
+    --color-rust-soft: #fae6da;
+
+    --color-focus: var(--color-graphite);
 
     /* Movimiento. */
     --duration-fast: 120ms;
@@ -45,7 +48,7 @@
     scroll-behavior: smooth;
   }
 
-  /* El atributo [hidden] debe ganar siempre: componentes como .card usan
+  /* El atributo [hidden] debe ganar siempre: componentes como .ficha usan
      display:flex, que por especificidad anularía [hidden] y rompería el
      filtrado en cliente (las tarjetas contaban como ocultas pero seguían visibles). */
   [hidden] {
@@ -54,48 +57,53 @@
 
   body {
     @apply font-sans;
-    background-color: var(--color-background);
-    color: var(--color-text-primary);
+    background-color: var(--color-fog);
+    color: var(--color-graphite);
     font-size: 1rem;
     line-height: 1.6;
     -webkit-font-smoothing: antialiased;
     text-rendering: optimizeLegibility;
   }
 
+  /* Titulares en Archivo ancha. El ancho es parte de la identidad: no quitarlo. */
   h1,
   h2,
   h3 {
     @apply font-display;
-    font-weight: 600;
-    letter-spacing: -0.005em;
-    color: var(--color-text-primary);
+    font-weight: 700;
+    font-stretch: 108%;
+    color: var(--color-graphite);
     /* Equilibra líneas en títulos: evita el "escalón" de una línea larga
-       seguida de una corta, look habitual de sitios generados con IA. */
+       seguida de una corta. */
     text-wrap: balance;
   }
+  h1,
+  h2 {
+    font-weight: 800;
+    font-stretch: 112%;
+    letter-spacing: -0.01em;
+  }
 
-  /* Párrafos: evita huérfanos (última línea de una sola palabra), que hacen
-     que el texto se vea "cortado". Progressive enhancement (se ignora donde
-     no haya soporte). */
+  /* Párrafos: evita huérfanos (última línea de una sola palabra). Progressive
+     enhancement (se ignora donde no haya soporte). */
   p {
     text-wrap: pretty;
   }
 
-  /* Foco visible y accesible (>= 2px, offset), nunca eliminado sin reemplazo. */
+  /* Foco visible y accesible (2px, offset), nunca eliminado sin reemplazo. */
   :where(a, button, input, select, textarea, summary, [tabindex]):focus-visible {
-    outline: 2px solid var(--color-accent);
+    outline: 2px solid var(--color-focus);
     outline-offset: 2px;
-    border-radius: 3px;
   }
 
   a {
     color: inherit;
-    text-underline-offset: 2px;
+    text-underline-offset: 3px;
   }
 
   ::selection {
-    background: var(--color-accent-soft);
-    color: var(--color-accent-ink);
+    background: var(--color-highlight);
+    color: var(--color-on-highlight);
   }
 
   /* Respeta prefers-reduced-motion. */
@@ -112,7 +120,7 @@
 }
 
 @layer components {
-  /* Contenedores editoriales. */
+  /* Contenedores. */
   .container-content {
     @apply mx-auto w-full max-w-content px-4 sm:px-6 lg:px-8;
   }
@@ -123,52 +131,141 @@
     @apply mx-auto w-full max-w-detail px-4 sm:px-6 lg:px-8;
   }
 
-  /* Kicker: etiqueta breve de tipo/sección, monoespaciada y discreta. */
-  .kicker {
-    @apply font-mono text-xs uppercase tracking-kicker text-ink-500;
+  /* Etiqueta de casilla: tipo de entidad, leyendas y rótulos breves. */
+  .field-label {
+    @apply font-sans text-xs font-bold uppercase tracking-field text-graphite-2;
   }
 
-  /* Enlace editorial. */
+  /* Dato: códigos CIIU/SNIES, fechas ISO, dominios y conteos. */
+  .data {
+    @apply font-mono tabular-nums;
+  }
+
+  /* Resaltador: fondo amarillo con texto oscuro. Se usa en hover y foco de
+     enlaces y títulos de ficha. box-decoration-break mantiene el relleno en
+     títulos de varias líneas. */
+  .mark {
+    background: var(--color-highlight);
+    color: var(--color-on-highlight);
+    box-shadow: 0 0 0 2px var(--color-highlight);
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+
+  /* Enlace en tinta azul; se resalta en hover y foco. */
   .link {
-    @apply font-medium text-accent underline decoration-brand-200 underline-offset-2 transition-colors duration-fast hover:decoration-accent;
+    @apply font-medium text-ink-blue underline decoration-1 underline-offset-[3px] transition-colors duration-fast;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .link:hover,
+  .link:focus-visible {
+    @apply mark no-underline;
   }
 
-  /* Ficha de archivo/observatorio: superficie sobria con marca lateral en hover. */
-  .card {
-    @apply relative flex h-full flex-col rounded-lg border border-ink-200 bg-surface p-5 transition duration-base ease-standard hover:border-brand-300;
+  /* Ficha de registro: hoja recta con borde fino; el borde se oscurece en hover. */
+  .ficha {
+    @apply relative flex h-full flex-col border border-rule bg-sheet transition-colors duration-base ease-standard hover:border-graphite;
   }
-  .card-archived {
-    @apply border-archived/40 bg-archived-bg/40;
+  .ficha-archived {
+    @apply bg-sheet-alt;
+  }
+  .ficha-head {
+    @apply flex flex-wrap items-center justify-between gap-x-3 gap-y-1.5 border-b border-rule px-4 py-2.5;
+  }
+  .ficha-title-link {
+    @apply no-underline;
+    -webkit-box-decoration-break: clone;
+    box-decoration-break: clone;
+  }
+  .ficha:hover .ficha-title-link,
+  .ficha-title-link:focus-visible {
+    @apply mark;
+  }
+
+  /* Casillas: etiqueta arriba, valor abajo, líneas de 1px compartidas. */
+  .fields {
+    @apply m-0 grid grid-cols-1 gap-px border border-rule bg-rule;
+    grid-template-columns: repeat(auto-fit, minmax(9.5rem, 1fr));
+  }
+  .fields-stack {
+    grid-template-columns: minmax(0, 1fr);
+  }
+  .field {
+    @apply flex min-w-0 flex-col gap-0.5 bg-sheet px-3 pb-2.5 pt-2;
+  }
+  .field > dt {
+    @apply field-label;
+  }
+  .field > dd {
+    @apply m-0 text-sm font-medium text-graphite [overflow-wrap:anywhere];
+  }
+
+  /* Cifra de conteo. */
+  .figure {
+    @apply font-display font-extrabold tabular-nums text-graphite;
+    font-stretch: 112%;
   }
 
   /* Botones. */
   .btn {
-    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-md px-4 py-2 text-sm font-semibold transition duration-fast ease-standard;
+    @apply inline-flex min-h-11 items-center justify-center gap-2 rounded-control border border-transparent px-4 py-2 text-sm font-semibold no-underline transition-colors duration-fast ease-standard;
   }
   .btn-primary {
-    @apply btn bg-accent text-white hover:bg-brand-700;
+    @apply btn bg-ink-blue text-on-ink-blue hover:bg-ink-blue-hover;
   }
   .btn-secondary {
-    @apply btn border border-ink-300 bg-surface text-ink-800 hover:border-brand-400 hover:text-accent;
+    @apply btn border-rule-strong bg-sheet text-graphite hover:border-graphite;
+  }
+  .btn-quiet {
+    @apply btn px-1 text-ink-blue underline underline-offset-[3px] hover:no-underline;
+  }
+  .btn-quiet:hover {
+    @apply mark;
   }
 
   /* Campo de formulario. */
   .input {
-    @apply min-h-11 w-full rounded-md border border-ink-300 bg-surface px-3 py-2 text-sm text-ink-900 transition-colors duration-fast placeholder:text-ink-400 focus:border-accent;
+    @apply min-h-11 w-full rounded-control border border-rule-strong bg-sheet px-3 py-2 text-sm text-graphite transition-colors duration-fast placeholder:text-graphite-2 focus:border-graphite;
   }
 
-  /* Badge base (label siempre visible). */
+  /* Sello de verificación: se distingue por forma, símbolo y texto. */
+  .stamp {
+    @apply inline-flex min-h-[26px] items-center gap-1.5 whitespace-nowrap rounded-control border-[1.5px] border-transparent px-2 py-0.5 text-xs font-bold uppercase tracking-[0.04em];
+  }
+  .stamp-verified {
+    @apply border-ink-blue bg-ink-blue text-on-ink-blue;
+  }
+  .stamp-partial {
+    @apply border-ink-blue bg-sheet text-ink-blue;
+  }
+  .stamp-unknown {
+    @apply border-dashed border-rule-strong bg-transparent text-graphite-2;
+  }
+  .stamp-inactive {
+    @apply border-rust bg-rust-soft text-rust;
+  }
+  .stamp-archived {
+    @apply border-sheet-alt bg-sheet-alt text-graphite-2;
+  }
+
+  /* Badge neutro (metadatos que no son estados). */
   .badge {
-    @apply inline-flex items-center gap-1.5 rounded-full px-2.5 py-0.5 text-xs font-semibold;
+    @apply inline-flex items-center gap-1.5 rounded-control border border-rule bg-fog px-2 py-0.5 text-xs font-semibold text-graphite;
   }
 
-  /* Divisor fino editorial. */
+  /* Regla gruesa que cierra encabezados, header y listas de fuentes. */
+  .rule-strong {
+    @apply border-b-2 border-graphite;
+  }
+
+  /* Divisor fino. */
   .hairline {
-    @apply border-t border-ink-200;
+    @apply border-t border-rule;
   }
 
   /* Texto de lectura cómoda. */
   .prose-reading {
-    @apply max-w-reading text-md leading-[1.7] text-ink-800;
+    @apply max-w-reading text-md leading-[1.7] text-graphite;
   }
 }

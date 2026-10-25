@@ -75,8 +75,8 @@ const sourceHierarchy = [
   <div class="container-content grid gap-10 py-10 lg:grid-cols-3">
     <div class="space-y-10 lg:col-span-2">
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">Propósito y alcance</h2>
-        <p class="mt-3 text-ink-700">
+        <h2 class="text-2xl">Propósito y alcance</h2>
+        <p class="mt-3 text-graphite">
           Es un mapa abierto y verificable del ecosistema tecnológico de <strong
             >Manizales y Caldas</strong
           >. Documenta actores y relaciones con fuentes públicas; no certifica actividad, calidad ni
@@ -86,8 +86,8 @@ const sourceHierarchy = [
       </section>
 
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">Estado del archivo</h2>
-        <p class="mt-3 text-ink-700">
+        <h2 class="text-2xl">Estado del archivo</h2>
+        <p class="mt-3 text-graphite">
           Estas cifras se calculan en vivo desde los datos publicados, con corte del <strong
             >{cutoff}</strong
           >. Cada ficha muestra además su propia fecha de revisión, que puede ser posterior al
@@ -96,17 +96,17 @@ const sourceHierarchy = [
         <dl class="mt-4 grid grid-cols-2 gap-3 sm:grid-cols-3">
           {
             inventory.map((i) => (
-              <div class="rounded-lg border border-ink-200 bg-surface p-4">
-                <dt class="text-xs text-ink-500">{i.label}</dt>
-                <dd class="font-display text-2xl font-semibold tabular-nums text-ink-900">
+              <div class="border border-rule bg-sheet p-4">
+                <dt class="text-xs text-graphite-2">{i.label}</dt>
+                <dd class="font-display text-2xl font-semibold tabular-nums text-graphite">
                   {i.value}
                 </dd>
               </div>
             ))
           }
-          <div class="bg-mist/60 rounded-lg border border-ink-200 p-4">
-            <dt class="text-xs text-ink-500">Total de registros</dt>
-            <dd class="font-display text-2xl font-semibold tabular-nums text-ink-900">
+          <div class="border border-rule bg-sheet-alt p-4">
+            <dt class="text-xs text-graphite-2">Total de registros</dt>
+            <dd class="font-display text-2xl font-semibold tabular-nums text-graphite">
               {totalRecords}
             </dd>
           </div>
@@ -116,27 +116,27 @@ const sourceHierarchy = [
             verificationOrder
               .filter((s) => dist[s] > 0)
               .map((s) => (
-                <span class={`badge ${verificationMeta[s].badge}`}>
+                <span class={`${verificationMeta[s].badge}`}>
                   <span aria-hidden="true">{verificationMeta[s].symbol}</span>
                   {verificationMeta[s].label}: {dist[s]}
                 </span>
               ))
           }
         </div>
-        <p class="mt-3 text-sm text-ink-500">
+        <p class="mt-3 text-sm text-graphite-2">
           El “último corte auditado” es la fecha del inventario; la “fecha de revisión” es la de
           cada ficha. No toda la cobertura tiene la misma profundidad de verificación.
         </p>
       </section>
 
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">Criterios de inclusión</h2>
+        <h2 class="text-2xl">Criterios de inclusión</h2>
         <dl class="mt-4 space-y-4">
           {
             inclusion.map((i) => (
-              <div class="rounded-lg border border-ink-200 bg-surface p-4">
-                <dt class="font-semibold text-ink-900">{i.t}</dt>
-                <dd class="mt-1 text-sm text-ink-600">{i.d}</dd>
+              <div class="border border-rule bg-sheet p-4">
+                <dt class="font-semibold text-graphite">{i.t}</dt>
+                <dd class="mt-1 text-sm text-graphite-2">{i.d}</dd>
               </div>
             ))
           }
@@ -144,22 +144,22 @@ const sourceHierarchy = [
       </section>
 
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">Estados de verificación</h2>
-        <p class="mt-3 text-ink-700">
+        <h2 class="text-2xl">Estados de verificación</h2>
+        <p class="mt-3 text-graphite">
           Cada registro lleva un estado, comunicado con texto además de color. No ocultamos la
           incertidumbre: la mostramos y la convertimos en una invitación a aportar fuentes.
         </p>
         <dl class="mt-4 space-y-3">
           {
             verificationOrder.map((s) => (
-              <div class="flex flex-col gap-1 rounded-lg border border-ink-200 bg-surface p-4 sm:flex-row sm:items-baseline sm:gap-4">
+              <div class="flex flex-col gap-1 border border-rule bg-sheet p-4 sm:flex-row sm:items-baseline sm:gap-4">
                 <dt class="shrink-0">
-                  <span class={`badge ${verificationMeta[s].badge}`}>
+                  <span class={`${verificationMeta[s].badge}`}>
                     <span aria-hidden="true">{verificationMeta[s].symbol}</span>
                     {verificationMeta[s].label}
                   </span>
                 </dt>
-                <dd class="text-sm text-ink-600">{verificationMeta[s].message}</dd>
+                <dd class="text-sm text-graphite-2">{verificationMeta[s].message}</dd>
               </div>
             ))
           }
@@ -167,15 +167,15 @@ const sourceHierarchy = [
       </section>
 
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">Fuentes aceptables</h2>
-        <p class="mt-3 text-ink-700">
+        <h2 class="text-2xl">Fuentes aceptables</h2>
+        <p class="mt-3 text-graphite">
           Una fuente debe ser pública, accesible y pertinente al dato que respalda. Se prefieren, en
           este orden:
         </p>
-        <ol class="mt-3 list-decimal space-y-1 pl-5 text-sm text-ink-700">
+        <ol class="mt-3 list-decimal space-y-1 pl-5 text-sm text-graphite">
           {sourceHierarchy.map((s) => <li>{s}</li>)}
         </ol>
-        <p class="mt-3 text-sm text-ink-500">
+        <p class="mt-3 text-sm text-graphite-2">
           No se aceptan capturas sin procedencia, contenido generado por IA, resultados de buscador
           sin abrir la fuente, mensajes privados ni datos personales ajenos al propósito del
           observatorio.
@@ -183,10 +183,8 @@ const sourceHierarchy = [
       </section>
 
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">
-          Datos históricos, inactivos y legado 2020
-        </h2>
-        <p class="mt-3 text-ink-700">
+        <h2 class="text-2xl">Datos históricos, inactivos y legado 2020</h2>
+        <p class="mt-3 text-graphite">
           El material de 2020 se conserva como archivo histórico y no se elimina por falta de
           certeza; se contextualiza. Un registro <em>Posiblemente inactivo</em> mantiene una señal explícita
           (por ejemplo, “En liquidación”) y requiere revisión humana antes de archivarse. Distinguimos
@@ -195,8 +193,8 @@ const sourceHierarchy = [
       </section>
 
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">Personas y datos sensibles</h2>
-        <p class="mt-3 text-ink-700">
+        <h2 class="text-2xl">Personas y datos sensibles</h2>
+        <p class="mt-3 text-graphite">
           Solo incluimos personas con perfil o contribución pública, con enfoque en sus aportes al
           ecosistema. No publicamos teléfonos, direcciones, correos privados ni identificadores
           personales, conforme a la <strong>Ley 1581 de 2012</strong>. Cualquier persona puede
@@ -205,10 +203,8 @@ const sourceHierarchy = [
       </section>
 
       <section>
-        <h2 class="font-display text-2xl font-semibold text-ink-900">
-          Corrección, actualización y retiro
-        </h2>
-        <p class="mt-3 text-ink-700">
+        <h2 class="text-2xl">Corrección, actualización y retiro</h2>
+        <p class="mt-3 text-graphite">
           Una sugerencia no equivale a publicación automática: se revisa por evidencia y una ficha
           puede quedar “por confirmar”. Para aportar, corregir o pedir retiro basta indicar el
           registro, el cambio y una fuente pública; no necesitas conocimientos técnicos.
@@ -218,17 +214,17 @@ const sourceHierarchy = [
     </div>
 
     <aside class="space-y-6">
-      <div class="rounded-lg border border-ink-200 bg-surface p-5">
-        <h2 class="kicker">Corte de datos</h2>
-        <p class="mt-2 text-sm text-ink-600">
+      <div class="border border-rule bg-sheet p-5">
+        <h2 class="field-label">Corte de datos</h2>
+        <p class="mt-2 text-sm text-graphite-2">
           Última revisión documental: <strong>{cutoff}</strong>. Las cifras son registros del
           archivo a esa fecha, no indicadores de desempeño.
         </p>
       </div>
 
-      <div class="rounded-lg border border-ink-200 bg-surface p-5">
-        <h2 class="kicker">Política editorial</h2>
-        <ul class="mt-3 space-y-2 text-sm text-ink-600">
+      <div class="border border-rule bg-sheet p-5">
+        <h2 class="field-label">Política editorial</h2>
+        <ul class="mt-3 space-y-2 text-sm text-graphite-2">
           <li>Sin pagos por visibilidad ni contenido patrocinado.</li>
           <li>Sin rankings de empresas, programas o personas.</li>
           <li>Sin bolsa de empleo ni intermediación comercial.</li>
@@ -236,14 +232,14 @@ const sourceHierarchy = [
         </ul>
       </div>
 
-      <div class="rounded-lg border border-ink-200 bg-surface p-5">
-        <h2 class="kicker">Fuentes citadas</h2>
+      <div class="border border-rule bg-sheet p-5">
+        <h2 class="field-label">Fuentes citadas</h2>
         <ul class="mt-3 space-y-2 text-sm">
           <li>
             <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link"
               >{site.sources.ccmpc.name}</a
             >
-            <span class="block text-xs text-ink-500"
+            <span class="block text-xs text-graphite-2"
               >Empresas · registro mercantil y fuentes públicas</span
             >
           </li>
@@ -251,10 +247,10 @@ const sourceHierarchy = [
             <a href={site.sources.snies.url} target="_blank" rel="noopener noreferrer" class="link"
               >{site.sources.snies.name}</a
             >
-            <span class="block text-xs text-ink-500">Universidades y programas</span>
+            <span class="block text-xs text-graphite-2">Universidades y programas</span>
           </li>
         </ul>
-        <p class="mt-3 text-xs text-ink-500">
+        <p class="mt-3 text-xs text-graphite-2">
           La información empresarial se usa con fines no comerciales, citando a la Cámara de
           Comercio de Manizales por Caldas como fuente, conforme a sus condiciones de uso.
         </p>

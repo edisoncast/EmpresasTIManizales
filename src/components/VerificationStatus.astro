@@ -27,18 +27,18 @@ const verifiedDate = lastVerifiedAt ? formatDate(lastVerifiedAt) : '';
 {
   variant === 'inline' ? (
     <div class="inline-flex flex-col gap-1">
-      <span class={`badge ${meta.badge}`}>
+      <span class={`${meta.badge}`}>
         <span aria-hidden="true">{meta.symbol}</span>
         {meta.label}
       </span>
-      <span class="text-xs text-ink-500">
+      <span class="text-xs text-graphite-2">
         {meta.message}
         {verifiedDate && <span> · Última verificación: {verifiedDate}</span>}
       </span>
     </div>
   ) : (
     <span
-      class={`badge ${meta.badge}`}
+      class={`${meta.badge}`}
       title={verifiedDate ? `${meta.message} Última verificación: ${verifiedDate}` : meta.message}
     >
       <span aria-hidden="true">{meta.symbol}</span>
