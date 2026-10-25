@@ -62,8 +62,8 @@ if (community.contact) links.push({ label: 'Contacto', href: community.contact }
   >
     {
       organizers.length > 0 && (
-        <div slot="aside" class="rounded-lg border border-ink-200 bg-surface p-5">
-          <h2 class="kicker">
+        <div slot="aside" class="border border-rule bg-sheet p-5">
+          <h2 class="field-label">
             {organizers.length > 1 ? 'Personas organizadoras' : 'Persona organizadora'}
           </h2>
           <ul class="mt-2 space-y-1">
@@ -71,7 +71,7 @@ if (community.contact) links.push({ label: 'Contacto', href: community.contact }
               <li>
                 <a
                   href={`/personas/${organizer.slug}`}
-                  class="block text-sm font-medium text-accent no-underline hover:underline"
+                  class="block text-sm font-medium text-ink-blue no-underline hover:underline"
                 >
                   {organizer.name}
                 </a>

@@ -16,25 +16,14 @@ const {
 } = Astro.props;
 ---
 
+<!-- Hoja por llenar: borde punteado sobre la hoja, sin ilustraciones. -->
 <div
-  class="bg-mist/50 rounded-lg border border-dashed border-ink-300 px-6 py-14 text-center"
+  class="border border-dashed border-rule-strong bg-sheet px-6 py-10"
   data-empty-state={forFilters ? 'filters' : 'data'}
 >
-  <!-- Marca topográfica mínima -->
-  <svg
-    class="mx-auto h-10 w-16 text-ink-300"
-    viewBox="0 0 64 40"
-    fill="none"
-    stroke="currentColor"
-    stroke-width="1.5"
-    aria-hidden="true"
-  >
-    <path d="M2 30c10-6 18-6 30-12s20-8 30-12"></path>
-    <path d="M2 38c10-6 18-6 30-12s20-8 30-12" opacity="0.6"></path>
-  </svg>
-  <h2 class="mt-4 font-display text-xl font-semibold text-ink-900">{title}</h2>
-  <p class="mx-auto mt-2 max-w-md text-sm text-ink-600">{message}</p>
-  <div class="mt-6 flex flex-wrap items-center justify-center gap-3">
+  <h2 class="text-xl">{title}</h2>
+  <p class="mt-2 max-w-reading text-sm text-graphite-2">{message}</p>
+  <div class="mt-6 flex flex-wrap items-center gap-3">
     {
       forFilters && (
         <button type="button" class="btn-secondary" data-clear-filters-cta>
@@ -44,7 +33,7 @@ const {
     }
     {
       ctaHref && (
-        <a href={ctaHref} class="btn-primary">
+        <a href={ctaHref} class:list={[forFilters ? 'btn-quiet' : 'btn-primary']}>
           {ctaLabel}
         </a>
       )

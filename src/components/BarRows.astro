@@ -34,27 +34,29 @@ const width = (count: number) => (max > 0 ? Math.round((count / max) * 1000) / 1
         <div class="flex items-baseline justify-between gap-3">
           <span
             class:list={[
-              monoLabels ? 'font-mono text-xs text-ink-600' : 'text-sm font-medium text-ink-800',
+              monoLabels
+                ? 'font-mono text-xs text-graphite-2'
+                : 'text-sm font-medium text-graphite',
             ]}
           >
             {item.label}
           </span>
-          <span class="font-mono text-xs tabular-nums text-ink-600">
+          <span class="font-mono text-xs tabular-nums text-graphite-2">
             {item.count}
             {sampleSize !== undefined && ` de ${sampleSize}`}
           </span>
         </div>
         <svg
-          class="mt-1 h-2 w-full overflow-hidden rounded-full"
+          class="mt-1 h-2 w-full"
           viewBox="0 0 100 8"
           preserveAspectRatio="none"
           aria-hidden="true"
         >
-          <rect width="100" height="8" class="fill-accent-soft/60" />
-          {item.count > 0 && <rect width={width(item.count)} height="8" class="fill-accent" />}
+          <rect width="100" height="8" class="fill-sheet-alt" />
+          {item.count > 0 && <rect width={width(item.count)} height="8" class="fill-graphite" />}
         </svg>
         {item.links && item.links.length > 0 && (
-          <p class="mt-1 text-xs leading-relaxed text-ink-500">
+          <p class="mt-1 text-xs leading-relaxed text-graphite-2">
             {item.links.map((link, i) => (
               <>
                 {i > 0 && <span aria-hidden="true"> · </span>}
@@ -65,7 +67,7 @@ const width = (count: number) => (max > 0 ? Math.round((count / max) * 1000) / 1
             ))}
           </p>
         )}
-        {item.note && <p class="mt-1 text-xs text-ink-500">{item.note}</p>}
+        {item.note && <p class="mt-1 text-xs text-graphite-2">{item.note}</p>}
       </li>
     ))
   }

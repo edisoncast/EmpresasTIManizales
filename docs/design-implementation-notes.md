@@ -3,6 +3,31 @@
 Traducción de [`design-direction.md`](./design-direction.md) a tokens, componentes y pruebas.
 El principio se mantiene: **los datos, su procedencia y las relaciones son la identidad del producto.**
 
+## Rediseño "hoja de registro" (octubre 2026)
+
+Reemplaza la primera implementación (papel crema, Newsreader, verde bosque), que se leía como una
+plantilla editorial genérica. Las secciones siguientes a esta conservan el registro histórico de esa
+primera versión; donde contradigan esta sección, manda esta.
+
+- **Tokens** en `:root` de `global.css` con nombres semánticos: `fog`, `sheet`, `sheet-alt`, `rule`,
+  `rule-strong`, `graphite`, `graphite-2`, `ink-blue` (+ `hover`, `soft`), `highlight` (+ `soft`),
+  `rust` (+ `soft`). Tailwind los expone por variable (`bg-sheet`, `text-graphite-2`,
+  `border-rule-strong`…) sin modificadores de opacidad. Las escalas `ink-*` y `brand-*` se retiraron.
+- **Tipografía:** Archivo con eje de ancho (`@fontsource-variable/archivo/wdth.css`) para titulares
+  y cifras (`font-stretch` 108–125%), Atkinson Hyperlegible Next para el cuerpo y Atkinson
+  Hyperlegible Mono para datos (`.data`). El kicker monoespaciado pasa a `.field-label` en la sans.
+- **Radios:** el tema reemplaza la escala por defecto: `rounded-control` (4px) en botones, campos,
+  tags, sellos y chips de fuente; fichas, casillas y paneles quedan rectos (sin clase de radio).
+  **Sombras:** solo `shadow-overlay` para menús.
+- **Componentes:** `.ficha` (antes `.card`) con `.ficha-head`, casillas `.fields`/`.field` y título
+  `.ficha-title-link` que se resalta en hover; sellos `.stamp-*` por forma (definidos en
+  `lib/verification.ts`); `.link` y `.btn-quiet` usan el resaltador `.mark`. `EntityCard` recibe
+  `code` y `fields` (etiqueta + valor) en lugar de `meta`.
+- **Retirados:** `TopoPattern.astro`, los íconos emoji que algunas páginas pasaban a `EntityCard` y
+  `EmptyState`, y la numeración decorativa del índice de la home.
+- **Fuente del sistema:** el artifact "Observatorio TIC" (sistema de diseño con tokens, previews y
+  `migracion.md`). La variante oscura está definida allí, pero aún no se implementa.
+
 ## Tokens implementados
 
 Definidos como variables CSS en [`src/styles/global.css`](../src/styles/global.css) (`:root`) y

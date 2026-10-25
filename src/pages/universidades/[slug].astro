@@ -82,23 +82,23 @@ const jsonLd = {
     entityName={university.name}
   >
     <section class="mt-8">
-      <h2 class="font-display text-lg font-semibold text-ink-900">
+      <h2 class="text-lg">
         Programas TIC ({relatedPrograms.length})
       </h2>
       {
         relatedPrograms.length === 0 ? (
-          <p class="mt-2 text-sm text-ink-600">
+          <p class="mt-2 text-sm text-graphite-2">
             No hay programas TIC registrados para esta institución. Si conoces alguno, puedes
             aportarlo con una fuente pública.
           </p>
         ) : (
-          <ul class="mt-3 divide-y divide-ink-200 rounded-lg border border-ink-200">
+          <ul class="mt-3 divide-y divide-rule border border-rule">
             {relatedPrograms.map((p) => (
               <li class="flex items-center justify-between gap-3 p-4">
                 <div class="min-w-0">
                   <a
                     href={`/programas/${p.slug}`}
-                    class="font-medium text-ink-900 no-underline hover:text-accent"
+                    class="font-medium text-graphite no-underline hover:text-ink-blue"
                   >
                     {p.name}
                   </a>

@@ -12,6 +12,9 @@ const pages = [
 
 for (const path of pages) {
   test(`${path} no tiene violaciones axe serias o críticas`, async ({ page }) => {
+    // /empresas renderiza cientos de fichas con casillas; axe recorre todos los nodos y supera
+    // el timeout por defecto de 30s sin que eso indique una violación.
+    test.setTimeout(90_000);
     await page.goto(path);
     const results = await new AxeBuilder({ page })
       .withTags(['wcag2a', 'wcag2aa', 'wcag21aa', 'wcag22aa'])

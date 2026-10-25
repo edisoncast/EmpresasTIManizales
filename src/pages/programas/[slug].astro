@@ -88,11 +88,11 @@ const jsonLd = {
   >
     {
       university && (
-        <div slot="aside" class="rounded-lg border border-ink-200 bg-surface p-5">
-          <h2 class="kicker">Institución</h2>
+        <div slot="aside" class="border border-rule bg-sheet p-5">
+          <h2 class="field-label">Institución</h2>
           <a
             href={`/universidades/${university.slug}`}
-            class="mt-2 block text-sm font-medium text-accent no-underline hover:underline"
+            class="mt-2 block text-sm font-medium text-ink-blue no-underline hover:underline"
           >
             {university.name}
           </a>

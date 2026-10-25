@@ -35,7 +35,7 @@ const facets = [
   />
 
   <div class="container-content py-8">
-    <p class="bg-mist/60 mb-6 rounded-lg border border-ink-200 p-3 text-sm text-ink-600">
+    <p class="mb-6 border border-rule bg-sheet-alt p-3 text-sm text-graphite-2">
       El listado diferencia comunidades activas de antecedentes históricos. Una ficha histórica se
       conserva con una etiqueta clara y no implica actividad vigente. ¿Conoces una comunidad activa
       que falte?
@@ -43,9 +43,9 @@ const facets = [
     </p>
 
     <div
-      class="mb-6 flex flex-wrap items-center justify-between gap-3 rounded-lg border border-ink-200 bg-surface p-4"
+      class="mb-6 flex flex-wrap items-center justify-between gap-3 border border-rule bg-sheet p-4"
     >
-      <p class="text-sm text-ink-700">
+      <p class="text-sm text-graphite">
         <strong>Agenda.</strong> Encuentros y meetups con fecha: próximos, pasados y por verificar.
       </p>
       <a href="/eventos" class="btn-secondary shrink-0">Ver la agenda →</a>
@@ -53,7 +53,7 @@ const facets = [
 
     {
       communities.length === 0 ? (
-        <EmptyState icon="👥" title="Aún no hay comunidades registradas" />
+        <EmptyState title="Aún no hay comunidades registradas" />
       ) : (
         <Browser
           facets={facets}
@@ -69,7 +69,7 @@ const facets = [
               subtitle={c.organizer ? `Organiza: ${c.organizer}` : undefined}
               description={c.description}
               tags={c.focus}
-              meta={[c.city ?? ''].filter(Boolean)}
+              fields={[{ label: 'Ciudad', value: c.city ?? '' }]}
               needsVerification={c.needsVerification}
               verificationStatus={c.verificationStatus}
               status={c.status}

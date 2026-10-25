@@ -2,27 +2,30 @@
 import { site, nav } from '../lib/site';
 ---
 
-<footer class="bg-mist/60 mt-24 border-t border-ink-200">
+<footer class="mt-24 border-t-2 border-graphite bg-sheet-alt">
   <div class="container-content grid gap-10 py-14 md:grid-cols-12">
     <div class="md:col-span-5">
-      <p class="font-display text-lg font-semibold text-ink-900">
-        Observatorio TIC · Manizales y Caldas
+      <p
+        class="font-display text-base font-extrabold uppercase tracking-[0.02em] text-graphite [font-stretch:125%]"
+      >
+        Observatorio TIC
       </p>
-      <p class="mt-3 max-w-sm text-sm leading-relaxed text-ink-600">
+      <p class="mt-3 max-w-sm text-sm leading-relaxed text-graphite-2">
         Un mapa abierto del ecosistema tecnológico regional: empresas, universidades, programas,
         personas, comunidades y eventos. Datos abiertos, verificables y mantenidos por comunidad.
       </p>
+      <p class="data mt-3 text-xs text-graphite-2">5.07° N · 75.52° O · 2.150 m s. n. m.</p>
     </div>
 
     <nav aria-label="Explorar el ecosistema" class="md:col-span-3">
-      <h2 class="kicker">Explorar</h2>
+      <h2 class="field-label">Explorar</h2>
       <ul class="mt-3 space-y-2">
         {
           nav.slice(0, 6).map((item) => (
             <li>
               <a
                 href={item.href}
-                class="text-sm text-ink-600 no-underline transition-colors duration-fast hover:text-accent"
+                class="text-sm text-graphite-2 no-underline hover:bg-highlight hover:text-on-highlight"
               >
                 {item.label}
               </a>
@@ -33,20 +36,26 @@ import { site, nav } from '../lib/site';
     </nav>
 
     <nav aria-label="El proyecto" class="md:col-span-2">
-      <h2 class="kicker">Proyecto</h2>
+      <h2 class="field-label">Proyecto</h2>
       <ul class="mt-3 space-y-2">
         <li>
-          <a href="/metodologia" class="text-sm text-ink-600 no-underline hover:text-accent"
+          <a
+            href="/metodologia"
+            class="text-sm text-graphite-2 no-underline hover:bg-highlight hover:text-on-highlight"
             >Metodología y criterios</a
           >
         </li>
         <li>
-          <a href="/acerca" class="text-sm text-ink-600 no-underline hover:text-accent"
+          <a
+            href="/acerca"
+            class="text-sm text-graphite-2 no-underline hover:bg-highlight hover:text-on-highlight"
             >Acerca del proyecto</a
           >
         </li>
         <li>
-          <a href="/contribuir" class="text-sm text-ink-600 no-underline hover:text-accent"
+          <a
+            href="/contribuir"
+            class="text-sm text-graphite-2 no-underline hover:bg-highlight hover:text-on-highlight"
             >Cómo contribuir</a
           >
         </li>
@@ -55,24 +64,25 @@ import { site, nav } from '../lib/site';
             href={site.repoUrl}
             target="_blank"
             rel="noopener noreferrer"
-            class="text-sm text-ink-600 no-underline hover:text-accent">Repositorio</a
+            class="text-sm text-graphite-2 no-underline hover:bg-highlight hover:text-on-highlight"
+            >Repositorio</a
           >
         </li>
       </ul>
     </nav>
 
     <div class="md:col-span-2">
-      <h2 class="kicker">Contribuir</h2>
-      <p class="mt-3 text-sm text-ink-600">
+      <h2 class="field-label">Contribuir</h2>
+      <p class="mt-3 text-sm text-graphite-2">
         ¿Falta un dato o una fuente? Ayúdanos a mantener el archivo al día.
       </p>
       <a href="/contribuir" class="btn-secondary mt-4 inline-flex">Sugerir o corregir</a>
     </div>
   </div>
 
-  <div class="border-t border-ink-200">
+  <div class="border-t border-rule">
     <div
-      class="container-content flex flex-col gap-2 py-6 text-xs text-ink-500 sm:flex-row sm:items-center sm:justify-between"
+      class="container-content flex flex-col gap-2 py-6 text-xs text-graphite-2 sm:flex-row sm:items-center sm:justify-between"
     >
       <p>Contenido bajo licencia CC BY-SA 4.0 · {site.author}.</p>
       <p>Proyecto construido por Jhon Edison Castro para la comunidad.</p>

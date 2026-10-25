@@ -61,13 +61,12 @@ const facets = [
     {
       companies.length === 0 ? (
         <EmptyState
-          icon="🏢"
           title="Aún no hay empresas registradas"
           message="El repositorio original no incluía datos estructurados de empresas. ¡Sé la primera persona en aportar una!"
         />
       ) : (
         <>
-          <p class="bg-mist/60 mb-6 rounded-lg border border-ink-200 p-3 text-sm text-ink-600">
+          <p class="mb-6 border border-rule bg-sheet-alt p-3 text-sm text-graphite-2">
             <strong>Fuente:</strong>
             <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link">
               Cámara de Comercio de Manizales por Caldas
@@ -98,14 +97,15 @@ const facets = [
                 title={c.name}
                 href={`/empresas/${c.slug}`}
                 kicker={c.legalForm ?? 'Empresa'}
+                code={c.ciiu ? `CIIU ${c.ciiu}` : undefined}
                 subtitle={c.nit ? `NIT ${c.nit}` : undefined}
                 description={c.description}
                 tags={c.categories}
-                meta={[
-                  c.city,
-                  label('size', c.size),
-                  regYear(c) ? `Matrícula ${regYear(c)}` : '',
-                ].filter(Boolean)}
+                fields={[
+                  { label: 'Ciudad', value: c.city },
+                  { label: 'Tamaño', value: label('size', c.size) },
+                  { label: 'Matrícula', value: String(regYear(c) ?? ''), code: true },
+                ]}
                 needsVerification={c.needsVerification}
                 verificationStatus={c.verificationStatus}
                 lastVerifiedAt={c.lastVerifiedAt}

@@ -18,28 +18,23 @@ const {
   searchLabel = 'Buscar',
   total,
   noun = 'resultados',
-  gridClass = 'grid gap-4 sm:grid-cols-2 lg:grid-cols-3',
+  gridClass = 'grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3',
 } = Astro.props;
 ---
 
 <section data-browser data-noun={noun} data-total={total}>
-  <div class="bg-mist/50 rounded-lg border border-ink-200 p-4">
+  <div class="border border-rule bg-sheet-alt p-4">
     <div class="mb-3">
       <SearchBar placeholder={searchPlaceholder} label={searchLabel} visibleLabel={true} />
     </div>
     {facets.length > 0 && <FilterPanel facets={facets} />}
-    <div class="mt-3 flex items-center justify-between gap-3 border-t border-ink-200 pt-3">
-      <p class="text-sm text-ink-600" data-count aria-live="polite">
-        <span class="font-semibold text-ink-900" data-count-value>{total}</span>
+    <div class="mt-3 flex items-center justify-between gap-3 border-t border-rule pt-3">
+      <p class="text-sm text-graphite-2" data-count aria-live="polite">
+        <span class="font-semibold text-graphite" data-count-value>{total}</span>
         {' '}de {total}
         {noun}
       </p>
-      <button
-        type="button"
-        class="text-sm font-medium text-accent hover:underline"
-        data-clear-filters
-        hidden
-      >
+      <button type="button" class="btn-quiet text-sm" data-clear-filters hidden>
         Limpiar filtros
       </button>
     </div>

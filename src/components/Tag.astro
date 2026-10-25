@@ -6,10 +6,11 @@ export interface Props {
 }
 const { label, href, tone = 'neutral' } = Astro.props;
 
+// Etiquetas rectas; los tonos solo cambian el fondo y el borde, nunca el significado.
 const tones: Record<string, string> = {
-  soft: 'bg-accent-soft text-accent-ink',
-  neutral: 'bg-ink-100 text-ink-700',
-  outline: 'border border-ink-300 text-ink-600',
+  soft: 'border-rule bg-fog text-graphite',
+  neutral: 'border-rule bg-sheet text-graphite',
+  outline: 'border-rule-strong bg-transparent text-graphite-2',
 };
 const cls = `badge font-medium ${tones[tone]}`;
 ---
@@ -18,7 +19,7 @@ const cls = `badge font-medium ${tones[tone]}`;
   href ? (
     <a
       href={href}
-      class={`${cls} no-underline transition-colors duration-fast hover:bg-accent-soft hover:text-accent-ink`}
+      class={`${cls} no-underline transition-colors duration-fast hover:border-highlight hover:bg-highlight hover:text-on-highlight`}
     >
       {label}
     </a>
