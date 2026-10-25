@@ -82,17 +82,13 @@ const formatPercentage = (count: number) =>
             </tr>
           </thead>
           <tbody class="divide-y divide-rule">
-            {
-              ranges.map((range) => (
-                <tr>
-                  <th scope="row" class="break-words py-2.5 pr-2 font-medium text-graphite sm:pr-4">
-                    {range.label}
-                  </th>
-                  <td class="break-words py-2.5 pr-2 text-graphite-2 sm:pr-4">{range.uvt}</td>
-                  <td class="break-words py-2.5 font-mono text-xs text-graphite-2">{range.cop}</td>
-                </tr>
-              ))
-            }
+            {ranges.map((range) => <tr>
+              <th scope="row" class="break-words py-2.5 pr-2 font-medium text-graphite sm:pr-4">
+                {range.label}
+              </th>
+              <td class="break-words py-2.5 pr-2 text-graphite-2 sm:pr-4">{range.uvt}</td>
+              <td class="break-words py-2.5 font-mono text-xs text-graphite-2">{range.cop}</td>
+            </tr>)}
           </tbody>
         </table>
       </div>
@@ -105,14 +101,16 @@ const formatPercentage = (count: number) =>
           class="link"
           href="https://www.funcionpublica.gov.co/eva/gestornormativo/norma.php?i=94550"
           target="_blank"
-          rel="noopener noreferrer">Decreto 957 de 2019</a
+          rel="noopener noreferrer"
+          >Decreto 957 de 2019</a
         >
         y
         <a
           class="link"
           href="https://normograma.dian.gov.co/dian/compilacion/docs/resolucion_dian_0238_2025.htm"
           target="_blank"
-          rel="noopener noreferrer">UVT 2026</a
+          rel="noopener noreferrer"
+          >UVT 2026</a
         >.
       </p>
     </div>
@@ -126,36 +124,30 @@ const formatPercentage = (count: number) =>
       </p>
 
       <ul class="mt-6 space-y-4">
-        {
-          sizes.map((item) => {
-            const percent = percentage(item.count);
-            return (
-              <li>
-                <div class="flex items-baseline justify-between gap-4 text-sm">
-                  <span class="font-medium text-graphite">{item.label}</span>
-                  <span class="font-mono text-xs tabular-nums text-graphite-2">
-                    {item.count.toLocaleString('es-CO')} · {formatPercentage(item.count)} %
-                  </span>
-                </div>
-                <svg
-                  aria-hidden="true"
-                  class="mt-1.5 block h-2 w-full"
-                  viewBox="0 0 100 8"
-                  preserveAspectRatio="none"
-                >
-                  <rect width="100" height="8" fill="var(--color-sheet-alt)" />
-                  <rect
-                    width={Math.max(percent, item.count > 0 ? 0.6 : 0)}
-                    height="8"
-                    fill={
-                      item.key === 'unknown' ? 'var(--color-rule-strong)' : 'var(--color-graphite)'
-                    }
-                  />
-                </svg>
-              </li>
-            );
-          })
-        }
+        {sizes.map((item) => {
+          const percent = percentage(item.count);
+          return <li>
+            <div class="flex items-baseline justify-between gap-4 text-sm">
+              <span class="font-medium text-graphite">{item.label}</span>
+              <span class="font-mono text-xs tabular-nums text-graphite-2">
+                {item.count.toLocaleString('es-CO')} · {formatPercentage(item.count)} %
+              </span>
+            </div>
+            <svg
+              aria-hidden="true"
+              class="mt-1.5 block h-2 w-full"
+              viewBox="0 0 100 8"
+              preserveAspectRatio="none"
+            >
+              <rect width="100" height="8" fill="var(--color-sheet-alt)" />
+              <rect
+                width={Math.max(percent, item.count > 0 ? 0.6 : 0)}
+                height="8"
+                fill={item.key === 'unknown' ? 'var(--color-rule-strong)' : 'var(--color-graphite)'}
+              />
+            </svg>
+          </li>;
+        })}
       </ul>
 
       <p class="mt-5 text-xs leading-relaxed text-graphite-2">
@@ -166,34 +158,30 @@ const formatPercentage = (count: number) =>
       <div class="mt-6 border-t border-rule pt-5">
         <h3 class="text-base">Por ciudad</h3>
         <ul class="mt-4 space-y-3">
-          {
-            cities.map((item) => {
-              const percent = percentage(item.count);
-              return (
-                <li>
-                  <div class="flex items-baseline justify-between gap-4 text-sm">
-                    <span class="font-medium text-graphite">{item.city}</span>
-                    <span class="font-mono text-xs tabular-nums text-graphite-2">
-                      {item.count.toLocaleString('es-CO')} · {formatPercentage(item.count)} %
-                    </span>
-                  </div>
-                  <svg
-                    aria-hidden="true"
-                    class="mt-1.5 block h-2 w-full"
-                    viewBox="0 0 100 8"
-                    preserveAspectRatio="none"
-                  >
-                    <rect width="100" height="8" fill="var(--color-sheet-alt)" />
-                    <rect
-                      width={Math.max(percent, item.count > 0 ? 0.6 : 0)}
-                      height="8"
-                      fill="var(--color-graphite)"
-                    />
-                  </svg>
-                </li>
-              );
-            })
-          }
+          {cities.map((item) => {
+            const percent = percentage(item.count);
+            return <li>
+              <div class="flex items-baseline justify-between gap-4 text-sm">
+                <span class="font-medium text-graphite">{item.city}</span>
+                <span class="font-mono text-xs tabular-nums text-graphite-2">
+                  {item.count.toLocaleString('es-CO')} · {formatPercentage(item.count)} %
+                </span>
+              </div>
+              <svg
+                aria-hidden="true"
+                class="mt-1.5 block h-2 w-full"
+                viewBox="0 0 100 8"
+                preserveAspectRatio="none"
+              >
+                <rect width="100" height="8" fill="var(--color-sheet-alt)" />
+                <rect
+                  width={Math.max(percent, item.count > 0 ? 0.6 : 0)}
+                  height="8"
+                  fill="var(--color-graphite)"
+                />
+              </svg>
+            </li>;
+          })}
         </ul>
       </div>
     </figure>

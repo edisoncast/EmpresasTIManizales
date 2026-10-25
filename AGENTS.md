@@ -16,8 +16,11 @@ de apoyo). **Los datos, su procedencia y sus relaciones son la identidad del pro
 
 ## Stack
 
-- Astro 6 + TypeScript strict, salida estática (`format: 'directory'`).
-- Tailwind CSS 3.4 vía PostCSS (`postcss.config.mjs`). No se usa `@astrojs/tailwind`.
+- Astro 7 + TypeScript 6 strict, salida estática (`format: 'directory'`, `compressHTML: true` para
+  conservar los espacios entre elementos en línea).
+- Tailwind CSS 4 con `@tailwindcss/vite` (configurado en `astro.config.mjs`). No hay
+  `tailwind.config` ni PostCSS: los tokens viven en `@theme` dentro de `src/styles/global.css`.
+- TypeScript se queda en 6.x hasta que typescript-eslint acepte TypeScript 7.
 - Sin frameworks de cliente: búsqueda y filtros son JavaScript vanilla en `<script>` de componentes
   `.astro`. No añadir React ni islas hidratadas sin una necesidad real.
 - Zod valida los datos en build. Vitest para unit; Playwright + axe para e2e y accesibilidad.
@@ -41,7 +44,7 @@ Sin Node 24 local, todo corre en Docker:
 
 ```bash
 docker run --rm -v "$PWD:/app" -w /app node:24-alpine sh -c "npm ci && npm run build"
-docker run --rm -v "$PWD:/app" -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
+docker run --rm -v "$PWD:/app" -w /app mcr.microsoft.com/playwright:v1.64.1-noble \
   sh -c "npm ci && npm run build && npm run test:e2e"
 ```
 
@@ -87,10 +90,12 @@ Fuente de verdad: `docs/design-direction.md` (detalle de implementación en
 
 - "Hoja de registro": fondo `fog`, hojas `sheet`, texto `graphite`/`graphite-2`, tinta `ink-blue`
   para lo interactivo y resaltador `highlight` solo como relleno (hover, foco, una banda de
-  contribución por vista). Tokens semánticos en `:root` de `global.css`; no reintroducir escalas
-  numéricas de color ni modificadores de opacidad `/NN`.
+  contribución por vista). Tokens semánticos en `@theme` de `global.css`; no reintroducir escalas
+  numéricas de color.
 - Fichas, casillas y paneles son rectos; `rounded-control` (4px) solo en botones, campos, tags y
-  sellos. El tema reemplaza la escala de radios: `rounded-lg`/`rounded-xl` no generan CSS.
+  sellos. `@theme` reinicia la escala de radios: `rounded-lg`/`rounded-xl` no generan CSS.
+- En Tailwind 4, `@apply` solo acepta utilidades: una clase propia que otras reglas apliquen
+  (`btn`, `mark`, `field-label`) se declara con `@utility`, no dentro de `@layer components`.
 - Fuentes self-hosted con `@fontsource-variable/*` (la CSP exige `font-src 'self'`, sin CDNs):
   Archivo con eje de ancho (`archivo/wdth.css`) para titulares, Atkinson Hyperlegible Next para el
   cuerpo y Atkinson Hyperlegible Mono solo para datos.
@@ -127,3 +132,9 @@ Fuente de verdad: `docs/design-direction.md` (detalle de implementación en
 - Rollback: `git revert` + merge a `master` vuelve a desplegar el estado anterior (el bucket tiene
   versionado).
 - Cambios de infraestructura: solo `terraform plan` sin aprobación explícita; nunca `apply` desde un agente.
+  Terraform 1.17 y provider AWS `~> 6.70`; para revisar sin credenciales:
+  `docker run --rm --entrypoint sh -v "$PWD/infra/terraform:/tf" -w /tf hashicorp/terraform:1.17.0 -c "terraform init -backend=false && terraform validate"`.
+- Las Actions están fijadas por SHA de commit con la versión en un comentario; Dependabot las
+  actualiza. No volver a tags mutables (`@v7`).
+- Dependencias: al actualizar, regenera el lockfile con `npm install --before=<fecha>` y revisa
+  `npm audit`.

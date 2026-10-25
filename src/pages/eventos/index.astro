@@ -34,92 +34,84 @@ const undated = events.filter((e) => !e.date);
       ><span aria-hidden="true">←</span> Volver a Comunidad</a
     >
 
-    {
-      events.length === 0 ? (
-        <div class="space-y-8">
-          <EmptyState
-            title="Aún no hay eventos con fecha registrada"
-            message="El repositorio todavía no tiene eventos fechados. Puedes aportar el próximo evento de tu comunidad (con fecha, lugar y fuente) mediante un Pull Request."
-            ctaLabel="Sugerir un evento"
-          />
-          <section>
-            <h2 class="mb-3 text-lg">Mientras tanto, sigue a estas comunidades</h2>
-            <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-              {communities.slice(0, 6).map((c) => (
-                <EntityCard
-                  title={c.name}
-                  href={`/comunidades/${c.slug}`}
-                  description={c.description}
-                  tags={c.focus}
-                  needsVerification={c.needsVerification}
-                />
-              ))}
-            </div>
-          </section>
-        </div>
-      ) : (
-        <div class="space-y-10">
-          {upcoming.length > 0 && (
-            <section>
-              <h2 class="mb-3 text-lg">Próximos eventos</h2>
-              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {upcoming.map((e) => (
-                  <EntityCard
-                    title={e.name}
-                    href={e.url ?? '#'}
-                    description={e.description}
-                    kicker="Evento"
-                    fields={[
-                      { label: 'Fecha', value: formatDate(e.date) },
-                      { label: 'Lugar', value: e.venue ?? '' },
-                      { label: 'Modalidad', value: label('modality', e.modality) },
-                    ]}
-                    tags={e.topics}
-                    needsVerification={e.needsVerification}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
-          {past.length > 0 && (
-            <section>
-              <h2 class="mb-3 text-lg">Eventos pasados</h2>
-              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {past.map((e) => (
-                  <EntityCard
-                    title={e.name}
-                    href={e.url ?? '#'}
-                    description={e.description}
-                    kicker="Evento"
-                    fields={[
-                      { label: 'Fecha', value: formatDate(e.date) },
-                      { label: 'Lugar', value: e.venue ?? '' },
-                    ]}
-                    tags={e.topics}
-                    needsVerification={e.needsVerification}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
-          {undated.length > 0 && (
-            <section>
-              <h2 class="mb-3 text-lg">Sin fecha confirmada</h2>
-              <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-                {undated.map((e) => (
-                  <EntityCard
-                    title={e.name}
-                    href={e.url ?? '#'}
-                    description={e.description}
-                    tags={e.topics}
-                    needsVerification={e.needsVerification}
-                  />
-                ))}
-              </div>
-            </section>
-          )}
-        </div>
-      )
-    }
+    {events.length === 0 ? (
+      <div class="space-y-8">
+        <EmptyState
+          title="Aún no hay eventos con fecha registrada"
+          message="El repositorio todavía no tiene eventos fechados. Puedes aportar el próximo evento de tu comunidad (con fecha, lugar y fuente) mediante un Pull Request."
+          ctaLabel="Sugerir un evento"
+        />
+        <section>
+          <h2 class="mb-3 text-lg">Mientras tanto, sigue a estas comunidades</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {communities.slice(0, 6).map((c) => (
+              <EntityCard
+                title={c.name}
+                href={`/comunidades/${c.slug}`}
+                description={c.description}
+                tags={c.focus}
+                needsVerification={c.needsVerification}
+              />
+            ))}
+          </div>
+        </section>
+      </div>
+    ) : (
+      <div class="space-y-10">
+        {upcoming.length > 0 && <section>
+          <h2 class="mb-3 text-lg">Próximos eventos</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {upcoming.map((e) => (
+              <EntityCard
+                title={e.name}
+                href={e.url ?? '#'}
+                description={e.description}
+                kicker="Evento"
+                fields={[
+                  { label: 'Fecha', value: formatDate(e.date) },
+                  { label: 'Lugar', value: e.venue ?? '' },
+                  { label: 'Modalidad', value: label('modality', e.modality) },
+                ]}
+                tags={e.topics}
+                needsVerification={e.needsVerification}
+              />
+            ))}
+          </div>
+        </section>}
+        {past.length > 0 && <section>
+          <h2 class="mb-3 text-lg">Eventos pasados</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {past.map((e) => (
+              <EntityCard
+                title={e.name}
+                href={e.url ?? '#'}
+                description={e.description}
+                kicker="Evento"
+                fields={[
+                  { label: 'Fecha', value: formatDate(e.date) },
+                  { label: 'Lugar', value: e.venue ?? '' },
+                ]}
+                tags={e.topics}
+                needsVerification={e.needsVerification}
+              />
+            ))}
+          </div>
+        </section>}
+        {undated.length > 0 && <section>
+          <h2 class="mb-3 text-lg">Sin fecha confirmada</h2>
+          <div class="grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {undated.map((e) => (
+              <EntityCard
+                title={e.name}
+                href={e.url ?? '#'}
+                description={e.description}
+                tags={e.topics}
+                needsVerification={e.needsVerification}
+              />
+            ))}
+          </div>
+        </section>}
+      </div>
+    )}
   </div>
 </Layout>

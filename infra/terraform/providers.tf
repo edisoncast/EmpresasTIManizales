@@ -1,11 +1,11 @@
 terraform {
-  # >= 1.10 requerido para el bloqueo de estado nativo en S3 (use_lockfile).
-  required_version = ">= 1.10.0"
+  # 1.10+ habilita el bloqueo nativo en S3 (use_lockfile); se fija el mínimo en la versión probada.
+  required_version = ">= 1.17.0, < 2.0.0"
 
   required_providers {
     aws = {
       source  = "hashicorp/aws"
-      version = "~> 6.0"
+      version = "~> 6.70"
     }
   }
 }

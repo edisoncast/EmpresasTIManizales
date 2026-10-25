@@ -4,12 +4,11 @@
     "strict": true,
     "verbatimModuleSyntax": true,
     "allowJs": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@data/*": ["src/data/*"],
-      "@schemas/*": ["src/schemas/*"],
-      "@lib/*": ["src/lib/*"]
+      "@/*": ["./src/*"],
+      "@data/*": ["./src/data/*"],
+      "@schemas/*": ["./src/schemas/*"],
+      "@lib/*": ["./src/lib/*"]
     },
     "resolveJsonModule": true
   },

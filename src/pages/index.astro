@@ -179,19 +179,17 @@ const jsonLd = {
       ¿Qué te trae al mapa? Elige un punto de partida según lo que necesitas.
     </p>
     <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2">
-      {
-        starts.map((s) => (
-          <a href={s.href} class="ficha p-5 no-underline">
-            <h3 class="text-lg">
-              <span class="ficha-title-link">{s.title}</span>
-            </h3>
-            <p class="mt-1 text-sm text-graphite-2">{s.text}</p>
-            <span class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue underline underline-offset-[3px]">
-              {s.cta} <span aria-hidden="true">→</span>
-            </span>
-          </a>
-        ))
-      }
+      {starts.map((s) => <a href={s.href} class="ficha p-5 no-underline">
+        <h3 class="text-lg">
+          <span class="ficha-title-link">{s.title}</span>
+        </h3>
+        <p class="mt-1 text-sm text-graphite-2">{s.text}</p>
+        <span
+          class="mt-3 inline-flex items-center gap-1 text-sm font-medium text-ink-blue underline underline-offset-[3px]"
+        >
+          {s.cta} <span aria-hidden="true">→</span>
+        </span>
+      </a>)}
     </div>
   </section>
 
@@ -202,11 +200,10 @@ const jsonLd = {
     >
       <p class="max-w-2xl text-sm text-graphite">
         <span class="data text-xs text-graphite-2">{site.startedYear} → {site.currentYear}</span>
-        &nbsp; Proyecto iniciado en {site.startedYear} como repositorio comunitario y ampliado en {
-          site.currentYear
-        }, verificando por partes con fuentes públicas. Cada ficha muestra su estado y su fecha de
-        revisión; reconocemos lo que aún no está confirmado y lo convertimos en una invitación a
-        contribuir.
+        &nbsp; Proyecto iniciado en {site.startedYear} como repositorio comunitario y ampliado en
+        {site.currentYear}, verificando por partes con fuentes públicas. Cada ficha muestra su
+        estado y su fecha de revisión; reconocemos lo que aún no está confirmado y lo convertimos en
+        una invitación a contribuir.
       </p>
       <span class="flex shrink-0 flex-col gap-1 sm:items-end">
         <a href="/metodologia" class="link text-sm">Ver metodología →</a>
@@ -231,27 +228,18 @@ const jsonLd = {
       Seis tipos de registro conforman el mapa. Cada uno se explora, filtra y verifica por separado.
     </p>
     <ul class="mt-6 divide-y divide-rule border-y-2 border-graphite">
-      {
-        index.map((it) => (
-          <li>
-            <a
-              href={it.href}
-              class="ficha flex-row items-baseline gap-4 border-0 py-4 no-underline"
-            >
-              <span class="flex-1">
-                <span class="font-display text-lg font-bold text-graphite [font-stretch:108%]">
-                  <span class="ficha-title-link">{it.title}</span>
-                </span>
-                <span class="data ml-2 text-xs text-graphite-2">{it.count}</span>
-                <span class="mt-0.5 block max-w-xl text-sm text-graphite-2">{it.text}</span>
-              </span>
-              <span aria-hidden="true" class="text-graphite-2">
-                →
-              </span>
-            </a>
-          </li>
-        ))
-      }
+      {index.map((it) => <li>
+        <a href={it.href} class="ficha flex-row items-baseline gap-4 border-0 py-4 no-underline">
+          <span class="flex-1">
+            <span class="font-display text-lg font-bold text-graphite [font-stretch:108%]">
+              <span class="ficha-title-link">{it.title}</span>
+            </span>
+            <span class="data ml-2 text-xs text-graphite-2">{it.count}</span>
+            <span class="mt-0.5 block max-w-xl text-sm text-graphite-2">{it.text}</span>
+          </span>
+          <span aria-hidden="true" class="text-graphite-2"> → </span>
+        </a>
+      </li>)}
     </ul>
   </section>
 
@@ -266,22 +254,18 @@ const jsonLd = {
       <dl
         class="mt-6 grid grid-cols-1 gap-px border border-rule bg-rule sm:grid-cols-2 lg:grid-cols-5"
       >
-        {
-          verificationOrder.map((s) => (
-            <div class="bg-sheet p-4">
-              <dt class="flex items-center gap-2">
-                <span class={`${verificationMeta[s].badge}`}>
-                  <span aria-hidden="true">{verificationMeta[s].symbol}</span>
-                  {verificationMeta[s].label}
-                </span>
-              </dt>
-              <dd class="figure mt-3 text-2xl">
-                {dist[s]}
-                <span class="data ml-1 text-xs font-normal text-graphite-2">de {distTotal}</span>
-              </dd>
-            </div>
-          ))
-        }
+        {verificationOrder.map((s) => <div class="bg-sheet p-4">
+          <dt class="flex items-center gap-2">
+            <span class={`${verificationMeta[s].badge}`}>
+              <span aria-hidden="true">{verificationMeta[s].symbol}</span>
+              {verificationMeta[s].label}
+            </span>
+          </dt>
+          <dd class="figure mt-3 text-2xl">
+            {dist[s]}
+            <span class="data ml-1 text-xs font-normal text-graphite-2">de {distTotal}</span>
+          </dd>
+        </div>)}
       </dl>
     </div>
   </section>
@@ -297,7 +281,9 @@ const jsonLd = {
       ranking.
     </p>
     <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3">
-      {featuredPeople.map((p) => <PersonCard person={p} />)}
+      {featuredPeople.map((p) => (
+        <PersonCard person={p} />
+      ))}
     </div>
   </section>
 

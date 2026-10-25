@@ -38,38 +38,34 @@ const facets = [
       noun="programas"
       searchPlaceholder="Buscar programa por nombre, área o institución…"
     >
-      {
-        programs.map((p) => (
-          <EntityCard
-            title={p.name}
-            href={`/programas/${p.slug}`}
-            kicker={label('programLevel', p.level)}
-            code={p.sniesCode ? `SNIES ${p.sniesCode}` : undefined}
-            subtitle={p.institutionName}
-            tags={p.area}
-            fields={[{ label: 'Ciudad', value: p.city ?? '' }]}
-            needsVerification={p.needsVerification}
-            verificationStatus={p.verificationStatus}
-            lastVerifiedAt={p.lastVerifiedAt}
-            attrs={{
-              'data-item': '',
-              'data-search': [
-                p.name,
-                p.institutionName,
-                label('modality', p.modality),
-                ...p.area,
-                p.city,
-              ].join(' '),
-              'data-facet-level': encodeFacet([label('programLevel', p.level)]),
-              'data-facet-modality': encodeFacet([label('modality', p.modality)]),
-              'data-facet-area': encodeFacet(p.area),
-              'data-facet-institution': encodeFacet([p.institutionName]),
-            }}
-          >
-            <ModalityBadge slot="badge" modality={p.modality} />
-          </EntityCard>
-        ))
-      }
+      {programs.map((p) => <EntityCard
+        title={p.name}
+        href={`/programas/${p.slug}`}
+        kicker={label('programLevel', p.level)}
+        code={p.sniesCode ? `SNIES ${p.sniesCode}` : undefined}
+        subtitle={p.institutionName}
+        tags={p.area}
+        fields={[{ label: 'Ciudad', value: p.city ?? '' }]}
+        needsVerification={p.needsVerification}
+        verificationStatus={p.verificationStatus}
+        lastVerifiedAt={p.lastVerifiedAt}
+        attrs={{
+          'data-item': '',
+          'data-search': [
+            p.name,
+            p.institutionName,
+            label('modality', p.modality),
+            ...p.area,
+            p.city,
+          ].join(' '),
+          'data-facet-level': encodeFacet([label('programLevel', p.level)]),
+          'data-facet-modality': encodeFacet([label('modality', p.modality)]),
+          'data-facet-area': encodeFacet(p.area),
+          'data-facet-institution': encodeFacet([p.institutionName]),
+        }}
+      >
+        <ModalityBadge slot="badge" modality={p.modality} />
+      </EntityCard>)}
     </Browser>
   </div>
 </Layout>

@@ -58,79 +58,75 @@ const facets = [
   />
 
   <div class="container-content py-8">
-    {
-      companies.length === 0 ? (
-        <EmptyState
-          title="Aún no hay empresas registradas"
-          message="El repositorio original no incluía datos estructurados de empresas. ¡Sé la primera persona en aportar una!"
+    {companies.length === 0 ? (
+      <EmptyState
+        title="Aún no hay empresas registradas"
+        message="El repositorio original no incluía datos estructurados de empresas. ¡Sé la primera persona en aportar una!"
+      />
+    ) : (
+      <>
+        <p class="mb-6 border border-rule bg-sheet-alt p-3 text-sm text-graphite-2">
+          <strong>Fuente:</strong>
+          <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link">
+            Cámara de Comercio de Manizales por Caldas
+          </a
+          >{' '} y otras fuentes públicas — registros con actividades relacionadas con software,
+          servicios TI, infraestructura, conectividad, datos o ciberseguridad en Manizales y Caldas.
+          Los datos se revalidan a 2026 y cada ficha indica su nivel de evidencia. Por privacidad no
+          publicamos correos, direcciones ni representantes, y omitimos el número de identificación
+          de personas naturales. También puedes explorar la{' '}
+          <a href="/decadas" class="link"> evolución del ecosistema por décadas </a>
+          .
+        </p>
+        <CompanySizeOverview
+          sizes={sizeDistribution}
+          cities={cityDistribution}
+          total={companies.length}
         />
-      ) : (
-        <>
-          <p class="mb-6 border border-rule bg-sheet-alt p-3 text-sm text-graphite-2">
-            <strong>Fuente:</strong>
-            <a href={site.sources.ccmpc.url} target="_blank" rel="noopener noreferrer" class="link">
-              Cámara de Comercio de Manizales por Caldas
-            </a>{' '}
-            y otras fuentes públicas — registros con actividades relacionadas con software,
-            servicios TI, infraestructura, conectividad, datos o ciberseguridad en Manizales y
-            Caldas. Los datos se revalidan a 2026 y cada ficha indica su nivel de evidencia. Por
-            privacidad no publicamos correos, direcciones ni representantes, y omitimos el número de
-            identificación de personas naturales. También puedes explorar la{' '}
-            <a href="/decadas" class="link">
-              evolución del ecosistema por décadas
-            </a>
-            .
-          </p>
-          <CompanySizeOverview
-            sizes={sizeDistribution}
-            cities={cityDistribution}
-            total={companies.length}
-          />
-          <Browser
-            facets={facets}
-            total={companies.length}
-            noun="empresas"
-            searchPlaceholder="Buscar empresa por nombre, tecnología o categoría…"
-          >
-            {companies.map((c) => (
-              <EntityCard
-                title={c.name}
-                href={`/empresas/${c.slug}`}
-                kicker={c.legalForm ?? 'Empresa'}
-                code={c.ciiu ? `CIIU ${c.ciiu}` : undefined}
-                subtitle={c.nit ? `NIT ${c.nit}` : undefined}
-                description={c.description}
-                tags={c.categories}
-                fields={[
-                  { label: 'Ciudad', value: c.city },
-                  { label: 'Tamaño', value: label('size', c.size) },
-                  { label: 'Matrícula', value: String(regYear(c) ?? ''), code: true },
-                ]}
-                needsVerification={c.needsVerification}
-                verificationStatus={c.verificationStatus}
-                lastVerifiedAt={c.lastVerifiedAt}
-                cta="Ver ficha"
-                attrs={{
-                  'data-item': '',
-                  'data-search': [
-                    c.name,
-                    c.description ?? '',
-                    c.city,
-                    c.nit ?? '',
-                    c.legalForm ?? '',
-                    ...c.categories,
-                  ].join(' '),
-                  'data-facet-city': encodeFacet([c.city]),
-                  'data-facet-category': encodeFacet(c.categories),
-                  'data-facet-size': encodeFacet([label('size', c.size)]),
-                  'data-facet-form': encodeFacet(c.legalForm ? [c.legalForm] : []),
-                  'data-facet-decade': encodeFacet(regDecade(c) ? [regDecade(c)] : []),
-                }}
-              />
-            ))}
-          </Browser>
-        </>
-      )
-    }
+        <Browser
+          facets={facets}
+          total={companies.length}
+          noun="empresas"
+          searchPlaceholder="Buscar empresa por nombre, tecnología o categoría…"
+        >
+          {companies.map((c) => (
+            <EntityCard
+              title={c.name}
+              href={`/empresas/${c.slug}`}
+              kicker={c.legalForm ?? 'Empresa'}
+              code={c.ciiu ? `CIIU ${c.ciiu}` : undefined}
+              subtitle={c.nit ? `NIT ${c.nit}` : undefined}
+              description={c.description}
+              tags={c.categories}
+              fields={[
+                { label: 'Ciudad', value: c.city },
+                { label: 'Tamaño', value: label('size', c.size) },
+                { label: 'Matrícula', value: String(regYear(c) ?? ''), code: true },
+              ]}
+              needsVerification={c.needsVerification}
+              verificationStatus={c.verificationStatus}
+              lastVerifiedAt={c.lastVerifiedAt}
+              cta="Ver ficha"
+              attrs={{
+                'data-item': '',
+                'data-search': [
+                  c.name,
+                  c.description ?? '',
+                  c.city,
+                  c.nit ?? '',
+                  c.legalForm ?? '',
+                  ...c.categories,
+                ].join(' '),
+                'data-facet-city': encodeFacet([c.city]),
+                'data-facet-category': encodeFacet(c.categories),
+                'data-facet-size': encodeFacet([label('size', c.size)]),
+                'data-facet-form': encodeFacet(c.legalForm ? [c.legalForm] : []),
+                'data-facet-decade': encodeFacet(regDecade(c) ? [regDecade(c)] : []),
+              }}
+            />
+          ))}
+        </Browser>
+      </>
+    )}
   </div>
 </Layout>

@@ -39,31 +39,29 @@ const facets = [
       noun="universidades"
       searchPlaceholder="Buscar universidad…"
     >
-      {
-        universities.map((u) => (
-          <EntityCard
-            title={u.name}
-            href={`/universidades/${u.slug}`}
-            kicker={label('institutionType', u.institutionType)}
-            description={u.description}
-            fields={[
-              { label: 'Ciudad', value: u.city },
-              { label: 'Programas TIC', value: String(u.programs.length), code: true },
-              { label: 'Acreditación', value: u.accredited ? 'Alta calidad' : '' },
-            ]}
-            needsVerification={u.needsVerification}
-            verificationStatus={u.verificationStatus}
-            lastVerifiedAt={u.lastVerifiedAt}
-            attrs={{
-              'data-item': '',
-              'data-search': [u.name, u.description ?? '', u.city].join(' '),
-              'data-facet-city': encodeFacet([u.city]),
-              'data-facet-type': encodeFacet([label('institutionType', u.institutionType)]),
-              'data-facet-accredited': encodeFacet([u.accredited ? 'Sí' : 'No']),
-            }}
-          />
-        ))
-      }
+      {universities.map((u) => (
+        <EntityCard
+          title={u.name}
+          href={`/universidades/${u.slug}`}
+          kicker={label('institutionType', u.institutionType)}
+          description={u.description}
+          fields={[
+            { label: 'Ciudad', value: u.city },
+            { label: 'Programas TIC', value: String(u.programs.length), code: true },
+            { label: 'Acreditación', value: u.accredited ? 'Alta calidad' : '' },
+          ]}
+          needsVerification={u.needsVerification}
+          verificationStatus={u.verificationStatus}
+          lastVerifiedAt={u.lastVerifiedAt}
+          attrs={{
+            'data-item': '',
+            'data-search': [u.name, u.description ?? '', u.city].join(' '),
+            'data-facet-city': encodeFacet([u.city]),
+            'data-facet-type': encodeFacet([label('institutionType', u.institutionType)]),
+            'data-facet-accredited': encodeFacet([u.accredited ? 'Sí' : 'No']),
+          }}
+        />
+      ))}
     </Browser>
   </div>
 </Layout>

@@ -18,24 +18,20 @@ const isActive = (item: NavItem) => (item.match ?? [item.href]).some(matches);
 
     <nav aria-label="Navegación principal" class="hidden xl:block">
       <ul class="flex items-center gap-0.5">
-        {
-          nav.map((item) => (
-            <li>
-              <a
-                href={item.href}
-                aria-current={isActive(item) ? 'page' : undefined}
-                class:list={[
-                  'inline-flex min-h-11 items-center px-2.5 text-sm font-medium no-underline transition-colors duration-fast hover:bg-highlight hover:text-on-highlight',
-                  isActive(item)
-                    ? 'text-graphite shadow-[inset_0_-3px_0_var(--color-ink-blue)]'
-                    : 'text-graphite-2',
-                ]}
-              >
-                {item.label}
-              </a>
-            </li>
-          ))
-        }
+        {nav.map((item) => <li>
+          <a
+            href={item.href}
+            aria-current={isActive(item) ? 'page' : undefined}
+            class:list={[
+              'inline-flex min-h-11 items-center px-2.5 text-sm font-medium no-underline transition-colors duration-120 hover:bg-highlight hover:text-on-highlight',
+              isActive(item)
+                ? 'text-graphite shadow-[inset_0_-3px_0_var(--color-ink-blue)]'
+                : 'text-graphite-2',
+            ]}
+          >
+            {item.label}
+          </a>
+        </li>)}
       </ul>
     </nav>
 
@@ -52,24 +48,18 @@ const isActive = (item: NavItem) => (item.match ?? [item.href]).some(matches);
           class="absolute right-0 z-50 mt-2 w-60 border border-graphite bg-sheet p-2 shadow-overlay"
         >
           <ul class="flex flex-col">
-            {
-              [...nav, { href: '/acerca', label: 'Acerca' }].map((item) => (
-                <li>
-                  <a
-                    href={item.href}
-                    aria-current={isActive(item) ? 'page' : undefined}
-                    class:list={[
-                      'block min-h-11 px-3 py-2.5 text-sm no-underline hover:bg-highlight hover:text-on-highlight',
-                      isActive(item)
-                        ? 'bg-ink-blue-soft font-semibold text-graphite'
-                        : 'text-graphite',
-                    ]}
-                  >
-                    {item.label}
-                  </a>
-                </li>
-              ))
-            }
+            {[...nav, { href: '/acerca', label: 'Acerca' }].map((item) => <li>
+              <a
+                href={item.href}
+                aria-current={isActive(item) ? 'page' : undefined}
+                class:list={[
+                  'block min-h-11 px-3 py-2.5 text-sm no-underline hover:bg-highlight hover:text-on-highlight',
+                  isActive(item) ? 'bg-ink-blue-soft font-semibold text-graphite' : 'text-graphite',
+                ]}
+              >
+                {item.label}
+              </a>
+            </li>)}
           </ul>
         </nav>
       </details>

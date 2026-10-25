@@ -90,39 +90,28 @@ const companyExample = `{
           y nosotros lo revisamos; no hace falta usar Git ni editar código.
         </p>
         <div class="mt-6 grid grid-cols-1 gap-4 sm:grid-cols-3">
-          {
-            actions.map((a) => (
-              <div class="flex flex-col border border-rule bg-sheet p-5">
-                <h3 class="text-lg">{a.title}</h3>
-                <p class="mt-1 flex-1 text-sm text-graphite-2">{a.body}</p>
-                <a
-                  href={a.href}
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  class="btn-secondary mt-4 inline-flex"
-                >
-                  {a.cta}
-                </a>
-              </div>
-            ))
-          }
+          {actions.map((a) => <div class="flex flex-col border border-rule bg-sheet p-5">
+            <h3 class="text-lg">{a.title}</h3>
+            <p class="mt-1 flex-1 text-sm text-graphite-2">{a.body}</p>
+            <a
+              href={a.href}
+              target="_blank"
+              rel="noopener noreferrer"
+              class="btn-secondary mt-4 inline-flex"
+            >
+              {a.cta}
+            </a>
+          </div>)}
         </div>
       </section>
 
       <section>
         <h2 class="text-2xl">Qué incluir</h2>
         <ul class="mt-4 space-y-2 text-sm text-graphite">
-          {
-            include.map((i) => (
-              <li class="flex items-start gap-2">
-                <span
-                  aria-hidden="true"
-                  class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 bg-graphite"
-                />
-                <span>{i}</span>
-              </li>
-            ))
-          }
+          {include.map((i) => <li class="flex items-start gap-2">
+            <span aria-hidden="true" class="mt-1.5 inline-block h-1.5 w-1.5 shrink-0 bg-graphite" />
+            <span>{i}</span>
+          </li>)}
         </ul>
       </section>
 
@@ -143,8 +132,8 @@ const companyExample = `{
         <p class="mt-2 text-sm text-graphite">
           Buena parte del archivo proviene de un registro comunitario de 2020 y de fuentes públicas
           que pueden haber cambiado. Los registros marcados como <em>“Estado por confirmar”</em> o
-          <em>“Posiblemente inactivo”</em> son los que más necesitan una mano: basta aportar una fuente
-          pública reciente o confirmar que un dato sigue vigente.
+          <em>“Posiblemente inactivo”</em> son los que más necesitan una mano: basta aportar una
+          fuente pública reciente o confirmar que un dato sigue vigente.
         </p>
       </section>
 
@@ -156,21 +145,20 @@ const companyExample = `{
         </summary>
         <div class="mt-4 space-y-6 text-sm text-graphite">
           <p>
-            Los datos viven en archivos JSON versionados en <code
-              class="rounded-control bg-sheet-alt px-1">src/data/</code
-            >. Puedes abrir un Pull Request:
+            Los datos viven en archivos JSON versionados en
+            <code class="rounded-control bg-sheet-alt px-1">src/data/</code>. Puedes abrir un Pull
+            Request:
           </p>
           <ol class="list-decimal space-y-1 pl-5">
             <li>Haz un fork del repositorio y clónalo.</li>
             <li>
-              Instala con <code class="rounded-control bg-sheet-alt px-1">npm ci</code> y levanta el sitio
-              con
-              <code class="rounded-control bg-sheet-alt px-1">npm run dev</code>.
+              Instala con <code class="rounded-control bg-sheet-alt px-1">npm ci</code> y levanta el
+              sitio con <code class="rounded-control bg-sheet-alt px-1">npm run dev</code>.
             </li>
             <li>Agrega o edita el registro en el JSON correspondiente.</li>
             <li>
-              Valida con <code class="rounded-control bg-sheet-alt px-1">npm run validate:data</code
-              > y prueba
+              Valida con
+              <code class="rounded-control bg-sheet-alt px-1">npm run validate:data</code> y prueba
               <code class="rounded-control bg-sheet-alt px-1">npm run build</code>.
             </li>
             <li>Abre un Pull Request describiendo el cambio y su fuente.</li>
@@ -184,7 +172,8 @@ const companyExample = `{
           <div>
             <p class="font-semibold text-graphite">Ejemplo: empresa</p>
             <pre
-              class="mt-2 overflow-x-auto border border-rule bg-graphite p-4 text-xs text-fog"><code>{companyExample}</code></pre>
+              class="mt-2 overflow-x-auto border border-rule bg-graphite p-4 text-xs text-fog"
+            ><code>{companyExample}</code></pre>
           </div>
           <div class="flex flex-wrap gap-2">
             <a href={site.newPrUrl} target="_blank" rel="noopener noreferrer" class="btn-secondary"
@@ -194,7 +183,8 @@ const companyExample = `{
               href={`${site.repoUrl}/blob/master/CONTRIBUTING.md`}
               target="_blank"
               rel="noopener noreferrer"
-              class="btn-secondary">Guía completa (CONTRIBUTING)</a
+              class="btn-secondary"
+              >Guía completa (CONTRIBUTING)</a
             >
           </div>
         </div>
@@ -205,16 +195,10 @@ const companyExample = `{
       <div class="border border-rule bg-sheet p-5">
         <h2 class="field-label">Criterios de moderación</h2>
         <ul class="mt-3 space-y-2 text-sm text-graphite">
-          {
-            moderation.map((m) => (
-              <li class="flex items-start gap-2">
-                <span aria-hidden="true" class="mt-0.5 text-ink-blue">
-                  ✓
-                </span>
-                <span>{m}</span>
-              </li>
-            ))
-          }
+          {moderation.map((m) => <li class="flex items-start gap-2">
+            <span aria-hidden="true" class="mt-0.5 text-ink-blue"> ✓ </span>
+            <span>{m}</span>
+          </li>)}
         </ul>
         <p class="mt-3 text-xs text-graphite-2">
           Más detalle en la <a href="/metodologia" class="link">metodología y criterios</a>.
@@ -231,7 +215,8 @@ const companyExample = `{
           href={site.repoUrl}
           target="_blank"
           rel="noopener noreferrer"
-          class="btn-secondary mt-3 inline-flex">Ver repositorio</a
+          class="btn-secondary mt-3 inline-flex"
+          >Ver repositorio</a
         >
       </div>
     </aside>

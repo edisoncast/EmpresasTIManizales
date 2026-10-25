@@ -12,24 +12,24 @@ const domain = sourceUrl ? displayUrl(sourceUrl).split('/')[0] : '';
 const reviewed = reviewedAt ? formatDate(reviewedAt) : '';
 ---
 
-{
-  sourceUrl ? (
-    <a
-      href={sourceUrl}
-      target="_blank"
-      rel="noopener noreferrer"
-      class="data inline-flex min-h-7 items-center gap-1.5 rounded-control border border-rule bg-sheet px-2 py-1 text-xs text-graphite no-underline transition-colors duration-fast hover:border-highlight hover:bg-highlight hover:text-on-highlight"
-      title={`${label}: ${sourceUrl}`}
-    >
-      <span class="text-graphite-2">{label}</span>
-      <span>{domain}</span>
-      {reviewed && <span class="text-graphite-2">· rev. {reviewed}</span>}
-      <span aria-hidden="true">↗</span>
-      <span class="sr-only">(se abre en una pestaña nueva)</span>
-    </a>
-  ) : (
-    <span class="data inline-flex min-h-7 items-center rounded-control border border-dashed border-rule-strong px-2 py-1 text-xs text-graphite-2">
-      Sin fuente pública registrada
-    </span>
-  )
-}
+{sourceUrl ? (
+  <a
+    href={sourceUrl}
+    target="_blank"
+    rel="noopener noreferrer"
+    class="data inline-flex min-h-7 items-center gap-1.5 rounded-control border border-rule bg-sheet px-2 py-1 text-xs text-graphite no-underline transition-colors duration-120 hover:border-highlight hover:bg-highlight hover:text-on-highlight"
+    title={`${label}: ${sourceUrl}`}
+  >
+    <span class="text-graphite-2">{label}</span>
+    <span>{domain}</span>
+    {reviewed && <span class="text-graphite-2">· rev. {reviewed}</span>}
+    <span aria-hidden="true">↗</span>
+    <span class="sr-only">(se abre en una pestaña nueva)</span>
+  </a>
+) : (
+  <span
+    class="data inline-flex min-h-7 items-center rounded-control border border-dashed border-rule-strong px-2 py-1 text-xs text-graphite-2"
+  >
+    Sin fuente pública registrada
+  </span>
+)}

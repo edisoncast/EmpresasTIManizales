@@ -37,7 +37,7 @@ function parseOrThrow<T>(schema: { parse: (v: unknown) => T }, raw: unknown, nam
     return schema.parse(raw);
   } catch (err) {
     // Re-lanzamos con contexto del archivo para facilitar el diagnóstico en build.
-    throw new Error(`Error validando ${name}: ${(err as Error).message}`);
+    throw new Error(`Error validando ${name}: ${(err as Error).message}`, { cause: err });
   }
 }
 
