@@ -9,10 +9,12 @@ Reemplaza la primera implementación (papel crema, Newsreader, verde bosque), qu
 plantilla editorial genérica. Las secciones siguientes a esta conservan el registro histórico de esa
 primera versión; donde contradigan esta sección, manda esta.
 
-- **Tokens** en `:root` de `global.css` con nombres semánticos: `fog`, `sheet`, `sheet-alt`, `rule`,
-  `rule-strong`, `graphite`, `graphite-2`, `ink-blue` (+ `hover`, `soft`), `highlight` (+ `soft`),
-  `rust` (+ `soft`). Tailwind los expone por variable (`bg-sheet`, `text-graphite-2`,
-  `border-rule-strong`…) sin modificadores de opacidad. Las escalas `ink-*` y `brand-*` se retiraron.
+- **Tokens** en `@theme` de `global.css` (Tailwind 4, sin `tailwind.config` ni PostCSS) con nombres
+  semánticos: `fog`, `sheet`, `sheet-alt`, `rule`, `rule-strong`, `graphite`, `graphite-2`,
+  `ink-blue` (+ `hover`, `soft`), `highlight` (+ `soft`), `rust` (+ `soft`). `@theme` los publica
+  como variables `--color-*` y como utilidades (`bg-sheet`, `text-graphite-2`…). Las escalas `ink-*`
+  y `brand-*` se retiraron. Las clases que otras reglas aplican (`btn`, `mark`, `field-label`) son
+  `@utility`, porque en v4 `@apply` no acepta clases de `@layer components`.
 - **Tipografía:** Archivo con eje de ancho (`@fontsource-variable/archivo/wdth.css`) para titulares
   y cifras (`font-stretch` 108–125%), Atkinson Hyperlegible Next para el cuerpo y Atkinson
   Hyperlegible Mono para datos (`.data`). El kicker monoespaciado pasa a `.field-label` en la sans.
@@ -119,7 +121,7 @@ npm run test:e2e
 npm run test:e2e:ui
 
 # Con Docker (imagen oficial, navegadores incluidos)
-docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.61.1-noble \
+docker run --rm -v "$PWD":/app -w /app mcr.microsoft.com/playwright:v1.64.1-noble \
   sh -c "npm ci && npm run build && npm run test:e2e"
 ```
 
