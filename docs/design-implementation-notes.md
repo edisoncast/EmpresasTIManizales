@@ -90,6 +90,20 @@ Cinco estados sobrios con **label + símbolo + color + mensaje** (nunca solo col
 - **React no está instalado**: búsqueda y filtros usan JavaScript nativo y el resto permanece
   estático.
 
+## Directorio de empresas
+
+- La explicación de fuentes, tamaños UVT y distribuciones se consulta en «¿Cómo leer estos datos
+  y tamaños?», un `<details>` cerrado inicialmente para priorizar filtros y resultados.
+- La búsqueda existente incluye nombre y NIT. Categoría usa un `datalist` nativo: permite escribir
+  y elegir una categoría completa; el filtro conserva coincidencias exactas normalizadas, parámetros
+  de URL y el botón de limpieza. Las sugerencias dependen del navegador; también se puede escribir
+  el valor completo. Los demás filtros mantienen sus labels y selects.
+- Solo las tarjetas de empresas activan el enlace extendido «Ver ficha», con el nombre de la empresa
+  como parte de su nombre accesible y foco visible alrededor de la tarjeta. Los tags siguen siendo
+  informativos, sin introducir controles que compitan con el enlace.
+- El estado vacío ofrece una invitación primaria a `/contribuir`. Las opciones nuevas de los
+  componentes compartidos son opt-in; los otros directorios conservan sus valores predeterminados.
+
 ## Pendientes / recomendaciones
 
 - Variante oscura (post-MVP): redefinir todos los pares de contraste, no invertir.

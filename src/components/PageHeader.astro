@@ -8,12 +8,13 @@ export interface Props {
   eyebrow?: string;
   /** Muestra la nota de corte temporal de la auditoría. */
   showCutoff?: boolean;
+  compact?: boolean;
 }
-const { title, description, eyebrow, showCutoff = true } = Astro.props;
+const { title, description, eyebrow, showCutoff = true, compact = false } = Astro.props;
 ---
 
 <div class="border-b-2 border-graphite bg-fog">
-  <div class="container-content py-10 sm:py-12">
+  <div class:list={['container-content', compact ? 'py-6' : 'py-10 sm:py-12']}>
     {eyebrow && <p class="field-label">{eyebrow}</p>}
     <h1 class="mt-2 max-w-3xl text-3xl">
       {title}

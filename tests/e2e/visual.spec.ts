@@ -97,6 +97,8 @@ test.describe('Estructura visual y contenido', () => {
   }) => {
     await page.goto('/empresas');
     const overview = page.locator('[data-company-size-overview]');
+    await expect(overview).not.toBeVisible();
+    await page.locator('summary', { hasText: '¿Cómo leer estos datos y tamaños?' }).click();
     await expect(
       overview.getByRole('heading', { name: /qué significa el tamaño de una empresa/i }),
     ).toBeVisible();
@@ -131,7 +133,9 @@ test.describe('Estructura visual y contenido', () => {
     await page.goto('/empresas');
     await page.locator('[data-search-input]').fill('zzz-registro-inexistente-xyz');
     await expect(page.locator('[data-empty-wrapper]')).toBeVisible();
-    await expect(page.getByText(/no encontramos resultados/i)).toBeVisible();
+    await expect(
+      page.getByText('No encontramos empresas que coincidan con estos filtros.'),
+    ).toBeVisible();
   });
 
   test('ecosistema y contribuir cargan con un h1', async ({ page }) => {
