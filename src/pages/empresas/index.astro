@@ -8,6 +8,7 @@ import EmptyState from '../../components/EmptyState.astro';
 import { companies } from '../../lib/data';
 import { decadeLabel, label } from '../../lib/format';
 import { encodeFacet, uniqueSorted } from '../../lib/search';
+import { verificationFacetOptions, verificationSlug } from '../../lib/verification';
 import { site } from '../../lib/site';
 
 const regYear = (c: (typeof companies)[number]) =>
@@ -44,6 +45,12 @@ const facets = [
   { key: 'size', label: 'Tamaño', options: sizes, allLabel: 'Todos los tamaños' },
   { key: 'form', label: 'Forma jurídica', options: forms, allLabel: 'Todas' },
   { key: 'decade', label: 'Década de matrícula', options: decades, allLabel: 'Cualquier década' },
+  {
+    key: 'estado',
+    label: 'Verificación',
+    options: verificationFacetOptions(companies),
+    allLabel: 'Todos los estados',
+  },
 ];
 ---
 
@@ -122,6 +129,7 @@ const facets = [
                 'data-facet-size': encodeFacet([label('size', c.size)]),
                 'data-facet-form': encodeFacet(c.legalForm ? [c.legalForm] : []),
                 'data-facet-decade': encodeFacet(regDecade(c) ? [regDecade(c)] : []),
+                'data-facet-estado': encodeFacet([verificationSlug(c)]),
               }}
             />
           ))}

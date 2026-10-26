@@ -1,0 +1,24 @@
+---
+/**
+ * Coordenadas de Manizales como enlace al mapa del ecosistema. El nombre accesible empieza
+ * por el texto visible (WCAG 2.5.3) y agrega el destino solo para lectores de pantalla.
+ */
+export interface Props {
+  /** Muestra también la altitud (footer). */
+  altitude?: boolean;
+  class?: string;
+}
+const { altitude = false, class: className } = Astro.props;
+const label = altitude ? '5.07° N · 75.52° O · 2.150 m s. n. m.' : '5.07° N · 75.52° O';
+---
+
+<a
+  href="/ecosistema"
+  title="Ver el mapa del ecosistema de Manizales y Caldas"
+  class:list={[
+    'data underline decoration-dotted decoration-1 underline-offset-[3px] transition-colors duration-120 hover:bg-highlight hover:text-on-highlight hover:no-underline',
+    className,
+  ]}
+>
+  {label}<span class="sr-only">: ver el mapa del ecosistema</span>
+</a>

@@ -276,6 +276,21 @@
     @apply mark;
   }
 
+  /* Enlace estirado: el área clicable cubre toda la ficha (requiere `.ficha`, que es relative)
+     sin envolver la ficha en <a>, así el lector de pantalla solo anuncia el nombre. */
+  .stretched-link::after {
+    content: '';
+    position: absolute;
+    inset: 0;
+  }
+  .stretched-link:focus-visible {
+    outline: none;
+  }
+  .ficha:has(.stretched-link:focus-visible) {
+    outline: 2px solid var(--color-focus);
+    outline-offset: 2px;
+  }
+
   /* Casillas: etiqueta arriba, valor abajo, líneas de 1px compartidas. */
   .fields {
     @apply m-0 grid grid-cols-1 gap-px border border-rule bg-rule;

@@ -11,6 +11,9 @@ export const site = {
   get issuesUrl() {
     return `${this.repoUrl}/issues/new/choose`;
   },
+  get suggestCompanyUrl() {
+    return `${this.repoUrl}/issues/new?template=suggest-company.yml`;
+  },
   get correctionUrl() {
     return `${this.repoUrl}/issues/new?template=correct-record.yml`;
   },
