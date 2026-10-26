@@ -40,6 +40,7 @@ test('clasificación empresarial screenshot desktop', async ({ page }, testInfo)
   test.skip(testInfo.project.name !== 'desktop-chromium');
   await page.goto('/empresas');
   const overview = page.locator('[data-company-size-overview]');
+  await page.locator('summary', { hasText: '¿Cómo leer estos datos y tamaños?' }).click();
   await expect(overview).toBeVisible();
   await overview.screenshot({
     path: 'test-results/screenshots/clasificacion-empresarial-desktop.png',

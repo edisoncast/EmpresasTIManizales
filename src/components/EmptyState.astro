@@ -6,6 +6,7 @@ export interface Props {
   ctaLabel?: string;
   /** Si es un estado de "sin resultados de filtro", se marca para el script de filtros. */
   forFilters?: boolean;
+  primaryCta?: boolean;
 }
 const {
   title = 'Aún no hay registros',
@@ -13,6 +14,7 @@ const {
   ctaHref = '/contribuir',
   ctaLabel = 'Sugerir un registro',
   forFilters = false,
+  primaryCta = false,
 } = Astro.props;
 ---
 
@@ -27,7 +29,10 @@ const {
     {forFilters && <button type="button" class="btn-secondary" data-clear-filters-cta>
       Limpiar filtros
     </button>}
-    {ctaHref && <a href={ctaHref} class:list={[forFilters ? 'btn-quiet' : 'btn-primary']}>
+    {ctaHref && <a
+      href={ctaHref}
+      class:list={[forFilters && !primaryCta ? 'btn-quiet' : 'btn-primary']}
+    >
       {ctaLabel}
     </a>}
   </div>

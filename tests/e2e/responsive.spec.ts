@@ -33,7 +33,7 @@ test.describe('Responsive', () => {
   test('controles táctiles principales tienen al menos 44px en móvil', async ({ page }) => {
     await page.setViewportSize({ width: 375, height: 667 });
     await page.goto('/empresas');
-    const controls = page.locator('header summary, [data-search-input], select[data-facet-select]');
+    const controls = page.locator('summary, [data-search-input], [data-facet-select]');
     for (let index = 0; index < (await controls.count()); index++) {
       const box = await controls.nth(index).boundingBox();
       expect(box?.height ?? 0).toBeGreaterThanOrEqual(44);

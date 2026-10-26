@@ -11,6 +11,10 @@ export interface Props {
   total: number;
   noun?: string;
   gridClass?: string;
+  filterGridClass?: string;
+  emptyTitle?: string;
+  emptyCtaLabel?: string;
+  emptyCtaPrimary?: boolean;
 }
 const {
   facets = [],
@@ -19,6 +23,10 @@ const {
   total,
   noun = 'resultados',
   gridClass = 'grid grid-cols-1 gap-4 sm:grid-cols-2 lg:grid-cols-3',
+  filterGridClass,
+  emptyTitle = 'No encontramos resultados',
+  emptyCtaLabel = 'Sugerir un registro',
+  emptyCtaPrimary = false,
 } = Astro.props;
 ---
 
@@ -27,7 +35,7 @@ const {
     <div class="mb-3">
       <SearchBar placeholder={searchPlaceholder} label={searchLabel} visibleLabel={true} />
     </div>
-    {facets.length > 0 && <FilterPanel facets={facets} />}
+    {facets.length > 0 && <FilterPanel facets={facets} gridClass={filterGridClass} />}
     <div class="mt-3 flex items-center justify-between gap-3 border-t border-rule pt-3">
       <p class="text-sm text-graphite-2" data-count aria-live="polite">
         <span class="font-semibold text-graphite" data-count-value>{total}</span>
@@ -47,10 +55,11 @@ const {
   <div class="mt-6" data-empty-wrapper hidden>
     <EmptyState
       forFilters={true}
-      title="No encontramos resultados"
+      title={emptyTitle}
       message="Ninguna combinación de búsqueda y filtros coincide. Prueba con menos filtros o sugiere un registro."
       ctaHref="/contribuir"
-      ctaLabel="Sugerir un registro"
+      ctaLabel={emptyCtaLabel}
+      primaryCta={emptyCtaPrimary}
     />
   </div>
 </section>
@@ -60,7 +69,9 @@ const {
 
   function setupBrowser(root: HTMLElement) {
     const searchInput = root.querySelector<HTMLInputElement>('[data-search-input]');
-    const selects = Array.from(root.querySelectorAll<HTMLSelectElement>('[data-facet-select]'));
+    const selects = Array.from(
+      root.querySelectorAll<HTMLSelectElement | HTMLInputElement>('[data-facet-select]'),
+    );
     const cards = Array.from(root.querySelectorAll<HTMLElement>('[data-item]'));
     const countValue = root.querySelector<HTMLElement>('[data-count-value]');
     const emptyWrapper = root.querySelector<HTMLElement>('[data-empty-wrapper]');
@@ -116,11 +127,15 @@ const {
     if (q && searchInput) searchInput.value = q;
     selects.forEach((s) => {
       const val = params.get(s.dataset.facetKey ?? '');
-      if (val && Array.from(s.options).some((o) => o.value === val)) s.value = val;
+      const options = s instanceof HTMLSelectElement ? s.options : s.list?.options;
+      if (val && options && Array.from(options).some((o) => o.value === val)) s.value = val;
     });
 
     searchInput?.addEventListener('input', apply);
-    selects.forEach((s) => s.addEventListener('change', apply));
+    selects.forEach((s) => {
+      s.addEventListener('change', apply);
+      if (s instanceof HTMLInputElement) s.addEventListener('input', apply);
+    });
     clearBtns.forEach((b) => b.addEventListener('click', clearAll));
 
     apply();

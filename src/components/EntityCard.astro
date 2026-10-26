@@ -27,6 +27,7 @@ export interface Props {
   status?: 'active' | 'inactive' | 'unknown';
   lastVerifiedAt?: string;
   cta?: string;
+  stretchedLink?: boolean;
   /** Atributos data-* para el filtrado en cliente. */
   attrs?: Record<string, string>;
 }
@@ -44,6 +45,7 @@ const {
   status,
   lastVerifiedAt,
   cta = 'Ver ficha',
+  stretchedLink = false,
   attrs = {},
 } = Astro.props;
 
@@ -70,7 +72,11 @@ const shownFields = fields.filter((f) => f.value);
 
   <div class="flex flex-1 flex-col gap-2 p-4">
     <h3 class="text-lg">
-      <a href={href} class="ficha-title-link">{title}</a>
+      {stretchedLink ? (
+        <span class="ficha-title-link">{title}</span>
+      ) : (
+        <a href={href} class="ficha-title-link">{title}</a>
+      )}
     </h3>
     {subtitle && <p class="text-sm text-graphite-2">{subtitle}</p>}
 
@@ -96,7 +102,11 @@ const shownFields = fields.filter((f) => f.value);
   </dl>}
 
   <div class="flex items-center justify-end border-t border-rule px-4 py-2.5">
-    <a href={href} class="link text-sm">
+    <a
+      href={href}
+      class:list={['link text-sm', stretchedLink && 'stretched-link']}
+      aria-label={stretchedLink ? `${cta}: ${title}` : undefined}
+    >
       {cta}
       <span aria-hidden="true">→</span>
     </a>
